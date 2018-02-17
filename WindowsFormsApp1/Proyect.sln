@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27323.2
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsFormsApp1", "WindowsFormsApp1\WindowsFormsApp1.csproj", "{7CA1D0B4-CBF7-4B83-80DE-00E80D39F6C3}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Interfaz", "WindowsFormsApp1\Interfaz.csproj", "{7CA1D0B4-CBF7-4B83-80DE-00E80D39F6C3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Capa_Info", "Capa_Info\Capa_Info.csproj", "{23070910-44B8-4EAF-A96F-43FB98B3FA9D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{7CA1D0B4-CBF7-4B83-80DE-00E80D39F6C3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7CA1D0B4-CBF7-4B83-80DE-00E80D39F6C3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7CA1D0B4-CBF7-4B83-80DE-00E80D39F6C3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{23070910-44B8-4EAF-A96F-43FB98B3FA9D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{23070910-44B8-4EAF-A96F-43FB98B3FA9D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{23070910-44B8-4EAF-A96F-43FB98B3FA9D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{23070910-44B8-4EAF-A96F-43FB98B3FA9D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
