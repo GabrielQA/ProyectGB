@@ -317,7 +317,7 @@
             this.Paises.Location = new System.Drawing.Point(4, 12);
             this.Paises.Name = "Paises";
             this.Paises.SelectedIndex = 0;
-            this.Paises.Size = new System.Drawing.Size(532, 342);
+            this.Paises.Size = new System.Drawing.Size(540, 342);
             this.Paises.TabIndex = 33;
             // 
             // tabPage1
@@ -326,7 +326,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(524, 316);
+            this.tabPage1.Size = new System.Drawing.Size(532, 316);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Paises";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -407,6 +407,7 @@
             this.button2.TabIndex = 1;
             this.button2.Text = "Agregar";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // label1
             // 
@@ -482,6 +483,7 @@
             this.button3.TabIndex = 8;
             this.button3.Text = "Modificar";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // label6
             // 
@@ -513,6 +515,7 @@
             this.button4.TabIndex = 14;
             this.button4.Text = "Eliminar";
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // IDPaisDelete
             // 
@@ -536,7 +539,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(524, 316);
+            this.tabPage2.Size = new System.Drawing.Size(532, 316);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Lugares";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -575,6 +578,7 @@
             this.button5.TabIndex = 11;
             this.button5.Text = "Agregar";
             this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // nombreLADD
             // 
@@ -654,6 +658,7 @@
             this.button6.TabIndex = 15;
             this.button6.Text = "Modificar";
             this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // label12
             // 
@@ -692,6 +697,7 @@
             this.button7.TabIndex = 15;
             this.button7.Text = "Eliminar";
             this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // label14
             // 
@@ -708,7 +714,7 @@
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(524, 316);
+            this.tabPage3.Size = new System.Drawing.Size(532, 316);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Aeropuertos";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -806,6 +812,7 @@
             this.button8.TabIndex = 8;
             this.button8.Text = "Agregar";
             this.button8.UseVisualStyleBackColor = true;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
             // label15
             // 
@@ -898,6 +905,7 @@
             this.button9.TabIndex = 17;
             this.button9.Text = "Modificar";
             this.button9.UseVisualStyleBackColor = true;
+            this.button9.Click += new System.EventHandler(this.button9_Click);
             // 
             // label20
             // 
@@ -929,6 +937,7 @@
             this.button10.TabIndex = 23;
             this.button10.Text = "Eliminar";
             this.button10.UseVisualStyleBackColor = true;
+            this.button10.Click += new System.EventHandler(this.button10_Click);
             // 
             // IDDELETEAeropuerto
             // 
@@ -952,7 +961,7 @@
             this.tabPage4.Location = new System.Drawing.Point(4, 22);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(524, 316);
+            this.tabPage4.Size = new System.Drawing.Size(532, 316);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Rutas";
             this.tabPage4.UseVisualStyleBackColor = true;
@@ -1050,6 +1059,7 @@
             this.button11.TabIndex = 17;
             this.button11.Text = "Agregar";
             this.button11.UseVisualStyleBackColor = true;
+            this.button11.Click += new System.EventHandler(this.button11_Click);
             // 
             // label25
             // 
@@ -1151,6 +1161,7 @@
             this.button12.TabIndex = 17;
             this.button12.Text = "Modificar";
             this.button12.UseVisualStyleBackColor = true;
+            this.button12.Click += new System.EventHandler(this.button12_Click);
             // 
             // tabPage23
             // 
@@ -1173,6 +1184,7 @@
             this.button13.TabIndex = 23;
             this.button13.Text = "Eliminar";
             this.button13.UseVisualStyleBackColor = true;
+            this.button13.Click += new System.EventHandler(this.button13_Click);
             // 
             // idrdelete
             // 
@@ -1196,7 +1208,7 @@
             this.tabPage5.Location = new System.Drawing.Point(4, 22);
             this.tabPage5.Name = "tabPage5";
             this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage5.Size = new System.Drawing.Size(524, 316);
+            this.tabPage5.Size = new System.Drawing.Size(532, 316);
             this.tabPage5.TabIndex = 4;
             this.tabPage5.Text = "Hoteles";
             this.tabPage5.UseVisualStyleBackColor = true;
@@ -1267,6 +1279,7 @@
             this.button14.TabIndex = 37;
             this.button14.Text = "Agregar";
             this.button14.UseVisualStyleBackColor = true;
+            this.button14.Click += new System.EventHandler(this.button14_Click);
             // 
             // habitacionHotelesADD
             // 
@@ -1398,6 +1411,7 @@
             this.button15.TabIndex = 50;
             this.button15.Text = "Modificar";
             this.button15.UseVisualStyleBackColor = true;
+            this.button15.Click += new System.EventHandler(this.button15_Click);
             // 
             // habitacionesHotelesMod
             // 
@@ -1495,6 +1509,7 @@
             this.button16.TabIndex = 51;
             this.button16.Text = "Eliminar";
             this.button16.UseVisualStyleBackColor = true;
+            this.button16.Click += new System.EventHandler(this.button16_Click);
             // 
             // IDHotelesDelete
             // 
@@ -1518,7 +1533,7 @@
             this.tabPage6.Location = new System.Drawing.Point(4, 22);
             this.tabPage6.Name = "tabPage6";
             this.tabPage6.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage6.Size = new System.Drawing.Size(524, 316);
+            this.tabPage6.Size = new System.Drawing.Size(532, 316);
             this.tabPage6.TabIndex = 5;
             this.tabPage6.Text = "Tarifas Hoteles";
             this.tabPage6.UseVisualStyleBackColor = true;
@@ -1557,6 +1572,7 @@
             this.button17.TabIndex = 24;
             this.button17.Text = "Agregar";
             this.button17.UseVisualStyleBackColor = true;
+            this.button17.Click += new System.EventHandler(this.button17_Click);
             // 
             // PrecioTarifaHotelesADD
             // 
@@ -1613,6 +1629,7 @@
             this.button18.TabIndex = 29;
             this.button18.Text = "Modificar";
             this.button18.UseVisualStyleBackColor = true;
+            this.button18.Click += new System.EventHandler(this.button18_Click);
             // 
             // PrecioTarifaHotelesMod
             // 
@@ -1667,6 +1684,7 @@
             this.button19.TabIndex = 29;
             this.button19.Text = "Eliminar";
             this.button19.UseVisualStyleBackColor = true;
+            this.button19.Click += new System.EventHandler(this.button19_Click);
             // 
             // IDTarifaHotelesDelete
             // 
@@ -1690,7 +1708,7 @@
             this.tabPage7.Location = new System.Drawing.Point(4, 22);
             this.tabPage7.Name = "tabPage7";
             this.tabPage7.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage7.Size = new System.Drawing.Size(524, 316);
+            this.tabPage7.Size = new System.Drawing.Size(532, 316);
             this.tabPage7.TabIndex = 6;
             this.tabPage7.Text = "Tarifas Vuelos";
             this.tabPage7.UseVisualStyleBackColor = true;
@@ -1731,6 +1749,7 @@
             this.button20.TabIndex = 52;
             this.button20.Text = "Agregar";
             this.button20.UseVisualStyleBackColor = true;
+            this.button20.Click += new System.EventHandler(this.button20_Click);
             // 
             // RutaTarifaVuelosADD
             // 
@@ -1805,6 +1824,7 @@
             this.button21.TabIndex = 59;
             this.button21.Text = "Modificar";
             this.button21.UseVisualStyleBackColor = true;
+            this.button21.Click += new System.EventHandler(this.button21_Click);
             // 
             // RutaTarifaVuelosMOD
             // 
@@ -1875,6 +1895,7 @@
             this.button22.TabIndex = 59;
             this.button22.Text = "Eliminar";
             this.button22.UseVisualStyleBackColor = true;
+            this.button22.Click += new System.EventHandler(this.button22_Click);
             // 
             // IDTarifaVuelosDelete
             // 
@@ -1898,7 +1919,7 @@
             this.tabPage8.Location = new System.Drawing.Point(4, 22);
             this.tabPage8.Name = "tabPage8";
             this.tabPage8.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage8.Size = new System.Drawing.Size(524, 316);
+            this.tabPage8.Size = new System.Drawing.Size(532, 316);
             this.tabPage8.TabIndex = 7;
             this.tabPage8.Text = "Vehiculos";
             this.tabPage8.UseVisualStyleBackColor = true;
@@ -1945,6 +1966,7 @@
             this.button23.TabIndex = 50;
             this.button23.Text = "Agregar";
             this.button23.UseVisualStyleBackColor = true;
+            this.button23.Click += new System.EventHandler(this.button23_Click);
             // 
             // CantidadvehiculoADD
             // 
@@ -2073,6 +2095,7 @@
             this.button24.TabIndex = 63;
             this.button24.Text = "Modificar";
             this.button24.UseVisualStyleBackColor = true;
+            this.button24.Click += new System.EventHandler(this.button24_Click);
             // 
             // cantidadvehiculoMod
             // 
@@ -2191,6 +2214,7 @@
             this.button25.TabIndex = 63;
             this.button25.Text = "Agregar";
             this.button25.UseVisualStyleBackColor = true;
+            this.button25.Click += new System.EventHandler(this.button25_Click);
             // 
             // IDvehiculoDelete
             // 
@@ -2214,7 +2238,7 @@
             this.tabPage9.Location = new System.Drawing.Point(4, 22);
             this.tabPage9.Name = "tabPage9";
             this.tabPage9.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage9.Size = new System.Drawing.Size(524, 316);
+            this.tabPage9.Size = new System.Drawing.Size(532, 316);
             this.tabPage9.TabIndex = 8;
             this.tabPage9.Text = "Reportes";
             this.tabPage9.UseVisualStyleBackColor = true;

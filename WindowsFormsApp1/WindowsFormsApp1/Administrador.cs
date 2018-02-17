@@ -282,6 +282,126 @@ namespace WindowsFormsApp1
             conexion.Close();
         }
 
+        private void button3_Click(object sender, EventArgs e)
+        {
+            ModificarDatosPais();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            InsertarDatosPais();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            EliminarDatosPais();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            InsertarDatosLugares();
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            ModificarDatosLugares();
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            EliminarDatosLugares();
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            InsertarDatosAeropuertos();
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            ModificarDatosAeropuertos();
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            EliminarDatosAeropuertos();
+        }
+
+        private void button11_Click(object sender, EventArgs e)
+        {
+            InsertarDatosRutas();
+        }
+
+        private void button12_Click(object sender, EventArgs e)
+        {
+            ModificarDatosRutas();
+        }
+
+        private void button13_Click(object sender, EventArgs e)
+        {
+            EliminarDatosRutas();
+        }
+
+        private void button14_Click(object sender, EventArgs e)
+        {
+            InsertarDatosHoteles();
+        }
+
+        private void button15_Click(object sender, EventArgs e)
+        {
+            ModificarDatosTarifaHoteles();
+        }
+
+        private void button16_Click(object sender, EventArgs e)
+        {
+            EliminarDatosHoteles();
+        }
+
+        private void button17_Click(object sender, EventArgs e)
+        {
+            InsertarDatosHoteles();
+        }
+
+        private void button18_Click(object sender, EventArgs e)
+        {
+            ModificarDatosTarifaHoteles();
+        }
+
+        private void button19_Click(object sender, EventArgs e)
+        {
+            EliminarDatosTarifaHoteles();
+        }
+
+        private void button20_Click(object sender, EventArgs e)
+        {
+            InsertarDatosTarifaVuelos();
+        }
+
+        private void button21_Click(object sender, EventArgs e)
+        {
+            ModificarDatosTarifaVuelos();
+        }
+
+        private void button22_Click(object sender, EventArgs e)
+        {
+            EliminarDatosTarifaVuelos();
+        }
+
+        private void button23_Click(object sender, EventArgs e)
+        {
+            InsertarDatovehiculos();
+        }
+
+        private void button24_Click(object sender, EventArgs e)
+        {
+            ModificarDatosvehiculos();
+        }
+
+        private void button25_Click(object sender, EventArgs e)
+        {
+            EliminarDatosvehiculos();
+        }
+
         //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
