@@ -14,9 +14,140 @@ namespace WindowsFormsApp1
     public partial class Administrador : Form
     {
         public Administrador()
-        {
+        { 
             InitializeComponent();
+            Añadir_Ruta_Aviones();
+            EliminarPais();
+            Lugares();
+            aeropuertos();
+            Rutas();
+
         }
+        /// <summary>
+        /// Seccion añadir modificar y eliminar Datos...
+        /// </summary>
+        /// 
+        public void Rutas()
+        {
+            this.CenterToScreen();
+            Conexion();
+            conexion.Open();
+            List<String> lista = new List<String>();
+            NpgsqlCommand cmd = new NpgsqlCommand("SELECT id,pais_origen,pais_destino,duracion FROM rutas", conexion);
+            NpgsqlDataReader dr = cmd.ExecuteReader();
+            if (dr.HasRows)
+            {
+                while (dr.Read())
+                {
+                    PaisDadd.Items.Add(dr.GetString(2));
+                    PaisOadd.Items.Add(dr.GetString(1));
+
+
+
+                    POmod.Items.Add(dr.GetString(1));
+                   
+                    comboboxdeleteRuta.Items.Add(dr.GetString(0));
+                    PDmod.Items.Add(dr.GetString(2));
+                    
+                    
+                   
+                }
+            }
+            conexion.Close();
+        }
+        public void aeropuertos()
+        {
+            this.CenterToScreen();
+            Conexion();
+            conexion.Open();
+            List<String> lista = new List<String>();
+            NpgsqlCommand cmd = new NpgsqlCommand("SELECT id,nombre,localidad,iata FROM aeropuertos", conexion);
+            NpgsqlDataReader dr = cmd.ExecuteReader();
+            if (dr.HasRows)
+            {
+                while (dr.Read())
+                {
+                    ComboboxAeropuertoDelete.Items.Add(dr.GetString(1));
+                    IDDELETEAeropuerto.Text = dr.GetString(0);
+                    
+
+                    AeropuertoMod.Items.Add(dr.GetString(1));
+                    IDmodAeropuerto.Text = dr.GetString(0);
+                    nombreMODAeropuerto.Text = dr.GetString(1);
+                    modLocalidadAeropuerto.Text = dr.GetString(2);
+                    iataMODAeropuerto.Text = dr.GetString(3);
+                }
+            }
+            conexion.Close();
+        }
+        public void Lugares()
+        {
+            this.CenterToScreen();
+            Conexion();
+            conexion.Open();
+            List<String> lista = new List<String>();
+            NpgsqlCommand cmd = new NpgsqlCommand("SELECT id,nombre FROM lugares", conexion);
+            NpgsqlDataReader dr = cmd.ExecuteReader();
+            if (dr.HasRows)
+            {
+                while (dr.Read())
+                {
+                    LugaresMOD.Items.Add(dr.GetString(1));
+                    IDmodL.Text = dr.GetString(0);
+                    nombremodl.Text = dr.GetString(1);
+                   
+                    ComboboxLugaresDelete.Items.Add(dr.GetString(1));
+                    IDdeleteL.Text = dr.GetString(0);
+                }
+            }
+            conexion.Close();
+        }
+        public void EliminarPais()
+        {
+            this.CenterToScreen();
+            Conexion();
+            conexion.Open();
+            List<String> lista = new List<String>();
+            NpgsqlCommand cmd = new NpgsqlCommand("SELECT nombre FROM paises", conexion);
+            NpgsqlDataReader dr = cmd.ExecuteReader();
+            if (dr.HasRows)
+            {
+                while (dr.Read())
+                {
+                    c.Items.Add(dr.GetString(0));
+                    
+                }
+            }
+            conexion.Close();
+        }
+        public void Añadir_Ruta_Aviones()
+        {
+            this.CenterToScreen();
+            Conexion();
+            conexion.Open();
+            List<String> lista = new List<String>();
+            NpgsqlCommand cmd = new NpgsqlCommand("SELECT ruta FROM vuelos", conexion);
+            NpgsqlDataReader dr = cmd.ExecuteReader();
+            if (dr.HasRows)
+            {
+                while (dr.Read())
+                {
+                    RutaTarifaVuelosADD.Items.Add(dr.GetString(0));
+                }
+            }
+            conexion.Close();
+        }
+        /// <summary>
+        /// Variables globales
+        /// </summary>
+        String ubicacion;
+        String id;
+        int ID;
+        DataSet registro = new DataSet();
+        int NumRegistro;
+        string[] BtnNextBack;
+        string[] ComboBoxText;
+        OpenFileDialog Open = new OpenFileDialog();
         static string cadenaConexion = null;
         static NpgsqlConnection conexion;
         static NpgsqlCommand cmd;
@@ -52,6 +183,7 @@ namespace WindowsFormsApp1
             Conexion();
             conexion.Open();
             cmd = new NpgsqlCommand("INSERT INTO paises (id,nombre,bandera) VALUES ('" + Convert.ToInt32(txtIDPais.Text) + "', '" + textBox3.Text + "')", conexion);
+            cmd.Parameters.AddWithValue("bandera", imagenPaisesAdd);
             cmd.ExecuteNonQuery();
             conexion.Close();
         }
@@ -82,7 +214,7 @@ namespace WindowsFormsApp1
         {
             Conexion();
             conexion.Open();
-            cmd = new NpgsqlCommand("INSERT INTO lugares (id,nombre) VALUES ('" + Convert.ToInt32(IDLADD.Text) + "', '" + nombreLADD.Text + "')", conexion);
+            cmd = new NpgsqlCommand("INSERT INTO lugares(id,nombre) VALUES ('" + IDLADD.Text + "', '" + nombreLADD.Text + "')", conexion);
             cmd.ExecuteNonQuery();
             conexion.Close();
         }
@@ -159,7 +291,7 @@ namespace WindowsFormsApp1
         {
             Conexion();
             conexion.Open();
-            NpgsqlCommand cmd = new NpgsqlCommand("DELETE FROM rutas WHERE id = '" + Convert.ToInt32(idrdelete.Text) + "'", conexion);
+            NpgsqlCommand cmd = new NpgsqlCommand("DELETE FROM rutas WHERE id = '" + comboboxdeleteRuta.SelectedItem + "'", conexion);
             cmd.ExecuteNonQuery();
             conexion.Close();
         }
@@ -196,7 +328,7 @@ namespace WindowsFormsApp1
         }
 
 
-    
+
 
         ///Tarifa Hoteles
 
@@ -289,6 +421,7 @@ namespace WindowsFormsApp1
 
         private void button2_Click(object sender, EventArgs e)
         {
+
             InsertarDatosPais();
         }
 
@@ -305,8 +438,19 @@ namespace WindowsFormsApp1
         private void button6_Click(object sender, EventArgs e)
         {
             ModificarDatosLugares();
-        }
+            LimpiarLugares();
 
+
+        }
+        public void LimpiarLugares() {
+
+            IDLADD.Clear();
+            IDmodL.Clear();
+            nombreLADD.Clear();
+            nombremodl.Clear();
+
+
+        }
         private void button7_Click(object sender, EventArgs e)
         {
             EliminarDatosLugares();
@@ -402,72 +546,321 @@ namespace WindowsFormsApp1
             EliminarDatosvehiculos();
         }
 
-        //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+        private void image_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void imagenPaisesAdd_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void imagenPaisesAdd_DoubleClick(object sender, EventArgs e)
+        {
+
+        }
+
+        private void imagenPaisesAdd_MouseClick(object sender, MouseEventArgs e)
+        {
+
+            Open.Title = "Abrir";
+            Open.Filter = "Jpg files (*.jpg)|Gif files (*,gif|Vitmap files (*.Bmp)|*.BMP|PGN files )*.png)|*.png*";
+            if (Open.ShowDialog() == DialogResult.OK)
+            {
+                ubicacion = Open.FileName;
+                Bitmap picture = new Bitmap(ubicacion);
+                pictureBox1.Image = (Image)picture;
+                id = Open.SafeFileName;
+                txtIDPais.Text = id;
+            }
+
+        }
+
+        private void imagemodPaises_MouseClick(object sender, MouseEventArgs e)
+        {
+            Open.Title = "Abrir";
+            Open.Filter = "Jpg files (*.jpg)|Gif files (*,gif|Vitmap files (*.Bmp)|*.BMP|PGN files )*.png)|*.png*";
+            if (Open.ShowDialog() == DialogResult.OK)
+            {
+                ubicacion = Open.FileName;
+                Bitmap picture = new Bitmap(ubicacion);
+                pictureBox1.Image = (Image)picture;
+                id = Open.SafeFileName;
+                txtIDPais.Text = id;
+            }
+        }
+
+        private void imagenHotelesMod_MouseClick(object sender, MouseEventArgs e)
+        {
+            Open.Title = "Abrir";
+            Open.Filter = "Jpg files (*.jpg)|Gif files (*,gif|Vitmap files (*.Bmp)|*.BMP|PGN files )*.png)|*.png*";
+            if (Open.ShowDialog() == DialogResult.OK)
+            {
+                ubicacion = Open.FileName;
+                Bitmap picture = new Bitmap(ubicacion);
+                pictureBox1.Image = (Image)picture;
+                id = Open.SafeFileName;
+                txtIDPais.Text = id;
+            }
+        }
+
+        private void imagenhotel_MouseClick(object sender, MouseEventArgs e)
+        {
+            Open.Title = "Abrir";
+            Open.Filter = "Jpg files (*.jpg)|Gif files (*,gif|Vitmap files (*.Bmp)|*.BMP|PGN files )*.png)|*.png*";
+            if (Open.ShowDialog() == DialogResult.OK)
+            {
+                ubicacion = Open.FileName;
+                Bitmap picture = new Bitmap(ubicacion);
+                pictureBox1.Image = (Image)picture;
+                id = Open.SafeFileName;
+                txtIDPais.Text = id;
+            }
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+       
+        private void txtt_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
 
 
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+        }
+
+        private void textBox4_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void RutaTarifaVuelosMOD_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void imagemodPaises_Click(object sender, EventArgs e)
+        {
+            Open.Title = "Abrir";
+            Open.Filter = "Jpg files (*.jpg)|Gif files (*,gif|Vitmap files (*.Bmp)|*.BMP|PGN files )*.png)|*.png*";
+            if (Open.ShowDialog() == DialogResult.OK)
+            {
+                ubicacion = Open.FileName;
+                Bitmap picture = new Bitmap(ubicacion);
+                pictureBox1.Image = (Image)picture;
+                id = Open.SafeFileName;
+                txtIDPais.Text = id;
+            }
+        }
+
+        private void imagenPaisesAdd_Click_1(object sender, EventArgs e)
+        {
+            Open.Title = "Abrir";
+            Open.Filter = "Jpg files (*.jpg)|Gif files (*,gif|Vitmap files (*.Bmp)|*.BMP|PGN files )*.png)|*.png*";
+            if (Open.ShowDialog() == DialogResult.OK)
+            {
+                ubicacion = Open.FileName;
+                Bitmap picture = new Bitmap(ubicacion);
+                pictureBox1.Image = (Image)picture;
+                id = Open.SafeFileName;
+                txtIDPais.Text = id;
+            }
+        }
+        public void LugaresM()
+        {
+
+
+            Conexion();
+            conexion.Open();
+            NpgsqlCommand cmd = new NpgsqlCommand("SELECT id,nombre FROM lugares WHERE nombre = '" + LugaresMOD.SelectedItem + "'", conexion);
+            NpgsqlDataReader dr = cmd.ExecuteReader();
+            if (dr.HasRows)
+            {
+                while (dr.Read())
+                {
+                    IDmodL.Text = dr.GetString(0);
+                    nombremodl.Text = dr.GetString(1);
+                  
+
+
+
+                }
+
+                conexion.Close();
+
+
+
+            }
+        }
+        public void LugaresD()
+        {
+
+
+            Conexion();
+            conexion.Open();
+            NpgsqlCommand cmd = new NpgsqlCommand("SELECT id,nombre FROM lugares WHERE nombre = '" + ComboboxLugaresDelete.SelectedItem + "'", conexion);
+            NpgsqlDataReader dr = cmd.ExecuteReader();
+            if (dr.HasRows)
+            {
+                while (dr.Read())
+                {
+                   
+                    IDdeleteL.Text = dr.GetString(0);
+
+
+
+                }
+
+                conexion.Close();
+
+
+
+            }
+        }
+        public void AeropuertoM()
+        {
+
+
+            Conexion();
+            conexion.Open();
+            NpgsqlCommand cmd = new NpgsqlCommand("SELECT id,nombre,localidad,iata FROM aeropuertos WHERE nombre = '" + AeropuertoMod.SelectedItem + "'", conexion);
+            NpgsqlDataReader dr = cmd.ExecuteReader();
+            if (dr.HasRows)
+            {
+                while (dr.Read())
+                {   
+                    IDmodAeropuerto.Text = dr.GetString(0);
+                    nombreMODAeropuerto.Text = dr.GetString(1);
+                    modLocalidadAeropuerto.Text = dr.GetString(2);
+                    iataMODAeropuerto.Text = dr.GetString(3);
+
+
+
+
+                }
+
+                conexion.Close();
+
+
+
+            }
+        }
+        public void AeropuertoD()
+        {
+
+
+            Conexion();
+            conexion.Open();
+            NpgsqlCommand cmd = new NpgsqlCommand("SELECT id,nombre,localidad,iata FROM aeropuertos WHERE nombre = '" + ComboboxAeropuertoDelete.SelectedItem + "'", conexion);
+            NpgsqlDataReader dr = cmd.ExecuteReader();
+            if (dr.HasRows)
+            {
+                while (dr.Read())
+                {
+                    IDDELETEAeropuerto.Text = dr.GetString(0);
+                   
+
+
+
+                }
+
+                conexion.Close();
+
+
+
+            }
+        }
+        public void RutasM()
+        {
+
+
+            Conexion();
+            conexion.Open();
+            NpgsqlCommand cmd = new NpgsqlCommand("SELECT id,pais_origen,pais_destino,duracion FROM rutas WHERE pais_origen = '" + POmod.SelectedItem + "'and pais_destino='"+PDmod.SelectedItem +"'", conexion);
+            NpgsqlDataReader dr = cmd.ExecuteReader();
+            if (dr.HasRows)
+            {
+                while (dr.Read())
+                {
+                    IDRMOD.Text = dr.GetString(0);
+                    DuracionRmod.Text = dr.GetString(3);
+
+
+
+
+                }
+
+                conexion.Close();
+
+
+
+            }
+        }
+       
+        private void LugaresMOD_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            LugaresM();
+        }
+
+        private void comboBox1_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
+            LugaresD();
+        }
+
+        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            AeropuertoD();
+        }
+
+        private void tabPage17_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void AeropuertoMod_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            AeropuertoM();
+        }
+
+        private void POmod_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            RutasM();
+        }
+
+        private void PDmod_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            RutasM();
+        }
+
+        private void tabControl4_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tabPage23_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBox1_SelectedIndexChanged_2(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void comboBox1_SelectedIndexChanged_3(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBox1_SelectedIndexChanged_4(object sender, EventArgs e)
+        {
+
+        }
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 }
-

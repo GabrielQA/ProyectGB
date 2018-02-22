@@ -60,6 +60,7 @@
     <Compile Include="Cliente.Designer.cs">
       <DependentUpon>Cliente.cs</DependentUpon>
     </Compile>
+    <Compile Include="Conex.cs" />
     <Compile Include="Logeo_Cliente.cs">
       <SubType>Form</SubType>
     </Compile>
