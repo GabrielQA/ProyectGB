@@ -133,12 +133,12 @@
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(888, 266);
             this.dataGridView1.TabIndex = 9;
-          
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView3_CellContentClick);
             this.dataGridView1.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellValueChanged);
             // 
             // tabPage2
             // 
+            this.tabPage2.BackColor = System.Drawing.Color.White;
             this.tabPage2.Controls.Add(this.M1);
             this.tabPage2.Controls.Add(this.M4);
             this.tabPage2.Controls.Add(this.M2);
@@ -151,13 +151,12 @@
             this.tabPage2.Size = new System.Drawing.Size(1043, 414);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Modificar";
-            this.tabPage2.UseVisualStyleBackColor = true;
             this.tabPage2.Click += new System.EventHandler(this.tabPage2_Click);
             // 
             // M1
             // 
             this.M1.Enabled = false;
-            this.M1.Location = new System.Drawing.Point(107, 313);
+            this.M1.Location = new System.Drawing.Point(142, 327);
             this.M1.Name = "M1";
             this.M1.Size = new System.Drawing.Size(175, 22);
             this.M1.TabIndex = 19;
@@ -165,7 +164,7 @@
             // 
             // M4
             // 
-            this.M4.Location = new System.Drawing.Point(634, 313);
+            this.M4.Location = new System.Drawing.Point(669, 327);
             this.M4.Name = "M4";
             this.M4.Size = new System.Drawing.Size(175, 22);
             this.M4.TabIndex = 18;
@@ -173,7 +172,7 @@
             // 
             // M2
             // 
-            this.M2.Location = new System.Drawing.Point(288, 313);
+            this.M2.Location = new System.Drawing.Point(323, 327);
             this.M2.Name = "M2";
             this.M2.Size = new System.Drawing.Size(166, 22);
             this.M2.TabIndex = 17;
@@ -181,7 +180,7 @@
             // 
             // M3
             // 
-            this.M3.Location = new System.Drawing.Point(460, 313);
+            this.M3.Location = new System.Drawing.Point(495, 327);
             this.M3.Name = "M3";
             this.M3.Size = new System.Drawing.Size(165, 22);
             this.M3.TabIndex = 16;
@@ -200,7 +199,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(823, 313);
+            this.button2.Location = new System.Drawing.Point(863, 319);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(135, 38);
             this.button2.TabIndex = 0;
@@ -228,6 +227,7 @@
             this.dataGridView3.RowTemplate.Height = 24;
             this.dataGridView3.Size = new System.Drawing.Size(888, 266);
             this.dataGridView3.TabIndex = 20;
+            this.dataGridView3.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView3_CellClick);
             this.dataGridView3.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView3_CellContentClick);
             // 
             // button3
@@ -238,6 +238,7 @@
             this.button3.TabIndex = 0;
             this.button3.Text = "Eliminar";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.VisibleChanged += new System.EventHandler(this.button3_VisibleChanged);
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // Aeropuertos

@@ -155,21 +155,25 @@ namespace WindowsFormsApp1
         private void button2_Click(object sender, EventArgs e)
         {
             conexion.Open();
-            nombre = (A2.Text);
-            localidad = (A3.Text);
-            iata = Convert.ToInt32(A4.Text);
+            nombre = (M2.Text);
+            localidad = (M3.Text);
+            iata = Convert.ToInt32(M4.Text);
             DataGridViewRow FILA = dataGridView1.CurrentRow;
             id = Convert.ToInt32(FILA.Cells[0].Value);
-            actualizar();
+            actualizarM();
             dataSet.Clear();
             dataGridView1.DataSource = dataSet.Tables[0];
             Query = "SELECT * FROM aeropuertos;";
             NpgsqlDataAdapter add = new NpgsqlDataAdapter(Query, conexion);
             add.Fill(dataSet);
             dataGridView1.DataSource = dataSet.Tables[0];
-            A2.Clear();
-            A3.Clear();
-            A4.Clear();
+            M1.Clear();
+            M2.Clear();
+            M3.Clear();
+            M4.Clear();
+
+            
+            
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -191,7 +195,23 @@ namespace WindowsFormsApp1
             A4.Clear();
             conexion.Close();
         }
-         public void actualizar()
+        public void actualizarM()
+        {
+            try
+            {
+
+                NpgsqlCommand cmd = new NpgsqlCommand("UPDATE aeropuertos SET nombre = '" + M2.Text + "', localidad = '" + M3.Text + "', iata= '" + M4.Text + "' WHERE id = '" + Convert.ToInt32(M1.Text) + "'", conexion);
+                cmd.ExecuteNonQuery();
+                conexion.Close();
+                MessageBox.Show("Informacion modificada correctamente");
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Fallo al modificar la informacion");
+            }
+
+        }
+        public void actualizar()
         {
             try
             {
@@ -245,8 +265,8 @@ namespace WindowsFormsApp1
 
         private void dataGridView3_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            DataGridViewRow fila = dataGridView3.CurrentRow;
-            
+          
+
         }
 
         private void dataGridView2_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -283,6 +303,30 @@ namespace WindowsFormsApp1
 
         }
 
-       
+        private void dataGridView3_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+            conexion.Open();
+            DataGridViewRow fila = dataGridView1.CurrentRow;
+            id = Convert.ToInt32(fila.Cells[0].Value);
+            eliminarR(id);
+
+            dataSet.Clear();
+            dataGridView1.DataSource = dataSet.Tables[0];
+
+            Query = "SELECT * FROM aeropuertos;";
+            NpgsqlDataAdapter add = new NpgsqlDataAdapter(Query, conexion);
+            add.Fill(dataSet);
+            dataGridView1.DataSource = dataSet.Tables[0];
+            A2.Clear();
+            A3.Clear();
+            A4.Clear();
+            conexion.Close();
+        }
+
+        private void button3_VisibleChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
