@@ -124,6 +124,7 @@
             this.label29 = new System.Windows.Forms.Label();
             this.button12 = new System.Windows.Forms.Button();
             this.tabPage23 = new System.Windows.Forms.TabPage();
+            this.comboboxdeleteRuta = new System.Windows.Forms.ComboBox();
             this.button13 = new System.Windows.Forms.Button();
             this.label30 = new System.Windows.Forms.Label();
             this.tabPage5 = new System.Windows.Forms.TabPage();
@@ -238,17 +239,16 @@
             this.tabPage9 = new System.Windows.Forms.TabPage();
             this.tabControl9 = new System.Windows.Forms.TabControl();
             this.tabPage32 = new System.Windows.Forms.TabPage();
+            this.button26 = new System.Windows.Forms.Button();
             this.tabPage33 = new System.Windows.Forms.TabPage();
             this.tabPage34 = new System.Windows.Forms.TabPage();
             this.tabPage36 = new System.Windows.Forms.TabPage();
             this.tabPage37 = new System.Windows.Forms.TabPage();
             this.tabPage38 = new System.Windows.Forms.TabPage();
             this.tabPage39 = new System.Windows.Forms.TabPage();
-            this.AeropuertosDT = new System.Windows.Forms.TabPage();
-            this.label68 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.tabPage40 = new System.Windows.Forms.TabPage();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.button1 = new System.Windows.Forms.Button();
-            this.comboboxdeleteRuta = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.Paises.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -299,8 +299,9 @@
             this.tabPage31.SuspendLayout();
             this.tabPage9.SuspendLayout();
             this.tabControl9.SuspendLayout();
-            this.AeropuertosDT.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.tabPage32.SuspendLayout();
+            this.tabPage40.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -327,12 +328,12 @@
             this.Paises.Controls.Add(this.tabPage7);
             this.Paises.Controls.Add(this.tabPage8);
             this.Paises.Controls.Add(this.tabPage9);
-            this.Paises.Controls.Add(this.AeropuertosDT);
-            this.Paises.Location = new System.Drawing.Point(24, 13);
+            this.Paises.Controls.Add(this.tabPage40);
+            this.Paises.Location = new System.Drawing.Point(49, 19);
             this.Paises.Margin = new System.Windows.Forms.Padding(4);
             this.Paises.Name = "Paises";
             this.Paises.SelectedIndex = 0;
-            this.Paises.Size = new System.Drawing.Size(720, 421);
+            this.Paises.Size = new System.Drawing.Size(757, 421);
             this.Paises.TabIndex = 33;
             this.Paises.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Paises_MouseClick);
             // 
@@ -343,7 +344,7 @@
             this.tabPage1.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(4);
-            this.tabPage1.Size = new System.Drawing.Size(712, 392);
+            this.tabPage1.Size = new System.Drawing.Size(749, 392);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Paises";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -357,7 +358,7 @@
             this.tabControl1.Margin = new System.Windows.Forms.Padding(4);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(716, 389);
+            this.tabControl1.Size = new System.Drawing.Size(749, 389);
             this.tabControl1.TabIndex = 1;
             this.tabControl1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.tabControl1_MouseClick);
             // 
@@ -374,7 +375,7 @@
             this.tabPage10.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage10.Name = "tabPage10";
             this.tabPage10.Padding = new System.Windows.Forms.Padding(4);
-            this.tabPage10.Size = new System.Drawing.Size(708, 360);
+            this.tabPage10.Size = new System.Drawing.Size(741, 360);
             this.tabPage10.TabIndex = 0;
             this.tabPage10.Text = "Agregar";
             this.tabPage10.UseVisualStyleBackColor = true;
@@ -462,7 +463,7 @@
             this.Modificar.Margin = new System.Windows.Forms.Padding(4);
             this.Modificar.Name = "Modificar";
             this.Modificar.Padding = new System.Windows.Forms.Padding(4);
-            this.Modificar.Size = new System.Drawing.Size(708, 360);
+            this.Modificar.Size = new System.Drawing.Size(741, 360);
             this.Modificar.TabIndex = 1;
             this.Modificar.Text = "Modificar";
             this.Modificar.UseVisualStyleBackColor = true;
@@ -544,7 +545,7 @@
             this.tabPage11.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage11.Name = "tabPage11";
             this.tabPage11.Padding = new System.Windows.Forms.Padding(4);
-            this.tabPage11.Size = new System.Drawing.Size(708, 360);
+            this.tabPage11.Size = new System.Drawing.Size(741, 360);
             this.tabPage11.TabIndex = 2;
             this.tabPage11.Text = "Eliminar";
             this.tabPage11.UseVisualStyleBackColor = true;
@@ -589,7 +590,7 @@
             this.tabPage2.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(4);
-            this.tabPage2.Size = new System.Drawing.Size(712, 392);
+            this.tabPage2.Size = new System.Drawing.Size(749, 392);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Lugares";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -814,7 +815,7 @@
             this.tabPage3.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(4);
-            this.tabPage3.Size = new System.Drawing.Size(712, 392);
+            this.tabPage3.Size = new System.Drawing.Size(749, 392);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Aeropuertos";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -1117,7 +1118,7 @@
             this.tabPage4.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Padding = new System.Windows.Forms.Padding(4);
-            this.tabPage4.Size = new System.Drawing.Size(712, 392);
+            this.tabPage4.Size = new System.Drawing.Size(749, 392);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Rutas";
             this.tabPage4.UseVisualStyleBackColor = true;
@@ -1387,6 +1388,18 @@
             this.tabPage23.Click += new System.EventHandler(this.tabPage23_Click);
             this.tabPage23.MouseClick += new System.Windows.Forms.MouseEventHandler(this.tabPage23_MouseClick);
             // 
+            // comboboxdeleteRuta
+            // 
+            this.comboboxdeleteRuta.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboboxdeleteRuta.FormattingEnabled = true;
+            this.comboboxdeleteRuta.Location = new System.Drawing.Point(224, 45);
+            this.comboboxdeleteRuta.Margin = new System.Windows.Forms.Padding(4);
+            this.comboboxdeleteRuta.Name = "comboboxdeleteRuta";
+            this.comboboxdeleteRuta.Size = new System.Drawing.Size(204, 24);
+            this.comboboxdeleteRuta.TabIndex = 65;
+            this.comboboxdeleteRuta.SelectedIndexChanged += new System.EventHandler(this.comboboxdeleteRuta_SelectedIndexChanged);
+            this.comboboxdeleteRuta.MouseClick += new System.Windows.Forms.MouseEventHandler(this.comboboxdeleteRuta_MouseClick_1);
+            // 
             // button13
             // 
             this.button13.Location = new System.Drawing.Point(333, 87);
@@ -1415,7 +1428,7 @@
             this.tabPage5.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage5.Name = "tabPage5";
             this.tabPage5.Padding = new System.Windows.Forms.Padding(4);
-            this.tabPage5.Size = new System.Drawing.Size(712, 392);
+            this.tabPage5.Size = new System.Drawing.Size(749, 392);
             this.tabPage5.TabIndex = 4;
             this.tabPage5.Text = "Hoteles";
             this.tabPage5.UseVisualStyleBackColor = true;
@@ -1781,7 +1794,7 @@
             this.tabPage6.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage6.Name = "tabPage6";
             this.tabPage6.Padding = new System.Windows.Forms.Padding(4);
-            this.tabPage6.Size = new System.Drawing.Size(712, 392);
+            this.tabPage6.Size = new System.Drawing.Size(749, 392);
             this.tabPage6.TabIndex = 5;
             this.tabPage6.Text = "Tarifas Hoteles";
             this.tabPage6.UseVisualStyleBackColor = true;
@@ -1996,7 +2009,7 @@
             this.tabPage7.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage7.Name = "tabPage7";
             this.tabPage7.Padding = new System.Windows.Forms.Padding(4);
-            this.tabPage7.Size = new System.Drawing.Size(712, 392);
+            this.tabPage7.Size = new System.Drawing.Size(749, 392);
             this.tabPage7.TabIndex = 6;
             this.tabPage7.Text = "Tarifas Vuelos";
             this.tabPage7.UseVisualStyleBackColor = true;
@@ -2248,7 +2261,7 @@
             this.tabPage8.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage8.Name = "tabPage8";
             this.tabPage8.Padding = new System.Windows.Forms.Padding(4);
-            this.tabPage8.Size = new System.Drawing.Size(712, 392);
+            this.tabPage8.Size = new System.Drawing.Size(749, 392);
             this.tabPage8.TabIndex = 7;
             this.tabPage8.Text = "Vehiculos";
             this.tabPage8.UseVisualStyleBackColor = true;
@@ -2437,7 +2450,6 @@
             // 
             // IDVehiculoMod
             // 
-            this.IDVehiculoMod.Enabled = false;
             this.IDVehiculoMod.FormattingEnabled = true;
             this.IDVehiculoMod.Location = new System.Drawing.Point(210, 43);
             this.IDVehiculoMod.Name = "IDVehiculoMod";
@@ -2610,7 +2622,7 @@
             this.tabPage9.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage9.Name = "tabPage9";
             this.tabPage9.Padding = new System.Windows.Forms.Padding(4);
-            this.tabPage9.Size = new System.Drawing.Size(712, 392);
+            this.tabPage9.Size = new System.Drawing.Size(749, 392);
             this.tabPage9.TabIndex = 8;
             this.tabPage9.Text = "Reportes";
             this.tabPage9.UseVisualStyleBackColor = true;
@@ -2633,6 +2645,7 @@
             // 
             // tabPage32
             // 
+            this.tabPage32.Controls.Add(this.button26);
             this.tabPage32.Location = new System.Drawing.Point(4, 25);
             this.tabPage32.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage32.Name = "tabPage32";
@@ -2641,6 +2654,15 @@
             this.tabPage32.TabIndex = 0;
             this.tabPage32.Text = "Reporte 1";
             this.tabPage32.UseVisualStyleBackColor = true;
+            // 
+            // button26
+            // 
+            this.button26.Location = new System.Drawing.Point(590, 32);
+            this.button26.Name = "button26";
+            this.button26.Size = new System.Drawing.Size(95, 26);
+            this.button26.TabIndex = 0;
+            this.button26.Text = "button26";
+            this.button26.UseVisualStyleBackColor = true;
             // 
             // tabPage33
             // 
@@ -2708,37 +2730,29 @@
             this.tabPage39.Text = "Reporte 7";
             this.tabPage39.UseVisualStyleBackColor = true;
             // 
-            // AeropuertosDT
+            // tabPage40
             // 
-            this.AeropuertosDT.Controls.Add(this.label68);
-            this.AeropuertosDT.Controls.Add(this.dataGridView1);
-            this.AeropuertosDT.Location = new System.Drawing.Point(4, 25);
-            this.AeropuertosDT.Name = "AeropuertosDT";
-            this.AeropuertosDT.Padding = new System.Windows.Forms.Padding(3);
-            this.AeropuertosDT.Size = new System.Drawing.Size(712, 392);
-            this.AeropuertosDT.TabIndex = 9;
-            this.AeropuertosDT.Text = "Aeropuertos";
-            this.AeropuertosDT.UseVisualStyleBackColor = true;
+            this.tabPage40.Controls.Add(this.pictureBox2);
+            this.tabPage40.Location = new System.Drawing.Point(4, 25);
+            this.tabPage40.Name = "tabPage40";
+            this.tabPage40.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage40.Size = new System.Drawing.Size(749, 392);
+            this.tabPage40.TabIndex = 9;
+            this.tabPage40.Text = "Aeropuertos";
+            this.tabPage40.UseVisualStyleBackColor = true;
             // 
-            // label68
+            // pictureBox2
             // 
-            this.label68.AutoSize = true;
-            this.label68.BackColor = System.Drawing.Color.Transparent;
-            this.label68.Location = new System.Drawing.Point(86, 50);
-            this.label68.Name = "label68";
-            this.label68.Size = new System.Drawing.Size(86, 17);
-            this.label68.TabIndex = 1;
-            this.label68.Text = "Aeropuertos";
-            this.label68.Click += new System.EventHandler(this.label68_Click);
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(89, 91);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(526, 268);
-            this.dataGridView1.TabIndex = 0;
+            this.pictureBox2.ErrorImage = ((System.Drawing.Image)(resources.GetObject("pictureBox2.ErrorImage")));
+            this.pictureBox2.Location = new System.Drawing.Point(-4, 0);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(757, 396);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 3;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.MouseHover += new System.EventHandler(this.pictureBox2_MouseHover);
+            this.pictureBox2.MouseUp += new System.Windows.Forms.MouseEventHandler(this.pictureBox2_MouseUp);
             // 
             // button1
             // 
@@ -2751,16 +2765,6 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // comboboxdeleteRuta
-            // 
-            this.comboboxdeleteRuta.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboboxdeleteRuta.FormattingEnabled = true;
-            this.comboboxdeleteRuta.Location = new System.Drawing.Point(224, 45);
-            this.comboboxdeleteRuta.Margin = new System.Windows.Forms.Padding(4);
-            this.comboboxdeleteRuta.Name = "comboboxdeleteRuta";
-            this.comboboxdeleteRuta.Size = new System.Drawing.Size(204, 24);
-            this.comboboxdeleteRuta.TabIndex = 65;
-            // 
             // Administrador
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -2772,6 +2776,7 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Administrador";
             this.Text = "Administrador";
+            this.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Administrador_MouseClick);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.Paises.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
@@ -2846,9 +2851,9 @@
             this.tabPage31.PerformLayout();
             this.tabPage9.ResumeLayout(false);
             this.tabControl9.ResumeLayout(false);
-            this.AeropuertosDT.ResumeLayout(false);
-            this.AeropuertosDT.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.tabPage32.ResumeLayout(false);
+            this.tabPage40.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -3067,13 +3072,13 @@
         private System.Windows.Forms.ComboBox IDvehiculoDelete;
         private System.Windows.Forms.ComboBox IDVehiculoMod;
         private System.Windows.Forms.ComboBox RutaTarifaVuelosMOD;
-        private System.Windows.Forms.TabPage AeropuertosDT;
         private System.Windows.Forms.ComboBox IDTarifaVuelosMod;
-        private System.Windows.Forms.Label label68;
-        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.NumericUpDown DuracionRadd;
         private System.Windows.Forms.NumericUpDown DuracionRmod;
         private System.Windows.Forms.ComboBox IDRMOD;
         private System.Windows.Forms.ComboBox comboboxdeleteRuta;
+        private System.Windows.Forms.Button button26;
+        private System.Windows.Forms.TabPage tabPage40;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }

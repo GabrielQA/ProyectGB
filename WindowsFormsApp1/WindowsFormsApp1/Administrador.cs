@@ -432,6 +432,7 @@ namespace WindowsFormsApp1
         }
         public void EliminarDatosRutas()
         {
+
             try
             {
                 Conexion();
@@ -581,7 +582,8 @@ namespace WindowsFormsApp1
             {
                 Conexion();
                 conexion.Open();
-                NpgsqlCommand cmd = new NpgsqlCommand("UPDATE vuelos SET ruta = '" + IDTarifaVuelosMod.Text + "','precio =" + PreciosTarifaVuelosMod + "' WHERE id = '" + Convert.ToInt32(RutaTarifaVuelosMOD.Text) + "'", conexion);
+                //NpgsqlCommand cmd = new NpgsqlCommand("UPDATE vuelos SET ruta = '" + RutaTarifaVuelosMOD.Text + "','precio =" + PreciosTarifaVuelosMod.Text + "' WHERE id = '" + IDTarifaVuelosMod.Text + "'", conexion);
+                NpgsqlCommand cmd = new NpgsqlCommand("UPDATE vuelos SET ruta = '" + RutaTarifaVuelosMOD.Text + "', precio = '" + PreciosTarifaVuelosMod.Text + "'WHERE id = '" + Convert.ToInt32(IDTarifaVuelosMod.Text) + "'", conexion);
                 cmd.ExecuteNonQuery();
                 conexion.Close();
                 MessageBox.Show("Informacion modificada correctamente");
@@ -734,7 +736,9 @@ namespace WindowsFormsApp1
 
         private void button13_Click(object sender, EventArgs e)
         {
-            EliminarDatosRutas(); clearAll();
+
+            EliminarDatosRutas();
+           
         }
 
         private void button14_Click(object sender, EventArgs e)
@@ -770,7 +774,9 @@ namespace WindowsFormsApp1
         private void button20_Click(object sender, EventArgs e)
         {
             InsertarDatosTarifaVuelos();
-            clearAll();
+            IDTarifaVuelosADD.Clear();
+            RutaTarifaVuelosADD.Items.Clear();
+            PrecioTarifaVuelosADD.Clear();
         }
 
         private void button21_Click(object sender, EventArgs e)
@@ -895,6 +901,7 @@ namespace WindowsFormsApp1
         private void RutaTarifaVuelosMOD_SelectedIndexChanged(object sender, EventArgs e)
         {
             TarifaVuelos();
+
         }
 
         private void imagemodPaises_Click(object sender, EventArgs e)
@@ -1117,7 +1124,8 @@ namespace WindowsFormsApp1
             {
                 while (dr.Read())
                 {
-                    
+                    RutaTarifaVuelosMOD.Items.Add(dr.GetString(1));
+                 
                     PreciosTarifaVuelosMod.Text = dr.GetString(2);
 
 
@@ -1283,9 +1291,8 @@ namespace WindowsFormsApp1
             iataMODAeropuerto.Clear();
             IDDELETEAeropuerto.Clear();
             IDRadd.Clear();
-           
-            
-            
+
+
             IDHotelesAdd.Clear();
             nombreHotelesAdd.Clear();
             habitacionHotelesADD.Clear();
@@ -1293,7 +1300,7 @@ namespace WindowsFormsApp1
             PrecioTarifaHotelesADD.Clear();
             IDTarifaHotelesMod.Clear();
             PrecioTarifaHotelesMod.Clear();
-            IDTarifaVuelosADD.Clear();
+           
             PrecioTarifaVuelosADD.Clear();
             PreciosTarifaVuelosMod.Clear();
             IDVehiculoADD.Clear();
@@ -1312,7 +1319,7 @@ namespace WindowsFormsApp1
             TarifaHdelete.Items.Clear();
             ComboboxtarifaH.Items.Clear();
             RutaTarifaVuelosADD.Items.Clear();
-            IDTarifaVuelosMod.Items.Clear();
+            
             RutaTarifaVuelosMOD.Items.Clear();
             IDTarifaVuelosDelete.Items.Clear();
             IDVehiculoMod.Items.Clear();
@@ -1531,6 +1538,8 @@ namespace WindowsFormsApp1
 
         private void IDTarifaVuelosMod_MouseClick(object sender, MouseEventArgs e)
         {
+           
+            IDTarifaVuelosMod.Items.Clear();
             TarifaV();
         }
 
@@ -1609,8 +1618,46 @@ namespace WindowsFormsApp1
         private void comboboxdeleteRuta_MouseClick(object sender, MouseEventArgs e)
         {
 
+            
+            
+        }
+
+        private void comboboxdeleteRuta_MouseClick_1(object sender, MouseEventArgs e)
+        {
             comboboxdeleteRuta.Items.Clear();
             Rutas();
+        }
+
+        private void comboboxdeleteRuta_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+
+
+        private void Administrador_MouseClick(object sender, MouseEventArgs e)
+        {
+
+        }
+
+
+        private void label68_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox2_MouseHover(object sender, EventArgs e)
+        {
+            this.Hide();
+            Aeropuertos v = new Aeropuertos();
+            v.Show();
+        }
+
+        private void pictureBox2_MouseUp(object sender, MouseEventArgs e)
+        {
+            this.Hide();
+            Aeropuertos v = new Aeropuertos();
+            v.Show();
         }
     }
 }
