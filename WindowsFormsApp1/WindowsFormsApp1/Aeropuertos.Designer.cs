@@ -45,7 +45,6 @@
             this.button2 = new System.Windows.Forms.Button();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
-            this.button3 = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -111,7 +110,7 @@
             // 
             this.A3.Location = new System.Drawing.Point(460, 304);
             this.A3.Name = "A3";
-            this.A3.Size = new System.Drawing.Size(169, 22);
+            this.A3.Size = new System.Drawing.Size(180, 22);
             this.A3.TabIndex = 11;
             this.A3.TextChanged += new System.EventHandler(this.b_TextChanged);
             // 
@@ -152,6 +151,7 @@
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Modificar";
             this.tabPage2.Click += new System.EventHandler(this.tabPage2_Click);
+            this.tabPage2.MouseHover += new System.EventHandler(this.tabPage2_MouseHover);
             // 
             // M1
             // 
@@ -199,7 +199,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(863, 319);
+            this.button2.Location = new System.Drawing.Point(888, 327);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(135, 38);
             this.button2.TabIndex = 0;
@@ -210,7 +210,6 @@
             // tabPage3
             // 
             this.tabPage3.Controls.Add(this.dataGridView3);
-            this.tabPage3.Controls.Add(this.button3);
             this.tabPage3.Location = new System.Drawing.Point(4, 25);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
@@ -229,17 +228,6 @@
             this.dataGridView3.TabIndex = 20;
             this.dataGridView3.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView3_CellClick);
             this.dataGridView3.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView3_CellContentClick);
-            // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(830, 346);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(135, 38);
-            this.button3.TabIndex = 0;
-            this.button3.Text = "Eliminar";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.VisibleChanged += new System.EventHandler(this.button3_VisibleChanged);
-            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // Aeropuertos
             // 
@@ -275,7 +263,6 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
         private System.Windows.Forms.TextBox M1;
         private System.Windows.Forms.TextBox M4;
         private System.Windows.Forms.TextBox M2;

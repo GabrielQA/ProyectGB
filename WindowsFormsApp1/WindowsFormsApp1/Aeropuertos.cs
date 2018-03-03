@@ -328,5 +328,10 @@ namespace WindowsFormsApp1
         {
 
         }
+
+        private void tabPage2_MouseHover(object sender, EventArgs e)
+        {
+           
+        }
     }
 }
