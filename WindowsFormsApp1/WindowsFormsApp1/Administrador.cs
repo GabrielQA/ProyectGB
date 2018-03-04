@@ -128,15 +128,10 @@ namespace WindowsFormsApp1
             {
                 while (dr.Read())
                 {
-                    
                     RutaTarifaVuelosADD.Items.Add(dr.GetString(0));
                     RutaTarifaVuelosMOD.Items.Add(dr.GetString(0));
                     IDRMOD.Items.Add(dr.GetString(0));
                     comboboxdeleteRuta.Items.Add(dr.GetString(0));
-
-
-
-
                 }
             }
             conexion.Close();
@@ -157,8 +152,6 @@ namespace WindowsFormsApp1
                 {
                     ComboboxAeropuertoDelete.Items.Add(dr.GetString(1));
                     IDDELETEAeropuerto.Text = dr.GetString(0);
-
-
                     AeropuertoMod.Items.Add(dr.GetString(1));
                     IDmodAeropuerto.Text = dr.GetString(0);
                     nombreMODAeropuerto.Text = dr.GetString(1);
@@ -237,7 +230,7 @@ namespace WindowsFormsApp1
             string servidor = "localhost";
             int puerto = 5432;
             string usuario = "postgres";
-            int clave = 123;
+            string clave = "bryan2748245";
             string baseDatos = "proyectgb";
 
             cadenaConexion = "Server=" + servidor + "; " + "Port=" + puerto + "; " + "User Id=" + usuario + "; " + "Password=" + clave + "; " + "Database=" + baseDatos;

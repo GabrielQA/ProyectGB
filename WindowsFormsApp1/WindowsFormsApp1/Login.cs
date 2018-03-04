@@ -113,7 +113,7 @@ namespace WindowsFormsApp1
                 if (entra.Read())
                 {
                     this.Hide();
-                    Cliente a = new Cliente();
+                    formAlojamiento a = new formAlojamiento();
                     a.Show();
                     
                    A = true;  

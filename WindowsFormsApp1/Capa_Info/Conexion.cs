@@ -8,26 +8,20 @@ namespace Capa_Info
 {
     public class Conexion
     {
-        static string cadenaConexion = null;
-        static NpgsqlConnection conexion;
-        // static NpgsqlCommand cmd;
-        public Conexion()
+        public static string cadenaConexion = null;
+        public static NpgsqlConnection conexion;
+        public static NpgsqlCommand cmd;
+        public static void Coneccion()
         {
-
-
-            
-
-              string servidor = "localhost";
+                string servidor = "localhost";
                 int puerto = 5432;
                 string usuario = "postgres";
-                string clave = "123";
+                string clave = "bryan2748245";
                 string baseDatos = "proyectgb";
 
                 cadenaConexion = "Server=" + servidor + "; " + "Port=" + puerto + "; " + "User Id=" + usuario + "; " + "Password=" + clave + "; " + "Database=" + baseDatos;
                 conexion = new NpgsqlConnection(cadenaConexion);
                 Console.WriteLine(cadenaConexion);
-
-            
         }
     }
 }
