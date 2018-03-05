@@ -14,10 +14,14 @@ namespace WindowsFormsApp1
 {
     public partial class formAlojamiento : Form
     {
+        DataSet hoteles = new DataSet();
+
         public formAlojamiento()
         {
             InitializeComponent();
             pHabitaciones.Visible = false;
+            btnBuscar.Enabled = false;
+            dgvBusqueda.Visible = false;
         }
 
         public void autoComplete()
@@ -26,7 +30,7 @@ namespace WindowsFormsApp1
             {
                 Conexion.Coneccion();
                 Conexion.conexion.Open();
-                Conexion.cmd = new NpgsqlCommand("Select nombre, pais, lugar from hoteles",Conexion.conexion);
+                Conexion.cmd = new NpgsqlCommand("SELECT nombre, pais, lugar FROM hoteles",Conexion.conexion);
                 NpgsqlDataReader dr = Conexion.cmd.ExecuteReader();
                 if (dr.HasRows)
                 {
@@ -39,15 +43,15 @@ namespace WindowsFormsApp1
                 }
                 Conexion.conexion.Close();
             }
-            catch (Exception e)
+            catch (Exception ex)
             {
-
+                MessageBox.Show("Error: " + ex);
             }
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            this.Size = new Size(553,313);
+            this.Size = new Size(553, this.Size.Height);
             pHabitaciones.Visible = true;
             lblCantidad.Text = Convert.ToString(spnHabitaciones.Value);
             spnAdultos.Maximum = spnHabitaciones.Value * 4;
@@ -58,16 +62,17 @@ namespace WindowsFormsApp1
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {
-            this.Size = new Size(348, 313);
+            this.Size = new Size(348, this.Size.Height);
             spnHabitaciones.Enabled = true;
             btnCheck.Enabled = true;
         }
 
         private void btnAplicar_Click(object sender, EventArgs e)
         {
-            this.Size = new Size(348, 313);
+            this.Size = new Size(348, this.Size.Height);
             spnHabitaciones.Enabled = true;
             btnCheck.Enabled = true;
+            btnBuscar.Enabled = true;
         }
 
         private void dtpFecha2_ValueChanged(object sender, EventArgs e)
@@ -87,6 +92,55 @@ namespace WindowsFormsApp1
         private void formAlojamiento_Load(object sender, EventArgs e)
         {
             autoComplete();
+        }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            dgvBusqueda.Visible = true;
+            dgvBusqueda.DataSource = null;
+            this.Size = new Size(348, 355);
+            try
+            {
+                if (txtDestino.Text.Equals(""))
+                {
+                    hoteles.Clear();
+                    dgvBusqueda.Rows.Clear();
+                    Conexion.Coneccion();
+                    Conexion.conexion.Open();
+                    NpgsqlDataAdapter read = new NpgsqlDataAdapter("SELECT nombre, pais, lugar FROM hoteles", Conexion.conexion);
+                    read.Fill(hoteles);
+                    Conexion.conexion.Close();
+                    DataTable dtAll = hoteles.Tables[0].Copy();
+                    for (var i= 1; i < hoteles.Tables.Count; i++)
+                    {
+                        dtAll.Merge(hoteles.Tables[i]);
+                    }
+                    dgvBusqueda.AutoGenerateColumns = true;
+                    dgvBusqueda.DataSource = dtAll;
+
+                }
+                else
+                {
+                    hoteles.Clear();
+                    dgvBusqueda.Rows.Clear();
+                    Conexion.Coneccion();
+                    Conexion.conexion.Open();
+                    NpgsqlDataAdapter read = new NpgsqlDataAdapter("SELECT nombre, pais, lugar FROM hoteles WHERE nombre = '" + txtDestino.Text + "' OR pais = '" + txtDestino.Text + "' OR lugar = '" + txtDestino.Text + "'", Conexion.conexion);
+                    read.Fill(hoteles);
+                    Conexion.conexion.Close();
+                    DataTable dtAll = hoteles.Tables[0].Copy();
+                    for (var i = 1; i < hoteles.Tables.Count; i++)
+                    {
+                        dtAll.Merge(hoteles.Tables[i]);
+                    }
+                    dgvBusqueda.AutoGenerateColumns = true;
+                    dgvBusqueda.DataSource = dtAll;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex);
+            }
         }
     }
 }

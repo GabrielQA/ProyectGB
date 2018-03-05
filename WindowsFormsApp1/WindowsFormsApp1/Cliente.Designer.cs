@@ -49,10 +49,12 @@
             this.btnCheck = new System.Windows.Forms.Button();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.btnBuscar = new System.Windows.Forms.Button();
+            this.dgvBusqueda = new System.Windows.Forms.DataGridView();
             this.pHabitaciones.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.spnMenores)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.spnAdultos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.spnHabitaciones)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvBusqueda)).BeginInit();
             this.SuspendLayout();
             // 
             // txtDestino
@@ -76,7 +78,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(12, 54);
+            this.label2.Location = new System.Drawing.Point(12, 66);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(45, 13);
             this.label2.TabIndex = 2;
@@ -85,7 +87,7 @@
             // lblNoches
             // 
             this.lblNoches.AutoSize = true;
-            this.lblNoches.Location = new System.Drawing.Point(113, 54);
+            this.lblNoches.Location = new System.Drawing.Point(113, 66);
             this.lblNoches.Name = "lblNoches";
             this.lblNoches.Size = new System.Drawing.Size(44, 13);
             this.lblNoches.TabIndex = 3;
@@ -95,7 +97,7 @@
             // 
             this.dtpFecha1.CustomFormat = "dd/MM/yyyy";
             this.dtpFecha1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpFecha1.Location = new System.Drawing.Point(15, 70);
+            this.dtpFecha1.Location = new System.Drawing.Point(15, 83);
             this.dtpFecha1.Name = "dtpFecha1";
             this.dtpFecha1.Size = new System.Drawing.Size(95, 20);
             this.dtpFecha1.TabIndex = 4;
@@ -105,7 +107,7 @@
             // 
             this.dtpFecha2.CustomFormat = "dd/MM/yyyy";
             this.dtpFecha2.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpFecha2.Location = new System.Drawing.Point(116, 70);
+            this.dtpFecha2.Location = new System.Drawing.Point(116, 83);
             this.dtpFecha2.Name = "dtpFecha2";
             this.dtpFecha2.Size = new System.Drawing.Size(98, 20);
             this.dtpFecha2.TabIndex = 5;
@@ -114,7 +116,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(232, 54);
+            this.label4.Location = new System.Drawing.Point(232, 66);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(72, 13);
             this.label4.TabIndex = 6;
@@ -220,7 +222,7 @@
             // 
             // spnHabitaciones
             // 
-            this.spnHabitaciones.Location = new System.Drawing.Point(235, 70);
+            this.spnHabitaciones.Location = new System.Drawing.Point(235, 83);
             this.spnHabitaciones.Maximum = new decimal(new int[] {
             9999999,
             0,
@@ -238,7 +240,7 @@
             // 
             // btnCheck
             // 
-            this.btnCheck.Location = new System.Drawing.Point(284, 70);
+            this.btnCheck.Location = new System.Drawing.Point(284, 83);
             this.btnCheck.Name = "btnCheck";
             this.btnCheck.Size = new System.Drawing.Size(30, 20);
             this.btnCheck.TabIndex = 9;
@@ -249,18 +251,32 @@
             // 
             // btnBuscar
             // 
-            this.btnBuscar.Location = new System.Drawing.Point(15, 115);
+            this.btnBuscar.Location = new System.Drawing.Point(15, 128);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(75, 23);
             this.btnBuscar.TabIndex = 10;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
+            // 
+            // dgvBusqueda
+            // 
+            this.dgvBusqueda.AllowUserToAddRows = false;
+            this.dgvBusqueda.AllowUserToDeleteRows = false;
+            this.dgvBusqueda.AllowUserToOrderColumns = true;
+            this.dgvBusqueda.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvBusqueda.Location = new System.Drawing.Point(12, 162);
+            this.dgvBusqueda.Name = "dgvBusqueda";
+            this.dgvBusqueda.ReadOnly = true;
+            this.dgvBusqueda.Size = new System.Drawing.Size(310, 149);
+            this.dgvBusqueda.TabIndex = 11;
             // 
             // formAlojamiento
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(332, 274);
+            this.ClientSize = new System.Drawing.Size(332, 175);
+            this.Controls.Add(this.dgvBusqueda);
             this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.btnCheck);
             this.Controls.Add(this.spnHabitaciones);
@@ -280,6 +296,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.spnMenores)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.spnAdultos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.spnHabitaciones)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvBusqueda)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -307,5 +324,6 @@
         private System.Windows.Forms.ToolTip toolTip1;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Button btnBuscar;
+        private System.Windows.Forms.DataGridView dgvBusqueda;
     }
 }
