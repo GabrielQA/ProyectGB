@@ -249,6 +249,10 @@
             this.tabPage40 = new System.Windows.Forms.TabPage();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.button1 = new System.Windows.Forms.Button();
+            this.label68 = new System.Windows.Forms.Label();
+            this.Precio = new System.Windows.Forms.ComboBox();
+            this.PrecioM = new System.Windows.Forms.ComboBox();
+            this.label69 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.Paises.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -1447,6 +1451,8 @@
             // 
             // tabPage20
             // 
+            this.tabPage20.Controls.Add(this.Precio);
+            this.tabPage20.Controls.Add(this.label68);
             this.tabPage20.Controls.Add(this.imagenhotel);
             this.tabPage20.Controls.Add(this.LugarHotelesADD);
             this.tabPage20.Controls.Add(this.paisHotelesADD);
@@ -1501,7 +1507,7 @@
             // 
             // button14
             // 
-            this.button14.Location = new System.Drawing.Point(352, 250);
+            this.button14.Location = new System.Drawing.Point(590, 289);
             this.button14.Margin = new System.Windows.Forms.Padding(4);
             this.button14.Name = "button14";
             this.button14.Size = new System.Drawing.Size(95, 28);
@@ -1596,6 +1602,8 @@
             // 
             // tabPage21
             // 
+            this.tabPage21.Controls.Add(this.PrecioM);
+            this.tabPage21.Controls.Add(this.label69);
             this.tabPage21.Controls.Add(this.imagenHotelesMod);
             this.tabPage21.Controls.Add(this.LugarHotelesMod);
             this.tabPage21.Controls.Add(this.paisHotelesMod);
@@ -1650,7 +1658,7 @@
             // 
             // button15
             // 
-            this.button15.Location = new System.Drawing.Point(355, 250);
+            this.button15.Location = new System.Drawing.Point(518, 295);
             this.button15.Margin = new System.Windows.Forms.Padding(4);
             this.button15.Name = "button15";
             this.button15.Size = new System.Drawing.Size(95, 28);
@@ -2765,6 +2773,46 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // label68
+            // 
+            this.label68.AutoSize = true;
+            this.label68.Location = new System.Drawing.Point(23, 300);
+            this.label68.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label68.Name = "label68";
+            this.label68.Size = new System.Drawing.Size(48, 17);
+            this.label68.TabIndex = 57;
+            this.label68.Text = "Precio";
+            // 
+            // Precio
+            // 
+            this.Precio.FormattingEnabled = true;
+            this.Precio.Location = new System.Drawing.Point(119, 297);
+            this.Precio.Margin = new System.Windows.Forms.Padding(4);
+            this.Precio.Name = "Precio";
+            this.Precio.Size = new System.Drawing.Size(204, 24);
+            this.Precio.TabIndex = 58;
+            this.Precio.Click += new System.EventHandler(this.Precio_Click);
+            // 
+            // PrecioM
+            // 
+            this.PrecioM.FormattingEnabled = true;
+            this.PrecioM.Location = new System.Drawing.Point(121, 295);
+            this.PrecioM.Margin = new System.Windows.Forms.Padding(4);
+            this.PrecioM.Name = "PrecioM";
+            this.PrecioM.Size = new System.Drawing.Size(204, 24);
+            this.PrecioM.TabIndex = 60;
+            this.PrecioM.Click += new System.EventHandler(this.PrecioM_Click);
+            // 
+            // label69
+            // 
+            this.label69.AutoSize = true;
+            this.label69.Location = new System.Drawing.Point(25, 298);
+            this.label69.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label69.Name = "label69";
+            this.label69.Size = new System.Drawing.Size(48, 17);
+            this.label69.TabIndex = 59;
+            this.label69.Text = "Precio";
+            // 
             // Administrador
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -3080,5 +3128,9 @@
         private System.Windows.Forms.Button button26;
         private System.Windows.Forms.TabPage tabPage40;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Label label68;
+        private System.Windows.Forms.ComboBox Precio;
+        private System.Windows.Forms.ComboBox PrecioM;
+        private System.Windows.Forms.Label label69;
     }
 }

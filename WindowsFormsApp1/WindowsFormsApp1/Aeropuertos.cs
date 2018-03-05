@@ -154,26 +154,31 @@ namespace WindowsFormsApp1
 
         private void button2_Click(object sender, EventArgs e)
         {
-            conexion.Open();
-            nombre = (M2.Text);
-            localidad = (M3.Text);
-            iata = Convert.ToInt32(M4.Text);
-            DataGridViewRow FILA = dataGridView1.CurrentRow;
-            id = Convert.ToInt32(FILA.Cells[0].Value);
-            actualizarM();
-            dataSet.Clear();
-            dataGridView1.DataSource = dataSet.Tables[0];
-            Query = "SELECT * FROM aeropuertos;";
-            NpgsqlDataAdapter add = new NpgsqlDataAdapter(Query, conexion);
-            add.Fill(dataSet);
-            dataGridView1.DataSource = dataSet.Tables[0];
-            M1.Clear();
-            M2.Clear();
-            M3.Clear();
-            M4.Clear();
+            try {
+                conexion.Open();
+                nombre = (M2.Text);
+                localidad = (M3.Text);
+                iata = Convert.ToInt32(M4.Text);
+                DataGridViewRow FILA = dataGridView1.CurrentRow;
+                id = Convert.ToInt32(FILA.Cells[0].Value);
+                actualizarM();
+                dataSet.Clear();
+                dataGridView1.DataSource = dataSet.Tables[0];
+                Query = "SELECT * FROM aeropuertos;";
+                NpgsqlDataAdapter add = new NpgsqlDataAdapter(Query, conexion);
+                add.Fill(dataSet);
+                dataGridView1.DataSource = dataSet.Tables[0];
+                M1.Clear();
+                M2.Clear();
+                M3.Clear();
+                M4.Clear();
 
-            
-            
+            } catch (Exception)
+            {
+                MessageBox.Show("Los datos no fueron modificados");
+            }
+
+
         }
 
         private void button3_Click(object sender, EventArgs e)

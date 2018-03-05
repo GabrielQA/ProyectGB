@@ -76,7 +76,8 @@ namespace WindowsFormsApp1
                 {
 
 
-
+                    Precio.Items.Add(dr.GetString(1));
+                    PrecioM.Items.Add(dr.GetString(1));
                     TarifaHdelete.Items.Add(dr.GetString(0));
 
                     ComboboxtarifaH.Items.Add(dr.GetString(0));
@@ -230,7 +231,7 @@ namespace WindowsFormsApp1
             string servidor = "localhost";
             int puerto = 5432;
             string usuario = "postgres";
-            string clave = "bryan2748245";
+            string clave = "123";
             string baseDatos = "proyectgb";
 
             cadenaConexion = "Server=" + servidor + "; " + "Port=" + puerto + "; " + "User Id=" + usuario + "; " + "Password=" + clave + "; " + "Database=" + baseDatos;
@@ -453,7 +454,7 @@ namespace WindowsFormsApp1
             {
                 Conexion();
                 conexion.Open();
-                cmd = new NpgsqlCommand("INSERT INTO hoteles (id,nombre,foto,pais,lugar,habitaciones) VALUES ('" + Convert.ToInt32(IDHotelesAdd.Text) + "', '" + nombreHotelesAdd.Text + "', '" + imagenhotel.Text + "', '" + paisHotelesADD.Text + "', '" + LugarHotelesADD.Text + "', '" + habitacionHotelesADD.Text + "')", conexion);
+                cmd = new NpgsqlCommand("INSERT INTO hoteles (id,nombre,foto,pais,lugar,habitaciones,precio) VALUES ('" + Convert.ToInt32(IDHotelesAdd.Text) + "', '" + nombreHotelesAdd.Text + "', '" + imagenhotel.Text + "', '" + paisHotelesADD.Text + "', '" + LugarHotelesADD.Text + "', '" + habitacionHotelesADD.Text + "', '" + Precio.Text + "')", conexion);
                 cmd.ExecuteNonQuery();
                 conexion.Close();
                 MessageBox.Show("Informacion añadida correctamente");
@@ -469,7 +470,7 @@ namespace WindowsFormsApp1
             {
                 Conexion();
                 conexion.Open();
-                NpgsqlCommand cmd = new NpgsqlCommand("UPDATE hoteles SET nombre = '" + NombreHotelesMod.Text + "', foto = '" + imagenHotelesMod.Text + "', pais= '" + paisHotelesMod.Text + "', lugar= '" + LugarHotelesMod.Text + "', habitaciones= '" + habitacionesHotelesMod.Text + "' WHERE id = '" + Convert.ToInt32(IDHotelesMOD.Text) + "'", conexion);
+                NpgsqlCommand cmd = new NpgsqlCommand("UPDATE hoteles SET nombre = '" + NombreHotelesMod.Text + "', foto = '" + imagenHotelesMod.Text + "', pais= '" + paisHotelesMod.Text + "', lugar= '" + LugarHotelesMod.Text + "', habitaciones= '" + habitacionesHotelesMod.Text +"', habitaciones='"+Precio.Text+ "' WHERE id = '" + Convert.ToInt32(IDHotelesMOD.Text) + "'", conexion);
                 cmd.ExecuteNonQuery();
                 conexion.Close();
                 MessageBox.Show("Informacion modificada correctamente");
@@ -1651,6 +1652,18 @@ namespace WindowsFormsApp1
             this.Hide();
             Aeropuertos v = new Aeropuertos();
             v.Show();
+        }
+
+        private void PrecioM_Click(object sender, EventArgs e)
+        {
+            PrecioM.Items.Clear();
+            TarifaH();
+        }
+
+        private void Precio_Click(object sender, EventArgs e)
+        {
+            Precio.Items.Clear();
+            TarifaH();
         }
     }
 }

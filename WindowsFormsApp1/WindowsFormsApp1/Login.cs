@@ -65,8 +65,7 @@ namespace WindowsFormsApp1
         public void ValidarUsuarioAdmin()
         {
           
-            ///Mañana averiguo en un video de youtube que linea codigo se coloca despues de el 
-            ///npgsqlCommanda cmd = etc despues de esa sigue una linea en especifico para que pueda funcionar
+            
             if (txtu.Text.Length == 0 || txtc.Text.Length == 0)
             {
                 MessageBox.Show("Debe de llenar todos los datos.");

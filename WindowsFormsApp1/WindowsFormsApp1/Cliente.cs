@@ -107,7 +107,7 @@ namespace WindowsFormsApp1
                     dgvBusqueda.Rows.Clear();
                     Conexion.Coneccion();
                     Conexion.conexion.Open();
-                    NpgsqlDataAdapter read = new NpgsqlDataAdapter("SELECT nombre, pais, lugar FROM hoteles", Conexion.conexion);
+                    NpgsqlDataAdapter read = new NpgsqlDataAdapter("SELECT nombre, lugar,precio FROM hoteles", Conexion.conexion);
                     read.Fill(hoteles);
                     Conexion.conexion.Close();
                     DataTable dtAll = hoteles.Tables[0].Copy();
@@ -125,7 +125,7 @@ namespace WindowsFormsApp1
                     dgvBusqueda.Rows.Clear();
                     Conexion.Coneccion();
                     Conexion.conexion.Open();
-                    NpgsqlDataAdapter read = new NpgsqlDataAdapter("SELECT nombre, pais, lugar FROM hoteles WHERE nombre = '" + txtDestino.Text + "' OR pais = '" + txtDestino.Text + "' OR lugar = '" + txtDestino.Text + "'", Conexion.conexion);
+                    NpgsqlDataAdapter read = new NpgsqlDataAdapter("SELECT nombre,lugar,precio FROM hoteles WHERE nombre = '" + txtDestino.Text + "' OR pais = '" + txtDestino.Text + "' OR lugar = '" + txtDestino.Text + "'", Conexion.conexion);
                     read.Fill(hoteles);
                     Conexion.conexion.Close();
                     DataTable dtAll = hoteles.Tables[0].Copy();
