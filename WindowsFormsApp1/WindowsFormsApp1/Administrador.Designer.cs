@@ -334,7 +334,7 @@
             this.Paises.Controls.Add(this.tabPage8);
             this.Paises.Controls.Add(this.tabPage9);
             this.Paises.Controls.Add(this.tabPage40);
-            this.Paises.Location = new System.Drawing.Point(49, 19);
+            this.Paises.Location = new System.Drawing.Point(49, 13);
             this.Paises.Margin = new System.Windows.Forms.Padding(4);
             this.Paises.Name = "Paises";
             this.Paises.SelectedIndex = 0;
@@ -405,6 +405,7 @@
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(204, 22);
             this.textBox3.TabIndex = 6;
+            this.textBox3.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox3_KeyPress);
             // 
             // txtIDPais
             // 
@@ -413,6 +414,7 @@
             this.txtIDPais.Name = "txtIDPais";
             this.txtIDPais.Size = new System.Drawing.Size(204, 22);
             this.txtIDPais.TabIndex = 4;
+            this.txtIDPais.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtIDPais_KeyPress);
             // 
             // label3
             // 
@@ -497,11 +499,12 @@
             // 
             // textBox4
             // 
-            this.textBox4.Location = new System.Drawing.Point(132, 101);
+            this.textBox4.Location = new System.Drawing.Point(132, 96);
             this.textBox4.Margin = new System.Windows.Forms.Padding(4);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(204, 22);
             this.textBox4.TabIndex = 13;
+            this.textBox4.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox4_KeyPress);
             // 
             // textBox6
             // 
@@ -510,6 +513,7 @@
             this.textBox6.Name = "textBox6";
             this.textBox6.Size = new System.Drawing.Size(204, 22);
             this.textBox6.TabIndex = 11;
+            this.textBox6.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox6_KeyPress);
             // 
             // label5
             // 
@@ -595,7 +599,7 @@
             this.tabPage2.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(4);
-            this.tabPage2.Size = new System.Drawing.Size(742, 392);
+            this.tabPage2.Size = new System.Drawing.Size(742, 379);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Lugares";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -647,6 +651,7 @@
             this.nombreLADD.Name = "nombreLADD";
             this.nombreLADD.Size = new System.Drawing.Size(204, 22);
             this.nombreLADD.TabIndex = 10;
+            this.nombreLADD.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.nombreLADD_KeyPress);
             // 
             // IDLADD
             // 
@@ -655,6 +660,7 @@
             this.IDLADD.Name = "IDLADD";
             this.IDLADD.Size = new System.Drawing.Size(204, 22);
             this.IDLADD.TabIndex = 9;
+            this.IDLADD.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.IDLADD_KeyPress);
             // 
             // label8
             // 
@@ -713,6 +719,7 @@
             this.nombremodl.Name = "nombremodl";
             this.nombremodl.Size = new System.Drawing.Size(204, 22);
             this.nombremodl.TabIndex = 20;
+            this.nombremodl.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.nombremodl_KeyPress);
             // 
             // IDmodL
             // 
@@ -791,6 +798,7 @@
             this.IDdeleteL.Name = "IDdeleteL";
             this.IDdeleteL.Size = new System.Drawing.Size(204, 22);
             this.IDdeleteL.TabIndex = 18;
+            this.IDdeleteL.Visible = false;
             // 
             // button7
             // 
@@ -806,7 +814,7 @@
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(70, 85);
+            this.label14.Location = new System.Drawing.Point(73, 40);
             this.label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(21, 17);
@@ -820,7 +828,7 @@
             this.tabPage3.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(4);
-            this.tabPage3.Size = new System.Drawing.Size(742, 392);
+            this.tabPage3.Size = new System.Drawing.Size(742, 379);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Aeropuertos";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -884,6 +892,7 @@
             this.NombreaddAeropuerto.Name = "NombreaddAeropuerto";
             this.NombreaddAeropuerto.Size = new System.Drawing.Size(204, 22);
             this.NombreaddAeropuerto.TabIndex = 13;
+            this.NombreaddAeropuerto.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.NombreaddAeropuerto_KeyPress);
             // 
             // LOCALIDADddAeropuerto
             // 
@@ -892,6 +901,7 @@
             this.LOCALIDADddAeropuerto.Name = "LOCALIDADddAeropuerto";
             this.LOCALIDADddAeropuerto.Size = new System.Drawing.Size(204, 22);
             this.LOCALIDADddAeropuerto.TabIndex = 12;
+            this.LOCALIDADddAeropuerto.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.LOCALIDADddAeropuerto_KeyPress);
             // 
             // IDaddAeropuerto
             // 
@@ -1000,6 +1010,7 @@
             this.nombreMODAeropuerto.Name = "nombreMODAeropuerto";
             this.nombreMODAeropuerto.Size = new System.Drawing.Size(204, 22);
             this.nombreMODAeropuerto.TabIndex = 22;
+            this.nombreMODAeropuerto.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.nombreMODAeropuerto_KeyPress);
             // 
             // modLocalidadAeropuerto
             // 
@@ -1008,9 +1019,11 @@
             this.modLocalidadAeropuerto.Name = "modLocalidadAeropuerto";
             this.modLocalidadAeropuerto.Size = new System.Drawing.Size(204, 22);
             this.modLocalidadAeropuerto.TabIndex = 21;
+            this.modLocalidadAeropuerto.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.modLocalidadAeropuerto_KeyPress);
             // 
             // IDmodAeropuerto
             // 
+            this.IDmodAeropuerto.Enabled = false;
             this.IDmodAeropuerto.Location = new System.Drawing.Point(99, 87);
             this.IDmodAeropuerto.Margin = new System.Windows.Forms.Padding(4);
             this.IDmodAeropuerto.Name = "IDmodAeropuerto";
@@ -1123,7 +1136,7 @@
             this.tabPage4.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Padding = new System.Windows.Forms.Padding(4);
-            this.tabPage4.Size = new System.Drawing.Size(742, 392);
+            this.tabPage4.Size = new System.Drawing.Size(742, 379);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Rutas";
             this.tabPage4.UseVisualStyleBackColor = true;
@@ -1433,7 +1446,7 @@
             this.tabPage5.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage5.Name = "tabPage5";
             this.tabPage5.Padding = new System.Windows.Forms.Padding(4);
-            this.tabPage5.Size = new System.Drawing.Size(742, 392);
+            this.tabPage5.Size = new System.Drawing.Size(742, 379);
             this.tabPage5.TabIndex = 4;
             this.tabPage5.Text = "Hoteles";
             this.tabPage5.UseVisualStyleBackColor = true;
@@ -1544,6 +1557,7 @@
             this.habitacionHotelesADD.Name = "habitacionHotelesADD";
             this.habitacionHotelesADD.Size = new System.Drawing.Size(204, 22);
             this.habitacionHotelesADD.TabIndex = 36;
+            this.habitacionHotelesADD.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.habitacionHotelesADD_KeyPress);
             // 
             // label35
             // 
@@ -1582,6 +1596,7 @@
             this.nombreHotelesAdd.Name = "nombreHotelesAdd";
             this.nombreHotelesAdd.Size = new System.Drawing.Size(204, 22);
             this.nombreHotelesAdd.TabIndex = 30;
+            this.nombreHotelesAdd.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.nombreHotelesAdd_KeyPress);
             // 
             // IDHotelesAdd
             // 
@@ -1590,6 +1605,7 @@
             this.IDHotelesAdd.Name = "IDHotelesAdd";
             this.IDHotelesAdd.Size = new System.Drawing.Size(204, 22);
             this.IDHotelesAdd.TabIndex = 28;
+            this.IDHotelesAdd.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.IDHotelesAdd_KeyPress);
             // 
             // label32
             // 
@@ -1715,6 +1731,7 @@
             this.habitacionesHotelesMod.Name = "habitacionesHotelesMod";
             this.habitacionesHotelesMod.Size = new System.Drawing.Size(204, 22);
             this.habitacionesHotelesMod.TabIndex = 49;
+            this.habitacionesHotelesMod.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.habitacionesHotelesMod_KeyPress);
             // 
             // label37
             // 
@@ -1753,6 +1770,7 @@
             this.NombreHotelesMod.Name = "NombreHotelesMod";
             this.NombreHotelesMod.Size = new System.Drawing.Size(204, 22);
             this.NombreHotelesMod.TabIndex = 43;
+            this.NombreHotelesMod.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.NombreHotelesMod_KeyPress);
             // 
             // IDHotelesMOD
             // 
@@ -1843,7 +1861,7 @@
             this.tabPage6.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage6.Name = "tabPage6";
             this.tabPage6.Padding = new System.Windows.Forms.Padding(4);
-            this.tabPage6.Size = new System.Drawing.Size(742, 392);
+            this.tabPage6.Size = new System.Drawing.Size(742, 379);
             this.tabPage6.TabIndex = 5;
             this.tabPage6.Text = "Tarifas Hoteles";
             this.tabPage6.UseVisualStyleBackColor = true;
@@ -1903,6 +1921,7 @@
             this.IDTarifaHotelesADD.Name = "IDTarifaHotelesADD";
             this.IDTarifaHotelesADD.Size = new System.Drawing.Size(204, 22);
             this.IDTarifaHotelesADD.TabIndex = 9;
+            this.IDTarifaHotelesADD.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.IDTarifaHotelesADD_KeyPress);
             // 
             // label44
             // 
@@ -1977,11 +1996,12 @@
             // IDTarifaHotelesMod
             // 
             this.IDTarifaHotelesMod.Enabled = false;
-            this.IDTarifaHotelesMod.Location = new System.Drawing.Point(239, 113);
+            this.IDTarifaHotelesMod.Location = new System.Drawing.Point(531, 312);
             this.IDTarifaHotelesMod.Margin = new System.Windows.Forms.Padding(4);
             this.IDTarifaHotelesMod.Name = "IDTarifaHotelesMod";
             this.IDTarifaHotelesMod.Size = new System.Drawing.Size(204, 22);
             this.IDTarifaHotelesMod.TabIndex = 27;
+            this.IDTarifaHotelesMod.Visible = false;
             // 
             // label46
             // 
@@ -1996,7 +2016,7 @@
             // label47
             // 
             this.label47.AutoSize = true;
-            this.label47.Location = new System.Drawing.Point(158, 113);
+            this.label47.Location = new System.Drawing.Point(173, 67);
             this.label47.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label47.Name = "label47";
             this.label47.Size = new System.Drawing.Size(21, 17);
@@ -2058,7 +2078,7 @@
             this.tabPage7.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage7.Name = "tabPage7";
             this.tabPage7.Padding = new System.Windows.Forms.Padding(4);
-            this.tabPage7.Size = new System.Drawing.Size(742, 392);
+            this.tabPage7.Size = new System.Drawing.Size(742, 379);
             this.tabPage7.TabIndex = 6;
             this.tabPage7.Text = "Tarifas Vuelos";
             this.tabPage7.UseVisualStyleBackColor = true;
@@ -2125,6 +2145,7 @@
             this.PrecioTarifaVuelosADD.Name = "PrecioTarifaVuelosADD";
             this.PrecioTarifaVuelosADD.Size = new System.Drawing.Size(204, 22);
             this.PrecioTarifaVuelosADD.TabIndex = 27;
+            this.PrecioTarifaVuelosADD.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.PrecioTarifaVuelosADD_KeyPress);
             // 
             // IDTarifaVuelosADD
             // 
@@ -2133,6 +2154,7 @@
             this.IDTarifaVuelosADD.Name = "IDTarifaVuelosADD";
             this.IDTarifaVuelosADD.Size = new System.Drawing.Size(204, 22);
             this.IDTarifaVuelosADD.TabIndex = 26;
+            this.IDTarifaVuelosADD.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.IDTarifaVuelosADD_KeyPress);
             // 
             // label48
             // 
@@ -2224,6 +2246,7 @@
             this.PreciosTarifaVuelosMod.Name = "PreciosTarifaVuelosMod";
             this.PreciosTarifaVuelosMod.Size = new System.Drawing.Size(204, 22);
             this.PreciosTarifaVuelosMod.TabIndex = 57;
+            this.PreciosTarifaVuelosMod.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.PreciosTarifaVuelosMod_KeyPress);
             // 
             // label52
             // 
@@ -2310,7 +2333,7 @@
             this.tabPage8.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage8.Name = "tabPage8";
             this.tabPage8.Padding = new System.Windows.Forms.Padding(4);
-            this.tabPage8.Size = new System.Drawing.Size(742, 392);
+            this.tabPage8.Size = new System.Drawing.Size(742, 379);
             this.tabPage8.TabIndex = 7;
             this.tabPage8.Text = "Vehiculos";
             this.tabPage8.UseVisualStyleBackColor = true;
@@ -2407,6 +2430,7 @@
             this.TipoVehiculoADD.Name = "TipoVehiculoADD";
             this.TipoVehiculoADD.Size = new System.Drawing.Size(204, 22);
             this.TipoVehiculoADD.TabIndex = 45;
+            this.TipoVehiculoADD.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TipoVehiculoADD_KeyPress);
             // 
             // label58
             // 
@@ -2425,6 +2449,7 @@
             this.MarcaVehiculoADD.Name = "MarcaVehiculoADD";
             this.MarcaVehiculoADD.Size = new System.Drawing.Size(204, 22);
             this.MarcaVehiculoADD.TabIndex = 43;
+            this.MarcaVehiculoADD.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.MarcaVehiculoADD_KeyPress);
             // 
             // ModeloVehiculoADD
             // 
@@ -2433,6 +2458,8 @@
             this.ModeloVehiculoADD.Name = "ModeloVehiculoADD";
             this.ModeloVehiculoADD.Size = new System.Drawing.Size(204, 22);
             this.ModeloVehiculoADD.TabIndex = 42;
+            this.ModeloVehiculoADD.TextChanged += new System.EventHandler(this.ModeloVehiculoADD_TextChanged);
+            this.ModeloVehiculoADD.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ModeloVehiculoADD_KeyPress);
             // 
             // IDVehiculoADD
             // 
@@ -2441,6 +2468,7 @@
             this.IDVehiculoADD.Name = "IDVehiculoADD";
             this.IDVehiculoADD.Size = new System.Drawing.Size(204, 22);
             this.IDVehiculoADD.TabIndex = 41;
+            this.IDVehiculoADD.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.IDVehiculoADD_KeyPress);
             // 
             // label59
             // 
@@ -2525,6 +2553,7 @@
             this.cantidadvehiculoMod.Name = "cantidadvehiculoMod";
             this.cantidadvehiculoMod.Size = new System.Drawing.Size(204, 22);
             this.cantidadvehiculoMod.TabIndex = 62;
+            this.cantidadvehiculoMod.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cantidadvehiculoMod_KeyPress);
             // 
             // label62
             // 
@@ -2543,6 +2572,7 @@
             this.PreciovehiculoMod.Name = "PreciovehiculoMod";
             this.PreciovehiculoMod.Size = new System.Drawing.Size(204, 22);
             this.PreciovehiculoMod.TabIndex = 60;
+            this.PreciovehiculoMod.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.PreciovehiculoMod_KeyPress);
             // 
             // label63
             // 
@@ -2561,11 +2591,12 @@
             this.TipovehiculoMod.Name = "TipovehiculoMod";
             this.TipovehiculoMod.Size = new System.Drawing.Size(204, 22);
             this.TipovehiculoMod.TabIndex = 58;
+            this.TipovehiculoMod.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TipovehiculoMod_KeyPress);
             // 
             // label64
             // 
             this.label64.AutoSize = true;
-            this.label64.Location = new System.Drawing.Point(114, 195);
+            this.label64.Location = new System.Drawing.Point(114, 186);
             this.label64.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label64.Name = "label64";
             this.label64.Size = new System.Drawing.Size(36, 17);
@@ -2579,6 +2610,7 @@
             this.MarcavehiculoMod.Name = "MarcavehiculoMod";
             this.MarcavehiculoMod.Size = new System.Drawing.Size(204, 22);
             this.MarcavehiculoMod.TabIndex = 56;
+            this.MarcavehiculoMod.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.MarcavehiculoMod_KeyPress);
             // 
             // ModeloVehiculoMod
             // 
@@ -2587,6 +2619,7 @@
             this.ModeloVehiculoMod.Name = "ModeloVehiculoMod";
             this.ModeloVehiculoMod.Size = new System.Drawing.Size(204, 22);
             this.ModeloVehiculoMod.TabIndex = 55;
+            this.ModeloVehiculoMod.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ModeloVehiculoMod_KeyPress);
             // 
             // label65
             // 
@@ -2686,11 +2719,11 @@
             this.tabControl9.Controls.Add(this.tabPage38);
             this.tabControl9.Controls.Add(this.tabPage39);
             this.tabControl9.Controls.Add(this.tabPage41);
-            this.tabControl9.Location = new System.Drawing.Point(-5, 0);
+            this.tabControl9.Location = new System.Drawing.Point(0, 2);
             this.tabControl9.Margin = new System.Windows.Forms.Padding(4);
             this.tabControl9.Name = "tabControl9";
             this.tabControl9.SelectedIndex = 0;
-            this.tabControl9.Size = new System.Drawing.Size(893, 396);
+            this.tabControl9.Size = new System.Drawing.Size(750, 396);
             this.tabControl9.TabIndex = 0;
             // 
             // tabPage32
@@ -2700,10 +2733,11 @@
             this.tabPage32.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage32.Name = "tabPage32";
             this.tabPage32.Padding = new System.Windows.Forms.Padding(4);
-            this.tabPage32.Size = new System.Drawing.Size(885, 367);
+            this.tabPage32.Size = new System.Drawing.Size(742, 367);
             this.tabPage32.TabIndex = 0;
             this.tabPage32.Text = "Reporte 1";
             this.tabPage32.UseVisualStyleBackColor = true;
+            this.tabPage32.Click += new System.EventHandler(this.tabPage32_Click);
             // 
             // button26
             // 
@@ -2721,7 +2755,7 @@
             this.tabPage33.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage33.Name = "tabPage33";
             this.tabPage33.Padding = new System.Windows.Forms.Padding(4);
-            this.tabPage33.Size = new System.Drawing.Size(885, 367);
+            this.tabPage33.Size = new System.Drawing.Size(742, 367);
             this.tabPage33.TabIndex = 1;
             this.tabPage33.Text = "Reporte 2";
             this.tabPage33.UseVisualStyleBackColor = true;
@@ -2732,7 +2766,7 @@
             this.tabPage34.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage34.Name = "tabPage34";
             this.tabPage34.Padding = new System.Windows.Forms.Padding(4);
-            this.tabPage34.Size = new System.Drawing.Size(885, 367);
+            this.tabPage34.Size = new System.Drawing.Size(742, 367);
             this.tabPage34.TabIndex = 2;
             this.tabPage34.Text = "Reporte 3";
             this.tabPage34.UseVisualStyleBackColor = true;
@@ -2743,7 +2777,7 @@
             this.tabPage36.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage36.Name = "tabPage36";
             this.tabPage36.Padding = new System.Windows.Forms.Padding(4);
-            this.tabPage36.Size = new System.Drawing.Size(885, 367);
+            this.tabPage36.Size = new System.Drawing.Size(742, 367);
             this.tabPage36.TabIndex = 3;
             this.tabPage36.Text = "Reporte 4";
             this.tabPage36.UseVisualStyleBackColor = true;
@@ -2754,7 +2788,7 @@
             this.tabPage37.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage37.Name = "tabPage37";
             this.tabPage37.Padding = new System.Windows.Forms.Padding(4);
-            this.tabPage37.Size = new System.Drawing.Size(885, 367);
+            this.tabPage37.Size = new System.Drawing.Size(742, 367);
             this.tabPage37.TabIndex = 4;
             this.tabPage37.Text = "Reporte 5";
             this.tabPage37.UseVisualStyleBackColor = true;
@@ -2765,7 +2799,7 @@
             this.tabPage38.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage38.Name = "tabPage38";
             this.tabPage38.Padding = new System.Windows.Forms.Padding(4);
-            this.tabPage38.Size = new System.Drawing.Size(885, 367);
+            this.tabPage38.Size = new System.Drawing.Size(742, 367);
             this.tabPage38.TabIndex = 5;
             this.tabPage38.Text = "Reporte 6";
             this.tabPage38.UseVisualStyleBackColor = true;
@@ -2776,7 +2810,7 @@
             this.tabPage39.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage39.Name = "tabPage39";
             this.tabPage39.Padding = new System.Windows.Forms.Padding(4);
-            this.tabPage39.Size = new System.Drawing.Size(885, 367);
+            this.tabPage39.Size = new System.Drawing.Size(742, 367);
             this.tabPage39.TabIndex = 6;
             this.tabPage39.Text = "Reporte 7";
             this.tabPage39.UseVisualStyleBackColor = true;
@@ -2786,7 +2820,7 @@
             this.tabPage41.Location = new System.Drawing.Point(4, 25);
             this.tabPage41.Name = "tabPage41";
             this.tabPage41.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage41.Size = new System.Drawing.Size(885, 367);
+            this.tabPage41.Size = new System.Drawing.Size(742, 367);
             this.tabPage41.TabIndex = 7;
             this.tabPage41.Text = "Reporte 8";
             this.tabPage41.UseVisualStyleBackColor = true;
@@ -2797,7 +2831,7 @@
             this.tabPage40.Location = new System.Drawing.Point(4, 25);
             this.tabPage40.Name = "tabPage40";
             this.tabPage40.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage40.Size = new System.Drawing.Size(742, 392);
+            this.tabPage40.Size = new System.Drawing.Size(742, 379);
             this.tabPage40.TabIndex = 9;
             this.tabPage40.Text = "Aeropuertos";
             this.tabPage40.UseVisualStyleBackColor = true;
