@@ -60,11 +60,11 @@
     <Compile Include="Aeropuertos.Designer.cs">
       <DependentUpon>Aeropuertos.cs</DependentUpon>
     </Compile>
-    <Compile Include="Cliente.cs">
+    <Compile Include="Alojamiento.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Cliente.Designer.cs">
-      <DependentUpon>Cliente.cs</DependentUpon>
+    <Compile Include="Alojamiento.Designer.cs">
+      <DependentUpon>Alojamiento.cs</DependentUpon>
     </Compile>
     <Compile Include="Conex.cs" />
     <Compile Include="Logeo_Cliente.cs">
@@ -81,14 +81,20 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Vuelos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vuelos.Designer.cs">
+      <DependentUpon>Vuelos.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Administrador.resx">
       <DependentUpon>Administrador.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Aeropuertos.resx">
       <DependentUpon>Aeropuertos.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Cliente.resx">
-      <DependentUpon>Cliente.cs</DependentUpon>
+    <EmbeddedResource Include="Alojamiento.resx">
+      <DependentUpon>Alojamiento.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Logeo_Cliente.resx">
       <DependentUpon>Logeo_Cliente.cs</DependentUpon>
@@ -105,6 +111,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Vuelos.resx">
+      <DependentUpon>Vuelos.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
