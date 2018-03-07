@@ -130,6 +130,8 @@
             this.tabPage5 = new System.Windows.Forms.TabPage();
             this.tabControl5 = new System.Windows.Forms.TabControl();
             this.tabPage20 = new System.Windows.Forms.TabPage();
+            this.Precio = new System.Windows.Forms.ComboBox();
+            this.label68 = new System.Windows.Forms.Label();
             this.imagenhotel = new System.Windows.Forms.PictureBox();
             this.LugarHotelesADD = new System.Windows.Forms.ComboBox();
             this.paisHotelesADD = new System.Windows.Forms.ComboBox();
@@ -144,6 +146,8 @@
             this.label33 = new System.Windows.Forms.Label();
             this.label34 = new System.Windows.Forms.Label();
             this.tabPage21 = new System.Windows.Forms.TabPage();
+            this.PrecioM = new System.Windows.Forms.ComboBox();
+            this.label69 = new System.Windows.Forms.Label();
             this.imagenHotelesMod = new System.Windows.Forms.PictureBox();
             this.LugarHotelesMod = new System.Windows.Forms.ComboBox();
             this.paisHotelesMod = new System.Windows.Forms.ComboBox();
@@ -246,13 +250,10 @@
             this.tabPage37 = new System.Windows.Forms.TabPage();
             this.tabPage38 = new System.Windows.Forms.TabPage();
             this.tabPage39 = new System.Windows.Forms.TabPage();
+            this.tabPage41 = new System.Windows.Forms.TabPage();
             this.tabPage40 = new System.Windows.Forms.TabPage();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.button1 = new System.Windows.Forms.Button();
-            this.label68 = new System.Windows.Forms.Label();
-            this.Precio = new System.Windows.Forms.ComboBox();
-            this.PrecioM = new System.Windows.Forms.ComboBox();
-            this.label69 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.Paises.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -337,7 +338,7 @@
             this.Paises.Margin = new System.Windows.Forms.Padding(4);
             this.Paises.Name = "Paises";
             this.Paises.SelectedIndex = 0;
-            this.Paises.Size = new System.Drawing.Size(757, 421);
+            this.Paises.Size = new System.Drawing.Size(750, 408);
             this.Paises.TabIndex = 33;
             this.Paises.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Paises_MouseClick);
             // 
@@ -348,7 +349,7 @@
             this.tabPage1.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(4);
-            this.tabPage1.Size = new System.Drawing.Size(749, 392);
+            this.tabPage1.Size = new System.Drawing.Size(742, 379);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Paises";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -594,7 +595,7 @@
             this.tabPage2.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(4);
-            this.tabPage2.Size = new System.Drawing.Size(749, 392);
+            this.tabPage2.Size = new System.Drawing.Size(742, 392);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Lugares";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -819,7 +820,7 @@
             this.tabPage3.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(4);
-            this.tabPage3.Size = new System.Drawing.Size(749, 392);
+            this.tabPage3.Size = new System.Drawing.Size(742, 392);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Aeropuertos";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -1122,7 +1123,7 @@
             this.tabPage4.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Padding = new System.Windows.Forms.Padding(4);
-            this.tabPage4.Size = new System.Drawing.Size(749, 392);
+            this.tabPage4.Size = new System.Drawing.Size(742, 392);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Rutas";
             this.tabPage4.UseVisualStyleBackColor = true;
@@ -1432,7 +1433,7 @@
             this.tabPage5.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage5.Name = "tabPage5";
             this.tabPage5.Padding = new System.Windows.Forms.Padding(4);
-            this.tabPage5.Size = new System.Drawing.Size(749, 392);
+            this.tabPage5.Size = new System.Drawing.Size(742, 392);
             this.tabPage5.TabIndex = 4;
             this.tabPage5.Text = "Hoteles";
             this.tabPage5.UseVisualStyleBackColor = true;
@@ -1475,6 +1476,26 @@
             this.tabPage20.Text = "Agregar";
             this.tabPage20.UseVisualStyleBackColor = true;
             this.tabPage20.MouseClick += new System.Windows.Forms.MouseEventHandler(this.tabPage20_MouseClick);
+            // 
+            // Precio
+            // 
+            this.Precio.FormattingEnabled = true;
+            this.Precio.Location = new System.Drawing.Point(119, 297);
+            this.Precio.Margin = new System.Windows.Forms.Padding(4);
+            this.Precio.Name = "Precio";
+            this.Precio.Size = new System.Drawing.Size(204, 24);
+            this.Precio.TabIndex = 58;
+            this.Precio.Click += new System.EventHandler(this.Precio_Click);
+            // 
+            // label68
+            // 
+            this.label68.AutoSize = true;
+            this.label68.Location = new System.Drawing.Point(23, 300);
+            this.label68.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label68.Name = "label68";
+            this.label68.Size = new System.Drawing.Size(48, 17);
+            this.label68.TabIndex = 57;
+            this.label68.Text = "Precio";
             // 
             // imagenhotel
             // 
@@ -1626,6 +1647,26 @@
             this.tabPage21.Text = "Modificar";
             this.tabPage21.UseVisualStyleBackColor = true;
             this.tabPage21.MouseClick += new System.Windows.Forms.MouseEventHandler(this.tabPage21_MouseClick);
+            // 
+            // PrecioM
+            // 
+            this.PrecioM.FormattingEnabled = true;
+            this.PrecioM.Location = new System.Drawing.Point(121, 295);
+            this.PrecioM.Margin = new System.Windows.Forms.Padding(4);
+            this.PrecioM.Name = "PrecioM";
+            this.PrecioM.Size = new System.Drawing.Size(204, 24);
+            this.PrecioM.TabIndex = 60;
+            this.PrecioM.Click += new System.EventHandler(this.PrecioM_Click);
+            // 
+            // label69
+            // 
+            this.label69.AutoSize = true;
+            this.label69.Location = new System.Drawing.Point(25, 298);
+            this.label69.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label69.Name = "label69";
+            this.label69.Size = new System.Drawing.Size(48, 17);
+            this.label69.TabIndex = 59;
+            this.label69.Text = "Precio";
             // 
             // imagenHotelesMod
             // 
@@ -1802,7 +1843,7 @@
             this.tabPage6.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage6.Name = "tabPage6";
             this.tabPage6.Padding = new System.Windows.Forms.Padding(4);
-            this.tabPage6.Size = new System.Drawing.Size(749, 392);
+            this.tabPage6.Size = new System.Drawing.Size(742, 392);
             this.tabPage6.TabIndex = 5;
             this.tabPage6.Text = "Tarifas Hoteles";
             this.tabPage6.UseVisualStyleBackColor = true;
@@ -2017,7 +2058,7 @@
             this.tabPage7.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage7.Name = "tabPage7";
             this.tabPage7.Padding = new System.Windows.Forms.Padding(4);
-            this.tabPage7.Size = new System.Drawing.Size(749, 392);
+            this.tabPage7.Size = new System.Drawing.Size(742, 392);
             this.tabPage7.TabIndex = 6;
             this.tabPage7.Text = "Tarifas Vuelos";
             this.tabPage7.UseVisualStyleBackColor = true;
@@ -2269,7 +2310,7 @@
             this.tabPage8.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage8.Name = "tabPage8";
             this.tabPage8.Padding = new System.Windows.Forms.Padding(4);
-            this.tabPage8.Size = new System.Drawing.Size(749, 392);
+            this.tabPage8.Size = new System.Drawing.Size(742, 392);
             this.tabPage8.TabIndex = 7;
             this.tabPage8.Text = "Vehiculos";
             this.tabPage8.UseVisualStyleBackColor = true;
@@ -2630,7 +2671,7 @@
             this.tabPage9.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage9.Name = "tabPage9";
             this.tabPage9.Padding = new System.Windows.Forms.Padding(4);
-            this.tabPage9.Size = new System.Drawing.Size(749, 392);
+            this.tabPage9.Size = new System.Drawing.Size(742, 379);
             this.tabPage9.TabIndex = 8;
             this.tabPage9.Text = "Reportes";
             this.tabPage9.UseVisualStyleBackColor = true;
@@ -2644,11 +2685,12 @@
             this.tabControl9.Controls.Add(this.tabPage37);
             this.tabControl9.Controls.Add(this.tabPage38);
             this.tabControl9.Controls.Add(this.tabPage39);
+            this.tabControl9.Controls.Add(this.tabPage41);
             this.tabControl9.Location = new System.Drawing.Point(-5, 0);
             this.tabControl9.Margin = new System.Windows.Forms.Padding(4);
             this.tabControl9.Name = "tabControl9";
             this.tabControl9.SelectedIndex = 0;
-            this.tabControl9.Size = new System.Drawing.Size(893, 388);
+            this.tabControl9.Size = new System.Drawing.Size(893, 396);
             this.tabControl9.TabIndex = 0;
             // 
             // tabPage32
@@ -2658,19 +2700,20 @@
             this.tabPage32.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage32.Name = "tabPage32";
             this.tabPage32.Padding = new System.Windows.Forms.Padding(4);
-            this.tabPage32.Size = new System.Drawing.Size(885, 359);
+            this.tabPage32.Size = new System.Drawing.Size(885, 367);
             this.tabPage32.TabIndex = 0;
             this.tabPage32.Text = "Reporte 1";
             this.tabPage32.UseVisualStyleBackColor = true;
             // 
             // button26
             // 
-            this.button26.Location = new System.Drawing.Point(590, 32);
+            this.button26.Location = new System.Drawing.Point(641, 334);
             this.button26.Name = "button26";
             this.button26.Size = new System.Drawing.Size(95, 26);
             this.button26.TabIndex = 0;
-            this.button26.Text = "button26";
+            this.button26.Text = "Actualizar";
             this.button26.UseVisualStyleBackColor = true;
+            this.button26.Click += new System.EventHandler(this.button26_Click);
             // 
             // tabPage33
             // 
@@ -2678,7 +2721,7 @@
             this.tabPage33.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage33.Name = "tabPage33";
             this.tabPage33.Padding = new System.Windows.Forms.Padding(4);
-            this.tabPage33.Size = new System.Drawing.Size(885, 359);
+            this.tabPage33.Size = new System.Drawing.Size(885, 367);
             this.tabPage33.TabIndex = 1;
             this.tabPage33.Text = "Reporte 2";
             this.tabPage33.UseVisualStyleBackColor = true;
@@ -2689,7 +2732,7 @@
             this.tabPage34.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage34.Name = "tabPage34";
             this.tabPage34.Padding = new System.Windows.Forms.Padding(4);
-            this.tabPage34.Size = new System.Drawing.Size(885, 359);
+            this.tabPage34.Size = new System.Drawing.Size(885, 367);
             this.tabPage34.TabIndex = 2;
             this.tabPage34.Text = "Reporte 3";
             this.tabPage34.UseVisualStyleBackColor = true;
@@ -2700,7 +2743,7 @@
             this.tabPage36.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage36.Name = "tabPage36";
             this.tabPage36.Padding = new System.Windows.Forms.Padding(4);
-            this.tabPage36.Size = new System.Drawing.Size(885, 359);
+            this.tabPage36.Size = new System.Drawing.Size(885, 367);
             this.tabPage36.TabIndex = 3;
             this.tabPage36.Text = "Reporte 4";
             this.tabPage36.UseVisualStyleBackColor = true;
@@ -2711,7 +2754,7 @@
             this.tabPage37.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage37.Name = "tabPage37";
             this.tabPage37.Padding = new System.Windows.Forms.Padding(4);
-            this.tabPage37.Size = new System.Drawing.Size(885, 359);
+            this.tabPage37.Size = new System.Drawing.Size(885, 367);
             this.tabPage37.TabIndex = 4;
             this.tabPage37.Text = "Reporte 5";
             this.tabPage37.UseVisualStyleBackColor = true;
@@ -2722,7 +2765,7 @@
             this.tabPage38.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage38.Name = "tabPage38";
             this.tabPage38.Padding = new System.Windows.Forms.Padding(4);
-            this.tabPage38.Size = new System.Drawing.Size(885, 359);
+            this.tabPage38.Size = new System.Drawing.Size(885, 367);
             this.tabPage38.TabIndex = 5;
             this.tabPage38.Text = "Reporte 6";
             this.tabPage38.UseVisualStyleBackColor = true;
@@ -2733,10 +2776,20 @@
             this.tabPage39.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage39.Name = "tabPage39";
             this.tabPage39.Padding = new System.Windows.Forms.Padding(4);
-            this.tabPage39.Size = new System.Drawing.Size(885, 359);
+            this.tabPage39.Size = new System.Drawing.Size(885, 367);
             this.tabPage39.TabIndex = 6;
             this.tabPage39.Text = "Reporte 7";
             this.tabPage39.UseVisualStyleBackColor = true;
+            // 
+            // tabPage41
+            // 
+            this.tabPage41.Location = new System.Drawing.Point(4, 25);
+            this.tabPage41.Name = "tabPage41";
+            this.tabPage41.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage41.Size = new System.Drawing.Size(885, 367);
+            this.tabPage41.TabIndex = 7;
+            this.tabPage41.Text = "Reporte 8";
+            this.tabPage41.UseVisualStyleBackColor = true;
             // 
             // tabPage40
             // 
@@ -2744,7 +2797,7 @@
             this.tabPage40.Location = new System.Drawing.Point(4, 25);
             this.tabPage40.Name = "tabPage40";
             this.tabPage40.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage40.Size = new System.Drawing.Size(749, 392);
+            this.tabPage40.Size = new System.Drawing.Size(742, 392);
             this.tabPage40.TabIndex = 9;
             this.tabPage40.Text = "Aeropuertos";
             this.tabPage40.UseVisualStyleBackColor = true;
@@ -2764,7 +2817,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(5, 448);
+            this.button1.Location = new System.Drawing.Point(13, 444);
             this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(104, 28);
@@ -2772,46 +2825,6 @@
             this.button1.Text = "Cerrar sesión";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // label68
-            // 
-            this.label68.AutoSize = true;
-            this.label68.Location = new System.Drawing.Point(23, 300);
-            this.label68.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label68.Name = "label68";
-            this.label68.Size = new System.Drawing.Size(48, 17);
-            this.label68.TabIndex = 57;
-            this.label68.Text = "Precio";
-            // 
-            // Precio
-            // 
-            this.Precio.FormattingEnabled = true;
-            this.Precio.Location = new System.Drawing.Point(119, 297);
-            this.Precio.Margin = new System.Windows.Forms.Padding(4);
-            this.Precio.Name = "Precio";
-            this.Precio.Size = new System.Drawing.Size(204, 24);
-            this.Precio.TabIndex = 58;
-            this.Precio.Click += new System.EventHandler(this.Precio_Click);
-            // 
-            // PrecioM
-            // 
-            this.PrecioM.FormattingEnabled = true;
-            this.PrecioM.Location = new System.Drawing.Point(121, 295);
-            this.PrecioM.Margin = new System.Windows.Forms.Padding(4);
-            this.PrecioM.Name = "PrecioM";
-            this.PrecioM.Size = new System.Drawing.Size(204, 24);
-            this.PrecioM.TabIndex = 60;
-            this.PrecioM.Click += new System.EventHandler(this.PrecioM_Click);
-            // 
-            // label69
-            // 
-            this.label69.AutoSize = true;
-            this.label69.Location = new System.Drawing.Point(25, 298);
-            this.label69.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label69.Name = "label69";
-            this.label69.Size = new System.Drawing.Size(48, 17);
-            this.label69.TabIndex = 59;
-            this.label69.Text = "Precio";
             // 
             // Administrador
             // 
@@ -3132,5 +3145,6 @@
         private System.Windows.Forms.ComboBox Precio;
         private System.Windows.Forms.ComboBox PrecioM;
         private System.Windows.Forms.Label label69;
+        private System.Windows.Forms.TabPage tabPage41;
     }
 }

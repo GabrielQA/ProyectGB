@@ -45,6 +45,7 @@
             this.button2 = new System.Windows.Forms.Button();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
+            this.button3 = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -132,6 +133,7 @@
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(888, 266);
             this.dataGridView1.TabIndex = 9;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView3_CellContentClick);
             this.dataGridView1.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellValueChanged);
             // 
@@ -169,6 +171,7 @@
             this.M4.Size = new System.Drawing.Size(175, 22);
             this.M4.TabIndex = 18;
             this.M4.TextChanged += new System.EventHandler(this.M4_TextChanged);
+            this.M4.DoubleClick += new System.EventHandler(this.M4_DoubleClick);
             // 
             // M2
             // 
@@ -229,11 +232,22 @@
             this.dataGridView3.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView3_CellClick);
             this.dataGridView3.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView3_CellContentClick);
             // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(12, 511);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(94, 24);
+            this.button3.TabIndex = 1;
+            this.button3.Text = "button3";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click_1);
+            // 
             // Aeropuertos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1123, 547);
+            this.Controls.Add(this.button3);
             this.Controls.Add(this.tabControl1);
             this.Name = "Aeropuertos";
             this.Text = "Aeropuertos";
@@ -269,5 +283,6 @@
         private System.Windows.Forms.TextBox M3;
         private System.Windows.Forms.DataGridView dataGridView2;
         private System.Windows.Forms.DataGridView dataGridView3;
+        private System.Windows.Forms.Button button3;
     }
 }

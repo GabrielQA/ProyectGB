@@ -338,5 +338,54 @@ namespace WindowsFormsApp1
         {
            
         }
+
+        private void button3_Click_1(object sender, EventArgs e)
+        {
+            this.Hide();
+            Administrador v = new Administrador();
+            v.Show();
+        }
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (A1.Text == "" || A2.Text == "" || A3.Text == "" || A4.Text == "")
+            {
+                MessageBox.Show("deben de tener todos los campos llenos");
+            }
+            else
+            {
+                agregar();
+            }
+        }
+
+        private void M4_DoubleClick(object sender, EventArgs e)
+        {
+            try
+            {
+                conexion.Open();
+                nombre = (M2.Text);
+                localidad = (M3.Text);
+                iata = Convert.ToInt32(M4.Text);
+                DataGridViewRow FILA = dataGridView1.CurrentRow;
+                id = Convert.ToInt32(FILA.Cells[0].Value);
+                actualizarM();
+                dataSet.Clear();
+                dataGridView1.DataSource = dataSet.Tables[0];
+                Query = "SELECT * FROM aeropuertos;";
+                NpgsqlDataAdapter add = new NpgsqlDataAdapter(Query, conexion);
+                add.Fill(dataSet);
+                dataGridView1.DataSource = dataSet.Tables[0];
+                M1.Clear();
+                M2.Clear();
+                M3.Clear();
+                M4.Clear();
+
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Los datos no fueron modificados");
+            }
+
+        }
     }
 }

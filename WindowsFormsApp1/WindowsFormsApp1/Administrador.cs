@@ -914,15 +914,17 @@ namespace WindowsFormsApp1
 
         private void imagenPaisesAdd_Click_1(object sender, EventArgs e)
         {
+            string direccion;
             Open.Title = "Abrir";
             Open.Filter = "Jpg files (*.jpg)|Gif files (*,gif|Vitmap files (*.Bmp)|*.BMP|PGN files )*.png)|*.png*";
             if (Open.ShowDialog() == DialogResult.OK)
             {
                 ubicacion = Open.FileName;
                 Bitmap picture = new Bitmap(ubicacion);
-                pictureBox1.Image = (Image)picture;
+                imagenPaisesAdd.Image = (Image)picture;
                 id = Open.SafeFileName;
-                txtIDPais.Text = id;
+                direccion = id;
+                MessageBox.Show(direccion);
             }
         }
         public void LugaresM()
@@ -1664,6 +1666,11 @@ namespace WindowsFormsApp1
         {
             Precio.Items.Clear();
             TarifaH();
+        }
+
+        private void button26_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
