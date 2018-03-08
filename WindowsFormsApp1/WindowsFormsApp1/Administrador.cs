@@ -8,6 +8,16 @@ using System.Text;
 using System.Threading.Tasks;
 using Npgsql;
 using NpgsqlTypes;
+using System.Drawing;
+using System.Drawing.Imaging;
+using System.IO;
+using Microsoft.VisualBasic;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
 using System.Windows.Forms;
 
 namespace WindowsFormsApp1
@@ -17,6 +27,7 @@ namespace WindowsFormsApp1
         /// <summary>
         /// rowleef
         /// </summary>
+        string cadenas;
         public Administrador()
         {
             InitializeComponent();
@@ -63,7 +74,7 @@ namespace WindowsFormsApp1
         }
         public void TarifaH()
         {
-            clearAll();
+           
             this.CenterToScreen();
             Conexion();
             conexion.Open();
@@ -176,6 +187,7 @@ namespace WindowsFormsApp1
             {
                 while (dr.Read())
                 {
+                    LugarHotelesADD.Items.Add(dr.GetString(1));
                     LugaresMOD.Items.Add(dr.GetString(1));
                     IDmodL.Text = dr.GetString(0);
                     nombremodl.Text = dr.GetString(1);
@@ -200,12 +212,13 @@ namespace WindowsFormsApp1
             {
                 while (dr.Read())
                 {
+                    textBox6.Items.Add(dr.GetString(0));
                     PaisDadd.Items.Add(dr.GetString(1));
                     PaisOadd.Items.Add(dr.GetString(1));
                     PDmod.Items.Add(dr.GetString(1));
                     POmod.Items.Add(dr.GetString(1));
                     c.Items.Add(dr.GetString(0));
-
+                    paisHotelesADD.Items.Add(dr.GetString(1));
                 }
             }
             conexion.Close();
@@ -225,6 +238,7 @@ namespace WindowsFormsApp1
         static string cadenaConexion = null;
         static NpgsqlConnection conexion;
         static NpgsqlCommand cmd;
+      
 
         public static void Conexion()
         {
@@ -257,13 +271,13 @@ namespace WindowsFormsApp1
             try {
                 Conexion();
                 conexion.Open();
-                cmd = new NpgsqlCommand("INSERT INTO paises (id,nombre,bandera) VALUES ('" + Convert.ToInt32(txtIDPais.Text) + "', '" + textBox3.Text + "')", conexion);
-                cmd.Parameters.AddWithValue("bandera", imagenPaisesAdd);
+                cmd = new NpgsqlCommand("INSERT INTO paises(id,nombre,bandera) VALUES ('" + txtIDPais.Text + "', '" + textBox3.Text + "', '" + cadenas + "')", conexion);
+                //cmd.Parameters.AddWithValue("bandera", imagenPaisesAdd);
                 cmd.ExecuteNonQuery();
                 conexion.Close();
             } catch (Exception e)
             {
-                MessageBox.Show("Fallo en el ingreso de datos");
+                MessageBox.Show("Fallo en el ingreso de datos"+e.ToString());
             }
 
         }
@@ -273,7 +287,7 @@ namespace WindowsFormsApp1
             {
                 Conexion();
                 conexion.Open();
-                NpgsqlCommand cmd = new NpgsqlCommand("UPDATE paises SET nombre = '" + textBox4.Text + "' WHERE id = '" + Convert.ToInt32(textBox6.Text) + "'", conexion);
+                NpgsqlCommand cmd = new NpgsqlCommand("UPDATE paises SET nombre = '" + textBox4.Text + "', bandera= '" + cadenas + "' WHERE id = '" + Convert.ToInt32(textBox6.Text) + "'", conexion);
                 cmd.ExecuteNonQuery();
                 conexion.Close();
             }
@@ -454,7 +468,7 @@ namespace WindowsFormsApp1
             {
                 Conexion();
                 conexion.Open();
-                cmd = new NpgsqlCommand("INSERT INTO hoteles (id,nombre,foto,pais,lugar,habitaciones,precio) VALUES ('" + Convert.ToInt32(IDHotelesAdd.Text) + "', '" + nombreHotelesAdd.Text + "', '" + imagenhotel.Text + "', '" + paisHotelesADD.Text + "', '" + LugarHotelesADD.Text + "', '" + habitacionHotelesADD.Text + "', '" + Precio.Text + "')", conexion);
+                cmd = new NpgsqlCommand("INSERT INTO hoteles (id,nombre,foto,pais,lugar,habitaciones,precio) VALUES ('" + Convert.ToInt32(IDHotelesAdd.Text) + "', '" + nombreHotelesAdd.Text + "', '" + cadenas + "', '" + paisHotelesADD.Text + "', '" + LugarHotelesADD.Text + "', '" + habitacionHotelesADD.Text + "', '" + Precio.Text + "')", conexion);
                 cmd.ExecuteNonQuery();
                 conexion.Close();
                 MessageBox.Show("Informacion añadida correctamente");
@@ -752,6 +766,7 @@ namespace WindowsFormsApp1
 
         private void button17_Click(object sender, EventArgs e)
         {
+            clearAll();
             InsertarDatosTarifaHoteles();
         }
 
@@ -914,18 +929,21 @@ namespace WindowsFormsApp1
 
         private void imagenPaisesAdd_Click_1(object sender, EventArgs e)
         {
-            string direccion;
-            Open.Title = "Abrir";
-            Open.Filter = "Jpg files (*.jpg)|Gif files (*,gif|Vitmap files (*.Bmp)|*.BMP|PGN files )*.png)|*.png*";
-            if (Open.ShowDialog() == DialogResult.OK)
-            {
-                ubicacion = Open.FileName;
-                Bitmap picture = new Bitmap(ubicacion);
-                imagenPaisesAdd.Image = (Image)picture;
-                id = Open.SafeFileName;
-                direccion = id;
-                MessageBox.Show(direccion);
-            }
+
+
+           
+            /*  string direccion;
+              Open.Title = "Abrir";
+              Open.Filter = "Jpg files (*.jpg)|Gif files (*,gif|Vitmap files (*.Bmp)|*.BMP|PGN files )*.png)|*.png*";
+              if (Open.ShowDialog() == DialogResult.OK)
+              {
+                  ubicacion = Open.FileName;
+                  Bitmap picture = new Bitmap(ubicacion);
+                  imagenPaisesAdd.Image = (Image)picture;
+                  id = Open.SafeFileName;
+                  direccion = id;
+                  MessageBox.Show(direccion);
+              }*/
         }
         public void LugaresM()
         {
@@ -1269,9 +1287,9 @@ namespace WindowsFormsApp1
         {
             txtIDPais.Clear();
             textBox3.Clear();
-            textBox6.Clear();
+        
             textBox4.Clear();
-           
+            
             IDLADD.Clear();
             nombreLADD.Clear();
             IDmodL.Clear();
@@ -1504,6 +1522,7 @@ namespace WindowsFormsApp1
 
         private void ComboboxtarifaH_MouseClick(object sender, MouseEventArgs e)
         {
+            ComboboxtarifaH.Items.Clear();
             TarifaH();
         }
 
@@ -1514,6 +1533,7 @@ namespace WindowsFormsApp1
 
         private void TarifaHdelete_MouseClick(object sender, MouseEventArgs e)
         {
+            TarifaHdelete.Items.Clear();
             TarifaH();
         }
 
@@ -1699,7 +1719,15 @@ namespace WindowsFormsApp1
         private void textBox4_KeyPress(object sender, KeyPressEventArgs e)
         {
 
-            if (Char.IsDigit(e.KeyChar))
+            if (Char.IsLetter(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else if (Char.IsControl(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else if (Char.IsSeparator(e.KeyChar))
             {
                 e.Handled = false;
             }
@@ -2148,6 +2176,139 @@ namespace WindowsFormsApp1
             {
                 e.Handled = true;
             }
+        }
+
+        private void imagenPaisesAdd_Click_2(object sender, EventArgs e)
+        {
+            try
+            {
+                this.openFileDialog1.ShowDialog();
+                if (this.openFileDialog1.FileName.Equals("") == false)
+                {
+                    cadenas = openFileDialog1.FileName;
+                    imagenPaisesAdd.Load(this.openFileDialog1.FileName);
+                    MessageBox.Show(cadenas);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("No se pudo cargar la imagen: " + ex.ToString());
+            }
+        }
+
+        private void imagemodPaises_Click_1(object sender, EventArgs e)
+        {
+            try
+            {
+                this.openFileDialog1.ShowDialog();
+                if (this.openFileDialog1.FileName.Equals("") == false)
+                {
+                    cadenas = openFileDialog1.FileName;
+                    imagemodPaises.Load(this.openFileDialog1.FileName);
+                    MessageBox.Show(cadenas);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("No se pudo cargar la imagen: " + ex.ToString());
+            }
+        }
+
+        private void imagenhotel_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                this.openFileDialog1.ShowDialog();
+                if (this.openFileDialog1.FileName.Equals("") == false)
+                {
+                    cadenas = openFileDialog1.FileName;
+                    imagenhotel.Load(this.openFileDialog1.FileName);
+                    MessageBox.Show(cadenas);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("No se pudo cargar la imagen: " + ex.ToString());
+            }
+        }
+
+        private void imagenHotelesMod_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                this.openFileDialog1.ShowDialog();
+                if (this.openFileDialog1.FileName.Equals("") == false)
+                {
+                    cadenas = openFileDialog1.FileName;
+                    imagenHotelesMod.Load(this.openFileDialog1.FileName);
+                    MessageBox.Show(cadenas);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("No se pudo cargar la imagen: " + ex.ToString());
+            }
+        }
+
+        private void button3_Click_1(object sender, EventArgs e)
+        {
+            ModificarDatosPais();
+        }
+
+        private void TarifaHdelete_MouseCaptureChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox6_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Modificar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox6_MouseClick(object sender, MouseEventArgs e)
+        {
+            textBox6.Items.Clear();
+            PaisesA();
+        }
+
+        private void c_Click(object sender, EventArgs e)
+        {
+            c.Items.Clear();
+            PaisesA();
+        }
+
+        private void PrecioTarifaHotelesADD_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (Char.IsDigit(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void paisHotelesADD_MouseClick(object sender, MouseEventArgs e)
+        {
+            paisHotelesADD.Items.Clear();
+            PaisesA();
+        }
+
+        private void LugarHotelesADD_MouseClick(object sender, MouseEventArgs e)
+        {
+            LugarHotelesADD.Items.Clear();
+            Lugares();
         }
     }
 }
