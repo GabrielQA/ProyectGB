@@ -7,14 +7,46 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Capa_Info;
+using Npgsql;
 
 namespace WindowsFormsApp1
 {
     public partial class Vuelos : Form
     {
+        DataSet hoteles = new DataSet();
+
         public Vuelos()
         {
             InitializeComponent();
+            btnReservar.Visible = false;
+            pnlPasajeros.Visible = false;
+            pnlHotel.Visible = false;
+            pnlAuto.Visible = false;
+        }
+
+        public void autoComplete()
+        {
+            try
+            {
+                Conexion.Coneccion();
+                Conexion.conexion.Open();
+                Conexion.cmd = new NpgsqlCommand("SELECT pais_origen, pais_destino FROM rutas", Conexion.conexion);
+                NpgsqlDataReader dr = Conexion.cmd.ExecuteReader();
+                if (dr.HasRows)
+                {
+                    while (dr.Read())
+                    {
+                        txtOrigen.AutoCompleteCustomSource.Add(dr["pais_origen"].ToString());
+                        txtDestino.AutoCompleteCustomSource.Add(dr["pais_destino"].ToString());
+                    }
+                }
+                Conexion.conexion.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex);
+            }
         }
 
         private void btnPasajeros_Click(object sender, EventArgs e)
@@ -37,9 +69,7 @@ namespace WindowsFormsApp1
 
         private void Vuelos_Load(object sender, EventArgs e)
         {
-            pnlPasajeros.Visible = false;
-            pnlHotel.Visible = false;
-            pnlAuto.Visible = false;
+            autoComplete();
         }
 
         private void boxHotel_CheckedChanged(object sender, EventArgs e)
@@ -59,13 +89,30 @@ namespace WindowsFormsApp1
             }
             if(boxHotel.Checked.Equals(true) && txtDestino.Text != "")
             {
-                this.Size = new Size(this.Size.Width, 385);
+                btnReservar.Visible = true;
                 pnlHotel.Visible = true;
+                dgvBusqueda.DataSource = null;
+                this.Size = new Size(this.Size.Width, 385);
+                hoteles.Clear();
+                dgvBusqueda.Rows.Clear();
+                Conexion.Coneccion();
+                Conexion.conexion.Open();
+                NpgsqlDataAdapter read = new NpgsqlDataAdapter("SELECT nombre,lugar,precio FROM hoteles WHERE pais = '" + txtDestino.Text + "'", Conexion.conexion);
+                read.Fill(hoteles);
+                Conexion.conexion.Close();
+                DataTable dtAll = hoteles.Tables[0].Copy();
+                for (var i = 1; i < hoteles.Tables.Count; i++)
+                {
+                    dtAll.Merge(hoteles.Tables[i]);
+                }
+                dgvBusqueda.AutoGenerateColumns = true;
+                dgvBusqueda.DataSource = dtAll;
             }
             if (boxAuto.Checked.Equals(true))
             {
                 this.Size = new Size(555, this.Size.Height);
                 pnlAuto.Visible = true;
+                btnReservar.Visible = true;
             }
         }
 
@@ -76,6 +123,11 @@ namespace WindowsFormsApp1
                 this.Size = new Size(405, this.Size.Height);
                 pnlAuto.Visible = false;
             }
+        }
+
+        private void btnReservar_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
