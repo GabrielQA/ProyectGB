@@ -24,8 +24,25 @@ namespace WindowsFormsApp1
 {
     public partial class Administrador : Form
     {
+
+
+
+
         /// <summary>
-        /// rowleef
+        /// In this class its works the administrator, in the administrator
+        /// add modifiy and delete the information with respective dates, specifically
+        /// it is divided into sections,countries, places, routes, hotels, hotel rates, flight fares, vehicles, airports.
+        /// In countries add modify and delete the ids, names and flags.
+        /// In places add modify and delete the id,name.
+        /// In routes add modify and delete the id,country origin, country destination, duration.
+        /// In hotels add modify and delete the id,name,country,places,room,price.
+        /// In hotel rates add modify and delete the id,price.
+        /// In flight fares
+        /// In vehicles
+        /// In airports
+        
+
+
         /// </summary>
         string cadenas;
         public Administrador()
