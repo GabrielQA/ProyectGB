@@ -19,7 +19,7 @@ namespace WindowsFormsApp1
         public Vuelos()
         {
             InitializeComponent();
-            btnReservar.Visible = false;
+            btnPreliminar.Visible = false;
             pnlPasajeros.Visible = false;
             pnlHotel.Visible = false;
             pnlAuto.Visible = false;
@@ -89,7 +89,7 @@ namespace WindowsFormsApp1
             }
             if(boxHotel.Checked.Equals(true) && txtDestino.Text != "")
             {
-                btnReservar.Visible = true;
+                btnPreliminar.Visible = true;
                 pnlHotel.Visible = true;
                 dgvBusqueda.DataSource = null;
                 this.Size = new Size(this.Size.Width, 385);
@@ -112,7 +112,7 @@ namespace WindowsFormsApp1
             {
                 this.Size = new Size(555, this.Size.Height);
                 pnlAuto.Visible = true;
-                btnReservar.Visible = true;
+                btnPreliminar.Visible = true;
             }
         }
 
@@ -123,11 +123,6 @@ namespace WindowsFormsApp1
                 this.Size = new Size(405, this.Size.Height);
                 pnlAuto.Visible = false;
             }
-        }
-
-        private void btnReservar_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

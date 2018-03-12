@@ -53,23 +53,23 @@
             this.lblHabitaciones = new System.Windows.Forms.Label();
             this.spnHabitaciones = new System.Windows.Forms.NumericUpDown();
             this.pnlHotel = new System.Windows.Forms.Panel();
+            this.dgvBusqueda = new System.Windows.Forms.DataGridView();
             this.pnlAuto = new System.Windows.Forms.Panel();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.numericUpDown3 = new System.Windows.Forms.NumericUpDown();
             this.label9 = new System.Windows.Forms.Label();
-            this.btnReservar = new System.Windows.Forms.Button();
-            this.dgvBusqueda = new System.Windows.Forms.DataGridView();
+            this.btnPreliminar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.spnPasajeros)).BeginInit();
             this.pnlPasajeros.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.spnHabitaciones)).BeginInit();
             this.pnlHotel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvBusqueda)).BeginInit();
             this.pnlAuto.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvBusqueda)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -317,6 +317,18 @@
             this.pnlHotel.Size = new System.Drawing.Size(362, 146);
             this.pnlHotel.TabIndex = 19;
             // 
+            // dgvBusqueda
+            // 
+            this.dgvBusqueda.AllowUserToAddRows = false;
+            this.dgvBusqueda.AllowUserToDeleteRows = false;
+            this.dgvBusqueda.AllowUserToOrderColumns = true;
+            this.dgvBusqueda.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvBusqueda.Location = new System.Drawing.Point(5, 6);
+            this.dgvBusqueda.Name = "dgvBusqueda";
+            this.dgvBusqueda.ReadOnly = true;
+            this.dgvBusqueda.Size = new System.Drawing.Size(271, 134);
+            this.dgvBusqueda.TabIndex = 19;
+            // 
             // pnlAuto
             // 
             this.pnlAuto.Controls.Add(this.comboBox1);
@@ -371,34 +383,21 @@
             this.label9.TabIndex = 0;
             this.label9.Text = "Vehiculos";
             // 
-            // btnReservar
+            // btnPreliminar
             // 
-            this.btnReservar.Location = new System.Drawing.Point(296, 146);
-            this.btnReservar.Name = "btnReservar";
-            this.btnReservar.Size = new System.Drawing.Size(75, 23);
-            this.btnReservar.TabIndex = 21;
-            this.btnReservar.Text = "Reservar";
-            this.btnReservar.UseVisualStyleBackColor = true;
-            this.btnReservar.Click += new System.EventHandler(this.btnReservar_Click);
-            // 
-            // dgvBusqueda
-            // 
-            this.dgvBusqueda.AllowUserToAddRows = false;
-            this.dgvBusqueda.AllowUserToDeleteRows = false;
-            this.dgvBusqueda.AllowUserToOrderColumns = true;
-            this.dgvBusqueda.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvBusqueda.Location = new System.Drawing.Point(5, 6);
-            this.dgvBusqueda.Name = "dgvBusqueda";
-            this.dgvBusqueda.ReadOnly = true;
-            this.dgvBusqueda.Size = new System.Drawing.Size(271, 134);
-            this.dgvBusqueda.TabIndex = 19;
+            this.btnPreliminar.Location = new System.Drawing.Point(296, 146);
+            this.btnPreliminar.Name = "btnPreliminar";
+            this.btnPreliminar.Size = new System.Drawing.Size(75, 23);
+            this.btnPreliminar.TabIndex = 21;
+            this.btnPreliminar.Text = "Preliminar";
+            this.btnPreliminar.UseVisualStyleBackColor = true;
             // 
             // Vuelos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(389, 176);
-            this.Controls.Add(this.btnReservar);
+            this.Controls.Add(this.btnPreliminar);
             this.Controls.Add(this.pnlAuto);
             this.Controls.Add(this.pnlHotel);
             this.Controls.Add(this.pnlPasajeros);
@@ -428,10 +427,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.spnHabitaciones)).EndInit();
             this.pnlHotel.ResumeLayout(false);
             this.pnlHotel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvBusqueda)).EndInit();
             this.pnlAuto.ResumeLayout(false);
             this.pnlAuto.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvBusqueda)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -470,7 +469,7 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.NumericUpDown numericUpDown3;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Button btnReservar;
+        private System.Windows.Forms.Button btnPreliminar;
         private System.Windows.Forms.DataGridView dgvBusqueda;
     }
 }
