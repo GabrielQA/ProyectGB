@@ -24,21 +24,39 @@ namespace WindowsFormsApp1
 {
     public partial class Administrador : Form
     {
+
+
+
+
         /// <summary>
-        /// rowleef
+        /// In this class its works the administrator, in the administrator
+        /// add modifiy and delete the information with respective dates, specifically
+        /// it is divided into sections,countries, places, routes, hotels, hotel rates, flight fares, vehicles, airports.
+        /// In countries add modify and delete the ids, names and flags.
+        /// In places add modify and delete the id,name.
+        /// In routes add modify and delete the id,country origin, country destination, duration.
+        /// In hotels add modify and delete the id,name,country,places,room,price.
+        /// In hotel rates add modify and delete the id,price.
+        /// In flight fares
+        /// In vehicles
+        /// In airports
+
+
+
         /// </summary>
         string cadenas;
+        string pais;
         public Administrador()
         {
             InitializeComponent();
-          
+
             PaisesA();
-          // Lugares();
-            aeropuertos();
+            // Lugares();
+            //aeropuertos();
             //Rutas();
             //TarifaH();
-           // TarifaV();
-           // vehiculos();
+            // TarifaV();
+            // vehiculos();
 
         }
         /// <summary>
@@ -74,7 +92,7 @@ namespace WindowsFormsApp1
         }
         public void TarifaH()
         {
-           
+
             this.CenterToScreen();
             Conexion();
             conexion.Open();
@@ -114,7 +132,7 @@ namespace WindowsFormsApp1
                 while (dr.Read())
                 {
 
-                  
+
 
                     IDTarifaVuelosMod.Items.Add(dr.GetString(0));
 
@@ -149,6 +167,26 @@ namespace WindowsFormsApp1
             conexion.Close();
             RutasM();
         }
+        public void HotelesMod()
+        {
+            clearAll();
+            this.CenterToScreen();
+            Conexion();
+            conexion.Open();
+            List<String> lista = new List<String>();
+            NpgsqlCommand cmd = new NpgsqlCommand("SELECT id,nombre,foto,pais,lugar,habitaciones,precio FROM hoteles", conexion);
+            NpgsqlDataReader dr = cmd.ExecuteReader();
+            if (dr.HasRows)
+            {
+                while (dr.Read())
+                {
+                    IDHotelesMOD.Items.Add(dr.GetString(0));
+                    IDHotelesDelete.Items.Add(dr.GetString(1));
+                }
+            }
+            conexion.Close();
+
+        }
         public void aeropuertos()
         {
             clearAll();
@@ -176,28 +214,47 @@ namespace WindowsFormsApp1
         public void Lugares()
         {
             clearAll();
-            clearAll();
             this.CenterToScreen();
             Conexion();
             conexion.Open();
             List<String> lista = new List<String>();
-            NpgsqlCommand cmd = new NpgsqlCommand("SELECT id,nombre FROM lugares", conexion);
+            NpgsqlCommand cmd = new NpgsqlCommand("SELECT id,nombre,pais FROM lugares", conexion);
             NpgsqlDataReader dr = cmd.ExecuteReader();
             if (dr.HasRows)
             {
                 while (dr.Read())
                 {
-                    LugarHotelesADD.Items.Add(dr.GetString(1));
                     LugaresMOD.Items.Add(dr.GetString(1));
-                    IDmodL.Text = dr.GetString(0);
-                    nombremodl.Text = dr.GetString(1);
+                   
+                   
+                  
 
+                    LugarHotelesMod.Text = dr.GetString(1);
                     ComboboxLugaresDelete.Items.Add(dr.GetString(1));
                     IDdeleteL.Text = dr.GetString(0);
                 }
             }
             conexion.Close();
+
+        }
+        public void lugarPais(){
+            
+            this.CenterToScreen();
+            Conexion();
+            conexion.Open();
            
+            NpgsqlCommand cmd = new NpgsqlCommand("SELECT id,nombre,pais FROM lugares WHERE pais='"+pais+"'", conexion);
+            NpgsqlDataReader dr = cmd.ExecuteReader();
+            if (dr.HasRows)
+            {
+                while (dr.Read())
+                {
+                   LugarHotelesADD.Items.Add(dr.GetString(1));
+                    
+                }
+            }
+            conexion.Close();
+
         }
         public void PaisesA()
         {
@@ -212,6 +269,9 @@ namespace WindowsFormsApp1
             {
                 while (dr.Read())
                 {
+                    lpam.Items.Add(dr.GetString(1));
+                    lugarespaisadd.Items.Add(dr.GetString(1));
+                    paisHotelesMod.Items.Add(dr.GetString(1));
                     textBox6.Items.Add(dr.GetString(0));
                     PaisDadd.Items.Add(dr.GetString(1));
                     PaisOadd.Items.Add(dr.GetString(1));
@@ -245,7 +305,7 @@ namespace WindowsFormsApp1
             string servidor = "localhost";
             int puerto = 5432;
             string usuario = "postgres";
-            string clave = "bryan2748245";
+            string clave = "123";
             string baseDatos = "proyectgb";
 
             cadenaConexion = "Server=" + servidor + "; " + "Port=" + puerto + "; " + "User Id=" + usuario + "; " + "Password=" + clave + "; " + "Database=" + baseDatos;
@@ -322,7 +382,7 @@ namespace WindowsFormsApp1
         {
             Conexion();
             conexion.Open();
-            cmd = new NpgsqlCommand("INSERT INTO lugares(id,nombre) VALUES ('" + IDLADD.Text + "', '" + nombreLADD.Text + "')", conexion);
+            cmd = new NpgsqlCommand("INSERT INTO lugares(id,nombre,pais) VALUES ('" + IDLADD.Text + "', '" + nombreLADD.Text + "', '" + lugarespaisadd.Text + "')", conexion);
             cmd.ExecuteNonQuery();
             conexion.Close();
             MessageBox.Show("Informacion añadida correctamente");
@@ -332,7 +392,7 @@ namespace WindowsFormsApp1
         {
             Conexion();
             conexion.Open();
-            NpgsqlCommand cmd = new NpgsqlCommand("UPDATE lugares SET nombre = '" + nombremodl.Text + "' WHERE id = '" + Convert.ToInt32(IDmodL.Text) + "'", conexion);
+            NpgsqlCommand cmd = new NpgsqlCommand("UPDATE lugares SET nombre = '" + nombremodl.Text + "',pais= '" + lpam.Text + "' WHERE id = '" + Convert.ToInt32(IDmodL.Text) + "'", conexion);
             cmd.ExecuteNonQuery();
             conexion.Close();
             MessageBox.Show("Informacion modificada correctamente");
@@ -690,21 +750,25 @@ namespace WindowsFormsApp1
         private void button5_Click(object sender, EventArgs e)
         {
             InsertarDatosLugares();
+            clearAll();
+            LimpiarLugares();
         }
 
         private void button6_Click(object sender, EventArgs e)
         {
+           
             ModificarDatosLugares();
             LimpiarLugares();
 
 
         }
         public void LimpiarLugares() {
-
+            lpam.Equals("");
             IDLADD.Clear();
             IDmodL.Clear();
             nombreLADD.Clear();
             nombremodl.Clear();
+            LugaresMOD.Equals("");
 
 
         }
@@ -751,7 +815,14 @@ namespace WindowsFormsApp1
 
         private void button14_Click(object sender, EventArgs e)
         {
+            
             InsertarDatosHoteles();
+            IDHotelesAdd.Clear();
+            nombreHotelesAdd.Clear();
+            paisHotelesADD.Items.Clear();
+            LugarHotelesADD.Items.Clear();
+            habitacionHotelesADD.Clear();
+            Precio.Items.Clear();
         }
 
         private void button15_Click(object sender, EventArgs e)
@@ -945,6 +1016,7 @@ namespace WindowsFormsApp1
                   MessageBox.Show(direccion);
               }*/
         }
+
         public void LugaresM()
         {
 
@@ -1153,6 +1225,7 @@ namespace WindowsFormsApp1
 
             }
         }
+
         public void vehiculosM()
         {
 
@@ -1342,6 +1415,8 @@ namespace WindowsFormsApp1
             POmod.Items.Clear();
             PDmod.Items.Clear();
             
+            lugarespaisadd.Equals("");
+            lpam.Equals("");
 
 
             PaisDadd.Items.Clear();
@@ -1380,7 +1455,7 @@ namespace WindowsFormsApp1
 
         private void tabControl1_MouseClick(object sender, MouseEventArgs e)
         {
-            clearAll();
+           
         }
 
         private void tabPage10_MouseClick(object sender, MouseEventArgs e)
@@ -1506,7 +1581,7 @@ namespace WindowsFormsApp1
 
         private void Paises_MouseClick(object sender, MouseEventArgs e)
         {
-            clearAll();
+           
         }
 
         private void LugaresMOD_MouseClick(object sender, MouseEventArgs e)
@@ -2302,13 +2377,165 @@ namespace WindowsFormsApp1
         private void paisHotelesADD_MouseClick(object sender, MouseEventArgs e)
         {
             paisHotelesADD.Items.Clear();
+            LugarHotelesADD.Items.Clear();
             PaisesA();
         }
 
         private void LugarHotelesADD_MouseClick(object sender, MouseEventArgs e)
         {
             LugarHotelesADD.Items.Clear();
+            lugarPais();
+        }
+
+        
+
+        private void textBox6_SelectedValueChanged(object sender, EventArgs e)
+        {
+
+            this.CenterToScreen();
+            Conexion();
+            conexion.Open();
+            List<String> lista = new List<String>();
+            NpgsqlCommand cmd = new NpgsqlCommand("SELECT id,nombre,bandera FROM paises WHERE id='"+textBox6.SelectedItem+"'", conexion);
+            NpgsqlDataReader dr = cmd.ExecuteReader();
+            if (dr.HasRows)
+            {
+                while (dr.Read())
+                {
+                    imagemodPaises.Load(dr.GetString(2));
+                    textBox4.Text = dr.GetString(1);
+                   
+                }
+            }
+            conexion.Close();
+       
+    }
+
+        private void textBox6_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void IDHotelesMOD_SelectedValueChanged(object sender, EventArgs e)
+        {
+         
+
+            this.CenterToScreen();
+            Conexion();
+            conexion.Open();
+            List<String> lista = new List<String>();
+            NpgsqlCommand cmd = new NpgsqlCommand("SELECT id,nombre,foto,pais,lugar,habitaciones,precio FROM hoteles WHERE id='" + IDHotelesMOD.SelectedItem + "'", conexion);
+            NpgsqlDataReader dr = cmd.ExecuteReader();
+            if (dr.HasRows)
+            {
+                while (dr.Read())
+                {
+                   paisHotelesMod.Text = dr.GetString(3);
+                    imagenHotelesMod.Load(dr.GetString(2));
+                    NombreHotelesMod.Text = dr.GetString(1);
+                   
+                    LugarHotelesMod.Text=dr.GetString(4);
+                    habitacionesHotelesMod.Text = dr.GetString(5);
+                    PrecioM.Text =dr.GetString(6);
+                }
+            }
+            conexion.Close();
+          
+
+        }
+
+        private void IDHotelesMOD_Click(object sender, EventArgs e)
+        {
+            HotelesMod();
+        }
+
+        private void paisHotelesADD_SelectedValueChanged(object sender, EventArgs e)
+        {
+           pais= paisHotelesADD.SelectedItem.ToString();
+    
+        }
+
+        private void IDHotelesDelete_Click(object sender, EventArgs e)
+        {
+            HotelesMod();
+        }
+
+        private void paisHotelesMod_SelectedValueChanged(object sender, EventArgs e)
+        {
+            this.CenterToScreen();
+            Conexion();
+            conexion.Open();
+            List<String> listaa = new List<String>();
+            NpgsqlCommand cmdd = new NpgsqlCommand("SELECT id,nombre,pais FROM lugares WHERE nombre='" + paisHotelesADD.Text + "'", conexion);
+            NpgsqlDataReader dre = cmdd.ExecuteReader();
+            if (dre.HasRows)
+            {
+                while (dre.Read())
+                {
+                    LugarHotelesADD.Items.Add(dre.GetString(1));
+
+
+
+                }
+            }
+        }
+
+        private void paisHotelesMod_Click(object sender, EventArgs e)
+        {
+            LugarHotelesADD.Items.Clear(); 
+            PaisesA();
+        }
+
+        private void LugarHotelesMod_Click(object sender, EventArgs e)
+        {
             Lugares();
+        }
+
+        private void lugarespaisadd_Click(object sender, EventArgs e)
+        {
+            lugarespaisadd.Items.Clear();
+            PaisesA();
+        }
+
+        private void lpam_Click(object sender, EventArgs e)
+        {
+            lpam.Items.Clear();
+            PaisesA();
+        }
+
+        private void LugaresMOD_SelectedValueChanged(object sender, EventArgs e)
+        {
+            this.CenterToScreen();
+            Conexion();
+            conexion.Open();
+            List<String> lista = new List<String>();
+            NpgsqlCommand cmd = new NpgsqlCommand("SELECT id,nombre,pais FROM lugares WHERE nombre='" + LugaresMOD.SelectedItem + "'", conexion);
+            NpgsqlDataReader dr = cmd.ExecuteReader();
+            if (dr.HasRows)
+            {
+                while (dr.Read())
+                {
+                   
+                    lpam.Text = dr.GetString(2);
+
+                }
+            }
+            conexion.Close();
+
+        }
+
+        private void AeropuertoMod_Click(object sender, EventArgs e)
+        {
+
+            AeropuertoMod.Equals("");
+            AeropuertoMod.Items.Clear();
+            aeropuertos();
+        }
+
+        private void ComboboxAeropuertoDelete_Click(object sender, EventArgs e)
+        {
+            ComboboxAeropuertoDelete.Items.Clear();
+            aeropuertos();
         }
     }
 }

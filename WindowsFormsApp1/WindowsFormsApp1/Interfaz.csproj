@@ -67,6 +67,12 @@
     <Compile Include="Alojamiento.Designer.cs">
       <DependentUpon>Alojamiento.cs</DependentUpon>
     </Compile>
+    <Compile Include="Cliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cliente.Designer.cs">
+      <DependentUpon>Cliente.cs</DependentUpon>
+    </Compile>
     <Compile Include="Conex.cs" />
     <Compile Include="Logeo_Cliente.cs">
       <SubType>Form</SubType>
@@ -108,6 +114,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Alojamiento.resx">
       <DependentUpon>Alojamiento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cliente.resx">
+      <DependentUpon>Cliente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Logeo_Cliente.resx">
       <DependentUpon>Logeo_Cliente.cs</DependentUpon>
