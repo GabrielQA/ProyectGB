@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Npgsql;
+using Capa_Info;
 using System.Windows.Forms;
 
 namespace WindowsFormsApp1
@@ -72,9 +73,10 @@ namespace WindowsFormsApp1
             }
             else
             {
+                String contraseñaEn = Contraseña.EncriptarContraseña(txtc.Text);
                 Conexion();
                 conexion.Open();
-                NpgsqlCommand cmd = new NpgsqlCommand("SELECT cedula,nombre,contraseña,tipo FROM usuario WHERE nombre = '" + txtu.Text + "'and contraseña='" + txtc.Text + "'and tipo='" + Admin + "'", conexion);
+                NpgsqlCommand cmd = new NpgsqlCommand("SELECT cedula,nombre,contraseña,tipo FROM usuario WHERE nombre = '" + txtu.Text + "'and contraseña='" + contraseñaEn + "'and tipo='" + Admin + "'", conexion);
                 NpgsqlDataReader entra = cmd.ExecuteReader();
 
 
@@ -95,24 +97,25 @@ namespace WindowsFormsApp1
         public void ValidarUsuario()
         {
            
-            ///Mañana averiguo en un video de youtube que linea codigo se coloca despues de el 
-            ///npgsqlCommanda cmd = etc despues de esa sigue una linea en especifico para que pueda funcionar
+          
+            
             if (txtu.Text.Length == 0 || txtc.Text.Length == 0)
             {
                 MessageBox.Show("Debe de llenar todos los datos.");
             }
             else
             {
+                String contraseñaEn = Contraseña.EncriptarContraseña(txtc.Text);
                 Conexion();
                 conexion.Open();
-                NpgsqlCommand cmd = new NpgsqlCommand("SELECT cedula,nombre,contraseña,tipo FROM usuario WHERE nombre = '" + txtu.Text + "'and contraseña='" + txtc.Text + "'and tipo='" + Usu + "'", conexion);
+                NpgsqlCommand cmd = new NpgsqlCommand("SELECT cedula,nombre,contraseña,tipo FROM usuario WHERE nombre = '" + txtu.Text + "'and contraseña='" + contraseñaEn + "'and tipo='" + Usu + "'", conexion);
                 NpgsqlDataReader entra = cmd.ExecuteReader();
 
 
                 if (entra.Read())
                 {
                     this.Hide();
-                    formAlojamiento a = new formAlojamiento();
+                    Cliente a = new Cliente();
                     a.Show();
                     
                    A = true;  

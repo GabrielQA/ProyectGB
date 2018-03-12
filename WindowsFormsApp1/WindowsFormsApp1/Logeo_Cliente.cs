@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Npgsql;
 using System.Windows.Forms;
-
+using Capa_Info;
 namespace WindowsFormsApp1
 {
     public partial class Logeo_Cliente : Form
@@ -17,10 +17,12 @@ namespace WindowsFormsApp1
         {
             InitializeComponent();
         }
-       
+
+
         static string cadenaConexion = null;
         static NpgsqlConnection conexion;
         static NpgsqlCommand cmd;
+
 
         public static void Conexion()
         {
@@ -29,39 +31,33 @@ namespace WindowsFormsApp1
             string usuario = "postgres";
             int clave = 123;
             string baseDatos = "proyectgb";
-
             cadenaConexion = "Server=" + servidor + "; " + "Port=" + puerto + "; " + "User Id=" + usuario + "; " + "Password=" + clave + "; " + "Database=" + baseDatos;
             conexion = new NpgsqlConnection(cadenaConexion);
             Console.WriteLine(cadenaConexion);
 
         }
-
         private void Agregar_Datos_Click(object sender, EventArgs e)
         {
             if (txtCedula.Text.Length == 0 || txtc.Text.Length == 0 || txtUsuario.Text.Length == 0)
             {
                 MessageBox.Show("Debe de llenar todos los datos.");
-
                 txtc.Clear();
                 txtCedula.Clear();
-                txtUsuario.Clear();
-
-                    
+                txtUsuario.Clear();        
             }
             else
             {
                 String Usu = "Cliente";
+                String ContraseñaEn = Contraseña.EncriptarContraseña(txtc.Text);
                 Conexion();
                 conexion.Open();
-                cmd = new NpgsqlCommand("INSERT INTO usuario (cedula,nombre,contraseña,tipo) VALUES ('" + txtCedula.Text + "', '" + txtUsuario.Text + "', '" + txtc.Text + "', '" + Usu + "'  )", conexion);
+                cmd = new NpgsqlCommand("INSERT INTO usuario (cedula,nombre,contraseña,tipo) VALUES ('" + txtCedula.Text + "', '" + txtUsuario.Text + "', '" + ContraseñaEn + "', '" + Usu + "'  )", conexion);
                 cmd.ExecuteNonQuery();
                 conexion.Close();
                 MessageBox.Show("A sido registrado exitosamente");
                 txtc.Clear();
                 txtCedula.Clear();
                 txtUsuario.Clear();
-
-
             }
         }
 
@@ -72,13 +68,5 @@ namespace WindowsFormsApp1
             v.Show();
 
         }
-
-
-
-
-
-
-
     }
-
 }

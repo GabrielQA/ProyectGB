@@ -146,6 +146,7 @@
             this.label33 = new System.Windows.Forms.Label();
             this.label34 = new System.Windows.Forms.Label();
             this.tabPage21 = new System.Windows.Forms.TabPage();
+            this.IDHotelesMOD = new System.Windows.Forms.ComboBox();
             this.imagenHotelesMod = new System.Windows.Forms.PictureBox();
             this.PrecioM = new System.Windows.Forms.ComboBox();
             this.label69 = new System.Windows.Forms.Label();
@@ -157,7 +158,6 @@
             this.label38 = new System.Windows.Forms.Label();
             this.label39 = new System.Windows.Forms.Label();
             this.NombreHotelesMod = new System.Windows.Forms.TextBox();
-            this.IDHotelesMOD = new System.Windows.Forms.TextBox();
             this.label40 = new System.Windows.Forms.Label();
             this.label41 = new System.Windows.Forms.Label();
             this.label42 = new System.Windows.Forms.Label();
@@ -255,6 +255,10 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.button1 = new System.Windows.Forms.Button();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.lugarespaisadd = new System.Windows.Forms.ComboBox();
+            this.label70 = new System.Windows.Forms.Label();
+            this.label71 = new System.Windows.Forms.Label();
+            this.lpam = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.Paises.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -488,6 +492,8 @@
             this.textBox6.Name = "textBox6";
             this.textBox6.Size = new System.Drawing.Size(204, 24);
             this.textBox6.TabIndex = 67;
+            this.textBox6.SelectedIndexChanged += new System.EventHandler(this.textBox6_SelectedIndexChanged);
+            this.textBox6.SelectedValueChanged += new System.EventHandler(this.textBox6_SelectedValueChanged);
             this.textBox6.Click += new System.EventHandler(this.textBox6_Click);
             this.textBox6.MouseClick += new System.Windows.Forms.MouseEventHandler(this.textBox6_MouseClick);
             // 
@@ -629,6 +635,8 @@
             // tabPage12
             // 
             this.tabPage12.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.tabPage12.Controls.Add(this.label70);
+            this.tabPage12.Controls.Add(this.lugarespaisadd);
             this.tabPage12.Controls.Add(this.button5);
             this.tabPage12.Controls.Add(this.nombreLADD);
             this.tabPage12.Controls.Add(this.IDLADD);
@@ -644,7 +652,7 @@
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(229, 156);
+            this.button5.Location = new System.Drawing.Point(228, 188);
             this.button5.Margin = new System.Windows.Forms.Padding(4);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(104, 28);
@@ -694,6 +702,8 @@
             // tabPage13
             // 
             this.tabPage13.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.tabPage13.Controls.Add(this.label71);
+            this.tabPage13.Controls.Add(this.lpam);
             this.tabPage13.Controls.Add(this.LugaresMOD);
             this.tabPage13.Controls.Add(this.nombremodl);
             this.tabPage13.Controls.Add(this.IDmodL);
@@ -719,6 +729,7 @@
             this.LugaresMOD.Size = new System.Drawing.Size(204, 24);
             this.LugaresMOD.TabIndex = 21;
             this.LugaresMOD.SelectedIndexChanged += new System.EventHandler(this.LugaresMOD_SelectedIndexChanged);
+            this.LugaresMOD.SelectedValueChanged += new System.EventHandler(this.LugaresMOD_SelectedValueChanged);
             this.LugaresMOD.MouseClick += new System.Windows.Forms.MouseEventHandler(this.LugaresMOD_MouseClick);
             // 
             // nombremodl
@@ -751,7 +762,7 @@
             // 
             // button6
             // 
-            this.button6.Location = new System.Drawing.Point(361, 161);
+            this.button6.Location = new System.Drawing.Point(365, 207);
             this.button6.Margin = new System.Windows.Forms.Padding(4);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(95, 28);
@@ -993,6 +1004,7 @@
             this.AeropuertoMod.Size = new System.Drawing.Size(204, 24);
             this.AeropuertoMod.TabIndex = 25;
             this.AeropuertoMod.SelectedIndexChanged += new System.EventHandler(this.AeropuertoMod_SelectedIndexChanged);
+            this.AeropuertoMod.Click += new System.EventHandler(this.AeropuertoMod_Click);
             // 
             // iataMODAeropuerto
             // 
@@ -1107,6 +1119,7 @@
             this.ComboboxAeropuertoDelete.Size = new System.Drawing.Size(204, 24);
             this.ComboboxAeropuertoDelete.TabIndex = 26;
             this.ComboboxAeropuertoDelete.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
+            this.ComboboxAeropuertoDelete.Click += new System.EventHandler(this.ComboboxAeropuertoDelete_Click);
             // 
             // button10
             // 
@@ -1549,6 +1562,7 @@
             this.paisHotelesADD.Name = "paisHotelesADD";
             this.paisHotelesADD.Size = new System.Drawing.Size(204, 24);
             this.paisHotelesADD.TabIndex = 53;
+            this.paisHotelesADD.SelectedValueChanged += new System.EventHandler(this.paisHotelesADD_SelectedValueChanged);
             this.paisHotelesADD.MouseClick += new System.Windows.Forms.MouseEventHandler(this.paisHotelesADD_MouseClick);
             // 
             // button14
@@ -1651,6 +1665,7 @@
             // 
             // tabPage21
             // 
+            this.tabPage21.Controls.Add(this.IDHotelesMOD);
             this.tabPage21.Controls.Add(this.imagenHotelesMod);
             this.tabPage21.Controls.Add(this.PrecioM);
             this.tabPage21.Controls.Add(this.label69);
@@ -1662,7 +1677,6 @@
             this.tabPage21.Controls.Add(this.label38);
             this.tabPage21.Controls.Add(this.label39);
             this.tabPage21.Controls.Add(this.NombreHotelesMod);
-            this.tabPage21.Controls.Add(this.IDHotelesMOD);
             this.tabPage21.Controls.Add(this.label40);
             this.tabPage21.Controls.Add(this.label41);
             this.tabPage21.Controls.Add(this.label42);
@@ -1675,6 +1689,18 @@
             this.tabPage21.Text = "Modificar";
             this.tabPage21.UseVisualStyleBackColor = true;
             this.tabPage21.MouseClick += new System.Windows.Forms.MouseEventHandler(this.tabPage21_MouseClick);
+            // 
+            // IDHotelesMOD
+            // 
+            this.IDHotelesMOD.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.IDHotelesMOD.FormattingEnabled = true;
+            this.IDHotelesMOD.Location = new System.Drawing.Point(121, 31);
+            this.IDHotelesMOD.Margin = new System.Windows.Forms.Padding(4);
+            this.IDHotelesMOD.Name = "IDHotelesMOD";
+            this.IDHotelesMOD.Size = new System.Drawing.Size(204, 24);
+            this.IDHotelesMOD.TabIndex = 69;
+            this.IDHotelesMOD.SelectedValueChanged += new System.EventHandler(this.IDHotelesMOD_SelectedValueChanged);
+            this.IDHotelesMOD.Click += new System.EventHandler(this.IDHotelesMOD_Click);
             // 
             // imagenHotelesMod
             // 
@@ -1716,6 +1742,7 @@
             this.LugarHotelesMod.Name = "LugarHotelesMod";
             this.LugarHotelesMod.Size = new System.Drawing.Size(204, 24);
             this.LugarHotelesMod.TabIndex = 52;
+            this.LugarHotelesMod.Click += new System.EventHandler(this.LugarHotelesMod_Click);
             // 
             // paisHotelesMod
             // 
@@ -1725,6 +1752,8 @@
             this.paisHotelesMod.Name = "paisHotelesMod";
             this.paisHotelesMod.Size = new System.Drawing.Size(204, 24);
             this.paisHotelesMod.TabIndex = 51;
+            this.paisHotelesMod.SelectedValueChanged += new System.EventHandler(this.paisHotelesMod_SelectedValueChanged);
+            this.paisHotelesMod.Click += new System.EventHandler(this.paisHotelesMod_Click);
             // 
             // button15
             // 
@@ -1785,14 +1814,6 @@
             this.NombreHotelesMod.TabIndex = 43;
             this.NombreHotelesMod.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.NombreHotelesMod_KeyPress);
             // 
-            // IDHotelesMOD
-            // 
-            this.IDHotelesMOD.Location = new System.Drawing.Point(121, 34);
-            this.IDHotelesMOD.Margin = new System.Windows.Forms.Padding(4);
-            this.IDHotelesMOD.Name = "IDHotelesMOD";
-            this.IDHotelesMOD.Size = new System.Drawing.Size(204, 22);
-            this.IDHotelesMOD.TabIndex = 41;
-            // 
             // label40
             // 
             this.label40.AutoSize = true;
@@ -1847,6 +1868,7 @@
             this.IDHotelesDelete.Name = "IDHotelesDelete";
             this.IDHotelesDelete.Size = new System.Drawing.Size(204, 24);
             this.IDHotelesDelete.TabIndex = 52;
+            this.IDHotelesDelete.Click += new System.EventHandler(this.IDHotelesDelete_Click);
             // 
             // button16
             // 
@@ -2879,6 +2901,44 @@
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
+            // lugarespaisadd
+            // 
+            this.lugarespaisadd.FormattingEnabled = true;
+            this.lugarespaisadd.Location = new System.Drawing.Point(128, 141);
+            this.lugarespaisadd.Name = "lugarespaisadd";
+            this.lugarespaisadd.Size = new System.Drawing.Size(204, 24);
+            this.lugarespaisadd.TabIndex = 12;
+            this.lugarespaisadd.Click += new System.EventHandler(this.lugarespaisadd_Click);
+            // 
+            // label70
+            // 
+            this.label70.AutoSize = true;
+            this.label70.Location = new System.Drawing.Point(47, 148);
+            this.label70.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label70.Name = "label70";
+            this.label70.Size = new System.Drawing.Size(35, 17);
+            this.label70.TabIndex = 13;
+            this.label70.Text = "Pais";
+            // 
+            // label71
+            // 
+            this.label71.AutoSize = true;
+            this.label71.Location = new System.Drawing.Point(46, 214);
+            this.label71.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label71.Name = "label71";
+            this.label71.Size = new System.Drawing.Size(35, 17);
+            this.label71.TabIndex = 23;
+            this.label71.Text = "Pais";
+            // 
+            // lpam
+            // 
+            this.lpam.FormattingEnabled = true;
+            this.lpam.Location = new System.Drawing.Point(127, 207);
+            this.lpam.Name = "lpam";
+            this.lpam.Size = new System.Drawing.Size(204, 24);
+            this.lpam.TabIndex = 22;
+            this.lpam.Click += new System.EventHandler(this.lpam_Click);
+            // 
             // Administrador
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -3052,7 +3112,6 @@
         private System.Windows.Forms.Label label38;
         private System.Windows.Forms.Label label39;
         private System.Windows.Forms.TextBox NombreHotelesMod;
-        private System.Windows.Forms.TextBox IDHotelesMOD;
         private System.Windows.Forms.Label label40;
         private System.Windows.Forms.Label label41;
         private System.Windows.Forms.Label label42;
@@ -3200,5 +3259,10 @@
         public System.Windows.Forms.PictureBox imagenHotelesMod;
         private System.Windows.Forms.ComboBox IDHotelesDelete;
         private System.Windows.Forms.ComboBox textBox6;
+        private System.Windows.Forms.ComboBox IDHotelesMOD;
+        private System.Windows.Forms.Label label70;
+        private System.Windows.Forms.ComboBox lugarespaisadd;
+        private System.Windows.Forms.Label label71;
+        private System.Windows.Forms.ComboBox lpam;
     }
 }
