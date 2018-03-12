@@ -7,7 +7,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using Capa_Info;
+using Npgsql;
+using NpgsqlTypes;
+using Microsoft.VisualBasic;
 namespace WindowsFormsApp1
 {
     public partial class Preliminar : Form
@@ -29,6 +32,8 @@ namespace WindowsFormsApp1
         public static string Pvehiculo;
         public static string Validar;
 
+
+        public static int ID;
         public Preliminar()
         {
             InitializeComponent();
@@ -186,7 +191,46 @@ namespace WindowsFormsApp1
 
         private void btnComprar_Click(object sender, EventArgs e)
         {
+            string calificacion = Microsoft.VisualBasic.Interaction.InputBox("Ingrese la Calificacion al hotel " + txtHotel.Text, "Calificacion", "Ingrese la votacion del 1 al 10");
+            try
+            {
+                Conexion.Coneccion();
+                Conexion.conexion.Open();
+                Conexion.cmd = new NpgsqlCommand("INSERT INTO compra(id,fecha_inicio,fecha_final,pais_origen,pais_destino,hotel,vehiculo,calificacion,precio_total) VALUES ('" + ID + "', '" + dtpInicio.Value + "', '" + dtpFinal.Value + "', '" + txtOrigen1.Text + "', '" + txtDestino1.Text + "', '" + txtHotel.Text + "','" + txtVehiculo.Text + "', '" + calificacion + "', '" + txtTotal.Text + "')", Conexion.conexion);
+                Conexion.cmd.ExecuteNonQuery();
+                Conexion.conexion.Close();
+                MessageBox.Show("Su compra a sido exitosa");
+                this.Hide();
+                Cliente c = new Cliente();
+                c.Show();
 
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex);
+            }
+        }
+
+        private void btnReservar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Conexion.Coneccion();
+                Conexion.conexion.Open();
+
+                Conexion.cmd = new NpgsqlCommand("INSERT INTO reservas(id,fecha_inicio,fecha_final,pais_origen,pais_destino,escala,nombre_hotel,lugar_hotel,habitaciones_hotel,marca_vehiculo,modelo_vehiculo,cantidad_vehiculo,precio_vuelo,precio_hotel,precio_vehiculo,precio_total) VALUES ('" + ID + "', '" + dtpInicio.Value + "', '" + dtpFinal.Value + "', '" + txtOrigen1.Text + "', '" + txtDestino1.Text + "', '" + txtEscala.Text + "', '" + txtHotel.Text + "', '" + txtLugarH.Text + "', '" + txtHabitaciones.Text + "', '" + txtVehiculo.Text + "', '" + txtModeloV.Text + "', '" + txtCantidadV.Text + "', '" + txtVueloP.Text + "', '" + txtHotelP.Text + "', '" + txtVehiculoP.Text + "', '" + txtTotal.Text + "')", Conexion.conexion);
+                Conexion.cmd.ExecuteNonQuery();
+                Conexion.conexion.Close();
+                MessageBox.Show("Su reserva a sido exitosa");
+                this.Hide();
+                Cliente c = new Cliente();
+                c.Show();
+            }
+
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex);
+            }
         }
     }
 }

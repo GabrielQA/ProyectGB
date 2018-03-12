@@ -110,10 +110,9 @@ namespace WindowsFormsApp1
                 conexion.Open();
                 NpgsqlCommand cmd = new NpgsqlCommand("SELECT cedula,nombre,contraseña,tipo FROM usuario WHERE nombre = '" + txtu.Text + "'and contraseña='" + contraseñaEn + "'and tipo='" + Usu + "'", conexion);
                 NpgsqlDataReader entra = cmd.ExecuteReader();
-
-
                 if (entra.Read())
                 {
+                    Preliminar.ID = Convert.ToInt32(entra["cedula"].ToString());
                     this.Hide();
                     Cliente a = new Cliente();
                     a.Show();

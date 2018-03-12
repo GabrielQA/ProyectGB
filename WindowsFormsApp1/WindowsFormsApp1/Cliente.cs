@@ -29,11 +29,6 @@ namespace WindowsFormsApp1
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-           
-        }
-
-        private void comboBox1_MouseClick(object sender, MouseEventArgs e)
-        {
             if (comboBox1.Text == "Vuelos")
             {
                 this.Hide();
@@ -41,12 +36,22 @@ namespace WindowsFormsApp1
                 V.Show();
 
             }
-            else if (comboBox1.Text == "Alojamiento")
+            else if (comboBox1.Text == "Alojamientos")
             {
                 this.Hide();
                 formAlojamiento v = new formAlojamiento();
                 v.Show();
             }
+        }
+
+        private void comboBox1_MouseClick(object sender, MouseEventArgs e)
+        {
+           
+        }
+
+        private void comboBox1_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }
