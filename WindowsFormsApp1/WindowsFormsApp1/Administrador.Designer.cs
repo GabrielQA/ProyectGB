@@ -56,12 +56,16 @@
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.tabControl2 = new System.Windows.Forms.TabControl();
             this.tabPage12 = new System.Windows.Forms.TabPage();
+            this.label70 = new System.Windows.Forms.Label();
+            this.lugarespaisadd = new System.Windows.Forms.ComboBox();
             this.button5 = new System.Windows.Forms.Button();
             this.nombreLADD = new System.Windows.Forms.TextBox();
             this.IDLADD = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.tabPage13 = new System.Windows.Forms.TabPage();
+            this.label71 = new System.Windows.Forms.Label();
+            this.lpam = new System.Windows.Forms.ComboBox();
             this.LugaresMOD = new System.Windows.Forms.ComboBox();
             this.nombremodl = new System.Windows.Forms.TextBox();
             this.IDmodL = new System.Windows.Forms.TextBox();
@@ -73,34 +77,6 @@
             this.IDdeleteL = new System.Windows.Forms.TextBox();
             this.button7 = new System.Windows.Forms.Button();
             this.label14 = new System.Windows.Forms.Label();
-            this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.aeropuertoDelete = new System.Windows.Forms.TabControl();
-            this.tabPage15 = new System.Windows.Forms.TabPage();
-            this.IATAaddAeropuerto = new System.Windows.Forms.TextBox();
-            this.label16 = new System.Windows.Forms.Label();
-            this.NombreaddAeropuerto = new System.Windows.Forms.TextBox();
-            this.LOCALIDADddAeropuerto = new System.Windows.Forms.TextBox();
-            this.IDaddAeropuerto = new System.Windows.Forms.TextBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.button8 = new System.Windows.Forms.Button();
-            this.label15 = new System.Windows.Forms.Label();
-            this.tabPage16 = new System.Windows.Forms.TabPage();
-            this.AeropuertoMod = new System.Windows.Forms.ComboBox();
-            this.iataMODAeropuerto = new System.Windows.Forms.TextBox();
-            this.label17 = new System.Windows.Forms.Label();
-            this.nombreMODAeropuerto = new System.Windows.Forms.TextBox();
-            this.modLocalidadAeropuerto = new System.Windows.Forms.TextBox();
-            this.IDmodAeropuerto = new System.Windows.Forms.TextBox();
-            this.label18 = new System.Windows.Forms.Label();
-            this.label19 = new System.Windows.Forms.Label();
-            this.button9 = new System.Windows.Forms.Button();
-            this.label20 = new System.Windows.Forms.Label();
-            this.tabPage17 = new System.Windows.Forms.TabPage();
-            this.ComboboxAeropuertoDelete = new System.Windows.Forms.ComboBox();
-            this.button10 = new System.Windows.Forms.Button();
-            this.IDDELETEAeropuerto = new System.Windows.Forms.TextBox();
-            this.label21 = new System.Windows.Forms.Label();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.tabControl4 = new System.Windows.Forms.TabControl();
             this.tabPage18 = new System.Windows.Forms.TabPage();
@@ -255,10 +231,32 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.button1 = new System.Windows.Forms.Button();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.lugarespaisadd = new System.Windows.Forms.ComboBox();
-            this.label70 = new System.Windows.Forms.Label();
-            this.label71 = new System.Windows.Forms.Label();
-            this.lpam = new System.Windows.Forms.ComboBox();
+            this.tabPage17 = new System.Windows.Forms.TabPage();
+            this.label21 = new System.Windows.Forms.Label();
+            this.IDDELETEAeropuerto = new System.Windows.Forms.TextBox();
+            this.button10 = new System.Windows.Forms.Button();
+            this.ComboboxAeropuertoDelete = new System.Windows.Forms.ComboBox();
+            this.tabPage16 = new System.Windows.Forms.TabPage();
+            this.label20 = new System.Windows.Forms.Label();
+            this.button9 = new System.Windows.Forms.Button();
+            this.label19 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
+            this.IDmodAeropuerto = new System.Windows.Forms.TextBox();
+            this.modLocalidadAeropuerto = new System.Windows.Forms.TextBox();
+            this.nombreMODAeropuerto = new System.Windows.Forms.TextBox();
+            this.label17 = new System.Windows.Forms.Label();
+            this.iataMODAeropuerto = new System.Windows.Forms.TextBox();
+            this.AeropuertoMod = new System.Windows.Forms.ComboBox();
+            this.tabPage15 = new System.Windows.Forms.TabPage();
+            this.label15 = new System.Windows.Forms.Label();
+            this.button8 = new System.Windows.Forms.Button();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.IDaddAeropuerto = new System.Windows.Forms.TextBox();
+            this.LOCALIDADddAeropuerto = new System.Windows.Forms.TextBox();
+            this.NombreaddAeropuerto = new System.Windows.Forms.TextBox();
+            this.label16 = new System.Windows.Forms.Label();
+            this.IATAaddAeropuerto = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.Paises.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -273,11 +271,6 @@
             this.tabPage12.SuspendLayout();
             this.tabPage13.SuspendLayout();
             this.tabPage14.SuspendLayout();
-            this.tabPage3.SuspendLayout();
-            this.aeropuertoDelete.SuspendLayout();
-            this.tabPage15.SuspendLayout();
-            this.tabPage16.SuspendLayout();
-            this.tabPage17.SuspendLayout();
             this.tabPage4.SuspendLayout();
             this.tabControl4.SuspendLayout();
             this.tabPage18.SuspendLayout();
@@ -331,7 +324,6 @@
             // 
             this.Paises.Controls.Add(this.tabPage1);
             this.Paises.Controls.Add(this.tabPage2);
-            this.Paises.Controls.Add(this.tabPage3);
             this.Paises.Controls.Add(this.tabPage4);
             this.Paises.Controls.Add(this.tabPage5);
             this.Paises.Controls.Add(this.tabPage6);
@@ -465,6 +457,7 @@
             // 
             // Modificar
             // 
+            this.Modificar.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.Modificar.Controls.Add(this.textBox6);
             this.Modificar.Controls.Add(this.imagemodPaises);
             this.Modificar.Controls.Add(this.label4);
@@ -479,7 +472,6 @@
             this.Modificar.Size = new System.Drawing.Size(741, 360);
             this.Modificar.TabIndex = 1;
             this.Modificar.Text = "Modificar";
-            this.Modificar.UseVisualStyleBackColor = true;
             this.Modificar.Click += new System.EventHandler(this.Modificar_Click);
             this.Modificar.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Modificar_MouseClick);
             // 
@@ -650,6 +642,25 @@
             this.tabPage12.TabIndex = 0;
             this.tabPage12.Text = "Agregar";
             // 
+            // label70
+            // 
+            this.label70.AutoSize = true;
+            this.label70.Location = new System.Drawing.Point(47, 148);
+            this.label70.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label70.Name = "label70";
+            this.label70.Size = new System.Drawing.Size(35, 17);
+            this.label70.TabIndex = 13;
+            this.label70.Text = "Pais";
+            // 
+            // lugarespaisadd
+            // 
+            this.lugarespaisadd.FormattingEnabled = true;
+            this.lugarespaisadd.Location = new System.Drawing.Point(128, 141);
+            this.lugarespaisadd.Name = "lugarespaisadd";
+            this.lugarespaisadd.Size = new System.Drawing.Size(204, 24);
+            this.lugarespaisadd.TabIndex = 12;
+            this.lugarespaisadd.Click += new System.EventHandler(this.lugarespaisadd_Click);
+            // 
             // button5
             // 
             this.button5.Location = new System.Drawing.Point(228, 188);
@@ -718,6 +729,25 @@
             this.tabPage13.TabIndex = 1;
             this.tabPage13.Text = "Modificar";
             this.tabPage13.MouseClick += new System.Windows.Forms.MouseEventHandler(this.tabPage13_MouseClick);
+            // 
+            // label71
+            // 
+            this.label71.AutoSize = true;
+            this.label71.Location = new System.Drawing.Point(46, 214);
+            this.label71.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label71.Name = "label71";
+            this.label71.Size = new System.Drawing.Size(35, 17);
+            this.label71.TabIndex = 23;
+            this.label71.Text = "Pais";
+            // 
+            // lpam
+            // 
+            this.lpam.FormattingEnabled = true;
+            this.lpam.Location = new System.Drawing.Point(127, 207);
+            this.lpam.Name = "lpam";
+            this.lpam.Size = new System.Drawing.Size(204, 24);
+            this.lpam.TabIndex = 22;
+            this.lpam.Click += new System.EventHandler(this.lpam_Click);
             // 
             // LugaresMOD
             // 
@@ -840,316 +870,6 @@
             this.label14.Size = new System.Drawing.Size(21, 17);
             this.label14.TabIndex = 14;
             this.label14.Text = "ID";
-            // 
-            // tabPage3
-            // 
-            this.tabPage3.Controls.Add(this.aeropuertoDelete);
-            this.tabPage3.Location = new System.Drawing.Point(4, 25);
-            this.tabPage3.Margin = new System.Windows.Forms.Padding(4);
-            this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Padding = new System.Windows.Forms.Padding(4);
-            this.tabPage3.Size = new System.Drawing.Size(742, 379);
-            this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "Aeropuertos";
-            this.tabPage3.UseVisualStyleBackColor = true;
-            // 
-            // aeropuertoDelete
-            // 
-            this.aeropuertoDelete.Controls.Add(this.tabPage15);
-            this.aeropuertoDelete.Controls.Add(this.tabPage16);
-            this.aeropuertoDelete.Controls.Add(this.tabPage17);
-            this.aeropuertoDelete.Location = new System.Drawing.Point(-5, 0);
-            this.aeropuertoDelete.Margin = new System.Windows.Forms.Padding(4);
-            this.aeropuertoDelete.Name = "aeropuertoDelete";
-            this.aeropuertoDelete.SelectedIndex = 0;
-            this.aeropuertoDelete.Size = new System.Drawing.Size(896, 394);
-            this.aeropuertoDelete.TabIndex = 0;
-            this.aeropuertoDelete.MouseClick += new System.Windows.Forms.MouseEventHandler(this.aeropuertoDelete_MouseClick);
-            // 
-            // tabPage15
-            // 
-            this.tabPage15.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.tabPage15.Controls.Add(this.IATAaddAeropuerto);
-            this.tabPage15.Controls.Add(this.label16);
-            this.tabPage15.Controls.Add(this.NombreaddAeropuerto);
-            this.tabPage15.Controls.Add(this.LOCALIDADddAeropuerto);
-            this.tabPage15.Controls.Add(this.IDaddAeropuerto);
-            this.tabPage15.Controls.Add(this.label10);
-            this.tabPage15.Controls.Add(this.label13);
-            this.tabPage15.Controls.Add(this.button8);
-            this.tabPage15.Controls.Add(this.label15);
-            this.tabPage15.Location = new System.Drawing.Point(4, 25);
-            this.tabPage15.Margin = new System.Windows.Forms.Padding(4);
-            this.tabPage15.Name = "tabPage15";
-            this.tabPage15.Padding = new System.Windows.Forms.Padding(4);
-            this.tabPage15.Size = new System.Drawing.Size(888, 365);
-            this.tabPage15.TabIndex = 0;
-            this.tabPage15.Text = "Agregar";
-            this.tabPage15.MouseClick += new System.Windows.Forms.MouseEventHandler(this.tabPage15_MouseClick);
-            // 
-            // IATAaddAeropuerto
-            // 
-            this.IATAaddAeropuerto.Location = new System.Drawing.Point(123, 181);
-            this.IATAaddAeropuerto.Margin = new System.Windows.Forms.Padding(4);
-            this.IATAaddAeropuerto.Name = "IATAaddAeropuerto";
-            this.IATAaddAeropuerto.Size = new System.Drawing.Size(204, 22);
-            this.IATAaddAeropuerto.TabIndex = 15;
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(41, 185);
-            this.label16.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(38, 17);
-            this.label16.TabIndex = 14;
-            this.label16.Text = "IATA";
-            // 
-            // NombreaddAeropuerto
-            // 
-            this.NombreaddAeropuerto.Location = new System.Drawing.Point(123, 87);
-            this.NombreaddAeropuerto.Margin = new System.Windows.Forms.Padding(4);
-            this.NombreaddAeropuerto.Name = "NombreaddAeropuerto";
-            this.NombreaddAeropuerto.Size = new System.Drawing.Size(204, 22);
-            this.NombreaddAeropuerto.TabIndex = 13;
-            this.NombreaddAeropuerto.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.NombreaddAeropuerto_KeyPress);
-            // 
-            // LOCALIDADddAeropuerto
-            // 
-            this.LOCALIDADddAeropuerto.Location = new System.Drawing.Point(123, 137);
-            this.LOCALIDADddAeropuerto.Margin = new System.Windows.Forms.Padding(4);
-            this.LOCALIDADddAeropuerto.Name = "LOCALIDADddAeropuerto";
-            this.LOCALIDADddAeropuerto.Size = new System.Drawing.Size(204, 22);
-            this.LOCALIDADddAeropuerto.TabIndex = 12;
-            this.LOCALIDADddAeropuerto.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.LOCALIDADddAeropuerto_KeyPress);
-            // 
-            // IDaddAeropuerto
-            // 
-            this.IDaddAeropuerto.Location = new System.Drawing.Point(123, 39);
-            this.IDaddAeropuerto.Margin = new System.Windows.Forms.Padding(4);
-            this.IDaddAeropuerto.Name = "IDaddAeropuerto";
-            this.IDaddAeropuerto.Size = new System.Drawing.Size(204, 22);
-            this.IDaddAeropuerto.TabIndex = 11;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(41, 140);
-            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(69, 17);
-            this.label10.TabIndex = 10;
-            this.label10.Text = "Localidad";
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(41, 87);
-            this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(58, 17);
-            this.label13.TabIndex = 9;
-            this.label13.Text = "Nombre";
-            // 
-            // button8
-            // 
-            this.button8.Location = new System.Drawing.Point(233, 228);
-            this.button8.Margin = new System.Windows.Forms.Padding(4);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(95, 28);
-            this.button8.TabIndex = 8;
-            this.button8.Text = "Agregar";
-            this.button8.UseVisualStyleBackColor = true;
-            this.button8.Click += new System.EventHandler(this.button8_Click);
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(41, 39);
-            this.label15.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(21, 17);
-            this.label15.TabIndex = 7;
-            this.label15.Text = "ID";
-            // 
-            // tabPage16
-            // 
-            this.tabPage16.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.tabPage16.Controls.Add(this.AeropuertoMod);
-            this.tabPage16.Controls.Add(this.iataMODAeropuerto);
-            this.tabPage16.Controls.Add(this.label17);
-            this.tabPage16.Controls.Add(this.nombreMODAeropuerto);
-            this.tabPage16.Controls.Add(this.modLocalidadAeropuerto);
-            this.tabPage16.Controls.Add(this.IDmodAeropuerto);
-            this.tabPage16.Controls.Add(this.label18);
-            this.tabPage16.Controls.Add(this.label19);
-            this.tabPage16.Controls.Add(this.button9);
-            this.tabPage16.Controls.Add(this.label20);
-            this.tabPage16.Location = new System.Drawing.Point(4, 25);
-            this.tabPage16.Margin = new System.Windows.Forms.Padding(4);
-            this.tabPage16.Name = "tabPage16";
-            this.tabPage16.Padding = new System.Windows.Forms.Padding(4);
-            this.tabPage16.Size = new System.Drawing.Size(888, 365);
-            this.tabPage16.TabIndex = 1;
-            this.tabPage16.Text = "Modificar";
-            this.tabPage16.MouseClick += new System.Windows.Forms.MouseEventHandler(this.tabPage16_MouseClick);
-            // 
-            // AeropuertoMod
-            // 
-            this.AeropuertoMod.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.AeropuertoMod.FormattingEnabled = true;
-            this.AeropuertoMod.Location = new System.Drawing.Point(99, 39);
-            this.AeropuertoMod.Margin = new System.Windows.Forms.Padding(4);
-            this.AeropuertoMod.Name = "AeropuertoMod";
-            this.AeropuertoMod.Size = new System.Drawing.Size(204, 24);
-            this.AeropuertoMod.TabIndex = 25;
-            this.AeropuertoMod.SelectedIndexChanged += new System.EventHandler(this.AeropuertoMod_SelectedIndexChanged);
-            this.AeropuertoMod.Click += new System.EventHandler(this.AeropuertoMod_Click);
-            // 
-            // iataMODAeropuerto
-            // 
-            this.iataMODAeropuerto.Location = new System.Drawing.Point(99, 228);
-            this.iataMODAeropuerto.Margin = new System.Windows.Forms.Padding(4);
-            this.iataMODAeropuerto.Name = "iataMODAeropuerto";
-            this.iataMODAeropuerto.Size = new System.Drawing.Size(204, 22);
-            this.iataMODAeropuerto.TabIndex = 24;
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(18, 232);
-            this.label17.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(38, 17);
-            this.label17.TabIndex = 23;
-            this.label17.Text = "IATA";
-            // 
-            // nombreMODAeropuerto
-            // 
-            this.nombreMODAeropuerto.Location = new System.Drawing.Point(99, 135);
-            this.nombreMODAeropuerto.Margin = new System.Windows.Forms.Padding(4);
-            this.nombreMODAeropuerto.Name = "nombreMODAeropuerto";
-            this.nombreMODAeropuerto.Size = new System.Drawing.Size(204, 22);
-            this.nombreMODAeropuerto.TabIndex = 22;
-            this.nombreMODAeropuerto.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.nombreMODAeropuerto_KeyPress);
-            // 
-            // modLocalidadAeropuerto
-            // 
-            this.modLocalidadAeropuerto.Location = new System.Drawing.Point(99, 184);
-            this.modLocalidadAeropuerto.Margin = new System.Windows.Forms.Padding(4);
-            this.modLocalidadAeropuerto.Name = "modLocalidadAeropuerto";
-            this.modLocalidadAeropuerto.Size = new System.Drawing.Size(204, 22);
-            this.modLocalidadAeropuerto.TabIndex = 21;
-            this.modLocalidadAeropuerto.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.modLocalidadAeropuerto_KeyPress);
-            // 
-            // IDmodAeropuerto
-            // 
-            this.IDmodAeropuerto.Enabled = false;
-            this.IDmodAeropuerto.Location = new System.Drawing.Point(99, 87);
-            this.IDmodAeropuerto.Margin = new System.Windows.Forms.Padding(4);
-            this.IDmodAeropuerto.Name = "IDmodAeropuerto";
-            this.IDmodAeropuerto.Size = new System.Drawing.Size(204, 22);
-            this.IDmodAeropuerto.TabIndex = 20;
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(18, 188);
-            this.label18.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(69, 17);
-            this.label18.TabIndex = 19;
-            this.label18.Text = "Localidad";
-            // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(18, 135);
-            this.label19.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(58, 17);
-            this.label19.TabIndex = 18;
-            this.label19.Text = "Nombre";
-            // 
-            // button9
-            // 
-            this.button9.Location = new System.Drawing.Point(210, 275);
-            this.button9.Margin = new System.Windows.Forms.Padding(4);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(95, 28);
-            this.button9.TabIndex = 17;
-            this.button9.Text = "Modificar";
-            this.button9.UseVisualStyleBackColor = true;
-            this.button9.Click += new System.EventHandler(this.button9_Click);
-            // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(18, 87);
-            this.label20.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(21, 17);
-            this.label20.TabIndex = 16;
-            this.label20.Text = "ID";
-            // 
-            // tabPage17
-            // 
-            this.tabPage17.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.tabPage17.Controls.Add(this.ComboboxAeropuertoDelete);
-            this.tabPage17.Controls.Add(this.button10);
-            this.tabPage17.Controls.Add(this.IDDELETEAeropuerto);
-            this.tabPage17.Controls.Add(this.label21);
-            this.tabPage17.Location = new System.Drawing.Point(4, 25);
-            this.tabPage17.Margin = new System.Windows.Forms.Padding(4);
-            this.tabPage17.Name = "tabPage17";
-            this.tabPage17.Padding = new System.Windows.Forms.Padding(4);
-            this.tabPage17.Size = new System.Drawing.Size(888, 365);
-            this.tabPage17.TabIndex = 2;
-            this.tabPage17.Text = "Eliminar";
-            this.tabPage17.Click += new System.EventHandler(this.tabPage17_Click);
-            this.tabPage17.MouseClick += new System.Windows.Forms.MouseEventHandler(this.tabPage17_MouseClick);
-            // 
-            // ComboboxAeropuertoDelete
-            // 
-            this.ComboboxAeropuertoDelete.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.ComboboxAeropuertoDelete.FormattingEnabled = true;
-            this.ComboboxAeropuertoDelete.Location = new System.Drawing.Point(174, 45);
-            this.ComboboxAeropuertoDelete.Margin = new System.Windows.Forms.Padding(4);
-            this.ComboboxAeropuertoDelete.Name = "ComboboxAeropuertoDelete";
-            this.ComboboxAeropuertoDelete.Size = new System.Drawing.Size(204, 24);
-            this.ComboboxAeropuertoDelete.TabIndex = 26;
-            this.ComboboxAeropuertoDelete.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
-            this.ComboboxAeropuertoDelete.Click += new System.EventHandler(this.ComboboxAeropuertoDelete_Click);
-            // 
-            // button10
-            // 
-            this.button10.Location = new System.Drawing.Point(285, 136);
-            this.button10.Margin = new System.Windows.Forms.Padding(4);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(95, 28);
-            this.button10.TabIndex = 23;
-            this.button10.Text = "Eliminar";
-            this.button10.UseVisualStyleBackColor = true;
-            this.button10.Click += new System.EventHandler(this.button10_Click);
-            // 
-            // IDDELETEAeropuerto
-            // 
-            this.IDDELETEAeropuerto.Enabled = false;
-            this.IDDELETEAeropuerto.Location = new System.Drawing.Point(174, 87);
-            this.IDDELETEAeropuerto.Margin = new System.Windows.Forms.Padding(4);
-            this.IDDELETEAeropuerto.Name = "IDDELETEAeropuerto";
-            this.IDDELETEAeropuerto.Size = new System.Drawing.Size(204, 22);
-            this.IDDELETEAeropuerto.TabIndex = 22;
-            // 
-            // label21
-            // 
-            this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(93, 87);
-            this.label21.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(21, 17);
-            this.label21.TabIndex = 21;
-            this.label21.Text = "ID";
             // 
             // tabPage4
             // 
@@ -2901,43 +2621,258 @@
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
-            // lugarespaisadd
+            // tabPage17
             // 
-            this.lugarespaisadd.FormattingEnabled = true;
-            this.lugarespaisadd.Location = new System.Drawing.Point(128, 141);
-            this.lugarespaisadd.Name = "lugarespaisadd";
-            this.lugarespaisadd.Size = new System.Drawing.Size(204, 24);
-            this.lugarespaisadd.TabIndex = 12;
-            this.lugarespaisadd.Click += new System.EventHandler(this.lugarespaisadd_Click);
+            this.tabPage17.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.tabPage17.Location = new System.Drawing.Point(4, 25);
+            this.tabPage17.Margin = new System.Windows.Forms.Padding(4);
+            this.tabPage17.Name = "tabPage17";
+            this.tabPage17.Padding = new System.Windows.Forms.Padding(4);
+            this.tabPage17.Size = new System.Drawing.Size(888, 365);
+            this.tabPage17.TabIndex = 2;
+            this.tabPage17.Text = "Eliminar";
+            this.tabPage17.Click += new System.EventHandler(this.tabPage17_Click);
+            this.tabPage17.MouseClick += new System.Windows.Forms.MouseEventHandler(this.tabPage17_MouseClick);
             // 
-            // label70
+            // label21
             // 
-            this.label70.AutoSize = true;
-            this.label70.Location = new System.Drawing.Point(47, 148);
-            this.label70.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label70.Name = "label70";
-            this.label70.Size = new System.Drawing.Size(35, 17);
-            this.label70.TabIndex = 13;
-            this.label70.Text = "Pais";
+            this.label21.AutoSize = true;
+            this.label21.Location = new System.Drawing.Point(93, 87);
+            this.label21.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(21, 17);
+            this.label21.TabIndex = 21;
             // 
-            // label71
+            // IDDELETEAeropuerto
             // 
-            this.label71.AutoSize = true;
-            this.label71.Location = new System.Drawing.Point(46, 214);
-            this.label71.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label71.Name = "label71";
-            this.label71.Size = new System.Drawing.Size(35, 17);
-            this.label71.TabIndex = 23;
-            this.label71.Text = "Pais";
+            this.IDDELETEAeropuerto.Enabled = false;
+            this.IDDELETEAeropuerto.Location = new System.Drawing.Point(174, 87);
+            this.IDDELETEAeropuerto.Margin = new System.Windows.Forms.Padding(4);
+            this.IDDELETEAeropuerto.Name = "IDDELETEAeropuerto";
+            this.IDDELETEAeropuerto.Size = new System.Drawing.Size(204, 22);
+            this.IDDELETEAeropuerto.TabIndex = 22;
             // 
-            // lpam
+            // button10
             // 
-            this.lpam.FormattingEnabled = true;
-            this.lpam.Location = new System.Drawing.Point(127, 207);
-            this.lpam.Name = "lpam";
-            this.lpam.Size = new System.Drawing.Size(204, 24);
-            this.lpam.TabIndex = 22;
-            this.lpam.Click += new System.EventHandler(this.lpam_Click);
+            this.button10.Location = new System.Drawing.Point(285, 136);
+            this.button10.Margin = new System.Windows.Forms.Padding(4);
+            this.button10.Name = "button10";
+            this.button10.Size = new System.Drawing.Size(95, 28);
+            this.button10.TabIndex = 23;
+            this.button10.Text = "Eliminar";
+            this.button10.UseVisualStyleBackColor = true;
+            this.button10.Click += new System.EventHandler(this.button10_Click);
+            // 
+            // ComboboxAeropuertoDelete
+            // 
+            this.ComboboxAeropuertoDelete.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.ComboboxAeropuertoDelete.FormattingEnabled = true;
+            this.ComboboxAeropuertoDelete.Location = new System.Drawing.Point(174, 45);
+            this.ComboboxAeropuertoDelete.Margin = new System.Windows.Forms.Padding(4);
+            this.ComboboxAeropuertoDelete.Name = "ComboboxAeropuertoDelete";
+            this.ComboboxAeropuertoDelete.Size = new System.Drawing.Size(204, 25);
+            this.ComboboxAeropuertoDelete.TabIndex = 26;
+            this.ComboboxAeropuertoDelete.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
+            this.ComboboxAeropuertoDelete.Click += new System.EventHandler(this.ComboboxAeropuertoDelete_Click);
+            // 
+            // tabPage16
+            // 
+            this.tabPage16.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.tabPage16.Location = new System.Drawing.Point(4, 25);
+            this.tabPage16.Margin = new System.Windows.Forms.Padding(4);
+            this.tabPage16.Name = "tabPage16";
+            this.tabPage16.Padding = new System.Windows.Forms.Padding(4);
+            this.tabPage16.Size = new System.Drawing.Size(888, 365);
+            this.tabPage16.TabIndex = 1;
+            this.tabPage16.Text = "Modificar";
+            this.tabPage16.MouseClick += new System.Windows.Forms.MouseEventHandler(this.tabPage16_MouseClick);
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Location = new System.Drawing.Point(18, 87);
+            this.label20.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(21, 17);
+            this.label20.TabIndex = 16;
+            // 
+            // button9
+            // 
+            this.button9.Location = new System.Drawing.Point(210, 275);
+            this.button9.Margin = new System.Windows.Forms.Padding(4);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(95, 28);
+            this.button9.TabIndex = 17;
+            this.button9.Text = "Modificar";
+            this.button9.UseVisualStyleBackColor = true;
+            this.button9.Click += new System.EventHandler(this.button9_Click);
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Location = new System.Drawing.Point(18, 135);
+            this.label19.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(58, 17);
+            this.label19.TabIndex = 18;
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(18, 188);
+            this.label18.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(69, 17);
+            this.label18.TabIndex = 19;
+            // 
+            // IDmodAeropuerto
+            // 
+            this.IDmodAeropuerto.Enabled = false;
+            this.IDmodAeropuerto.Location = new System.Drawing.Point(99, 87);
+            this.IDmodAeropuerto.Margin = new System.Windows.Forms.Padding(4);
+            this.IDmodAeropuerto.Name = "IDmodAeropuerto";
+            this.IDmodAeropuerto.Size = new System.Drawing.Size(204, 22);
+            this.IDmodAeropuerto.TabIndex = 20;
+            // 
+            // modLocalidadAeropuerto
+            // 
+            this.modLocalidadAeropuerto.Location = new System.Drawing.Point(99, 184);
+            this.modLocalidadAeropuerto.Margin = new System.Windows.Forms.Padding(4);
+            this.modLocalidadAeropuerto.Name = "modLocalidadAeropuerto";
+            this.modLocalidadAeropuerto.Size = new System.Drawing.Size(204, 22);
+            this.modLocalidadAeropuerto.TabIndex = 21;
+            this.modLocalidadAeropuerto.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.modLocalidadAeropuerto_KeyPress);
+            // 
+            // nombreMODAeropuerto
+            // 
+            this.nombreMODAeropuerto.Location = new System.Drawing.Point(99, 135);
+            this.nombreMODAeropuerto.Margin = new System.Windows.Forms.Padding(4);
+            this.nombreMODAeropuerto.Name = "nombreMODAeropuerto";
+            this.nombreMODAeropuerto.Size = new System.Drawing.Size(204, 22);
+            this.nombreMODAeropuerto.TabIndex = 22;
+            this.nombreMODAeropuerto.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.nombreMODAeropuerto_KeyPress);
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(18, 232);
+            this.label17.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(38, 17);
+            this.label17.TabIndex = 23;
+            // 
+            // iataMODAeropuerto
+            // 
+            this.iataMODAeropuerto.Location = new System.Drawing.Point(99, 228);
+            this.iataMODAeropuerto.Margin = new System.Windows.Forms.Padding(4);
+            this.iataMODAeropuerto.Name = "iataMODAeropuerto";
+            this.iataMODAeropuerto.Size = new System.Drawing.Size(204, 22);
+            this.iataMODAeropuerto.TabIndex = 24;
+            // 
+            // AeropuertoMod
+            // 
+            this.AeropuertoMod.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.AeropuertoMod.FormattingEnabled = true;
+            this.AeropuertoMod.Location = new System.Drawing.Point(99, 39);
+            this.AeropuertoMod.Margin = new System.Windows.Forms.Padding(4);
+            this.AeropuertoMod.Name = "AeropuertoMod";
+            this.AeropuertoMod.Size = new System.Drawing.Size(204, 25);
+            this.AeropuertoMod.TabIndex = 25;
+            this.AeropuertoMod.SelectedIndexChanged += new System.EventHandler(this.AeropuertoMod_SelectedIndexChanged);
+            this.AeropuertoMod.Click += new System.EventHandler(this.AeropuertoMod_Click);
+            // 
+            // tabPage15
+            // 
+            this.tabPage15.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.tabPage15.Location = new System.Drawing.Point(4, 25);
+            this.tabPage15.Margin = new System.Windows.Forms.Padding(4);
+            this.tabPage15.Name = "tabPage15";
+            this.tabPage15.Padding = new System.Windows.Forms.Padding(4);
+            this.tabPage15.Size = new System.Drawing.Size(888, 365);
+            this.tabPage15.TabIndex = 0;
+            this.tabPage15.Text = "Agregar";
+            this.tabPage15.MouseClick += new System.Windows.Forms.MouseEventHandler(this.tabPage15_MouseClick);
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(41, 39);
+            this.label15.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(21, 17);
+            this.label15.TabIndex = 7;
+            // 
+            // button8
+            // 
+            this.button8.Location = new System.Drawing.Point(233, 228);
+            this.button8.Margin = new System.Windows.Forms.Padding(4);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(95, 28);
+            this.button8.TabIndex = 8;
+            this.button8.Text = "Agregar";
+            this.button8.UseVisualStyleBackColor = true;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(41, 87);
+            this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(58, 17);
+            this.label13.TabIndex = 9;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(41, 140);
+            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(69, 17);
+            this.label10.TabIndex = 10;
+            // 
+            // IDaddAeropuerto
+            // 
+            this.IDaddAeropuerto.Location = new System.Drawing.Point(123, 39);
+            this.IDaddAeropuerto.Margin = new System.Windows.Forms.Padding(4);
+            this.IDaddAeropuerto.Name = "IDaddAeropuerto";
+            this.IDaddAeropuerto.Size = new System.Drawing.Size(204, 22);
+            this.IDaddAeropuerto.TabIndex = 11;
+            // 
+            // LOCALIDADddAeropuerto
+            // 
+            this.LOCALIDADddAeropuerto.Location = new System.Drawing.Point(123, 137);
+            this.LOCALIDADddAeropuerto.Margin = new System.Windows.Forms.Padding(4);
+            this.LOCALIDADddAeropuerto.Name = "LOCALIDADddAeropuerto";
+            this.LOCALIDADddAeropuerto.Size = new System.Drawing.Size(204, 22);
+            this.LOCALIDADddAeropuerto.TabIndex = 12;
+            this.LOCALIDADddAeropuerto.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.LOCALIDADddAeropuerto_KeyPress);
+            // 
+            // NombreaddAeropuerto
+            // 
+            this.NombreaddAeropuerto.Location = new System.Drawing.Point(123, 87);
+            this.NombreaddAeropuerto.Margin = new System.Windows.Forms.Padding(4);
+            this.NombreaddAeropuerto.Name = "NombreaddAeropuerto";
+            this.NombreaddAeropuerto.Size = new System.Drawing.Size(204, 22);
+            this.NombreaddAeropuerto.TabIndex = 13;
+            this.NombreaddAeropuerto.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.NombreaddAeropuerto_KeyPress);
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(41, 185);
+            this.label16.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(38, 17);
+            this.label16.TabIndex = 14;
+            // 
+            // IATAaddAeropuerto
+            // 
+            this.IATAaddAeropuerto.Location = new System.Drawing.Point(123, 181);
+            this.IATAaddAeropuerto.Margin = new System.Windows.Forms.Padding(4);
+            this.IATAaddAeropuerto.Name = "IATAaddAeropuerto";
+            this.IATAaddAeropuerto.Size = new System.Drawing.Size(204, 22);
+            this.IATAaddAeropuerto.TabIndex = 15;
             // 
             // Administrador
             // 
@@ -2971,14 +2906,6 @@
             this.tabPage13.PerformLayout();
             this.tabPage14.ResumeLayout(false);
             this.tabPage14.PerformLayout();
-            this.tabPage3.ResumeLayout(false);
-            this.aeropuertoDelete.ResumeLayout(false);
-            this.tabPage15.ResumeLayout(false);
-            this.tabPage15.PerformLayout();
-            this.tabPage16.ResumeLayout(false);
-            this.tabPage16.PerformLayout();
-            this.tabPage17.ResumeLayout(false);
-            this.tabPage17.PerformLayout();
             this.tabPage4.ResumeLayout(false);
             this.tabControl4.ResumeLayout(false);
             this.tabPage18.ResumeLayout(false);
@@ -3054,32 +2981,6 @@
         private System.Windows.Forms.TextBox IDdeleteL;
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.TabPage tabPage3;
-        private System.Windows.Forms.TabControl aeropuertoDelete;
-        private System.Windows.Forms.TabPage tabPage15;
-        private System.Windows.Forms.TextBox IATAaddAeropuerto;
-        private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.TextBox NombreaddAeropuerto;
-        private System.Windows.Forms.TextBox LOCALIDADddAeropuerto;
-        private System.Windows.Forms.TextBox IDaddAeropuerto;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.TabPage tabPage16;
-        private System.Windows.Forms.TextBox iataMODAeropuerto;
-        private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.TextBox nombreMODAeropuerto;
-        private System.Windows.Forms.TextBox modLocalidadAeropuerto;
-        private System.Windows.Forms.TextBox IDmodAeropuerto;
-        private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.Button button9;
-        private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.TabPage tabPage17;
-        private System.Windows.Forms.Button button10;
-        private System.Windows.Forms.TextBox IDDELETEAeropuerto;
-        private System.Windows.Forms.Label label21;
         private System.Windows.Forms.TabPage tabPage4;
         private System.Windows.Forms.TabPage tabPage18;
         private System.Windows.Forms.Label label22;
@@ -3217,8 +3118,6 @@
         private System.Windows.Forms.ComboBox LugaresMOD;
         private System.Windows.Forms.ComboBox ComboboxLugaresDelete;
         private System.Windows.Forms.TabPage tabPage13;
-        private System.Windows.Forms.ComboBox AeropuertoMod;
-        private System.Windows.Forms.ComboBox ComboboxAeropuertoDelete;
         private System.Windows.Forms.TabControl tabControl4;
         private System.Windows.Forms.ComboBox PaisDadd;
         private System.Windows.Forms.ComboBox PaisOadd;
@@ -3264,5 +3163,31 @@
         private System.Windows.Forms.ComboBox lugarespaisadd;
         private System.Windows.Forms.Label label71;
         private System.Windows.Forms.ComboBox lpam;
+        private System.Windows.Forms.TabPage tabPage17;
+        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.TextBox IDDELETEAeropuerto;
+        private System.Windows.Forms.Button button10;
+        private System.Windows.Forms.ComboBox ComboboxAeropuertoDelete;
+        private System.Windows.Forms.TabPage tabPage16;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.Button button9;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.TextBox IDmodAeropuerto;
+        private System.Windows.Forms.TextBox modLocalidadAeropuerto;
+        private System.Windows.Forms.TextBox nombreMODAeropuerto;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.TextBox iataMODAeropuerto;
+        private System.Windows.Forms.ComboBox AeropuertoMod;
+        private System.Windows.Forms.TabPage tabPage15;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.TextBox IDaddAeropuerto;
+        private System.Windows.Forms.TextBox LOCALIDADddAeropuerto;
+        private System.Windows.Forms.TextBox NombreaddAeropuerto;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.TextBox IATAaddAeropuerto;
     }
 }

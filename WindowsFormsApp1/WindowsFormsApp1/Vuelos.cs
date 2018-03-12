@@ -320,5 +320,18 @@ namespace WindowsFormsApp1
             }
             return "Se callo xD";
         }
+
+        private void dgvBusqueda_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            string nombre;
+            string lugar;
+            string precio;
+            DataGridViewRow fila =dgvBusqueda.CurrentRow;
+            nombre= Convert.ToString(fila.Cells[0].Value);
+            lugar = Convert.ToString(fila.Cells[1].Value);
+           precio = Convert.ToString(fila.Cells[2].Value);
+            MessageBox.Show(nombre,lugar);
+           
+        }
     }
 }

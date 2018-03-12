@@ -34,7 +34,6 @@
             this.A4 = new System.Windows.Forms.TextBox();
             this.A2 = new System.Windows.Forms.TextBox();
             this.A3 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.M1 = new System.Windows.Forms.TextBox();
@@ -42,7 +41,6 @@
             this.M2 = new System.Windows.Forms.TextBox();
             this.M3 = new System.Windows.Forms.TextBox();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.button2 = new System.Windows.Forms.Button();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
             this.button3 = new System.Windows.Forms.Button();
@@ -73,7 +71,6 @@
             this.tabPage1.Controls.Add(this.A4);
             this.tabPage1.Controls.Add(this.A2);
             this.tabPage1.Controls.Add(this.A3);
-            this.tabPage1.Controls.Add(this.button1);
             this.tabPage1.Controls.Add(this.dataGridView1);
             this.tabPage1.Location = new System.Drawing.Point(4, 25);
             this.tabPage1.Name = "tabPage1";
@@ -97,7 +94,7 @@
             this.A4.Name = "A4";
             this.A4.Size = new System.Drawing.Size(169, 22);
             this.A4.TabIndex = 13;
-            this.A4.TextChanged += new System.EventHandler(this.c_TextChanged);
+            this.A4.Leave += new System.EventHandler(this.A4_Leave);
             // 
             // A2
             // 
@@ -114,16 +111,6 @@
             this.A3.Size = new System.Drawing.Size(180, 22);
             this.A3.TabIndex = 11;
             this.A3.TextChanged += new System.EventHandler(this.b_TextChanged);
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(843, 304);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(105, 36);
-            this.button1.TabIndex = 10;
-            this.button1.Text = "Agregar";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // dataGridView1
             // 
@@ -145,7 +132,6 @@
             this.tabPage2.Controls.Add(this.M2);
             this.tabPage2.Controls.Add(this.M3);
             this.tabPage2.Controls.Add(this.dataGridView2);
-            this.tabPage2.Controls.Add(this.button2);
             this.tabPage2.Location = new System.Drawing.Point(4, 25);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
@@ -172,6 +158,7 @@
             this.M4.TabIndex = 18;
             this.M4.TextChanged += new System.EventHandler(this.M4_TextChanged);
             this.M4.DoubleClick += new System.EventHandler(this.M4_DoubleClick);
+            this.M4.Leave += new System.EventHandler(this.M4_Leave);
             // 
             // M2
             // 
@@ -198,17 +185,6 @@
             this.dataGridView2.Size = new System.Drawing.Size(888, 266);
             this.dataGridView2.TabIndex = 10;
             this.dataGridView2.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellClick);
-            this.dataGridView2.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellContentClick);
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(888, 327);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(135, 38);
-            this.button2.TabIndex = 0;
-            this.button2.Text = "Modificar";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // tabPage3
             // 
@@ -274,9 +250,7 @@
         private System.Windows.Forms.TextBox A4;
         private System.Windows.Forms.TextBox A2;
         private System.Windows.Forms.TextBox A3;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.TextBox M1;
         private System.Windows.Forms.TextBox M4;
         private System.Windows.Forms.TextBox M2;

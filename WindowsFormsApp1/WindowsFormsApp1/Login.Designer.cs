@@ -45,51 +45,58 @@
             this.pictureBox1.AccessibleRole = System.Windows.Forms.AccessibleRole.MenuItem;
             this.pictureBox1.ErrorImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.ErrorImage")));
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(-14, -1);
+            this.pictureBox1.Location = new System.Drawing.Point(-19, -1);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(381, 192);
+            this.pictureBox1.Size = new System.Drawing.Size(508, 236);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 29;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // txtu
             // 
-            this.txtu.Location = new System.Drawing.Point(197, 72);
+            this.txtu.Location = new System.Drawing.Point(263, 89);
+            this.txtu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtu.Name = "txtu";
-            this.txtu.Size = new System.Drawing.Size(139, 20);
+            this.txtu.Size = new System.Drawing.Size(184, 22);
             this.txtu.TabIndex = 42;
             // 
             // txtc
             // 
-            this.txtc.Location = new System.Drawing.Point(197, 98);
+            this.txtc.Location = new System.Drawing.Point(263, 121);
+            this.txtc.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtc.Name = "txtc";
             this.txtc.PasswordChar = '*';
-            this.txtc.Size = new System.Drawing.Size(139, 20);
+            this.txtc.Size = new System.Drawing.Size(184, 22);
             this.txtc.TabIndex = 41;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(127, 105);
+            this.label4.Location = new System.Drawing.Point(169, 129);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(61, 13);
+            this.label4.Size = new System.Drawing.Size(81, 17);
             this.label4.TabIndex = 40;
             this.label4.Text = "Contraseña";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(127, 75);
+            this.label3.Location = new System.Drawing.Point(169, 92);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(43, 13);
+            this.label3.Size = new System.Drawing.Size(57, 17);
             this.label3.TabIndex = 39;
             this.label3.Text = "Usuario";
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(275, 12);
+            this.button5.Location = new System.Drawing.Point(367, 15);
+            this.button5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(74, 23);
+            this.button5.Size = new System.Drawing.Size(99, 28);
             this.button5.TabIndex = 38;
             this.button5.Text = "Registrarse";
             this.button5.UseVisualStyleBackColor = true;
@@ -97,9 +104,10 @@
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(12, 155);
+            this.button4.Location = new System.Drawing.Point(16, 191);
+            this.button4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(74, 23);
+            this.button4.Size = new System.Drawing.Size(99, 28);
             this.button4.TabIndex = 37;
             this.button4.Text = "Salir";
             this.button4.UseVisualStyleBackColor = true;
@@ -108,9 +116,10 @@
             // button3
             // 
             this.button3.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.button3.Location = new System.Drawing.Point(240, 124);
+            this.button3.Location = new System.Drawing.Point(320, 153);
+            this.button3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(96, 23);
+            this.button3.Size = new System.Drawing.Size(128, 28);
             this.button3.TabIndex = 36;
             this.button3.Text = "Iniciar sesion";
             this.button3.UseVisualStyleBackColor = true;
@@ -118,9 +127,9 @@
             // 
             // Login
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(361, 190);
+            this.ClientSize = new System.Drawing.Size(481, 234);
             this.Controls.Add(this.txtu);
             this.Controls.Add(this.txtc);
             this.Controls.Add(this.label4);
@@ -129,6 +138,7 @@
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.pictureBox1);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Login";
             this.Text = "Login";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

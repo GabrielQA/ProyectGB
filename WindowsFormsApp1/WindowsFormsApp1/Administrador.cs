@@ -305,7 +305,7 @@ namespace WindowsFormsApp1
             string servidor = "localhost";
             int puerto = 5432;
             string usuario = "postgres";
-            string clave = "bryan2748245";
+            string clave = "123";
             string baseDatos = "proyectgb";
 
             cadenaConexion = "Server=" + servidor + "; " + "Port=" + puerto + "; " + "User Id=" + usuario + "; " + "Password=" + clave + "; " + "Database=" + baseDatos;
@@ -1685,7 +1685,8 @@ namespace WindowsFormsApp1
 
         private void PaisOadd_MouseClick(object sender, MouseEventArgs e)
         {
-            
+            PaisOadd.Items.Clear();
+            PaisesA();
         }
 
         private void PaisDadd_MouseClick(object sender, MouseEventArgs e)
