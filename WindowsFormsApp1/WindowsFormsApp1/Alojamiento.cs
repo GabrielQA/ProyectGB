@@ -15,6 +15,9 @@ namespace WindowsFormsApp1
     public partial class formAlojamiento : Form
     {
         DataSet hoteles = new DataSet();
+        string nombre;
+        string lugar;
+        string precio;
 
         public formAlojamiento()
         {
@@ -142,6 +145,19 @@ namespace WindowsFormsApp1
             {
                 spnAdultos.Maximum = (4 * spnHabitaciones.Value) - spnMenores.Value;
             }
+        }
+
+        private void btnPreliminar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dgvBusqueda_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            DataGridViewRow fila = dgvBusqueda.CurrentRow;
+            nombre = Convert.ToString(fila.Cells[0].Value);
+            lugar = Convert.ToString(fila.Cells[1].Value);
+            precio = Convert.ToString(fila.Cells[2].Value);
         }
     }
 }
