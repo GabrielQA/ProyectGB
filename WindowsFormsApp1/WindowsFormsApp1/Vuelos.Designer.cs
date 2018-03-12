@@ -36,7 +36,7 @@
             this.txtDestino = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
+            this.lblDias = new System.Windows.Forms.Label();
             this.dtpInicio = new System.Windows.Forms.DateTimePicker();
             this.dtpFin = new System.Windows.Forms.DateTimePicker();
             this.label6 = new System.Windows.Forms.Label();
@@ -44,10 +44,8 @@
             this.btnPasajeros = new System.Windows.Forms.Button();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.pnlPasajeros = new System.Windows.Forms.Panel();
-            this.btnAplicar = new System.Windows.Forms.Button();
-            this.btnCancelar = new System.Windows.Forms.Button();
-            this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.spnMenores = new System.Windows.Forms.NumericUpDown();
+            this.spnAdultos = new System.Windows.Forms.NumericUpDown();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.lblHabitaciones = new System.Windows.Forms.Label();
@@ -55,21 +53,25 @@
             this.pnlHotel = new System.Windows.Forms.Panel();
             this.dgvBusqueda = new System.Windows.Forms.DataGridView();
             this.pnlAuto = new System.Windows.Forms.Panel();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.boxTipo = new System.Windows.Forms.ComboBox();
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.numericUpDown3 = new System.Windows.Forms.NumericUpDown();
+            this.spnCantidadV = new System.Windows.Forms.NumericUpDown();
             this.label9 = new System.Windows.Forms.Label();
             this.btnPreliminar = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
+            this.boxModelo = new System.Windows.Forms.ComboBox();
+            this.boxMarca = new System.Windows.Forms.ComboBox();
+            this.label12 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.spnPasajeros)).BeginInit();
             this.pnlPasajeros.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.spnMenores)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.spnAdultos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.spnHabitaciones)).BeginInit();
             this.pnlHotel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBusqueda)).BeginInit();
             this.pnlAuto.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.spnCantidadV)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -148,14 +150,14 @@
             this.label4.TabIndex = 7;
             this.label4.Text = "Fechas";
             // 
-            // label5
+            // lblDias
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(156, 91);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(28, 13);
-            this.label5.TabIndex = 8;
-            this.label5.Text = "Dias";
+            this.lblDias.AutoSize = true;
+            this.lblDias.Location = new System.Drawing.Point(156, 91);
+            this.lblDias.Name = "lblDias";
+            this.lblDias.Size = new System.Drawing.Size(28, 13);
+            this.lblDias.TabIndex = 8;
+            this.lblDias.Text = "Dias";
             // 
             // dtpInicio
             // 
@@ -165,6 +167,7 @@
             this.dtpInicio.Name = "dtpInicio";
             this.dtpInicio.Size = new System.Drawing.Size(137, 20);
             this.dtpInicio.TabIndex = 9;
+            this.dtpInicio.ValueChanged += new System.EventHandler(this.dtpInicio_ValueChanged);
             // 
             // dtpFin
             // 
@@ -174,6 +177,7 @@
             this.dtpFin.Name = "dtpFin";
             this.dtpFin.Size = new System.Drawing.Size(144, 20);
             this.dtpFin.TabIndex = 10;
+            this.dtpFin.ValueChanged += new System.EventHandler(this.dtpFin_ValueChanged);
             // 
             // label6
             // 
@@ -187,14 +191,20 @@
             // spnPasajeros
             // 
             this.spnPasajeros.Location = new System.Drawing.Point(309, 107);
-            this.spnPasajeros.Maximum = new decimal(new int[] {
-            0,
+            this.spnPasajeros.Minimum = new decimal(new int[] {
+            1,
             0,
             0,
             0});
             this.spnPasajeros.Name = "spnPasajeros";
+            this.spnPasajeros.ReadOnly = true;
             this.spnPasajeros.Size = new System.Drawing.Size(41, 20);
             this.spnPasajeros.TabIndex = 12;
+            this.spnPasajeros.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             // 
             // btnPasajeros
             // 
@@ -202,7 +212,7 @@
             this.btnPasajeros.Name = "btnPasajeros";
             this.btnPasajeros.Size = new System.Drawing.Size(26, 22);
             this.btnPasajeros.TabIndex = 13;
-            this.btnPasajeros.Text = "✓";
+            this.btnPasajeros.Text = "+";
             this.btnPasajeros.UseVisualStyleBackColor = true;
             this.btnPasajeros.Click += new System.EventHandler(this.btnPasajeros_Click);
             // 
@@ -218,10 +228,8 @@
             // 
             // pnlPasajeros
             // 
-            this.pnlPasajeros.Controls.Add(this.btnAplicar);
-            this.pnlPasajeros.Controls.Add(this.btnCancelar);
-            this.pnlPasajeros.Controls.Add(this.numericUpDown2);
-            this.pnlPasajeros.Controls.Add(this.numericUpDown1);
+            this.pnlPasajeros.Controls.Add(this.spnMenores);
+            this.pnlPasajeros.Controls.Add(this.spnAdultos);
             this.pnlPasajeros.Controls.Add(this.label8);
             this.pnlPasajeros.Controls.Add(this.label7);
             this.pnlPasajeros.Location = new System.Drawing.Point(392, 12);
@@ -229,39 +237,32 @@
             this.pnlPasajeros.Size = new System.Drawing.Size(139, 119);
             this.pnlPasajeros.TabIndex = 15;
             // 
-            // btnAplicar
+            // spnMenores
             // 
-            this.btnAplicar.Location = new System.Drawing.Point(88, 91);
-            this.btnAplicar.Name = "btnAplicar";
-            this.btnAplicar.Size = new System.Drawing.Size(28, 23);
-            this.btnAplicar.TabIndex = 5;
-            this.btnAplicar.Text = "✓";
-            this.btnAplicar.UseVisualStyleBackColor = true;
-            this.btnAplicar.Click += new System.EventHandler(this.btnAplicar_Click);
+            this.spnMenores.Location = new System.Drawing.Point(88, 54);
+            this.spnMenores.Maximum = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.spnMenores.Name = "spnMenores";
+            this.spnMenores.ReadOnly = true;
+            this.spnMenores.Size = new System.Drawing.Size(48, 20);
+            this.spnMenores.TabIndex = 3;
+            this.spnMenores.Click += new System.EventHandler(this.spnMenores_Click);
             // 
-            // btnCancelar
+            // spnAdultos
             // 
-            this.btnCancelar.Location = new System.Drawing.Point(25, 91);
-            this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(28, 23);
-            this.btnCancelar.TabIndex = 4;
-            this.btnCancelar.Text = "X";
-            this.btnCancelar.UseVisualStyleBackColor = true;
-            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
-            // 
-            // numericUpDown2
-            // 
-            this.numericUpDown2.Location = new System.Drawing.Point(88, 54);
-            this.numericUpDown2.Name = "numericUpDown2";
-            this.numericUpDown2.Size = new System.Drawing.Size(48, 20);
-            this.numericUpDown2.TabIndex = 3;
-            // 
-            // numericUpDown1
-            // 
-            this.numericUpDown1.Location = new System.Drawing.Point(88, 12);
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(48, 20);
-            this.numericUpDown1.TabIndex = 2;
+            this.spnAdultos.Location = new System.Drawing.Point(88, 12);
+            this.spnAdultos.Maximum = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.spnAdultos.Name = "spnAdultos";
+            this.spnAdultos.ReadOnly = true;
+            this.spnAdultos.Size = new System.Drawing.Size(48, 20);
+            this.spnAdultos.TabIndex = 2;
             // 
             // label8
             // 
@@ -293,19 +294,16 @@
             // spnHabitaciones
             // 
             this.spnHabitaciones.Location = new System.Drawing.Point(283, 21);
-            this.spnHabitaciones.Minimum = new decimal(new int[] {
-            1,
+            this.spnHabitaciones.Maximum = new decimal(new int[] {
+            0,
             0,
             0,
             0});
             this.spnHabitaciones.Name = "spnHabitaciones";
+            this.spnHabitaciones.ReadOnly = true;
             this.spnHabitaciones.Size = new System.Drawing.Size(66, 20);
             this.spnHabitaciones.TabIndex = 18;
-            this.spnHabitaciones.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
+            this.spnHabitaciones.Click += new System.EventHandler(this.spnHabitaciones_Click);
             // 
             // pnlHotel
             // 
@@ -331,23 +329,27 @@
             // 
             // pnlAuto
             // 
-            this.pnlAuto.Controls.Add(this.comboBox1);
+            this.pnlAuto.Controls.Add(this.label12);
+            this.pnlAuto.Controls.Add(this.boxMarca);
+            this.pnlAuto.Controls.Add(this.boxModelo);
+            this.pnlAuto.Controls.Add(this.label5);
+            this.pnlAuto.Controls.Add(this.boxTipo);
             this.pnlAuto.Controls.Add(this.label11);
             this.pnlAuto.Controls.Add(this.label10);
-            this.pnlAuto.Controls.Add(this.numericUpDown3);
+            this.pnlAuto.Controls.Add(this.spnCantidadV);
             this.pnlAuto.Controls.Add(this.label9);
-            this.pnlAuto.Location = new System.Drawing.Point(387, 15);
+            this.pnlAuto.Location = new System.Drawing.Point(387, 12);
             this.pnlAuto.Name = "pnlAuto";
-            this.pnlAuto.Size = new System.Drawing.Size(148, 116);
+            this.pnlAuto.Size = new System.Drawing.Size(148, 157);
             this.pnlAuto.TabIndex = 20;
             // 
-            // comboBox1
+            // boxTipo
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(44, 78);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(93, 21);
-            this.comboBox1.TabIndex = 4;
+            this.boxTipo.FormattingEnabled = true;
+            this.boxTipo.Location = new System.Drawing.Point(44, 75);
+            this.boxTipo.Name = "boxTipo";
+            this.boxTipo.Size = new System.Drawing.Size(93, 21);
+            this.boxTipo.TabIndex = 4;
             // 
             // label11
             // 
@@ -361,18 +363,28 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(12, 81);
+            this.label10.Location = new System.Drawing.Point(12, 78);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(28, 13);
             this.label10.TabIndex = 2;
             this.label10.Text = "Tipo";
             // 
-            // numericUpDown3
+            // spnCantidadV
             // 
-            this.numericUpDown3.Location = new System.Drawing.Point(71, 42);
-            this.numericUpDown3.Name = "numericUpDown3";
-            this.numericUpDown3.Size = new System.Drawing.Size(66, 20);
-            this.numericUpDown3.TabIndex = 1;
+            this.spnCantidadV.Location = new System.Drawing.Point(71, 42);
+            this.spnCantidadV.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.spnCantidadV.Name = "spnCantidadV";
+            this.spnCantidadV.Size = new System.Drawing.Size(66, 20);
+            this.spnCantidadV.TabIndex = 1;
+            this.spnCantidadV.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             // 
             // label9
             // 
@@ -391,6 +403,43 @@
             this.btnPreliminar.TabIndex = 21;
             this.btnPreliminar.Text = "Preliminar";
             this.btnPreliminar.UseVisualStyleBackColor = true;
+            this.btnPreliminar.Click += new System.EventHandler(this.btnPreliminar_Click);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(3, 106);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(42, 13);
+            this.label5.TabIndex = 5;
+            this.label5.Text = "Modelo";
+            // 
+            // boxModelo
+            // 
+            this.boxModelo.FormattingEnabled = true;
+            this.boxModelo.Location = new System.Drawing.Point(44, 102);
+            this.boxModelo.Name = "boxModelo";
+            this.boxModelo.Size = new System.Drawing.Size(93, 21);
+            this.boxModelo.TabIndex = 6;
+            this.boxModelo.Click += new System.EventHandler(this.boxModelo_Click);
+            // 
+            // boxMarca
+            // 
+            this.boxMarca.FormattingEnabled = true;
+            this.boxMarca.Location = new System.Drawing.Point(44, 129);
+            this.boxMarca.Name = "boxMarca";
+            this.boxMarca.Size = new System.Drawing.Size(93, 21);
+            this.boxMarca.TabIndex = 7;
+            this.boxMarca.Click += new System.EventHandler(this.boxMarca_Click);
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(3, 132);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(37, 13);
+            this.label12.TabIndex = 8;
+            this.label12.Text = "Marca";
             // 
             // Vuelos
             // 
@@ -407,7 +456,7 @@
             this.Controls.Add(this.label6);
             this.Controls.Add(this.dtpFin);
             this.Controls.Add(this.dtpInicio);
-            this.Controls.Add(this.label5);
+            this.Controls.Add(this.lblDias);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txtDestino);
@@ -422,15 +471,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.spnPasajeros)).EndInit();
             this.pnlPasajeros.ResumeLayout(false);
             this.pnlPasajeros.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.spnMenores)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.spnAdultos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.spnHabitaciones)).EndInit();
             this.pnlHotel.ResumeLayout(false);
             this.pnlHotel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBusqueda)).EndInit();
             this.pnlAuto.ResumeLayout(false);
             this.pnlAuto.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.spnCantidadV)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -446,7 +495,7 @@
         private System.Windows.Forms.TextBox txtDestino;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label lblDias;
         private System.Windows.Forms.DateTimePicker dtpInicio;
         private System.Windows.Forms.DateTimePicker dtpFin;
         private System.Windows.Forms.Label label6;
@@ -454,22 +503,24 @@
         private System.Windows.Forms.Button btnPasajeros;
         private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.Panel pnlPasajeros;
-        private System.Windows.Forms.Button btnAplicar;
-        private System.Windows.Forms.Button btnCancelar;
-        private System.Windows.Forms.NumericUpDown numericUpDown2;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.NumericUpDown spnMenores;
+        private System.Windows.Forms.NumericUpDown spnAdultos;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label lblHabitaciones;
         private System.Windows.Forms.NumericUpDown spnHabitaciones;
         private System.Windows.Forms.Panel pnlHotel;
         private System.Windows.Forms.Panel pnlAuto;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox boxTipo;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.NumericUpDown numericUpDown3;
+        private System.Windows.Forms.NumericUpDown spnCantidadV;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Button btnPreliminar;
         private System.Windows.Forms.DataGridView dgvBusqueda;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.ComboBox boxMarca;
+        private System.Windows.Forms.ComboBox boxModelo;
+        private System.Windows.Forms.Label label5;
     }
 }

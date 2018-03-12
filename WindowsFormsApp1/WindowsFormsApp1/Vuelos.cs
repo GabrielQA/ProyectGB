@@ -15,6 +15,7 @@ namespace WindowsFormsApp1
     public partial class Vuelos : Form
     {
         DataSet hoteles = new DataSet();
+        string escala;
 
         public Vuelos()
         {
@@ -51,20 +52,19 @@ namespace WindowsFormsApp1
 
         private void btnPasajeros_Click(object sender, EventArgs e)
         {
-            this.Size = new Size(555, this.Size.Height);
-            pnlPasajeros.Visible = true;
-        }
-
-        private void btnAplicar_Click(object sender, EventArgs e)
-        {
-            this.Size = new Size(405, this.Size.Height);
-            pnlPasajeros.Visible = false;
-        }
-
-        private void btnCancelar_Click(object sender, EventArgs e)
-        {
-            this.Size = new Size(405, this.Size.Height);
-            pnlPasajeros.Visible = false;
+            spnAdultos.Maximum = spnPasajeros.Value;
+            if (btnPasajeros.Text.Equals("+"))
+            {
+                btnPasajeros.Text = "-";
+                this.Size = new Size(555, this.Size.Height);
+                pnlPasajeros.Visible = true;
+            }
+            else
+            {
+                btnPasajeros.Text = "+";
+                this.Size = new Size(405, this.Size.Height);
+                pnlPasajeros.Visible = false;
+            }
         }
 
         private void Vuelos_Load(object sender, EventArgs e)
@@ -113,6 +113,28 @@ namespace WindowsFormsApp1
                 this.Size = new Size(555, this.Size.Height);
                 pnlAuto.Visible = true;
                 btnPreliminar.Visible = true;
+                try
+                {
+                    Conexion.Coneccion();
+                    Conexion.conexion.Open();
+                    Conexion.cmd = new NpgsqlCommand("SELECT tipo FROM vehiculos", Conexion.conexion);
+                    NpgsqlDataReader dr = Conexion.cmd.ExecuteReader();
+                    if (dr.HasRows)
+                    {
+                        while (dr.Read())
+                        {
+                            if (boxTipo.Items.Contains(dr["tipo"].ToString()) == false)
+                            {
+                                boxTipo.Items.Add(dr["tipo"].ToString());
+                            }
+                        }
+                    }
+                    Conexion.conexion.Close();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error: " + ex);
+                }
             }
         }
 
@@ -123,6 +145,180 @@ namespace WindowsFormsApp1
                 this.Size = new Size(405, this.Size.Height);
                 pnlAuto.Visible = false;
             }
+        }
+
+        private void spnMenores_Click(object sender, EventArgs e)
+        {
+            spnMenores.Maximum = spnPasajeros.Value - spnAdultos.Value;
+            if (spnAdultos.Maximum.Equals(spnAdultos.Value + spnMenores.Value))
+            {
+                spnAdultos.Maximum = spnPasajeros.Value - spnMenores.Value;
+            }
+        }
+
+        private void spnHabitaciones_Click(object sender, EventArgs e)
+        {
+            spnHabitaciones.Maximum = spnPasajeros.Value;
+        }
+
+        private void dtpInicio_ValueChanged(object sender, EventArgs e)
+        {
+            int fecha1 = dtpInicio.Value.DayOfYear;
+            int fecha2 = dtpFin.Value.DayOfYear;
+            lblDias.Text = fecha2 - fecha1 + " Dias";
+        }
+
+        private void dtpFin_ValueChanged(object sender, EventArgs e)
+        {
+            int fecha1 = dtpInicio.Value.DayOfYear;
+            int fecha2 = dtpFin.Value.DayOfYear;
+            lblDias.Text = fecha2 - fecha1 + " Dias";
+        }
+
+        private void boxModelo_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Conexion.Coneccion();
+                Conexion.conexion.Open();
+                Conexion.cmd = new NpgsqlCommand("SELECT modelo FROM vehiculos WHERE tipo = '"+boxTipo.SelectedItem+"'", Conexion.conexion);
+                NpgsqlDataReader dr = Conexion.cmd.ExecuteReader();
+                if (dr.HasRows)
+                {
+                    while (dr.Read())
+                    {
+                        if (boxModelo.Items.Contains(dr["modelo"].ToString()) == false)
+                        {
+                            boxModelo.Items.Add(dr["modelo"].ToString());
+                        }
+                    }
+                }
+                Conexion.conexion.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex);
+            }
+        }
+
+        private void boxMarca_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Conexion.Coneccion();
+                Conexion.conexion.Open();
+                Conexion.cmd = new NpgsqlCommand("SELECT marca FROM vehiculos WHERE modelo = '" + boxModelo.SelectedItem + "'", Conexion.conexion);
+                NpgsqlDataReader dr = Conexion.cmd.ExecuteReader();
+                if (dr.HasRows)
+                {
+                    while (dr.Read())
+                    {
+                        if (boxMarca.Items.Contains(dr["marca"].ToString()) == false)
+                        {
+                            boxMarca.Items.Add(dr["marca"].ToString());
+                        }
+                    }
+                }
+                Conexion.conexion.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex);
+            }
+        }
+
+        private void btnPreliminar_Click(object sender, EventArgs e)
+        {
+            Preliminar.fecha1 = dtpInicio.Value;
+            Preliminar.fecha2 = dtpFin.Value;
+            Preliminar.Origen = txtOrigen.Text;
+            Preliminar.Destino = txtDestino.Text;
+            //Preliminar.Hotel = 
+            Preliminar.Habitaciones = spnHabitaciones.Value.ToString();
+            Preliminar.Marca = boxMarca.SelectedItem.ToString();
+            Preliminar.Modelo = boxModelo.SelectedItem.ToString();
+            Preliminar.Tipo = boxTipo.SelectedItem.ToString();
+            Preliminar.Cantidad = spnCantidadV.Value.ToString();
+            Preliminar.Pvuelo = preciovuelo();
+            Preliminar.Escala = escala;
+            Preliminar ven = new Preliminar();
+            ven.Show();
+        }
+
+        public string preciovuelo()
+        {
+            int precio = 0;
+            try
+            {
+                Conexion.Coneccion();
+                Conexion.conexion.Open();
+                Conexion.cmd = new NpgsqlCommand("SELECT id FROM rutas WHERE pais_origen = '" + txtOrigen.Text + "' AND pais_destino = '" + txtDestino.Text + "'", Conexion.conexion);
+                NpgsqlDataReader dr = Conexion.cmd.ExecuteReader();
+                if (dr.HasRows)
+                {
+                    while (dr.Read())
+                    {
+                        Conexion.Coneccion();
+                        Conexion.conexion.Open();
+                        Conexion.cmd = new NpgsqlCommand("SELECT precio FROM vuelos WHERE ruta = '" + dr["id"].ToString() + "'", Conexion.conexion);
+                        NpgsqlDataReader dr1 = Conexion.cmd.ExecuteReader();
+                        if (dr1.HasRows)
+                        {
+                            while (dr1.Read())
+                            {
+                                return dr1["precio"].ToString();
+                            }
+                        }
+                    }
+                }
+                Conexion.conexion.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex);
+            }
+            try
+            {
+                Conexion.Coneccion();
+                Conexion.conexion.Open();
+                Conexion.cmd = new NpgsqlCommand("SELECT id, pais_destino FROM rutas WHERE pais_origen = '" + txtOrigen.Text + "'", Conexion.conexion);
+                NpgsqlDataReader dr = Conexion.cmd.ExecuteReader();
+                if (dr.HasRows)
+                {
+                    while (dr.Read())
+                    {
+                        Conexion.Coneccion();
+                        Conexion.conexion.Open();
+                        Conexion.cmd = new NpgsqlCommand("SELECT id FROM rutas WHERE pais_origen = '" + dr["pais_destino"].ToString() + "' AND pais_destino = '"+ txtDestino.Text +"'", Conexion.conexion);
+                        NpgsqlDataReader dr1 = Conexion.cmd.ExecuteReader();
+                        if (dr1.HasRows)
+                        {
+                            while (dr1.Read())
+                            {
+                                Conexion.Coneccion();
+                                Conexion.conexion.Open();
+                                Conexion.cmd = new NpgsqlCommand("SELECT precio FROM vuelos WHERE ruta = '" + dr["id"].ToString() + "' OR ruta = '" + dr1["id"].ToString() + "'", Conexion.conexion);
+                                NpgsqlDataReader dr2 = Conexion.cmd.ExecuteReader();
+                                if (dr2.HasRows)
+                                {
+                                    while (dr2.Read())
+                                    {
+                                        precio = precio + Convert.ToInt32(dr2["precio"].ToString());
+                                    }
+                                    escala = dr["pais_destino"].ToString();
+                                    return Convert.ToString(precio);
+                                }
+                            }
+                        }
+                    }
+                }
+                Conexion.conexion.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex);
+            }
+            return "Se callo xD";
         }
     }
 }

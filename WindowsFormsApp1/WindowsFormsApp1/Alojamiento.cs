@@ -20,7 +20,6 @@ namespace WindowsFormsApp1
         {
             InitializeComponent();
             pHabitaciones.Visible = false;
-            btnBuscar.Enabled = false;
             dgvBusqueda.Visible = false;
         }
 
@@ -49,37 +48,12 @@ namespace WindowsFormsApp1
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            this.Size = new Size(553, this.Size.Height);
-            pHabitaciones.Visible = true;
-            lblCantidad.Text = Convert.ToString(spnHabitaciones.Value);
-            spnAdultos.Maximum = spnHabitaciones.Value * 4;
-            spnMenores.Maximum = spnHabitaciones.Value * 4;
-            spnHabitaciones.Enabled = false;
-            btnCheck.Enabled = false;
-        }
-
-        private void btnCancelar_Click(object sender, EventArgs e)
-        {
-            this.Size = new Size(348, this.Size.Height);
-            spnHabitaciones.Enabled = true;
-            btnCheck.Enabled = true;
-        }
-
-        private void btnAplicar_Click(object sender, EventArgs e)
-        {
-            this.Size = new Size(348, this.Size.Height);
-            spnHabitaciones.Enabled = true;
-            btnCheck.Enabled = true;
-            btnBuscar.Enabled = true;
-        }
-
         private void dtpFecha2_ValueChanged(object sender, EventArgs e)
         {
             int fecha1 = dtpFecha1.Value.DayOfYear;
             int fecha2 = dtpFecha2.Value.DayOfYear;
             lblNoches.Text = fecha2 - fecha1 + " Noches";
+
         }
 
         private void dtpFecha1_ValueChanged(object sender, EventArgs e)
@@ -98,7 +72,7 @@ namespace WindowsFormsApp1
         {
             dgvBusqueda.Visible = true;
             dgvBusqueda.DataSource = null;
-            this.Size = new Size(348, 355);
+            this.Size = new Size(this.Size.Width, 355);
             try
             {
                 if (txtDestino.Text.Equals(""))
@@ -107,7 +81,7 @@ namespace WindowsFormsApp1
                     dgvBusqueda.Rows.Clear();
                     Conexion.Coneccion();
                     Conexion.conexion.Open();
-                    NpgsqlDataAdapter read = new NpgsqlDataAdapter("SELECT nombre, lugar,precio FROM hoteles", Conexion.conexion);
+                    NpgsqlDataAdapter read = new NpgsqlDataAdapter("SELECT nombre, lugar, precio FROM hoteles", Conexion.conexion);
                     read.Fill(hoteles);
                     Conexion.conexion.Close();
                     DataTable dtAll = hoteles.Tables[0].Copy();
@@ -125,7 +99,7 @@ namespace WindowsFormsApp1
                     dgvBusqueda.Rows.Clear();
                     Conexion.Coneccion();
                     Conexion.conexion.Open();
-                    NpgsqlDataAdapter read = new NpgsqlDataAdapter("SELECT nombre,lugar,precio FROM hoteles WHERE nombre = '" + txtDestino.Text + "' OR pais = '" + txtDestino.Text + "' OR lugar = '" + txtDestino.Text + "'", Conexion.conexion);
+                    NpgsqlDataAdapter read = new NpgsqlDataAdapter("SELECT nombre, lugar, precio FROM hoteles WHERE nombre = '" + txtDestino.Text + "' OR pais = '" + txtDestino.Text + "' OR lugar = '" + txtDestino.Text + "'", Conexion.conexion);
                     read.Fill(hoteles);
                     Conexion.conexion.Close();
                     DataTable dtAll = hoteles.Tables[0].Copy();
@@ -140,6 +114,33 @@ namespace WindowsFormsApp1
             catch (Exception ex)
             {
                 MessageBox.Show("Error: " + ex);
+            }
+        }
+
+        private void btnCheck_Click(object sender, EventArgs e)
+        {
+            lblCantidad.Text = spnHabitaciones.Value.ToString();
+            spnAdultos.Maximum = 4 * spnHabitaciones.Value;
+            if (btnCheck.Text.Equals("+"))
+            {
+                btnCheck.Text = "-";
+                this.Size = new Size(548, this.Size.Height);
+                pHabitaciones.Visible = true;
+            }
+            else
+            {
+                btnCheck.Text = "+";
+                this.Size = new Size(348, this.Size.Height);
+                pHabitaciones.Visible = false;
+            }
+        }
+
+        private void spnMenores_Click(object sender, EventArgs e)
+        {
+            spnMenores.Maximum = (4*spnHabitaciones.Value) - spnAdultos.Value;
+            if (spnAdultos.Maximum.Equals(spnAdultos.Value + spnMenores.Value))
+            {
+                spnAdultos.Maximum = (4 * spnHabitaciones.Value) - spnMenores.Value;
             }
         }
     }

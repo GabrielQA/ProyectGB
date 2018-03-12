@@ -12,6 +12,21 @@ namespace WindowsFormsApp1
 {
     public partial class Preliminar : Form
     {
+
+        public static DateTime fecha1;
+        public static DateTime fecha2;
+        public static string Origen;
+        public static string Destino;
+        public static string Escala;
+        public static string Hotel;
+        public static string Habitaciones;
+        public static string Marca;
+        public static string Modelo;
+        public static string Tipo;
+        public static string Cantidad;
+        public static string Pvuelo;
+
+
         public Preliminar()
         {
             InitializeComponent();
@@ -22,6 +37,17 @@ namespace WindowsFormsApp1
 
         private void Preliminar_Load(object sender, EventArgs e)
         {
+            dtpInicio.Value = fecha1;
+            dtpFinal.Value = fecha2;
+            txtOrigen1.Text = txtDestino2.Text = Origen;
+            txtOrigen2.Text = txtDestino1.Text = Destino;
+            txtEscala.Text = Escala;
+            txtHabitaciones.Text = Habitaciones;
+            txtVehiculo.Text = Marca;
+            txtModeloV.Text = Modelo;
+            txtTipoV.Text = Tipo;
+            txtCantidadV.Text = Cantidad;
+            txtVueloP.Text = Pvuelo;
 
         }
 
@@ -86,6 +112,11 @@ namespace WindowsFormsApp1
                 this.Size = new Size(this.Size.Width, 238);
                 pnlVehiculo.Visible = false;
             }
+        }
+
+        private void btnComprar_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

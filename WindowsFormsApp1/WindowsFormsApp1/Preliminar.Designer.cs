@@ -41,7 +41,7 @@
             this.txtOrigen2 = new System.Windows.Forms.TextBox();
             this.txtDestino2 = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtEscala = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.txtHotel = new System.Windows.Forms.TextBox();
@@ -52,6 +52,7 @@
             this.txtTotal = new System.Windows.Forms.TextBox();
             this.btnTotal = new System.Windows.Forms.Button();
             this.pnlTotal = new System.Windows.Forms.Panel();
+            this.label20 = new System.Windows.Forms.Label();
             this.txtVehiculoP = new System.Windows.Forms.TextBox();
             this.txtHotelP = new System.Windows.Forms.TextBox();
             this.txtVueloP = new System.Windows.Forms.TextBox();
@@ -59,6 +60,7 @@
             this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.pnlVehiculo = new System.Windows.Forms.Panel();
+            this.label21 = new System.Windows.Forms.Label();
             this.txtCantidadV = new System.Windows.Forms.TextBox();
             this.txtTipoV = new System.Windows.Forms.TextBox();
             this.txtModeloV = new System.Windows.Forms.TextBox();
@@ -66,17 +68,15 @@
             this.label15 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.pnlHotel = new System.Windows.Forms.Panel();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.label22 = new System.Windows.Forms.Label();
+            this.btnFotoH = new System.Windows.Forms.Button();
+            this.txtHabitaciones = new System.Windows.Forms.TextBox();
             this.txtLugarH = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
-            this.btnFotoH = new System.Windows.Forms.Button();
             this.btnReservar = new System.Windows.Forms.Button();
             this.btnComprar = new System.Windows.Forms.Button();
-            this.label20 = new System.Windows.Forms.Label();
-            this.label21 = new System.Windows.Forms.Label();
-            this.label22 = new System.Windows.Forms.Label();
             this.pnlTotal.SuspendLayout();
             this.pnlVehiculo.SuspendLayout();
             this.pnlHotel.SuspendLayout();
@@ -195,13 +195,13 @@
             this.label7.TabIndex = 12;
             this.label7.Text = "Pais Escala";
             // 
-            // textBox1
+            // txtEscala
             // 
-            this.textBox1.Location = new System.Drawing.Point(103, 104);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(133, 20);
-            this.textBox1.TabIndex = 13;
+            this.txtEscala.Location = new System.Drawing.Point(103, 104);
+            this.txtEscala.Name = "txtEscala";
+            this.txtEscala.ReadOnly = true;
+            this.txtEscala.Size = new System.Drawing.Size(133, 20);
+            this.txtEscala.TabIndex = 13;
             // 
             // label8
             // 
@@ -298,6 +298,15 @@
             this.pnlTotal.Size = new System.Drawing.Size(132, 114);
             this.pnlTotal.TabIndex = 24;
             // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Location = new System.Drawing.Point(34, 8);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(64, 13);
+            this.label20.TabIndex = 6;
+            this.label20.Text = "Precio Total";
+            // 
             // txtVehiculoP
             // 
             this.txtVehiculoP.Location = new System.Drawing.Point(57, 88);
@@ -363,6 +372,15 @@
             this.pnlVehiculo.Size = new System.Drawing.Size(140, 114);
             this.pnlVehiculo.TabIndex = 25;
             // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Location = new System.Drawing.Point(35, 9);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(69, 13);
+            this.label21.TabIndex = 12;
+            this.label21.Text = "Vehiculo Info";
+            // 
             // txtCantidadV
             // 
             this.txtCantidadV.Location = new System.Drawing.Point(60, 88);
@@ -418,7 +436,7 @@
             // 
             this.pnlHotel.Controls.Add(this.label22);
             this.pnlHotel.Controls.Add(this.btnFotoH);
-            this.pnlHotel.Controls.Add(this.textBox3);
+            this.pnlHotel.Controls.Add(this.txtHabitaciones);
             this.pnlHotel.Controls.Add(this.txtLugarH);
             this.pnlHotel.Controls.Add(this.label17);
             this.pnlHotel.Controls.Add(this.label18);
@@ -428,13 +446,31 @@
             this.pnlHotel.Size = new System.Drawing.Size(151, 114);
             this.pnlHotel.TabIndex = 26;
             // 
-            // textBox3
+            // label22
             // 
-            this.textBox3.Location = new System.Drawing.Point(76, 60);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.ReadOnly = true;
-            this.textBox3.Size = new System.Drawing.Size(72, 20);
-            this.textBox3.TabIndex = 16;
+            this.label22.AutoSize = true;
+            this.label22.Location = new System.Drawing.Point(50, 9);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(53, 13);
+            this.label22.TabIndex = 18;
+            this.label22.Text = "Hotel Info";
+            // 
+            // btnFotoH
+            // 
+            this.btnFotoH.Location = new System.Drawing.Point(76, 85);
+            this.btnFotoH.Name = "btnFotoH";
+            this.btnFotoH.Size = new System.Drawing.Size(72, 23);
+            this.btnFotoH.TabIndex = 17;
+            this.btnFotoH.Text = "Ver";
+            this.btnFotoH.UseVisualStyleBackColor = true;
+            // 
+            // txtHabitaciones
+            // 
+            this.txtHabitaciones.Location = new System.Drawing.Point(76, 60);
+            this.txtHabitaciones.Name = "txtHabitaciones";
+            this.txtHabitaciones.ReadOnly = true;
+            this.txtHabitaciones.Size = new System.Drawing.Size(72, 20);
+            this.txtHabitaciones.TabIndex = 16;
             // 
             // txtLugarH
             // 
@@ -471,15 +507,6 @@
             this.label19.TabIndex = 12;
             this.label19.Text = "Lugar";
             // 
-            // btnFotoH
-            // 
-            this.btnFotoH.Location = new System.Drawing.Point(76, 85);
-            this.btnFotoH.Name = "btnFotoH";
-            this.btnFotoH.Size = new System.Drawing.Size(72, 23);
-            this.btnFotoH.TabIndex = 17;
-            this.btnFotoH.Text = "Ver";
-            this.btnFotoH.UseVisualStyleBackColor = true;
-            // 
             // btnReservar
             // 
             this.btnReservar.Location = new System.Drawing.Point(89, 167);
@@ -497,33 +524,7 @@
             this.btnComprar.TabIndex = 28;
             this.btnComprar.Text = "Comprar";
             this.btnComprar.UseVisualStyleBackColor = true;
-            // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(34, 8);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(64, 13);
-            this.label20.TabIndex = 6;
-            this.label20.Text = "Precio Total";
-            // 
-            // label21
-            // 
-            this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(35, 9);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(69, 13);
-            this.label21.TabIndex = 12;
-            this.label21.Text = "Vehiculo Info";
-            // 
-            // label22
-            // 
-            this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(50, 9);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(53, 13);
-            this.label22.TabIndex = 18;
-            this.label22.Text = "Hotel Info";
+            this.btnComprar.Click += new System.EventHandler(this.btnComprar_Click);
             // 
             // Preliminar
             // 
@@ -544,7 +545,7 @@
             this.Controls.Add(this.txtHotel);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtEscala);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.txtDestino2);
             this.Controls.Add(this.txtOrigen2);
@@ -587,7 +588,7 @@
         private System.Windows.Forms.TextBox txtOrigen2;
         private System.Windows.Forms.TextBox txtDestino2;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtEscala;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox txtHotel;
@@ -616,7 +617,7 @@
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.Button btnFotoH;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtHabitaciones;
         private System.Windows.Forms.TextBox txtLugarH;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label18;
