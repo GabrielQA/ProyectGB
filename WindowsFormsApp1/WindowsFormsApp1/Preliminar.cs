@@ -39,6 +39,10 @@ namespace WindowsFormsApp1
         {
             dtpInicio.Value = fecha1;
             dtpFinal.Value = fecha2;
+            dtpInicio.MaxDate = fecha1;
+            dtpInicio.MinDate = fecha1;
+            dtpFinal.MaxDate = fecha2;
+            dtpFinal.MinDate = fecha2;
             txtOrigen1.Text = txtDestino2.Text = Origen;
             txtOrigen2.Text = txtDestino1.Text = Destino;
             txtEscala.Text = Escala;

@@ -15,7 +15,7 @@ namespace WindowsFormsApp1
     public partial class Vuelos : Form
     {
         DataSet hoteles = new DataSet();
-        string escala;
+        string escala = "No hay escala";
 
         public Vuelos()
         {
@@ -239,7 +239,7 @@ namespace WindowsFormsApp1
             Preliminar.Modelo = boxModelo.SelectedItem.ToString();
             Preliminar.Tipo = boxTipo.SelectedItem.ToString();
             Preliminar.Cantidad = spnCantidadV.Value.ToString();
-            Preliminar.Pvuelo = preciovuelo();
+            Preliminar.Pvuelo = Convert.ToString(spnPasajeros.Value * Convert.ToInt32(preciovuelo()));
             Preliminar.Escala = escala;
             Preliminar ven = new Preliminar();
             ven.Show();

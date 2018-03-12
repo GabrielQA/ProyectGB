@@ -305,7 +305,7 @@ namespace WindowsFormsApp1
             string servidor = "localhost";
             int puerto = 5432;
             string usuario = "postgres";
-            string clave = "123";
+            string clave = "bryan2748245";
             string baseDatos = "proyectgb";
 
             cadenaConexion = "Server=" + servidor + "; " + "Port=" + puerto + "; " + "User Id=" + usuario + "; " + "Password=" + clave + "; " + "Database=" + baseDatos;

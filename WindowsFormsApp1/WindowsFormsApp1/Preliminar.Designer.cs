@@ -260,11 +260,11 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(37, 135);
+            this.label10.Location = new System.Drawing.Point(14, 135);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(60, 13);
+            this.label10.Size = new System.Drawing.Size(83, 13);
             this.label10.TabIndex = 21;
-            this.label10.Text = "Precio total";
+            this.label10.Text = "Total + IVA 13%";
             // 
             // txtTotal
             // 
