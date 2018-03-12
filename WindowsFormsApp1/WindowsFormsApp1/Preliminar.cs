@@ -12,7 +12,6 @@ namespace WindowsFormsApp1
 {
     public partial class Preliminar : Form
     {
-
         public static DateTime fecha1;
         public static DateTime fecha2;
         public static string Origen;
@@ -25,7 +24,10 @@ namespace WindowsFormsApp1
         public static string Tipo;
         public static string Cantidad;
         public static string Pvuelo;
-
+        public static string Photel;
+        public static string Hlugar;
+        public static string Pvehiculo;
+        public static string Validar;
 
         public Preliminar()
         {
@@ -37,22 +39,86 @@ namespace WindowsFormsApp1
 
         private void Preliminar_Load(object sender, EventArgs e)
         {
-            dtpInicio.Value = fecha1;
-            dtpFinal.Value = fecha2;
-            dtpInicio.MaxDate = fecha1;
-            dtpInicio.MinDate = fecha1;
-            dtpFinal.MaxDate = fecha2;
-            dtpFinal.MinDate = fecha2;
-            txtOrigen1.Text = txtDestino2.Text = Origen;
-            txtOrigen2.Text = txtDestino1.Text = Destino;
-            txtEscala.Text = Escala;
-            txtHabitaciones.Text = Habitaciones;
-            txtVehiculo.Text = Marca;
-            txtModeloV.Text = Modelo;
-            txtTipoV.Text = Tipo;
-            txtCantidadV.Text = Cantidad;
-            txtVueloP.Text = Pvuelo;
-
+            int dias = fecha2.DayOfYear - fecha1.DayOfYear;
+            if (Validar.Equals("Ambos"))
+            {
+                double IVA = (Convert.ToDouble(Pvuelo) + Convert.ToDouble(Photel) + Convert.ToDouble(Pvehiculo)) * 0.13;
+                dtpInicio.Value = fecha1;
+                dtpFinal.Value = fecha2;
+                dtpInicio.MaxDate = fecha1;
+                dtpInicio.MinDate = fecha1;
+                dtpFinal.MaxDate = fecha2;
+                dtpFinal.MinDate = fecha2;
+                txtOrigen1.Text = txtDestino2.Text = Origen;
+                txtOrigen2.Text = txtDestino1.Text = Destino;
+                txtEscala.Text = Escala;
+                txtHabitaciones.Text = Habitaciones;
+                txtVehiculo.Text = Marca;
+                txtModeloV.Text = Modelo;
+                txtTipoV.Text = Tipo;
+                txtCantidadV.Text = Cantidad;
+                txtVueloP.Text = Pvuelo;
+                txtHotelP.Text = Convert.ToString(Convert.ToInt32(Photel) * Convert.ToInt32(Habitaciones) * dias);
+                txtLugarH.Text = Hlugar;
+                txtHotel.Text = Hotel;
+                txtVehiculoP.Text = Convert.ToString(Convert.ToInt32(Pvehiculo) * Convert.ToInt32(Cantidad));
+                txtTotal.Text = Convert.ToString((Convert.ToDouble(Pvuelo) + Convert.ToDouble(txtHotelP.Text) + Convert.ToDouble(txtVehiculoP.Text)) + IVA);
+            }
+            else if (Validar.Equals("Hotel"))
+            {
+                double IVA = (Convert.ToDouble(Pvuelo) + Convert.ToDouble(Photel)) * 0.13;
+                dtpInicio.Value = fecha1;
+                dtpFinal.Value = fecha2;
+                dtpInicio.MaxDate = fecha1;
+                dtpInicio.MinDate = fecha1;
+                dtpFinal.MaxDate = fecha2;
+                dtpFinal.MinDate = fecha2;
+                txtOrigen1.Text = txtDestino2.Text = Origen;
+                txtOrigen2.Text = txtDestino1.Text = Destino;
+                txtEscala.Text = Escala;
+                txtHabitaciones.Text = Habitaciones;
+                txtVueloP.Text = Pvuelo;
+                txtHotelP.Text = Convert.ToString(Convert.ToInt32(Photel) * Convert.ToInt32(Habitaciones) * dias);
+                txtLugarH.Text = Hlugar;
+                txtHotel.Text = Hotel;
+                txtTotal.Text = Convert.ToString((Convert.ToDouble(Pvuelo) + Convert.ToDouble(txtHotelP.Text)) + IVA);
+            }
+            else if (Validar.Equals("Auto"))
+            {
+                double IVA = (Convert.ToDouble(Pvuelo) + Convert.ToDouble(Pvehiculo)) * 0.13;
+                dtpInicio.Value = fecha1;
+                dtpFinal.Value = fecha2;
+                dtpInicio.MaxDate = fecha1;
+                dtpInicio.MinDate = fecha1;
+                dtpFinal.MaxDate = fecha2;
+                dtpFinal.MinDate = fecha2;
+                txtOrigen1.Text = txtDestino2.Text = Origen;
+                txtOrigen2.Text = txtDestino1.Text = Destino;
+                txtEscala.Text = Escala;
+                txtVehiculo.Text = Marca;
+                txtModeloV.Text = Modelo;
+                txtTipoV.Text = Tipo;
+                txtCantidadV.Text = Cantidad;
+                txtVueloP.Text = Pvuelo;
+                txtVehiculoP.Text = Convert.ToString(Convert.ToInt32(Pvehiculo) * Convert.ToInt32(Cantidad));
+                txtTotal.Text = Convert.ToString((Convert.ToDouble(Pvuelo) + Convert.ToDouble(txtVehiculoP.Text)) + IVA);
+            }
+            else if (Validar.Equals("Vuelo"))
+            {
+                double IVA = (Convert.ToDouble(Pvuelo)) * 0.13;
+                dtpInicio.Value = fecha1;
+                dtpFinal.Value = fecha2;
+                dtpInicio.MaxDate = fecha1;
+                dtpInicio.MinDate = fecha1;
+                dtpFinal.MaxDate = fecha2;
+                dtpFinal.MinDate = fecha2;
+                txtOrigen1.Text = txtDestino2.Text = Origen;
+                txtOrigen2.Text = txtDestino1.Text = Destino;
+                txtEscala.Text = Escala;
+                txtVueloP.Text = Pvuelo;
+                txtTotal.Text = Convert.ToString((Convert.ToDouble(Pvuelo)) + IVA);
+            }
+            
         }
 
         private void btnTotal_Click(object sender, EventArgs e)

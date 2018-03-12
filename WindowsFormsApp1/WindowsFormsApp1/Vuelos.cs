@@ -16,6 +16,9 @@ namespace WindowsFormsApp1
     {
         DataSet hoteles = new DataSet();
         string escala = "No hay escala";
+        string hotel;
+        string hlugar;
+        string hprecio;
 
         public Vuelos()
         {
@@ -136,6 +139,10 @@ namespace WindowsFormsApp1
                     MessageBox.Show("Error: " + ex);
                 }
             }
+            else if(boxHotel.Checked.Equals(false) && boxAuto.Checked.Equals(false))
+            {
+                btnPreliminar.Visible = true;
+            }
         }
 
         private void boxAuto_CheckedChanged(object sender, EventArgs e)
@@ -229,20 +236,97 @@ namespace WindowsFormsApp1
 
         private void btnPreliminar_Click(object sender, EventArgs e)
         {
-            Preliminar.fecha1 = dtpInicio.Value;
-            Preliminar.fecha2 = dtpFin.Value;
-            Preliminar.Origen = txtOrigen.Text;
-            Preliminar.Destino = txtDestino.Text;
-            //Preliminar.Hotel = 
-            Preliminar.Habitaciones = spnHabitaciones.Value.ToString();
-            Preliminar.Marca = boxMarca.SelectedItem.ToString();
-            Preliminar.Modelo = boxModelo.SelectedItem.ToString();
-            Preliminar.Tipo = boxTipo.SelectedItem.ToString();
-            Preliminar.Cantidad = spnCantidadV.Value.ToString();
-            Preliminar.Pvuelo = Convert.ToString(spnPasajeros.Value * Convert.ToInt32(preciovuelo()));
-            Preliminar.Escala = escala;
-            Preliminar ven = new Preliminar();
-            ven.Show();
+            if (boxHotel.Checked == true && boxAuto.Checked == true)
+            {
+                Preliminar.Validar = "Ambos";
+                Preliminar.fecha1 = dtpInicio.Value;
+                Preliminar.fecha2 = dtpFin.Value;
+                Preliminar.Origen = txtOrigen.Text;
+                Preliminar.Destino = txtDestino.Text;
+                Preliminar.Hotel = hotel;
+                Preliminar.Habitaciones = spnHabitaciones.Value.ToString();
+                Preliminar.Marca = boxMarca.SelectedItem.ToString();
+                Preliminar.Modelo = boxModelo.SelectedItem.ToString();
+                Preliminar.Tipo = boxTipo.SelectedItem.ToString();
+                Preliminar.Cantidad = spnCantidadV.Value.ToString();
+                Preliminar.Pvuelo = Convert.ToString(spnPasajeros.Value * Convert.ToInt32(preciovuelo()));
+                Preliminar.Escala = escala;
+                Preliminar.Photel = hprecio;
+                Preliminar.Hlugar = hlugar;
+                Preliminar.Pvehiculo = preciovehiculo();
+                Preliminar ven = new Preliminar();
+                ven.Show();
+            }
+            else if(boxHotel.Checked == true)
+            {
+                Preliminar.Validar = "Hotel";
+                Preliminar.fecha1 = dtpInicio.Value;
+                Preliminar.fecha2 = dtpFin.Value;
+                Preliminar.Origen = txtOrigen.Text;
+                Preliminar.Destino = txtDestino.Text;
+                Preliminar.Hotel = hotel;
+                Preliminar.Habitaciones = spnHabitaciones.Value.ToString();
+                Preliminar.Pvuelo = Convert.ToString(spnPasajeros.Value * Convert.ToInt32(preciovuelo()));
+                Preliminar.Escala = escala;
+                Preliminar.Photel = hprecio;
+                Preliminar.Hlugar = hlugar;
+                Preliminar ven = new Preliminar();
+                ven.Show();
+            }
+            else if(boxAuto.Checked == true)
+            {
+                Preliminar.Validar = "Auto";
+                Preliminar.fecha1 = dtpInicio.Value;
+                Preliminar.fecha2 = dtpFin.Value;
+                Preliminar.Origen = txtOrigen.Text;
+                Preliminar.Destino = txtDestino.Text;
+                Preliminar.Marca = boxMarca.SelectedItem.ToString();
+                Preliminar.Modelo = boxModelo.SelectedItem.ToString();
+                Preliminar.Tipo = boxTipo.SelectedItem.ToString();
+                Preliminar.Cantidad = spnCantidadV.Value.ToString();
+                Preliminar.Pvuelo = Convert.ToString(spnPasajeros.Value * Convert.ToInt32(preciovuelo()));
+                Preliminar.Escala = escala;
+                Preliminar.Pvehiculo = preciovehiculo();
+                Preliminar ven = new Preliminar();
+                ven.Show();
+            }
+            else
+            {
+                Preliminar.Validar = "Vuelo";
+                Preliminar.fecha1 = dtpInicio.Value;
+                Preliminar.fecha2 = dtpFin.Value;
+                Preliminar.Origen = txtOrigen.Text;
+                Preliminar.Destino = txtDestino.Text;
+                Preliminar.Pvuelo = Convert.ToString(spnPasajeros.Value * Convert.ToInt32(preciovuelo()));
+                Preliminar.Escala = escala;
+                Preliminar ven = new Preliminar();
+                ven.Show();
+            }
+        }
+
+        public string preciovehiculo()
+        {
+            try
+            {
+                Conexion.Coneccion();
+                Conexion.conexion.Open();
+                Conexion.cmd = new NpgsqlCommand("SELECT precio FROM vehiculos WHERE tipo = '" + boxTipo.Text + "' AND modelo = '" + boxModelo.Text + "' AND marca = '" + boxMarca.Text + "'", Conexion.conexion);
+                NpgsqlDataReader dr = Conexion.cmd.ExecuteReader();
+                if (dr.HasRows)
+                {
+                    while (dr.Read())
+                    {
+                        return dr["precio"].ToString();
+                    }
+                }
+                Conexion.conexion.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex);
+            }
+
+            return "Se callo xD";
         }
 
         public string preciovuelo()
@@ -323,15 +407,10 @@ namespace WindowsFormsApp1
 
         private void dgvBusqueda_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            string nombre;
-            string lugar;
-            string precio;
             DataGridViewRow fila =dgvBusqueda.CurrentRow;
-            nombre= Convert.ToString(fila.Cells[0].Value);
-            lugar = Convert.ToString(fila.Cells[1].Value);
-           precio = Convert.ToString(fila.Cells[2].Value);
-            MessageBox.Show(nombre,lugar);
-           
+            hotel= Convert.ToString(fila.Cells[0].Value);
+            hlugar = Convert.ToString(fila.Cells[1].Value);
+            hprecio = Convert.ToString(fila.Cells[2].Value);           
         }
     }
 }
