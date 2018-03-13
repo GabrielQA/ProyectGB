@@ -50,7 +50,7 @@ namespace WindowsFormsApp1
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error: " + ex);
+                MessageBox.Show("Este usuario no tiene reservas.");
             }
         }
 
