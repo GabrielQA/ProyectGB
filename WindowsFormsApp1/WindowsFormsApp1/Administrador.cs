@@ -47,6 +47,7 @@ namespace WindowsFormsApp1
         /// </summary>
         string cadenas;
         string pais;
+        string Global_Escala;
         public Administrador()
         {
             InitializeComponent();
@@ -226,9 +227,9 @@ namespace WindowsFormsApp1
                 while (dr.Read())
                 {
                     LugaresMOD.Items.Add(dr.GetString(1));
-                   
-                   
-                  
+
+
+
 
                     LugarHotelesMod.Text = dr.GetString(1);
                     ComboboxLugaresDelete.Items.Add(dr.GetString(1));
@@ -238,20 +239,20 @@ namespace WindowsFormsApp1
             conexion.Close();
 
         }
-        public void lugarPais(){
-            
+        public void lugarPais() {
+
             this.CenterToScreen();
             Conexion();
             conexion.Open();
-           
-            NpgsqlCommand cmd = new NpgsqlCommand("SELECT id,nombre,pais FROM lugares WHERE pais='"+pais+"'", conexion);
+
+            NpgsqlCommand cmd = new NpgsqlCommand("SELECT id,nombre,pais FROM lugares WHERE pais='" + pais + "'", conexion);
             NpgsqlDataReader dr = cmd.ExecuteReader();
             if (dr.HasRows)
             {
                 while (dr.Read())
                 {
-                   LugarHotelesADD.Items.Add(dr.GetString(1));
-                    
+                    LugarHotelesADD.Items.Add(dr.GetString(1));
+
                 }
             }
             conexion.Close();
@@ -259,7 +260,7 @@ namespace WindowsFormsApp1
         }
         public void PaisesA()
         {
-            
+
             this.CenterToScreen();
             Conexion();
             conexion.Open();
@@ -284,7 +285,7 @@ namespace WindowsFormsApp1
             }
             conexion.Close();
         }
-       
+
         /// <summary>
         /// Variables globales
         /// </summary>
@@ -299,7 +300,7 @@ namespace WindowsFormsApp1
         static string cadenaConexion = null;
         static NpgsqlConnection conexion;
         static NpgsqlCommand cmd;
-      
+
 
         public static void Conexion()
         {
@@ -338,7 +339,7 @@ namespace WindowsFormsApp1
                 conexion.Close();
             } catch (Exception e)
             {
-                MessageBox.Show("Fallo en el ingreso de datos"+e.ToString());
+                MessageBox.Show("Fallo en el ingreso de datos" + e.ToString());
             }
 
         }
@@ -545,7 +546,7 @@ namespace WindowsFormsApp1
             {
                 Conexion();
                 conexion.Open();
-                NpgsqlCommand cmd = new NpgsqlCommand("UPDATE hoteles SET nombre = '" + NombreHotelesMod.Text + "', foto = '" + imagenHotelesMod.Text + "', pais= '" + paisHotelesMod.Text + "', lugar= '" + LugarHotelesMod.Text + "', habitaciones= '" + habitacionesHotelesMod.Text +"', habitaciones='"+Precio.Text+ "' WHERE id = '" + Convert.ToInt32(IDHotelesMOD.Text) + "'", conexion);
+                NpgsqlCommand cmd = new NpgsqlCommand("UPDATE hoteles SET nombre = '" + NombreHotelesMod.Text + "', foto = '" + imagenHotelesMod.Text + "', pais= '" + paisHotelesMod.Text + "', lugar= '" + LugarHotelesMod.Text + "', habitaciones= '" + habitacionesHotelesMod.Text + "', habitaciones='" + Precio.Text + "' WHERE id = '" + Convert.ToInt32(IDHotelesMOD.Text) + "'", conexion);
                 cmd.ExecuteNonQuery();
                 conexion.Close();
                 MessageBox.Show("Informacion modificada correctamente");
@@ -757,7 +758,7 @@ namespace WindowsFormsApp1
 
         private void button6_Click(object sender, EventArgs e)
         {
-           
+
             ModificarDatosLugares();
             LimpiarLugares();
 
@@ -811,12 +812,12 @@ namespace WindowsFormsApp1
         {
 
             EliminarDatosRutas();
-           
+
         }
 
         private void button14_Click(object sender, EventArgs e)
         {
-            
+
             InsertarDatosHoteles();
             IDHotelesAdd.Clear();
             nombreHotelesAdd.Clear();
@@ -1003,7 +1004,7 @@ namespace WindowsFormsApp1
         {
 
 
-           
+
             /*  string direccion;
               Open.Title = "Abrir";
               Open.Filter = "Jpg files (*.jpg)|Gif files (*,gif|Vitmap files (*.Bmp)|*.BMP|PGN files )*.png)|*.png*";
@@ -1124,17 +1125,17 @@ namespace WindowsFormsApp1
         }
         public void RutasM()
         {
-            
 
 
-                Conexion();
-                conexion.Open();
-                NpgsqlCommand cmd = new NpgsqlCommand("SELECT id, nombre, localidad, iata FROM aeropuertos WHERE nombre = '" + ComboboxAeropuertoDelete.SelectedItem + "'", conexion);
-                NpgsqlDataReader dr = cmd.ExecuteReader();
-                if (dr.HasRows)
+
+            Conexion();
+            conexion.Open();
+            NpgsqlCommand cmd = new NpgsqlCommand("SELECT id, nombre, localidad, iata FROM aeropuertos WHERE nombre = '" + ComboboxAeropuertoDelete.SelectedItem + "'", conexion);
+            NpgsqlDataReader dr = cmd.ExecuteReader();
+            if (dr.HasRows)
+            {
+                while (dr.Read())
                 {
-                    while (dr.Read())
-                    {
                     POmod.Items.Add(dr.GetString(1));
 
                     PDmod.Items.Add(dr.GetString(2));
@@ -1142,38 +1143,38 @@ namespace WindowsFormsApp1
 
                 }
 
-                    conexion.Close();
+                conexion.Close();
 
 
 
-                }
             }
+        }
 
-            /* 
-             Conexion();
-             conexion.Open();
-             NpgsqlCommand cmd = new NpgsqlCommand("SELECT id,pais_origen,pais_destino,duracion FROM rutas WHERE id = '" + IDRMOD.SelectedItem +  "'", conexion);
-             NpgsqlDataReader dr = cmd.ExecuteReader();
-             if (dr.HasRows)
+        /* 
+         Conexion();
+         conexion.Open();
+         NpgsqlCommand cmd = new NpgsqlCommand("SELECT id,pais_origen,pais_destino,duracion FROM rutas WHERE id = '" + IDRMOD.SelectedItem +  "'", conexion);
+         NpgsqlDataReader dr = cmd.ExecuteReader();
+         if (dr.HasRows)
+         {
+             while (dr.Read())
              {
-                 while (dr.Read())
-                 {
 
 
 
-                     POmod.Items.Add(dr.GetString(1));
+                 POmod.Items.Add(dr.GetString(1));
 
-                     PDmod.Items.Add(dr.GetString(2));
-
-                 }
-
-                 conexion.Close();
-
-
+                 PDmod.Items.Add(dr.GetString(2));
 
              }
-         }*/
-            public void TarifaHoteles()
+
+             conexion.Close();
+
+
+
+         }
+     }*/
+        public void TarifaHoteles()
         {
 
 
@@ -1212,7 +1213,7 @@ namespace WindowsFormsApp1
                 while (dr.Read())
                 {
                     RutaTarifaVuelosMOD.Items.Add(dr.GetString(1));
-                 
+
                     PreciosTarifaVuelosMod.Text = dr.GetString(2);
 
 
@@ -1260,9 +1261,9 @@ namespace WindowsFormsApp1
         private void LugaresMOD_SelectedIndexChanged(object sender, EventArgs e)
         {
 
-            
+
             LugaresM();
-       
+
         }
 
         private void comboBox1_SelectedIndexChanged_1(object sender, EventArgs e)
@@ -1287,12 +1288,12 @@ namespace WindowsFormsApp1
 
         private void POmod_SelectedIndexChanged(object sender, EventArgs e)
         {
-          
+
         }
 
         private void PDmod_SelectedIndexChanged(object sender, EventArgs e)
         {
-          
+
         }
 
         private void tabControl4_SelectedIndexChanged(object sender, EventArgs e)
@@ -1361,9 +1362,9 @@ namespace WindowsFormsApp1
         {
             txtIDPais.Clear();
             textBox3.Clear();
-        
+
             textBox4.Clear();
-            
+
             IDLADD.Clear();
             nombreLADD.Clear();
             IDmodL.Clear();
@@ -1388,7 +1389,7 @@ namespace WindowsFormsApp1
             PrecioTarifaHotelesADD.Clear();
             IDTarifaHotelesMod.Clear();
             PrecioTarifaHotelesMod.Clear();
-           
+
             PrecioTarifaVuelosADD.Clear();
             PreciosTarifaVuelosMod.Clear();
             IDVehiculoADD.Clear();
@@ -1407,7 +1408,7 @@ namespace WindowsFormsApp1
             TarifaHdelete.Items.Clear();
             ComboboxtarifaH.Items.Clear();
             RutaTarifaVuelosADD.Items.Clear();
-            
+
             RutaTarifaVuelosMOD.Items.Clear();
             IDTarifaVuelosDelete.Items.Clear();
             IDVehiculoMod.Items.Clear();
@@ -1415,13 +1416,13 @@ namespace WindowsFormsApp1
             IDRMOD.Items.Clear();
             POmod.Items.Clear();
             PDmod.Items.Clear();
-            
+
             lugarespaisadd.Equals("");
             lpam.Equals("");
 
 
             PaisDadd.Items.Clear();
-            
+
 
 
 
@@ -1450,13 +1451,13 @@ namespace WindowsFormsApp1
         private void tabPage13_MouseClick(object sender, MouseEventArgs e)
         {
             clearAll();
-           
+
 
         }
 
         private void tabControl1_MouseClick(object sender, MouseEventArgs e)
         {
-           
+
         }
 
         private void tabPage10_MouseClick(object sender, MouseEventArgs e)
@@ -1496,7 +1497,7 @@ namespace WindowsFormsApp1
 
         private void tabPage19_MouseClick(object sender, MouseEventArgs e)
         {
-            
+
         }
 
         private void tabPage23_MouseClick(object sender, MouseEventArgs e)
@@ -1571,8 +1572,8 @@ namespace WindowsFormsApp1
 
         private void c_SelectedIndexChanged(object sender, EventArgs e)
         {
-            
-            
+
+
         }
 
         private void tabPage14_Click(object sender, EventArgs e)
@@ -1582,13 +1583,13 @@ namespace WindowsFormsApp1
 
         private void Paises_MouseClick(object sender, MouseEventArgs e)
         {
-           
+
         }
 
         private void LugaresMOD_MouseClick(object sender, MouseEventArgs e)
         {
             Lugares();
-           
+
         }
 
         private void ComboboxLugaresDelete_MouseClick(object sender, MouseEventArgs e)
@@ -1615,7 +1616,7 @@ namespace WindowsFormsApp1
 
         private void RutaTarifaVuelosADD_MouseClick(object sender, MouseEventArgs e)
         {
-          Rutas();
+            Rutas();
         }
 
         private void IDTarifaVuelosDelete_SelectedIndexChanged(object sender, EventArgs e)
@@ -1630,7 +1631,7 @@ namespace WindowsFormsApp1
 
         private void IDTarifaVuelosMod_MouseClick(object sender, MouseEventArgs e)
         {
-           
+
             IDTarifaVuelosMod.Items.Clear();
             TarifaV();
         }
@@ -1671,7 +1672,7 @@ namespace WindowsFormsApp1
         {
 
             Rutas();
-           
+
         }
 
         private void IDRMOD_SelectedIndexChanged(object sender, EventArgs e)
@@ -1711,8 +1712,8 @@ namespace WindowsFormsApp1
         private void comboboxdeleteRuta_MouseClick(object sender, MouseEventArgs e)
         {
 
-            
-            
+
+
         }
 
         private void comboboxdeleteRuta_MouseClick_1(object sender, MouseEventArgs e)
@@ -1772,27 +1773,27 @@ namespace WindowsFormsApp1
 
         private void textBox3_KeyPress(object sender, KeyPressEventArgs e)
         {
-           
-                if (Char.IsLetter(e.KeyChar))
-                {
-                    e.Handled = false;
-                }
-                else if (Char.IsControl(e.KeyChar))
-                {
-                    e.Handled = false;
-                }
-                else if (Char.IsSeparator(e.KeyChar))
-                {
-                    e.Handled = false;
-                }
-                else
-                {
-                    e.Handled = true;
-                
-                }
+
+            if (Char.IsLetter(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else if (Char.IsControl(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else if (Char.IsSeparator(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else
+            {
+                e.Handled = true;
+
+            }
         }
 
-      
+
         private void textBox4_KeyPress(object sender, KeyPressEventArgs e)
         {
 
@@ -2113,9 +2114,7 @@ namespace WindowsFormsApp1
 
         private void tabPage32_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            Rep r = new Rep();
-            r.Show();
+
         }
 
         private void textBox6_KeyPress(object sender, KeyPressEventArgs e)
@@ -2389,7 +2388,7 @@ namespace WindowsFormsApp1
             lugarPais();
         }
 
-        
+
 
         private void textBox6_SelectedValueChanged(object sender, EventArgs e)
         {
@@ -2398,7 +2397,7 @@ namespace WindowsFormsApp1
             Conexion();
             conexion.Open();
             List<String> lista = new List<String>();
-            NpgsqlCommand cmd = new NpgsqlCommand("SELECT id,nombre,bandera FROM paises WHERE id='"+textBox6.SelectedItem+"'", conexion);
+            NpgsqlCommand cmd = new NpgsqlCommand("SELECT id,nombre,bandera FROM paises WHERE id='" + textBox6.SelectedItem + "'", conexion);
             NpgsqlDataReader dr = cmd.ExecuteReader();
             if (dr.HasRows)
             {
@@ -2406,12 +2405,12 @@ namespace WindowsFormsApp1
                 {
                     imagemodPaises.Load(dr.GetString(2));
                     textBox4.Text = dr.GetString(1);
-                   
+
                 }
             }
             conexion.Close();
-       
-    }
+
+        }
 
         private void textBox6_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -2420,7 +2419,7 @@ namespace WindowsFormsApp1
 
         private void IDHotelesMOD_SelectedValueChanged(object sender, EventArgs e)
         {
-         
+
 
             this.CenterToScreen();
             Conexion();
@@ -2432,17 +2431,17 @@ namespace WindowsFormsApp1
             {
                 while (dr.Read())
                 {
-                   paisHotelesMod.Text = dr.GetString(3);
+                    paisHotelesMod.Text = dr.GetString(3);
                     imagenHotelesMod.Load(dr.GetString(2));
                     NombreHotelesMod.Text = dr.GetString(1);
-                   
-                    LugarHotelesMod.Text=dr.GetString(4);
+
+                    LugarHotelesMod.Text = dr.GetString(4);
                     habitacionesHotelesMod.Text = dr.GetString(5);
-                    PrecioM.Text =dr.GetString(6);
+                    PrecioM.Text = dr.GetString(6);
                 }
             }
             conexion.Close();
-          
+
 
         }
 
@@ -2453,8 +2452,8 @@ namespace WindowsFormsApp1
 
         private void paisHotelesADD_SelectedValueChanged(object sender, EventArgs e)
         {
-           pais= paisHotelesADD.SelectedItem.ToString();
-    
+            pais = paisHotelesADD.SelectedItem.ToString();
+
         }
 
         private void IDHotelesDelete_Click(object sender, EventArgs e)
@@ -2484,7 +2483,7 @@ namespace WindowsFormsApp1
 
         private void paisHotelesMod_Click(object sender, EventArgs e)
         {
-            LugarHotelesADD.Items.Clear(); 
+            LugarHotelesADD.Items.Clear();
             PaisesA();
         }
 
@@ -2517,7 +2516,7 @@ namespace WindowsFormsApp1
             {
                 while (dr.Read())
                 {
-                   
+
                     lpam.Text = dr.GetString(2);
 
                 }
@@ -2551,6 +2550,32 @@ namespace WindowsFormsApp1
                 serie.Points.Add(puntos[i]);
             }
         }
+        public void resultadoRP7(int lista, string nombre)
+        {
+            string[] series = { nombre };
+            int[] puntos = { lista };
+            MessageBox.Show("valor" + Global_Escala);
+            chart7.Palette = ChartColorPalette.Pastel;
+            for (int i = 0; i < series.Length; i++)
+            {
+                Series serie = chart7.Series.Add(series[i]);
+                serie.Label = puntos[i].ToString();
+                serie.Points.Add(puntos[i]);
+            }
+        }
+        public void resultadoRP6(int valor, string nombre)
+        {
+            string[] series = { nombre };
+            int[] puntos = { valor };
+
+            chart6.Palette = ChartColorPalette.Pastel;
+            for (int i = 0; i < series.Length; i++)
+            {
+                Series serie = chart6.Series.Add(series[i]);
+                serie.Label = puntos[i].ToString();
+                serie.Points.Add(puntos[i]);
+            }
+        }
 
         private void comboboxRep1_SelectedValueChanged(object sender, EventArgs e)
         {
@@ -2575,6 +2600,44 @@ namespace WindowsFormsApp1
             Rep1();
 
         }
+        public void Rep7()
+        {
+
+            Conexion();
+            conexion.Open();
+            List<String> lista = new List<String>();
+            NpgsqlCommand cmd = new NpgsqlCommand("SELECT escala FROM compra", conexion);
+            NpgsqlDataReader dr = cmd.ExecuteReader();
+            if (dr.HasRows)
+            {
+                while (dr.Read())
+                {
+                    Global_Escala = dr.GetString(0);
+
+
+                }
+            }
+            conexion.Close();
+        }
+        public void Rep6()
+        {
+            Conexion();
+            conexion.Open();
+            List<String> lista = new List<String>();
+            NpgsqlCommand cmd = new NpgsqlCommand("SELECT vehiculo FROM compra", conexion);
+            NpgsqlDataReader dr = cmd.ExecuteReader();
+            if (dr.HasRows)
+            {
+                while (dr.Read())
+                {
+                    comboBox2.Items.Add(dr.GetString(0));
+
+                }
+            }
+            conexion.Close();
+        }
+
+
         public void Rep1()
         {
             Conexion();
@@ -2603,7 +2666,7 @@ namespace WindowsFormsApp1
             rep2.Items.Clear();
             Rep1();
 
-            
+
         }
 
         private void rep2_SelectedValueChanged(object sender, EventArgs e)
@@ -2612,7 +2675,7 @@ namespace WindowsFormsApp1
             int cantidad = 0;
             Conexion();
             conexion.Open();
-            NpgsqlCommand cmd = new NpgsqlCommand("SELECT cantidad_personas from compra where hotel='"+rep2.SelectedItem+"'", conexion);
+            NpgsqlCommand cmd = new NpgsqlCommand("SELECT cantidad_personas from compra where hotel='" + rep2.SelectedItem + "'", conexion);
             NpgsqlDataReader dr = cmd.ExecuteReader();
             if (dr.HasRows)
             {
@@ -2622,9 +2685,9 @@ namespace WindowsFormsApp1
                 }
             }
             conexion.Close();
-            reporte2(cantidad,rep2.SelectedItem.ToString());
+            reporte2(cantidad, rep2.SelectedItem.ToString());
         }
-        public void reporte2(int valor,string nombre)
+        public void reporte2(int valor, string nombre)
         {
             string[] series = { nombre };
             int[] puntos = { valor };
@@ -2704,7 +2767,7 @@ namespace WindowsFormsApp1
             int adulto = 0;
             Conexion();
             conexion.Open();
-            NpgsqlCommand cmd = new NpgsqlCommand("SELECT adultos from compra where fecha_inicio AFTER '" + dateTimePicker1.Value + "' AND fecha_final BEFORE '"+dateTimePicker2.Value+"'", conexion);
+            NpgsqlCommand cmd = new NpgsqlCommand("SELECT adultos from compra where fecha_inicio AFTER '" + dateTimePicker1.Value + "' AND fecha_final BEFORE '" + dateTimePicker2.Value + "'", conexion);
             NpgsqlDataReader dr = cmd.ExecuteReader();
             if (dr.HasRows)
             {
@@ -2759,6 +2822,73 @@ namespace WindowsFormsApp1
                 serie.Label = puntos[i].ToString();
                 serie.Points.Add(puntos[i]);
             }
+        }
+
+        private void label72_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboboxRep1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBox2_SelectedValueChanged(object sender, EventArgs e)
+        {
+            Conexion();
+            conexion.Open();
+            List<String> lista = new List<String>();
+            NpgsqlCommand cmd = new NpgsqlCommand("SELECT count(vehiculo) AS contador FROM compra WHERE vehiculo='" + comboBox2.SelectedItem + "'", conexion);
+            NpgsqlDataReader dr = cmd.ExecuteReader();
+            if (dr.HasRows)
+            {
+                while (dr.Read())
+                {
+                    resultadoRP6(Convert.ToInt32(dr["contador"].ToString()), comboBox2.SelectedItem.ToString());
+                }
+            }
+            conexion.Close();
+        }
+
+        private void comboBox2_Click(object sender, EventArgs e)
+        {
+            comboBox2.Items.Clear();
+            Rep6();
+        }
+
+        private void chart7_Click(object sender, EventArgs e)
+        {
+            /*Rep7();
+            Conexion();
+            conexion.Open();
+            List<String> lis ta = new List<String>();
+            NpgsqlCommand cmd = new NpgsqlCommand("SELECT count(escala) AS contador FROM compra WHERE escala='" + lista.ToString() + "'", conexion);
+            NpgsqlDataReader dr = cmd.ExecuteReader();
+            if (dr.HasRows)
+            {
+                while (dr.Read())
+                {
+                    resultadoRP7(Convert.ToInt32(dr["contador"].ToString()), lista.ToString());
+
+                    NpgsqlCommand cmdd = new NpgsqlCommand("SELECT escala FROM compra", conexion);
+                    NpgsqlDataReader ddr = cmdd.ExecuteReader();
+                    if (ddr.HasRows)
+                    {
+                        while (ddr.Read())
+                        {
+                            lista.Add(ddr.GetString(0));
+
+
+                        }
+                    }
+                
+                    
+                }
+            }
+            conexion.Close();
+            */
+        } 
         }
     }
 }

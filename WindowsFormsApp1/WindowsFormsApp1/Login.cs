@@ -9,9 +9,11 @@ using System.Threading.Tasks;
 using Npgsql;
 using Capa_Info;
 using System.Windows.Forms;
-
 namespace WindowsFormsApp1
 {
+    /// <summary>
+    /// In this form you start session, either client or administrator
+    /// </summary>
     public partial class Login : Form
     {
         public Login()

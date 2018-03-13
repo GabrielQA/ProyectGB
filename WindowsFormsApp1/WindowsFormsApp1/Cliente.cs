@@ -20,7 +20,7 @@ namespace WindowsFormsApp1
             comboBox1.Items.Add("Vuelos");
             comboBox1.Items.Add("Alojamientos");
             comboBox1.Items.Add("Mis Reservas");
-
+            comboBox1.Items.Add("Atras");
         }
 
         private void Cliente_Load(object sender, EventArgs e)
@@ -47,6 +47,12 @@ namespace WindowsFormsApp1
             {
                 this.Hide();
                 Reservas v = new Reservas();
+                v.Show();
+            }
+            else if (comboBox1.Text == "Atras")
+            {
+                this.Hide();
+               Login v = new Login();
                 v.Show();
             }
         }

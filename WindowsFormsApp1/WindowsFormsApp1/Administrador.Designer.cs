@@ -29,16 +29,20 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Administrador));
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea17 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend17 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea18 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend18 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea19 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend19 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea20 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend20 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea16 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend16 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea25 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend25 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea26 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend26 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea27 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend27 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea28 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend28 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea29 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend29 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea30 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend30 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea24 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend24 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.Paises = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
@@ -236,8 +240,23 @@
             this.label74 = new System.Windows.Forms.Label();
             this.rep2 = new System.Windows.Forms.ComboBox();
             this.chart2 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.tabPage34 = new System.Windows.Forms.TabPage();
+            this.label76 = new System.Windows.Forms.Label();
+            this.label75 = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.chart3 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.tabPage36 = new System.Windows.Forms.TabPage();
+            this.label78 = new System.Windows.Forms.Label();
+            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.label77 = new System.Windows.Forms.Label();
+            this.chart4 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.tabPage37 = new System.Windows.Forms.TabPage();
+            this.label80 = new System.Windows.Forms.Label();
+            this.dateTimePicker3 = new System.Windows.Forms.DateTimePicker();
+            this.dateTimePicker4 = new System.Windows.Forms.DateTimePicker();
+            this.label79 = new System.Windows.Forms.Label();
+            this.chart5 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.tabPage38 = new System.Windows.Forms.TabPage();
             this.tabPage39 = new System.Windows.Forms.TabPage();
             this.tabPage40 = new System.Windows.Forms.TabPage();
@@ -270,21 +289,11 @@
             this.NombreaddAeropuerto = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
             this.IATAaddAeropuerto = new System.Windows.Forms.TextBox();
-            this.chart3 = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.label75 = new System.Windows.Forms.Label();
-            this.tabPage34 = new System.Windows.Forms.TabPage();
-            this.label76 = new System.Windows.Forms.Label();
-            this.label77 = new System.Windows.Forms.Label();
-            this.chart4 = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.label78 = new System.Windows.Forms.Label();
-            this.dateTimePicker3 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker4 = new System.Windows.Forms.DateTimePicker();
-            this.label79 = new System.Windows.Forms.Label();
-            this.chart5 = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.label80 = new System.Windows.Forms.Label();
+            this.label81 = new System.Windows.Forms.Label();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.chart6 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.chart7 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.label82 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.Paises.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -334,14 +343,18 @@
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             this.tabPage33.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart2)).BeginInit();
+            this.tabPage34.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chart3)).BeginInit();
             this.tabPage36.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chart4)).BeginInit();
             this.tabPage37.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chart5)).BeginInit();
+            this.tabPage38.SuspendLayout();
+            this.tabPage39.SuspendLayout();
             this.tabPage40.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chart3)).BeginInit();
-            this.tabPage34.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.chart4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chart5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chart6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chart7)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -2542,6 +2555,7 @@
             this.label72.Size = new System.Drawing.Size(120, 17);
             this.label72.TabIndex = 37;
             this.label72.Text = "Nombre del hotel:";
+            this.label72.Click += new System.EventHandler(this.label72_Click);
             // 
             // comboboxRep1
             // 
@@ -2552,16 +2566,17 @@
             this.comboboxRep1.Name = "comboboxRep1";
             this.comboboxRep1.Size = new System.Drawing.Size(204, 24);
             this.comboboxRep1.TabIndex = 36;
+            this.comboboxRep1.SelectedIndexChanged += new System.EventHandler(this.comboboxRep1_SelectedIndexChanged);
             this.comboboxRep1.SelectedValueChanged += new System.EventHandler(this.comboboxRep1_SelectedValueChanged);
             this.comboboxRep1.Click += new System.EventHandler(this.comboboxRep1_Click);
             // 
             // chart1
             // 
-            chartArea17.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea17);
+            chartArea25.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea25);
             this.chart1.Cursor = System.Windows.Forms.Cursors.No;
-            legend17.Name = "Legend1";
-            this.chart1.Legends.Add(legend17);
+            legend25.Name = "Legend1";
+            this.chart1.Legends.Add(legend25);
             this.chart1.Location = new System.Drawing.Point(56, 50);
             this.chart1.Name = "chart1";
             this.chart1.Size = new System.Drawing.Size(331, 298);
@@ -2606,16 +2621,72 @@
             // 
             // chart2
             // 
-            chartArea18.Name = "ChartArea1";
-            this.chart2.ChartAreas.Add(chartArea18);
+            chartArea26.Name = "ChartArea1";
+            this.chart2.ChartAreas.Add(chartArea26);
             this.chart2.Cursor = System.Windows.Forms.Cursors.No;
-            legend18.Name = "Legend1";
-            this.chart2.Legends.Add(legend18);
+            legend26.Name = "Legend1";
+            this.chart2.Legends.Add(legend26);
             this.chart2.Location = new System.Drawing.Point(68, 58);
             this.chart2.Name = "chart2";
             this.chart2.Size = new System.Drawing.Size(331, 298);
             this.chart2.TabIndex = 38;
             this.chart2.Text = "chart2";
+            // 
+            // tabPage34
+            // 
+            this.tabPage34.Controls.Add(this.label76);
+            this.tabPage34.Controls.Add(this.label75);
+            this.tabPage34.Controls.Add(this.comboBox1);
+            this.tabPage34.Controls.Add(this.chart3);
+            this.tabPage34.Location = new System.Drawing.Point(4, 25);
+            this.tabPage34.Margin = new System.Windows.Forms.Padding(4);
+            this.tabPage34.Name = "tabPage34";
+            this.tabPage34.Padding = new System.Windows.Forms.Padding(4);
+            this.tabPage34.Size = new System.Drawing.Size(748, 384);
+            this.tabPage34.TabIndex = 2;
+            this.tabPage34.Text = "Reporte 3";
+            this.tabPage34.UseVisualStyleBackColor = true;
+            // 
+            // label76
+            // 
+            this.label76.AutoSize = true;
+            this.label76.Location = new System.Drawing.Point(98, 24);
+            this.label76.Name = "label76";
+            this.label76.Size = new System.Drawing.Size(115, 17);
+            this.label76.TabIndex = 44;
+            this.label76.Text = "Nombre del pais:";
+            // 
+            // label75
+            // 
+            this.label75.AutoSize = true;
+            this.label75.Location = new System.Drawing.Point(101, 24);
+            this.label75.Name = "label75";
+            this.label75.Size = new System.Drawing.Size(0, 17);
+            this.label75.TabIndex = 43;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(228, 21);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(204, 24);
+            this.comboBox1.TabIndex = 42;
+            this.comboBox1.SelectedValueChanged += new System.EventHandler(this.comboBox1_SelectedValueChanged);
+            this.comboBox1.Click += new System.EventHandler(this.comboBox1_Click);
+            // 
+            // chart3
+            // 
+            chartArea27.Name = "ChartArea1";
+            this.chart3.ChartAreas.Add(chartArea27);
+            this.chart3.Cursor = System.Windows.Forms.Cursors.No;
+            legend27.Name = "Legend1";
+            this.chart3.Legends.Add(legend27);
+            this.chart3.Location = new System.Drawing.Point(101, 55);
+            this.chart3.Name = "chart3";
+            this.chart3.Size = new System.Drawing.Size(331, 298);
+            this.chart3.TabIndex = 41;
             // 
             // tabPage36
             // 
@@ -2633,6 +2704,55 @@
             this.tabPage36.Text = "Reporte 4";
             this.tabPage36.UseVisualStyleBackColor = true;
             // 
+            // label78
+            // 
+            this.label78.AutoSize = true;
+            this.label78.Location = new System.Drawing.Point(397, 20);
+            this.label78.Name = "label78";
+            this.label78.Size = new System.Drawing.Size(16, 17);
+            this.label78.TabIndex = 50;
+            this.label78.Text = "a";
+            // 
+            // dateTimePicker2
+            // 
+            this.dateTimePicker2.CustomFormat = "dd MMMM yyyy";
+            this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateTimePicker2.Location = new System.Drawing.Point(419, 15);
+            this.dateTimePicker2.Name = "dateTimePicker2";
+            this.dateTimePicker2.Size = new System.Drawing.Size(161, 22);
+            this.dateTimePicker2.TabIndex = 49;
+            this.dateTimePicker2.ValueChanged += new System.EventHandler(this.dateTimePicker2_ValueChanged);
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.CustomFormat = "dd MMMM yyyy";
+            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateTimePicker1.Location = new System.Drawing.Point(230, 15);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(161, 22);
+            this.dateTimePicker1.TabIndex = 48;
+            // 
+            // label77
+            // 
+            this.label77.AutoSize = true;
+            this.label77.Location = new System.Drawing.Point(104, 20);
+            this.label77.Name = "label77";
+            this.label77.Size = new System.Drawing.Size(120, 17);
+            this.label77.TabIndex = 47;
+            this.label77.Text = "Rango de fechas:";
+            // 
+            // chart4
+            // 
+            chartArea28.Name = "ChartArea1";
+            this.chart4.ChartAreas.Add(chartArea28);
+            this.chart4.Cursor = System.Windows.Forms.Cursors.No;
+            legend28.Name = "Legend1";
+            this.chart4.Legends.Add(legend28);
+            this.chart4.Location = new System.Drawing.Point(176, 51);
+            this.chart4.Name = "chart4";
+            this.chart4.Size = new System.Drawing.Size(331, 298);
+            this.chart4.TabIndex = 45;
+            // 
             // tabPage37
             // 
             this.tabPage37.Controls.Add(this.label80);
@@ -2649,8 +2769,60 @@
             this.tabPage37.Text = "Reporte 5";
             this.tabPage37.UseVisualStyleBackColor = true;
             // 
+            // label80
+            // 
+            this.label80.AutoSize = true;
+            this.label80.Location = new System.Drawing.Point(429, 30);
+            this.label80.Name = "label80";
+            this.label80.Size = new System.Drawing.Size(16, 17);
+            this.label80.TabIndex = 54;
+            this.label80.Text = "a";
+            // 
+            // dateTimePicker3
+            // 
+            this.dateTimePicker3.CustomFormat = "dd MMMM yyyy";
+            this.dateTimePicker3.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateTimePicker3.Location = new System.Drawing.Point(451, 25);
+            this.dateTimePicker3.Name = "dateTimePicker3";
+            this.dateTimePicker3.Size = new System.Drawing.Size(161, 22);
+            this.dateTimePicker3.TabIndex = 53;
+            this.dateTimePicker3.ValueChanged += new System.EventHandler(this.dateTimePicker3_ValueChanged);
+            // 
+            // dateTimePicker4
+            // 
+            this.dateTimePicker4.CustomFormat = "dd MMMM yyyy";
+            this.dateTimePicker4.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateTimePicker4.Location = new System.Drawing.Point(262, 25);
+            this.dateTimePicker4.Name = "dateTimePicker4";
+            this.dateTimePicker4.Size = new System.Drawing.Size(161, 22);
+            this.dateTimePicker4.TabIndex = 52;
+            // 
+            // label79
+            // 
+            this.label79.AutoSize = true;
+            this.label79.Location = new System.Drawing.Point(136, 30);
+            this.label79.Name = "label79";
+            this.label79.Size = new System.Drawing.Size(120, 17);
+            this.label79.TabIndex = 51;
+            this.label79.Text = "Rango de fechas:";
+            // 
+            // chart5
+            // 
+            chartArea29.Name = "ChartArea1";
+            this.chart5.ChartAreas.Add(chartArea29);
+            this.chart5.Cursor = System.Windows.Forms.Cursors.No;
+            legend29.Name = "Legend1";
+            this.chart5.Legends.Add(legend29);
+            this.chart5.Location = new System.Drawing.Point(208, 61);
+            this.chart5.Name = "chart5";
+            this.chart5.Size = new System.Drawing.Size(331, 298);
+            this.chart5.TabIndex = 50;
+            // 
             // tabPage38
             // 
+            this.tabPage38.Controls.Add(this.label81);
+            this.tabPage38.Controls.Add(this.comboBox2);
+            this.tabPage38.Controls.Add(this.chart6);
             this.tabPage38.Location = new System.Drawing.Point(4, 25);
             this.tabPage38.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage38.Name = "tabPage38";
@@ -2662,6 +2834,8 @@
             // 
             // tabPage39
             // 
+            this.tabPage39.Controls.Add(this.label82);
+            this.tabPage39.Controls.Add(this.chart7);
             this.tabPage39.Location = new System.Drawing.Point(4, 25);
             this.tabPage39.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage39.Name = "tabPage39";
@@ -2697,7 +2871,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(13, 444);
+            this.button1.Location = new System.Drawing.Point(13, 447);
             this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(104, 28);
@@ -2963,159 +3137,62 @@
             this.IATAaddAeropuerto.Size = new System.Drawing.Size(204, 22);
             this.IATAaddAeropuerto.TabIndex = 15;
             // 
-            // chart3
+            // label81
             // 
-            chartArea19.Name = "ChartArea1";
-            this.chart3.ChartAreas.Add(chartArea19);
-            this.chart3.Cursor = System.Windows.Forms.Cursors.No;
-            legend19.Name = "Legend1";
-            this.chart3.Legends.Add(legend19);
-            this.chart3.Location = new System.Drawing.Point(101, 55);
-            this.chart3.Name = "chart3";
-            this.chart3.Size = new System.Drawing.Size(331, 298);
-            this.chart3.TabIndex = 41;
+            this.label81.AutoSize = true;
+            this.label81.Location = new System.Drawing.Point(52, 27);
+            this.label81.Name = "label81";
+            this.label81.Size = new System.Drawing.Size(127, 17);
+            this.label81.TabIndex = 40;
+            this.label81.Text = "marca de vehiculo:";
             // 
-            // comboBox1
+            // comboBox2
             // 
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(228, 21);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(204, 24);
-            this.comboBox1.TabIndex = 42;
-            this.comboBox1.SelectedValueChanged += new System.EventHandler(this.comboBox1_SelectedValueChanged);
-            this.comboBox1.Click += new System.EventHandler(this.comboBox1_Click);
+            this.comboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Location = new System.Drawing.Point(197, 27);
+            this.comboBox2.Margin = new System.Windows.Forms.Padding(4);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(204, 24);
+            this.comboBox2.TabIndex = 39;
+            this.comboBox2.SelectedValueChanged += new System.EventHandler(this.comboBox2_SelectedValueChanged);
+            this.comboBox2.Click += new System.EventHandler(this.comboBox2_Click);
             // 
-            // label75
+            // chart6
             // 
-            this.label75.AutoSize = true;
-            this.label75.Location = new System.Drawing.Point(101, 24);
-            this.label75.Name = "label75";
-            this.label75.Size = new System.Drawing.Size(0, 17);
-            this.label75.TabIndex = 43;
+            chartArea30.Name = "ChartArea1";
+            this.chart6.ChartAreas.Add(chartArea30);
+            this.chart6.Cursor = System.Windows.Forms.Cursors.No;
+            legend30.Name = "Legend1";
+            this.chart6.Legends.Add(legend30);
+            this.chart6.Location = new System.Drawing.Point(70, 61);
+            this.chart6.Name = "chart6";
+            this.chart6.Size = new System.Drawing.Size(331, 298);
+            this.chart6.TabIndex = 38;
+            this.chart6.Text = "chart6";
             // 
-            // tabPage34
+            // chart7
             // 
-            this.tabPage34.Controls.Add(this.label76);
-            this.tabPage34.Controls.Add(this.label75);
-            this.tabPage34.Controls.Add(this.comboBox1);
-            this.tabPage34.Controls.Add(this.chart3);
-            this.tabPage34.Location = new System.Drawing.Point(4, 25);
-            this.tabPage34.Margin = new System.Windows.Forms.Padding(4);
-            this.tabPage34.Name = "tabPage34";
-            this.tabPage34.Padding = new System.Windows.Forms.Padding(4);
-            this.tabPage34.Size = new System.Drawing.Size(748, 384);
-            this.tabPage34.TabIndex = 2;
-            this.tabPage34.Text = "Reporte 3";
-            this.tabPage34.UseVisualStyleBackColor = true;
+            chartArea24.Name = "ChartArea1";
+            this.chart7.ChartAreas.Add(chartArea24);
+            this.chart7.Cursor = System.Windows.Forms.Cursors.No;
+            legend24.Name = "Legend1";
+            this.chart7.Legends.Add(legend24);
+            this.chart7.Location = new System.Drawing.Point(64, 58);
+            this.chart7.Name = "chart7";
+            this.chart7.Size = new System.Drawing.Size(574, 298);
+            this.chart7.TabIndex = 39;
+            this.chart7.Text = "chart7";
+            this.chart7.Click += new System.EventHandler(this.chart7_Click);
             // 
-            // label76
+            // label82
             // 
-            this.label76.AutoSize = true;
-            this.label76.Location = new System.Drawing.Point(98, 24);
-            this.label76.Name = "label76";
-            this.label76.Size = new System.Drawing.Size(115, 17);
-            this.label76.TabIndex = 44;
-            this.label76.Text = "Nombre del pais:";
-            // 
-            // label77
-            // 
-            this.label77.AutoSize = true;
-            this.label77.Location = new System.Drawing.Point(104, 20);
-            this.label77.Name = "label77";
-            this.label77.Size = new System.Drawing.Size(120, 17);
-            this.label77.TabIndex = 47;
-            this.label77.Text = "Rango de fechas:";
-            // 
-            // chart4
-            // 
-            chartArea20.Name = "ChartArea1";
-            this.chart4.ChartAreas.Add(chartArea20);
-            this.chart4.Cursor = System.Windows.Forms.Cursors.No;
-            legend20.Name = "Legend1";
-            this.chart4.Legends.Add(legend20);
-            this.chart4.Location = new System.Drawing.Point(176, 51);
-            this.chart4.Name = "chart4";
-            this.chart4.Size = new System.Drawing.Size(331, 298);
-            this.chart4.TabIndex = 45;
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.CustomFormat = "dd MMMM yyyy";
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker1.Location = new System.Drawing.Point(230, 15);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(161, 22);
-            this.dateTimePicker1.TabIndex = 48;
-            // 
-            // dateTimePicker2
-            // 
-            this.dateTimePicker2.CustomFormat = "dd MMMM yyyy";
-            this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker2.Location = new System.Drawing.Point(419, 15);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(161, 22);
-            this.dateTimePicker2.TabIndex = 49;
-            this.dateTimePicker2.ValueChanged += new System.EventHandler(this.dateTimePicker2_ValueChanged);
-            // 
-            // label78
-            // 
-            this.label78.AutoSize = true;
-            this.label78.Location = new System.Drawing.Point(397, 20);
-            this.label78.Name = "label78";
-            this.label78.Size = new System.Drawing.Size(16, 17);
-            this.label78.TabIndex = 50;
-            this.label78.Text = "a";
-            // 
-            // dateTimePicker3
-            // 
-            this.dateTimePicker3.CustomFormat = "dd MMMM yyyy";
-            this.dateTimePicker3.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker3.Location = new System.Drawing.Point(451, 25);
-            this.dateTimePicker3.Name = "dateTimePicker3";
-            this.dateTimePicker3.Size = new System.Drawing.Size(161, 22);
-            this.dateTimePicker3.TabIndex = 53;
-            this.dateTimePicker3.ValueChanged += new System.EventHandler(this.dateTimePicker3_ValueChanged);
-            // 
-            // dateTimePicker4
-            // 
-            this.dateTimePicker4.CustomFormat = "dd MMMM yyyy";
-            this.dateTimePicker4.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker4.Location = new System.Drawing.Point(262, 25);
-            this.dateTimePicker4.Name = "dateTimePicker4";
-            this.dateTimePicker4.Size = new System.Drawing.Size(161, 22);
-            this.dateTimePicker4.TabIndex = 52;
-            // 
-            // label79
-            // 
-            this.label79.AutoSize = true;
-            this.label79.Location = new System.Drawing.Point(136, 30);
-            this.label79.Name = "label79";
-            this.label79.Size = new System.Drawing.Size(120, 17);
-            this.label79.TabIndex = 51;
-            this.label79.Text = "Rango de fechas:";
-            // 
-            // chart5
-            // 
-            chartArea16.Name = "ChartArea1";
-            this.chart5.ChartAreas.Add(chartArea16);
-            this.chart5.Cursor = System.Windows.Forms.Cursors.No;
-            legend16.Name = "Legend1";
-            this.chart5.Legends.Add(legend16);
-            this.chart5.Location = new System.Drawing.Point(208, 61);
-            this.chart5.Name = "chart5";
-            this.chart5.Size = new System.Drawing.Size(331, 298);
-            this.chart5.TabIndex = 50;
-            // 
-            // label80
-            // 
-            this.label80.AutoSize = true;
-            this.label80.Location = new System.Drawing.Point(429, 30);
-            this.label80.Name = "label80";
-            this.label80.Size = new System.Drawing.Size(16, 17);
-            this.label80.TabIndex = 54;
-            this.label80.Text = "a";
+            this.label82.AutoSize = true;
+            this.label82.Location = new System.Drawing.Point(61, 23);
+            this.label82.Name = "label82";
+            this.label82.Size = new System.Drawing.Size(95, 17);
+            this.label82.TabIndex = 42;
+            this.label82.Text = "Paises escala";
             // 
             // Administrador
             // 
@@ -3201,17 +3278,23 @@
             this.tabPage33.ResumeLayout(false);
             this.tabPage33.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart2)).EndInit();
-            this.tabPage36.ResumeLayout(false);
-            this.tabPage36.PerformLayout();
-            this.tabPage37.ResumeLayout(false);
-            this.tabPage37.PerformLayout();
-            this.tabPage40.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chart3)).EndInit();
             this.tabPage34.ResumeLayout(false);
             this.tabPage34.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chart3)).EndInit();
+            this.tabPage36.ResumeLayout(false);
+            this.tabPage36.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart4)).EndInit();
+            this.tabPage37.ResumeLayout(false);
+            this.tabPage37.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart5)).EndInit();
+            this.tabPage38.ResumeLayout(false);
+            this.tabPage38.PerformLayout();
+            this.tabPage39.ResumeLayout(false);
+            this.tabPage39.PerformLayout();
+            this.tabPage40.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chart6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chart7)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -3464,5 +3547,10 @@
         private System.Windows.Forms.Label label79;
         private System.Windows.Forms.DataVisualization.Charting.Chart chart5;
         private System.Windows.Forms.Label label80;
+        private System.Windows.Forms.Label label81;
+        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chart6;
+        private System.Windows.Forms.Label label82;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chart7;
     }
 }

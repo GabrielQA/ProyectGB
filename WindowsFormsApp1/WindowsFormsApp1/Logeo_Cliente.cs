@@ -11,6 +11,10 @@ using System.Windows.Forms;
 using Capa_Info;
 namespace WindowsFormsApp1
 {
+    /// <summary>
+    ///In this form you save, insert the client information at the time you want to log in, 
+    ///and once logged in you can go to the User tab and log in as a client that is.
+    /// </summary>
     public partial class Logeo_Cliente : Form
     {
         public Logeo_Cliente()
@@ -66,6 +70,11 @@ namespace WindowsFormsApp1
             this.Hide();
             Login v = new Login();
             v.Show();
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
 
         }
     }
