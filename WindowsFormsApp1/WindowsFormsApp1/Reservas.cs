@@ -63,7 +63,7 @@ namespace WindowsFormsApp1
             {
                 Conexion.Coneccion();
                 Conexion.conexion.Open();
-                NpgsqlCommand command = new NpgsqlCommand("DELETE FROM reservas WHERE id = '" + id + "' nombre_hotel = '" + hotel + "' precio_total = '" + total + "'", Conexion.conexion);
+                NpgsqlCommand command = new NpgsqlCommand("DELETE FROM reservas WHERE id = '" + ID + "' nombre_hotel = '" + hotel + "' precio_total = '" + total + "'", Conexion.conexion);
                 command.ExecuteNonQuery();
                 Conexion.conexion.Close();
                 cargardgv();
@@ -78,25 +78,24 @@ namespace WindowsFormsApp1
         private void dgvReservas_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             DataGridViewRow fila = dgvReservas.CurrentRow;
-            id = Convert.ToInt32(fila.Cells[0].Value);
-            fecha_inicio = Convert.ToDateTime(fila.Cells[1].Value);
-            fecha_final = Convert.ToDateTime(fila.Cells[2].Value);
-            pais_origen = Convert.ToString(fila.Cells[3].Value);
-            pais_destino = Convert.ToString(fila.Cells[4].Value);
-            escala = Convert.ToString(fila.Cells[5].Value);
-            hotel = Convert.ToString(fila.Cells[6].Value);
-            lugar_hotel = Convert.ToString(fila.Cells[7].Value);
-            habitaciones_hotel = Convert.ToString(fila.Cells[8].Value);
-            marca_vehiculo = Convert.ToString(fila.Cells[9].Value);
-            modelo_vehiculo = Convert.ToString(fila.Cells[10].Value);
-            cantidad_vehiculo = Convert.ToString(fila.Cells[11].Value);
-            precio_vuelo = Convert.ToString(fila.Cells[12].Value);
-            precio_hotel = Convert.ToString(fila.Cells[13].Value);
-            precio_vehiculo = Convert.ToString(fila.Cells[14].Value);
-            total = Convert.ToString(fila.Cells[15].Value);
-            cantidad_personas = Convert.ToString(fila.Cells[16].Value);
-            adultos = Convert.ToString(fila.Cells[17].Value);
-            menores = Convert.ToString(fila.Cells[18].Value);
+            fecha_inicio = Convert.ToDateTime(fila.Cells[0].Value);
+            fecha_final = Convert.ToDateTime(fila.Cells[1].Value);
+            pais_origen = Convert.ToString(fila.Cells[2].Value);
+            pais_destino = Convert.ToString(fila.Cells[3].Value);
+            escala = Convert.ToString(fila.Cells[4].Value);
+            hotel = Convert.ToString(fila.Cells[5].Value);
+            lugar_hotel = Convert.ToString(fila.Cells[6].Value);
+            habitaciones_hotel = Convert.ToString(fila.Cells[7].Value);
+            marca_vehiculo = Convert.ToString(fila.Cells[8].Value);
+            modelo_vehiculo = Convert.ToString(fila.Cells[9].Value);
+            cantidad_vehiculo = Convert.ToString(fila.Cells[10].Value);
+            precio_vuelo = Convert.ToString(fila.Cells[11].Value);
+            precio_hotel = Convert.ToString(fila.Cells[12].Value);
+            precio_vehiculo = Convert.ToString(fila.Cells[13].Value);
+            total = Convert.ToString(fila.Cells[14].Value);
+            cantidad_personas = Convert.ToString(fila.Cells[15].Value);
+            adultos = Convert.ToString(fila.Cells[16].Value);
+            menores = Convert.ToString(fila.Cells[17].Value);
         }
 
         private void btnSalir_Click(object sender, EventArgs e)
