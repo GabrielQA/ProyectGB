@@ -19,6 +19,7 @@ namespace WindowsFormsApp1
             InitializeComponent();
             comboBox1.Items.Add("Vuelos");
             comboBox1.Items.Add("Alojamientos");
+            comboBox1.Items.Add("Mis Reservas");
 
         }
 
@@ -40,6 +41,12 @@ namespace WindowsFormsApp1
             {
                 this.Hide();
                 formAlojamiento v = new formAlojamiento();
+                v.Show();
+            }
+            else if (comboBox1.Text == "Mis Reservas")
+            {
+                this.Hide();
+                Reservas v = new Reservas();
                 v.Show();
             }
         }

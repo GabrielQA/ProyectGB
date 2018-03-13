@@ -233,8 +233,7 @@ namespace WindowsFormsApp1
             {
                 Conexion.Coneccion();
                 Conexion.conexion.Open();
-
-                Conexion.cmd = new NpgsqlCommand("INSERT INTO reservas(id,fecha_inicio,fecha_final,pais_origen,pais_destino,escala,nombre_hotel,lugar_hotel,habitaciones_hotel,marca_vehiculo,modelo_vehiculo,cantidad_vehiculo,precio_vuelo,precio_hotel,precio_vehiculo,precio_total,cantidad_personas) VALUES ('" + ID + "', '" + dtpInicio.Value + "', '" + dtpFinal.Value + "', '" + txtOrigen1.Text + "', '" + txtDestino1.Text + "', '" + txtEscala.Text + "', '" + txtHotel.Text + "', '" + txtLugarH.Text + "', '" + txtHabitaciones.Text + "', '" + txtVehiculo.Text + "', '" + txtModeloV.Text + "', '" + txtCantidadV.Text + "', '" + txtVueloP.Text + "', '" + txtHotelP.Text + "', '" + txtVehiculoP.Text + "', '" + txtTotal.Text + "', '" + Personas + "')", Conexion.conexion);
+                Conexion.cmd = new NpgsqlCommand("INSERT INTO reservas(id,fecha_inicio,fecha_final,pais_origen,pais_destino,escala,nombre_hotel,lugar_hotel,habitaciones_hotel,marca_vehiculo,modelo_vehiculo,cantidad_vehiculo,precio_vuelo,precio_hotel,precio_vehiculo,precio_total,cantidad_personas, adultos, menores) VALUES ('" + ID + "', '" + dtpInicio.Value + "', '" + dtpFinal.Value + "', '" + txtOrigen1.Text + "', '" + txtDestino1.Text + "', '" + txtEscala.Text + "', '" + txtHotel.Text + "', '" + txtLugarH.Text + "', '" + txtHabitaciones.Text + "', '" + txtVehiculo.Text + "', '" + txtModeloV.Text + "', '" + txtCantidadV.Text + "', '" + txtVueloP.Text + "', '" + txtHotelP.Text + "', '" + txtVehiculoP.Text + "', '" + txtTotal.Text + "', '" + Personas + "', '" + Adultos + "', '" + Menores + "')", Conexion.conexion);
                 Conexion.cmd.ExecuteNonQuery();
                 Conexion.conexion.Close();
                 MessageBox.Show("Su reserva a sido exitosa");

@@ -113,6 +113,7 @@ namespace WindowsFormsApp1
                 if (entra.Read())
                 {
                     Preliminar.ID = Convert.ToInt32(entra["cedula"].ToString());
+                    Reservas.ID = Convert.ToInt32(entra["cedula"].ToString());
                     this.Hide();
                     Cliente a = new Cliente();
                     a.Show();
