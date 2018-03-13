@@ -2700,18 +2700,12 @@ namespace WindowsFormsApp1
             {
                 while (dr.Read())
                 {
-                    if (dr["cantidad_personas"].ToString().Equals("") == false)
+                    if (dr["cantidad_personas"].ToString().Equals("")==false)
                     {
                         cantidad = cantidad + Convert.ToInt32(dr["cantidad_personas"].ToString());
                     }
-                    else
-                    {
-                        cantidad = cantidad+0;
-                    }
-                    MessageBox.Show(""+cantidad);
                 }
             }
-           
             conexion.Close();
             reporte2(cantidad, rep2.SelectedItem.ToString());
         }
@@ -2919,6 +2913,11 @@ namespace WindowsFormsApp1
         }
 
         private void textBox3_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void rep2_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }

@@ -29,20 +29,20 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Administrador));
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea15 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend15 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea16 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend16 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea17 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend17 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea18 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend18 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea19 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend19 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea20 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend20 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea21 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend21 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea5 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend5 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea6 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend6 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea7 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend7 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.Paises = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
@@ -362,10 +362,9 @@
             this.pictureBox1.AccessibleRole = System.Windows.Forms.AccessibleRole.MenuItem;
             this.pictureBox1.ErrorImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.ErrorImage")));
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(-45, -6);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox1.Location = new System.Drawing.Point(-34, -5);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(949, 496);
+            this.pictureBox1.Size = new System.Drawing.Size(712, 403);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 30;
             this.pictureBox1.TabStop = false;
@@ -381,22 +380,20 @@
             this.Paises.Controls.Add(this.tabPage8);
             this.Paises.Controls.Add(this.tabPage9);
             this.Paises.Controls.Add(this.tabPage40);
-            this.Paises.Location = new System.Drawing.Point(49, 13);
-            this.Paises.Margin = new System.Windows.Forms.Padding(4);
+            this.Paises.Location = new System.Drawing.Point(37, 11);
             this.Paises.Name = "Paises";
             this.Paises.SelectedIndex = 0;
-            this.Paises.Size = new System.Drawing.Size(755, 430);
+            this.Paises.Size = new System.Drawing.Size(566, 349);
             this.Paises.TabIndex = 33;
             this.Paises.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Paises_MouseClick);
             // 
             // tabPage1
             // 
             this.tabPage1.Controls.Add(this.tabControl1);
-            this.tabPage1.Location = new System.Drawing.Point(4, 25);
-            this.tabPage1.Margin = new System.Windows.Forms.Padding(4);
+            this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(4);
-            this.tabPage1.Size = new System.Drawing.Size(747, 401);
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPage1.Size = new System.Drawing.Size(558, 323);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Paises";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -407,10 +404,9 @@
             this.tabControl1.Controls.Add(this.Modificar);
             this.tabControl1.Controls.Add(this.tabPage11);
             this.tabControl1.Location = new System.Drawing.Point(0, 0);
-            this.tabControl1.Margin = new System.Windows.Forms.Padding(4);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(749, 389);
+            this.tabControl1.Size = new System.Drawing.Size(562, 316);
             this.tabControl1.TabIndex = 1;
             this.tabControl1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.tabControl1_MouseClick);
             // 
@@ -424,11 +420,10 @@
             this.tabPage10.Controls.Add(this.label2);
             this.tabPage10.Controls.Add(this.button2);
             this.tabPage10.Controls.Add(this.label1);
-            this.tabPage10.Location = new System.Drawing.Point(4, 25);
-            this.tabPage10.Margin = new System.Windows.Forms.Padding(4);
+            this.tabPage10.Location = new System.Drawing.Point(4, 22);
             this.tabPage10.Name = "tabPage10";
-            this.tabPage10.Padding = new System.Windows.Forms.Padding(4);
-            this.tabPage10.Size = new System.Drawing.Size(741, 360);
+            this.tabPage10.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPage10.Size = new System.Drawing.Size(554, 290);
             this.tabPage10.TabIndex = 0;
             this.tabPage10.Text = "Agregar";
             this.tabPage10.Click += new System.EventHandler(this.tabPage10_Click);
@@ -437,10 +432,9 @@
             // imagenPaisesAdd
             // 
             this.imagenPaisesAdd.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.imagenPaisesAdd.Location = new System.Drawing.Point(434, 8);
-            this.imagenPaisesAdd.Margin = new System.Windows.Forms.Padding(4);
+            this.imagenPaisesAdd.Location = new System.Drawing.Point(326, 6);
             this.imagenPaisesAdd.Name = "imagenPaisesAdd";
-            this.imagenPaisesAdd.Size = new System.Drawing.Size(296, 306);
+            this.imagenPaisesAdd.Size = new System.Drawing.Size(223, 249);
             this.imagenPaisesAdd.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.imagenPaisesAdd.TabIndex = 65;
             this.imagenPaisesAdd.TabStop = false;
@@ -448,49 +442,44 @@
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(139, 101);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(4);
+            this.textBox3.Location = new System.Drawing.Point(104, 82);
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(204, 22);
+            this.textBox3.Size = new System.Drawing.Size(154, 20);
             this.textBox3.TabIndex = 6;
             this.textBox3.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
             this.textBox3.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox3_KeyPress);
             // 
             // txtIDPais
             // 
-            this.txtIDPais.Location = new System.Drawing.Point(139, 53);
-            this.txtIDPais.Margin = new System.Windows.Forms.Padding(4);
+            this.txtIDPais.Location = new System.Drawing.Point(104, 43);
             this.txtIDPais.Name = "txtIDPais";
-            this.txtIDPais.Size = new System.Drawing.Size(204, 22);
+            this.txtIDPais.Size = new System.Drawing.Size(154, 20);
             this.txtIDPais.TabIndex = 4;
             this.txtIDPais.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtIDPais_KeyPress);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(368, 14);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(276, 11);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(62, 17);
+            this.label3.Size = new System.Drawing.Size(47, 13);
             this.label3.TabIndex = 3;
             this.label3.Text = "Bandera";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(57, 101);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(43, 82);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(58, 17);
+            this.label2.Size = new System.Drawing.Size(44, 13);
             this.label2.TabIndex = 2;
             this.label2.Text = "Nombre";
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(635, 322);
-            this.button2.Margin = new System.Windows.Forms.Padding(4);
+            this.button2.Location = new System.Drawing.Point(476, 262);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(95, 28);
+            this.button2.Size = new System.Drawing.Size(71, 23);
             this.button2.TabIndex = 1;
             this.button2.Text = "Agregar";
             this.button2.UseVisualStyleBackColor = true;
@@ -499,10 +488,9 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(57, 53);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(43, 43);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(21, 17);
+            this.label1.Size = new System.Drawing.Size(18, 13);
             this.label1.TabIndex = 0;
             this.label1.Text = "ID";
             // 
@@ -516,11 +504,10 @@
             this.Modificar.Controls.Add(this.label5);
             this.Modificar.Controls.Add(this.button3);
             this.Modificar.Controls.Add(this.label6);
-            this.Modificar.Location = new System.Drawing.Point(4, 25);
-            this.Modificar.Margin = new System.Windows.Forms.Padding(4);
+            this.Modificar.Location = new System.Drawing.Point(4, 22);
             this.Modificar.Name = "Modificar";
-            this.Modificar.Padding = new System.Windows.Forms.Padding(4);
-            this.Modificar.Size = new System.Drawing.Size(741, 360);
+            this.Modificar.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.Modificar.Size = new System.Drawing.Size(554, 290);
             this.Modificar.TabIndex = 1;
             this.Modificar.Text = "Modificar";
             this.Modificar.Click += new System.EventHandler(this.Modificar_Click);
@@ -530,10 +517,9 @@
             // 
             this.textBox6.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.textBox6.FormattingEnabled = true;
-            this.textBox6.Location = new System.Drawing.Point(132, 50);
-            this.textBox6.Margin = new System.Windows.Forms.Padding(4);
+            this.textBox6.Location = new System.Drawing.Point(99, 41);
             this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(204, 24);
+            this.textBox6.Size = new System.Drawing.Size(154, 21);
             this.textBox6.TabIndex = 67;
             this.textBox6.SelectedIndexChanged += new System.EventHandler(this.textBox6_SelectedIndexChanged);
             this.textBox6.SelectedValueChanged += new System.EventHandler(this.textBox6_SelectedValueChanged);
@@ -543,10 +529,9 @@
             // imagemodPaises
             // 
             this.imagemodPaises.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.imagemodPaises.Location = new System.Drawing.Point(434, 8);
-            this.imagemodPaises.Margin = new System.Windows.Forms.Padding(4);
+            this.imagemodPaises.Location = new System.Drawing.Point(326, 6);
             this.imagemodPaises.Name = "imagemodPaises";
-            this.imagemodPaises.Size = new System.Drawing.Size(296, 306);
+            this.imagemodPaises.Size = new System.Drawing.Size(223, 249);
             this.imagemodPaises.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.imagemodPaises.TabIndex = 66;
             this.imagemodPaises.TabStop = false;
@@ -555,38 +540,34 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(364, 8);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Location = new System.Drawing.Point(273, 6);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(62, 17);
+            this.label4.Size = new System.Drawing.Size(47, 13);
             this.label4.TabIndex = 14;
             this.label4.Text = "Bandera";
             // 
             // textBox4
             // 
-            this.textBox4.Location = new System.Drawing.Point(132, 96);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(4);
+            this.textBox4.Location = new System.Drawing.Point(99, 78);
             this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(204, 22);
+            this.textBox4.Size = new System.Drawing.Size(154, 20);
             this.textBox4.TabIndex = 13;
             this.textBox4.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox4_KeyPress);
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(51, 101);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Location = new System.Drawing.Point(38, 82);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(58, 17);
+            this.label5.Size = new System.Drawing.Size(44, 13);
             this.label5.TabIndex = 9;
             this.label5.Text = "Nombre";
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(638, 318);
-            this.button3.Margin = new System.Windows.Forms.Padding(4);
+            this.button3.Location = new System.Drawing.Point(478, 258);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(95, 28);
+            this.button3.Size = new System.Drawing.Size(71, 23);
             this.button3.TabIndex = 8;
             this.button3.Text = "Modificar";
             this.button3.UseVisualStyleBackColor = true;
@@ -595,10 +576,9 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(51, 53);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label6.Location = new System.Drawing.Point(38, 43);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(21, 17);
+            this.label6.Size = new System.Drawing.Size(18, 13);
             this.label6.TabIndex = 7;
             this.label6.Text = "ID";
             // 
@@ -608,11 +588,10 @@
             this.tabPage11.Controls.Add(this.c);
             this.tabPage11.Controls.Add(this.button4);
             this.tabPage11.Controls.Add(this.label7);
-            this.tabPage11.Location = new System.Drawing.Point(4, 25);
-            this.tabPage11.Margin = new System.Windows.Forms.Padding(4);
+            this.tabPage11.Location = new System.Drawing.Point(4, 22);
             this.tabPage11.Name = "tabPage11";
-            this.tabPage11.Padding = new System.Windows.Forms.Padding(4);
-            this.tabPage11.Size = new System.Drawing.Size(741, 360);
+            this.tabPage11.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPage11.Size = new System.Drawing.Size(554, 290);
             this.tabPage11.TabIndex = 2;
             this.tabPage11.Text = "Eliminar";
             this.tabPage11.MouseClick += new System.Windows.Forms.MouseEventHandler(this.tabPage11_MouseClick);
@@ -621,20 +600,18 @@
             // 
             this.c.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.c.FormattingEnabled = true;
-            this.c.Location = new System.Drawing.Point(242, 60);
-            this.c.Margin = new System.Windows.Forms.Padding(4);
+            this.c.Location = new System.Drawing.Point(182, 49);
             this.c.Name = "c";
-            this.c.Size = new System.Drawing.Size(204, 24);
+            this.c.Size = new System.Drawing.Size(154, 21);
             this.c.TabIndex = 15;
             this.c.SelectedIndexChanged += new System.EventHandler(this.c_SelectedIndexChanged);
             this.c.Click += new System.EventHandler(this.c_Click);
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(351, 108);
-            this.button4.Margin = new System.Windows.Forms.Padding(4);
+            this.button4.Location = new System.Drawing.Point(263, 88);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(95, 28);
+            this.button4.Size = new System.Drawing.Size(71, 23);
             this.button4.TabIndex = 14;
             this.button4.Text = "Eliminar";
             this.button4.UseVisualStyleBackColor = true;
@@ -643,21 +620,19 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(213, 63);
-            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label7.Location = new System.Drawing.Point(160, 51);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(21, 17);
+            this.label7.Size = new System.Drawing.Size(18, 13);
             this.label7.TabIndex = 12;
             this.label7.Text = "ID";
             // 
             // tabPage2
             // 
             this.tabPage2.Controls.Add(this.tabControl2);
-            this.tabPage2.Location = new System.Drawing.Point(4, 25);
-            this.tabPage2.Margin = new System.Windows.Forms.Padding(4);
+            this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(4);
-            this.tabPage2.Size = new System.Drawing.Size(747, 401);
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPage2.Size = new System.Drawing.Size(558, 323);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Lugares";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -668,10 +643,9 @@
             this.tabControl2.Controls.Add(this.tabPage13);
             this.tabControl2.Controls.Add(this.tabPage14);
             this.tabControl2.Location = new System.Drawing.Point(0, 0);
-            this.tabControl2.Margin = new System.Windows.Forms.Padding(4);
             this.tabControl2.Name = "tabControl2";
             this.tabControl2.SelectedIndex = 0;
-            this.tabControl2.Size = new System.Drawing.Size(891, 394);
+            this.tabControl2.Size = new System.Drawing.Size(668, 320);
             this.tabControl2.TabIndex = 0;
             this.tabControl2.MouseClick += new System.Windows.Forms.MouseEventHandler(this.tabControl2_MouseClick);
             // 
@@ -685,39 +659,37 @@
             this.tabPage12.Controls.Add(this.IDLADD);
             this.tabPage12.Controls.Add(this.label8);
             this.tabPage12.Controls.Add(this.label9);
-            this.tabPage12.Location = new System.Drawing.Point(4, 25);
-            this.tabPage12.Margin = new System.Windows.Forms.Padding(4);
+            this.tabPage12.Location = new System.Drawing.Point(4, 22);
             this.tabPage12.Name = "tabPage12";
-            this.tabPage12.Padding = new System.Windows.Forms.Padding(4);
-            this.tabPage12.Size = new System.Drawing.Size(883, 365);
+            this.tabPage12.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPage12.Size = new System.Drawing.Size(660, 294);
             this.tabPage12.TabIndex = 0;
             this.tabPage12.Text = "Agregar";
             // 
             // label70
             // 
             this.label70.AutoSize = true;
-            this.label70.Location = new System.Drawing.Point(47, 148);
-            this.label70.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label70.Location = new System.Drawing.Point(35, 120);
             this.label70.Name = "label70";
-            this.label70.Size = new System.Drawing.Size(35, 17);
+            this.label70.Size = new System.Drawing.Size(27, 13);
             this.label70.TabIndex = 13;
             this.label70.Text = "Pais";
             // 
             // lugarespaisadd
             // 
             this.lugarespaisadd.FormattingEnabled = true;
-            this.lugarespaisadd.Location = new System.Drawing.Point(128, 141);
+            this.lugarespaisadd.Location = new System.Drawing.Point(96, 115);
+            this.lugarespaisadd.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.lugarespaisadd.Name = "lugarespaisadd";
-            this.lugarespaisadd.Size = new System.Drawing.Size(204, 24);
+            this.lugarespaisadd.Size = new System.Drawing.Size(154, 21);
             this.lugarespaisadd.TabIndex = 12;
             this.lugarespaisadd.Click += new System.EventHandler(this.lugarespaisadd_Click);
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(228, 188);
-            this.button5.Margin = new System.Windows.Forms.Padding(4);
+            this.button5.Location = new System.Drawing.Point(171, 153);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(104, 28);
+            this.button5.Size = new System.Drawing.Size(78, 23);
             this.button5.TabIndex = 11;
             this.button5.Text = "Agregar";
             this.button5.UseVisualStyleBackColor = true;
@@ -725,39 +697,35 @@
             // 
             // nombreLADD
             // 
-            this.nombreLADD.Location = new System.Drawing.Point(128, 98);
-            this.nombreLADD.Margin = new System.Windows.Forms.Padding(4);
+            this.nombreLADD.Location = new System.Drawing.Point(96, 80);
             this.nombreLADD.Name = "nombreLADD";
-            this.nombreLADD.Size = new System.Drawing.Size(204, 22);
+            this.nombreLADD.Size = new System.Drawing.Size(154, 20);
             this.nombreLADD.TabIndex = 10;
             this.nombreLADD.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.nombreLADD_KeyPress);
             // 
             // IDLADD
             // 
-            this.IDLADD.Location = new System.Drawing.Point(128, 50);
-            this.IDLADD.Margin = new System.Windows.Forms.Padding(4);
+            this.IDLADD.Location = new System.Drawing.Point(96, 41);
             this.IDLADD.Name = "IDLADD";
-            this.IDLADD.Size = new System.Drawing.Size(204, 22);
+            this.IDLADD.Size = new System.Drawing.Size(154, 20);
             this.IDLADD.TabIndex = 9;
             this.IDLADD.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.IDLADD_KeyPress);
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(47, 98);
-            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label8.Location = new System.Drawing.Point(35, 80);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(58, 17);
+            this.label8.Size = new System.Drawing.Size(44, 13);
             this.label8.TabIndex = 8;
             this.label8.Text = "Nombre";
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(47, 50);
-            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label9.Location = new System.Drawing.Point(35, 41);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(21, 17);
+            this.label9.Size = new System.Drawing.Size(18, 13);
             this.label9.TabIndex = 7;
             this.label9.Text = "ID";
             // 
@@ -772,11 +740,10 @@
             this.tabPage13.Controls.Add(this.label11);
             this.tabPage13.Controls.Add(this.button6);
             this.tabPage13.Controls.Add(this.label12);
-            this.tabPage13.Location = new System.Drawing.Point(4, 25);
-            this.tabPage13.Margin = new System.Windows.Forms.Padding(4);
+            this.tabPage13.Location = new System.Drawing.Point(4, 22);
             this.tabPage13.Name = "tabPage13";
-            this.tabPage13.Padding = new System.Windows.Forms.Padding(4);
-            this.tabPage13.Size = new System.Drawing.Size(883, 365);
+            this.tabPage13.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPage13.Size = new System.Drawing.Size(660, 294);
             this.tabPage13.TabIndex = 1;
             this.tabPage13.Text = "Modificar";
             this.tabPage13.MouseClick += new System.Windows.Forms.MouseEventHandler(this.tabPage13_MouseClick);
@@ -784,19 +751,19 @@
             // label71
             // 
             this.label71.AutoSize = true;
-            this.label71.Location = new System.Drawing.Point(46, 214);
-            this.label71.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label71.Location = new System.Drawing.Point(34, 174);
             this.label71.Name = "label71";
-            this.label71.Size = new System.Drawing.Size(35, 17);
+            this.label71.Size = new System.Drawing.Size(27, 13);
             this.label71.TabIndex = 23;
             this.label71.Text = "Pais";
             // 
             // lpam
             // 
             this.lpam.FormattingEnabled = true;
-            this.lpam.Location = new System.Drawing.Point(127, 207);
+            this.lpam.Location = new System.Drawing.Point(95, 168);
+            this.lpam.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.lpam.Name = "lpam";
-            this.lpam.Size = new System.Drawing.Size(204, 24);
+            this.lpam.Size = new System.Drawing.Size(154, 21);
             this.lpam.TabIndex = 22;
             this.lpam.Click += new System.EventHandler(this.lpam_Click);
             // 
@@ -804,10 +771,9 @@
             // 
             this.LugaresMOD.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.LugaresMOD.FormattingEnabled = true;
-            this.LugaresMOD.Location = new System.Drawing.Point(127, 53);
-            this.LugaresMOD.Margin = new System.Windows.Forms.Padding(4);
+            this.LugaresMOD.Location = new System.Drawing.Point(95, 43);
             this.LugaresMOD.Name = "LugaresMOD";
-            this.LugaresMOD.Size = new System.Drawing.Size(204, 24);
+            this.LugaresMOD.Size = new System.Drawing.Size(154, 21);
             this.LugaresMOD.TabIndex = 21;
             this.LugaresMOD.SelectedIndexChanged += new System.EventHandler(this.LugaresMOD_SelectedIndexChanged);
             this.LugaresMOD.SelectedValueChanged += new System.EventHandler(this.LugaresMOD_SelectedValueChanged);
@@ -815,38 +781,34 @@
             // 
             // nombremodl
             // 
-            this.nombremodl.Location = new System.Drawing.Point(127, 161);
-            this.nombremodl.Margin = new System.Windows.Forms.Padding(4);
+            this.nombremodl.Location = new System.Drawing.Point(95, 131);
             this.nombremodl.Name = "nombremodl";
-            this.nombremodl.Size = new System.Drawing.Size(204, 22);
+            this.nombremodl.Size = new System.Drawing.Size(154, 20);
             this.nombremodl.TabIndex = 20;
             this.nombremodl.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.nombremodl_KeyPress);
             // 
             // IDmodL
             // 
             this.IDmodL.Enabled = false;
-            this.IDmodL.Location = new System.Drawing.Point(127, 113);
-            this.IDmodL.Margin = new System.Windows.Forms.Padding(4);
+            this.IDmodL.Location = new System.Drawing.Point(95, 92);
             this.IDmodL.Name = "IDmodL";
-            this.IDmodL.Size = new System.Drawing.Size(204, 22);
+            this.IDmodL.Size = new System.Drawing.Size(154, 20);
             this.IDmodL.TabIndex = 18;
             // 
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(45, 161);
-            this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label11.Location = new System.Drawing.Point(34, 131);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(58, 17);
+            this.label11.Size = new System.Drawing.Size(44, 13);
             this.label11.TabIndex = 16;
             this.label11.Text = "Nombre";
             // 
             // button6
             // 
-            this.button6.Location = new System.Drawing.Point(365, 207);
-            this.button6.Margin = new System.Windows.Forms.Padding(4);
+            this.button6.Location = new System.Drawing.Point(274, 168);
             this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(95, 28);
+            this.button6.Size = new System.Drawing.Size(71, 23);
             this.button6.TabIndex = 15;
             this.button6.Text = "Modificar";
             this.button6.UseVisualStyleBackColor = true;
@@ -855,10 +817,9 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(45, 113);
-            this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label12.Location = new System.Drawing.Point(34, 92);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(21, 17);
+            this.label12.Size = new System.Drawing.Size(18, 13);
             this.label12.TabIndex = 14;
             this.label12.Text = "ID";
             // 
@@ -869,11 +830,10 @@
             this.tabPage14.Controls.Add(this.IDdeleteL);
             this.tabPage14.Controls.Add(this.button7);
             this.tabPage14.Controls.Add(this.label14);
-            this.tabPage14.Location = new System.Drawing.Point(4, 25);
-            this.tabPage14.Margin = new System.Windows.Forms.Padding(4);
+            this.tabPage14.Location = new System.Drawing.Point(4, 22);
             this.tabPage14.Name = "tabPage14";
-            this.tabPage14.Padding = new System.Windows.Forms.Padding(4);
-            this.tabPage14.Size = new System.Drawing.Size(883, 365);
+            this.tabPage14.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPage14.Size = new System.Drawing.Size(660, 294);
             this.tabPage14.TabIndex = 2;
             this.tabPage14.Text = "Eliminar";
             this.tabPage14.Click += new System.EventHandler(this.tabPage14_Click);
@@ -883,10 +843,9 @@
             // 
             this.ComboboxLugaresDelete.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.ComboboxLugaresDelete.FormattingEnabled = true;
-            this.ComboboxLugaresDelete.Location = new System.Drawing.Point(152, 40);
-            this.ComboboxLugaresDelete.Margin = new System.Windows.Forms.Padding(4);
+            this.ComboboxLugaresDelete.Location = new System.Drawing.Point(114, 32);
             this.ComboboxLugaresDelete.Name = "ComboboxLugaresDelete";
-            this.ComboboxLugaresDelete.Size = new System.Drawing.Size(204, 24);
+            this.ComboboxLugaresDelete.Size = new System.Drawing.Size(154, 21);
             this.ComboboxLugaresDelete.TabIndex = 22;
             this.ComboboxLugaresDelete.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged_1);
             this.ComboboxLugaresDelete.MouseClick += new System.Windows.Forms.MouseEventHandler(this.ComboboxLugaresDelete_MouseClick);
@@ -894,19 +853,17 @@
             // IDdeleteL
             // 
             this.IDdeleteL.Enabled = false;
-            this.IDdeleteL.Location = new System.Drawing.Point(152, 85);
-            this.IDdeleteL.Margin = new System.Windows.Forms.Padding(4);
+            this.IDdeleteL.Location = new System.Drawing.Point(114, 69);
             this.IDdeleteL.Name = "IDdeleteL";
-            this.IDdeleteL.Size = new System.Drawing.Size(204, 22);
+            this.IDdeleteL.Size = new System.Drawing.Size(154, 20);
             this.IDdeleteL.TabIndex = 18;
             this.IDdeleteL.Visible = false;
             // 
             // button7
             // 
-            this.button7.Location = new System.Drawing.Point(262, 134);
-            this.button7.Margin = new System.Windows.Forms.Padding(4);
+            this.button7.Location = new System.Drawing.Point(196, 109);
             this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(95, 28);
+            this.button7.Size = new System.Drawing.Size(71, 23);
             this.button7.TabIndex = 15;
             this.button7.Text = "Eliminar";
             this.button7.UseVisualStyleBackColor = true;
@@ -915,21 +872,19 @@
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(73, 40);
-            this.label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label14.Location = new System.Drawing.Point(55, 32);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(21, 17);
+            this.label14.Size = new System.Drawing.Size(18, 13);
             this.label14.TabIndex = 14;
             this.label14.Text = "ID";
             // 
             // tabPage4
             // 
             this.tabPage4.Controls.Add(this.tabControl4);
-            this.tabPage4.Location = new System.Drawing.Point(4, 25);
-            this.tabPage4.Margin = new System.Windows.Forms.Padding(4);
+            this.tabPage4.Location = new System.Drawing.Point(4, 22);
             this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Padding = new System.Windows.Forms.Padding(4);
-            this.tabPage4.Size = new System.Drawing.Size(747, 401);
+            this.tabPage4.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPage4.Size = new System.Drawing.Size(558, 323);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Rutas";
             this.tabPage4.UseVisualStyleBackColor = true;
@@ -939,11 +894,10 @@
             this.tabControl4.Controls.Add(this.tabPage18);
             this.tabControl4.Controls.Add(this.tabPage19);
             this.tabControl4.Controls.Add(this.tabPage23);
-            this.tabControl4.Location = new System.Drawing.Point(-5, 0);
-            this.tabControl4.Margin = new System.Windows.Forms.Padding(4);
+            this.tabControl4.Location = new System.Drawing.Point(-4, 0);
             this.tabControl4.Name = "tabControl4";
             this.tabControl4.SelectedIndex = 0;
-            this.tabControl4.Size = new System.Drawing.Size(895, 393);
+            this.tabControl4.Size = new System.Drawing.Size(671, 319);
             this.tabControl4.TabIndex = 0;
             this.tabControl4.SelectedIndexChanged += new System.EventHandler(this.tabControl4_SelectedIndexChanged);
             this.tabControl4.MouseClick += new System.Windows.Forms.MouseEventHandler(this.tabControl4_MouseClick);
@@ -960,11 +914,10 @@
             this.tabPage18.Controls.Add(this.label24);
             this.tabPage18.Controls.Add(this.button11);
             this.tabPage18.Controls.Add(this.label25);
-            this.tabPage18.Location = new System.Drawing.Point(4, 25);
-            this.tabPage18.Margin = new System.Windows.Forms.Padding(4);
+            this.tabPage18.Location = new System.Drawing.Point(4, 22);
             this.tabPage18.Name = "tabPage18";
-            this.tabPage18.Padding = new System.Windows.Forms.Padding(4);
-            this.tabPage18.Size = new System.Drawing.Size(887, 364);
+            this.tabPage18.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPage18.Size = new System.Drawing.Size(663, 293);
             this.tabPage18.TabIndex = 0;
             this.tabPage18.Text = "Agregar";
             this.tabPage18.Click += new System.EventHandler(this.tabPage18_Click);
@@ -972,24 +925,24 @@
             // 
             // DuracionRadd
             // 
-            this.DuracionRadd.Location = new System.Drawing.Point(119, 173);
+            this.DuracionRadd.Location = new System.Drawing.Point(89, 141);
+            this.DuracionRadd.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.DuracionRadd.Maximum = new decimal(new int[] {
             10,
             0,
             0,
             0});
             this.DuracionRadd.Name = "DuracionRadd";
-            this.DuracionRadd.Size = new System.Drawing.Size(202, 22);
+            this.DuracionRadd.Size = new System.Drawing.Size(152, 20);
             this.DuracionRadd.TabIndex = 62;
             // 
             // PaisDadd
             // 
             this.PaisDadd.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.PaisDadd.FormattingEnabled = true;
-            this.PaisDadd.Location = new System.Drawing.Point(119, 131);
-            this.PaisDadd.Margin = new System.Windows.Forms.Padding(4);
+            this.PaisDadd.Location = new System.Drawing.Point(89, 106);
             this.PaisDadd.Name = "PaisDadd";
-            this.PaisDadd.Size = new System.Drawing.Size(204, 24);
+            this.PaisDadd.Size = new System.Drawing.Size(154, 21);
             this.PaisDadd.TabIndex = 60;
             this.PaisDadd.MouseClick += new System.Windows.Forms.MouseEventHandler(this.PaisDadd_MouseClick);
             // 
@@ -997,10 +950,9 @@
             // 
             this.PaisOadd.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.PaisOadd.FormattingEnabled = true;
-            this.PaisOadd.Location = new System.Drawing.Point(119, 81);
-            this.PaisOadd.Margin = new System.Windows.Forms.Padding(4);
+            this.PaisOadd.Location = new System.Drawing.Point(89, 66);
             this.PaisOadd.Name = "PaisOadd";
-            this.PaisOadd.Size = new System.Drawing.Size(204, 24);
+            this.PaisOadd.Size = new System.Drawing.Size(154, 21);
             this.PaisOadd.TabIndex = 59;
             this.PaisOadd.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged_4);
             this.PaisOadd.MouseClick += new System.Windows.Forms.MouseEventHandler(this.PaisOadd_MouseClick);
@@ -1008,47 +960,42 @@
             // label22
             // 
             this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(23, 178);
-            this.label22.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label22.Location = new System.Drawing.Point(17, 145);
             this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(65, 17);
+            this.label22.Size = new System.Drawing.Size(50, 13);
             this.label22.TabIndex = 23;
             this.label22.Text = "Duracion";
             // 
             // IDRadd
             // 
-            this.IDRadd.Location = new System.Drawing.Point(119, 33);
-            this.IDRadd.Margin = new System.Windows.Forms.Padding(4);
+            this.IDRadd.Location = new System.Drawing.Point(89, 27);
             this.IDRadd.Name = "IDRadd";
-            this.IDRadd.Size = new System.Drawing.Size(204, 22);
+            this.IDRadd.Size = new System.Drawing.Size(154, 20);
             this.IDRadd.TabIndex = 20;
             // 
             // label23
             // 
             this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(23, 134);
-            this.label23.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label23.Location = new System.Drawing.Point(17, 109);
             this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(87, 17);
+            this.label23.Size = new System.Drawing.Size(66, 13);
             this.label23.TabIndex = 19;
             this.label23.Text = "Pais Destino";
             // 
             // label24
             // 
             this.label24.AutoSize = true;
-            this.label24.Location = new System.Drawing.Point(23, 81);
-            this.label24.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label24.Location = new System.Drawing.Point(17, 66);
             this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(82, 17);
+            this.label24.Size = new System.Drawing.Size(61, 13);
             this.label24.TabIndex = 18;
             this.label24.Text = "Pais Origen";
             // 
             // button11
             // 
-            this.button11.Location = new System.Drawing.Point(215, 222);
-            this.button11.Margin = new System.Windows.Forms.Padding(4);
+            this.button11.Location = new System.Drawing.Point(161, 180);
             this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(95, 28);
+            this.button11.Size = new System.Drawing.Size(71, 23);
             this.button11.TabIndex = 17;
             this.button11.Text = "Agregar";
             this.button11.UseVisualStyleBackColor = true;
@@ -1057,10 +1004,9 @@
             // label25
             // 
             this.label25.AutoSize = true;
-            this.label25.Location = new System.Drawing.Point(23, 33);
-            this.label25.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label25.Location = new System.Drawing.Point(17, 27);
             this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(21, 17);
+            this.label25.Size = new System.Drawing.Size(18, 13);
             this.label25.TabIndex = 16;
             this.label25.Text = "ID";
             // 
@@ -1076,11 +1022,10 @@
             this.tabPage19.Controls.Add(this.label28);
             this.tabPage19.Controls.Add(this.label29);
             this.tabPage19.Controls.Add(this.button12);
-            this.tabPage19.Location = new System.Drawing.Point(4, 25);
-            this.tabPage19.Margin = new System.Windows.Forms.Padding(4);
+            this.tabPage19.Location = new System.Drawing.Point(4, 22);
             this.tabPage19.Name = "tabPage19";
-            this.tabPage19.Padding = new System.Windows.Forms.Padding(4);
-            this.tabPage19.Size = new System.Drawing.Size(887, 364);
+            this.tabPage19.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPage19.Size = new System.Drawing.Size(663, 293);
             this.tabPage19.TabIndex = 1;
             this.tabPage19.Text = "Modificar";
             this.tabPage19.MouseClick += new System.Windows.Forms.MouseEventHandler(this.tabPage19_MouseClick);
@@ -1089,34 +1034,33 @@
             // 
             this.IDRMOD.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.IDRMOD.FormattingEnabled = true;
-            this.IDRMOD.Location = new System.Drawing.Point(123, 41);
-            this.IDRMOD.Margin = new System.Windows.Forms.Padding(4);
+            this.IDRMOD.Location = new System.Drawing.Point(92, 33);
             this.IDRMOD.Name = "IDRMOD";
-            this.IDRMOD.Size = new System.Drawing.Size(204, 24);
+            this.IDRMOD.Size = new System.Drawing.Size(154, 21);
             this.IDRMOD.TabIndex = 64;
             this.IDRMOD.SelectedIndexChanged += new System.EventHandler(this.IDRMOD_SelectedIndexChanged);
             this.IDRMOD.MouseClick += new System.Windows.Forms.MouseEventHandler(this.IDRMOD_MouseClick);
             // 
             // DuracionRmod
             // 
-            this.DuracionRmod.Location = new System.Drawing.Point(432, 125);
+            this.DuracionRmod.Location = new System.Drawing.Point(324, 102);
+            this.DuracionRmod.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.DuracionRmod.Maximum = new decimal(new int[] {
             10,
             0,
             0,
             0});
             this.DuracionRmod.Name = "DuracionRmod";
-            this.DuracionRmod.Size = new System.Drawing.Size(202, 22);
+            this.DuracionRmod.Size = new System.Drawing.Size(152, 20);
             this.DuracionRmod.TabIndex = 63;
             // 
             // POmod
             // 
             this.POmod.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.POmod.FormattingEnabled = true;
-            this.POmod.Location = new System.Drawing.Point(430, 82);
-            this.POmod.Margin = new System.Windows.Forms.Padding(4);
+            this.POmod.Location = new System.Drawing.Point(322, 67);
             this.POmod.Name = "POmod";
-            this.POmod.Size = new System.Drawing.Size(204, 24);
+            this.POmod.Size = new System.Drawing.Size(154, 21);
             this.POmod.TabIndex = 58;
             this.POmod.MouseClick += new System.Windows.Forms.MouseEventHandler(this.POmod_MouseClick);
             // 
@@ -1124,10 +1068,9 @@
             // 
             this.PDmod.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.PDmod.FormattingEnabled = true;
-            this.PDmod.Location = new System.Drawing.Point(430, 41);
-            this.PDmod.Margin = new System.Windows.Forms.Padding(4);
+            this.PDmod.Location = new System.Drawing.Point(322, 33);
             this.PDmod.Name = "PDmod";
-            this.PDmod.Size = new System.Drawing.Size(204, 24);
+            this.PDmod.Size = new System.Drawing.Size(154, 21);
             this.PDmod.TabIndex = 57;
             this.PDmod.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged_3);
             this.PDmod.MouseClick += new System.Windows.Forms.MouseEventHandler(this.PDmod_MouseClick);
@@ -1135,49 +1078,44 @@
             // label26
             // 
             this.label26.AutoSize = true;
-            this.label26.Location = new System.Drawing.Point(336, 127);
-            this.label26.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label26.Location = new System.Drawing.Point(252, 103);
             this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(65, 17);
+            this.label26.Size = new System.Drawing.Size(50, 13);
             this.label26.TabIndex = 31;
             this.label26.Text = "Duracion";
             // 
             // label27
             // 
             this.label27.AutoSize = true;
-            this.label27.Location = new System.Drawing.Point(335, 41);
-            this.label27.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label27.Location = new System.Drawing.Point(251, 33);
             this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(87, 17);
+            this.label27.Size = new System.Drawing.Size(66, 13);
             this.label27.TabIndex = 27;
             this.label27.Text = "Pais Destino";
             // 
             // label28
             // 
             this.label28.AutoSize = true;
-            this.label28.Location = new System.Drawing.Point(335, 82);
-            this.label28.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label28.Location = new System.Drawing.Point(251, 67);
             this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(82, 17);
+            this.label28.Size = new System.Drawing.Size(61, 13);
             this.label28.TabIndex = 26;
             this.label28.Text = "Pais Origen";
             // 
             // label29
             // 
             this.label29.AutoSize = true;
-            this.label29.Location = new System.Drawing.Point(27, 41);
-            this.label29.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label29.Location = new System.Drawing.Point(20, 33);
             this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(21, 17);
+            this.label29.Size = new System.Drawing.Size(18, 13);
             this.label29.TabIndex = 25;
             this.label29.Text = "ID";
             // 
             // button12
             // 
-            this.button12.Location = new System.Drawing.Point(531, 165);
-            this.button12.Margin = new System.Windows.Forms.Padding(4);
+            this.button12.Location = new System.Drawing.Point(398, 134);
             this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(95, 28);
+            this.button12.Size = new System.Drawing.Size(71, 23);
             this.button12.TabIndex = 17;
             this.button12.Text = "Modificar";
             this.button12.UseVisualStyleBackColor = true;
@@ -1189,11 +1127,10 @@
             this.tabPage23.Controls.Add(this.comboboxdeleteRuta);
             this.tabPage23.Controls.Add(this.button13);
             this.tabPage23.Controls.Add(this.label30);
-            this.tabPage23.Location = new System.Drawing.Point(4, 25);
-            this.tabPage23.Margin = new System.Windows.Forms.Padding(4);
+            this.tabPage23.Location = new System.Drawing.Point(4, 22);
             this.tabPage23.Name = "tabPage23";
-            this.tabPage23.Padding = new System.Windows.Forms.Padding(4);
-            this.tabPage23.Size = new System.Drawing.Size(887, 364);
+            this.tabPage23.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPage23.Size = new System.Drawing.Size(663, 293);
             this.tabPage23.TabIndex = 2;
             this.tabPage23.Text = "Eliminar";
             this.tabPage23.Click += new System.EventHandler(this.tabPage23_Click);
@@ -1203,20 +1140,18 @@
             // 
             this.comboboxdeleteRuta.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboboxdeleteRuta.FormattingEnabled = true;
-            this.comboboxdeleteRuta.Location = new System.Drawing.Point(224, 45);
-            this.comboboxdeleteRuta.Margin = new System.Windows.Forms.Padding(4);
+            this.comboboxdeleteRuta.Location = new System.Drawing.Point(168, 37);
             this.comboboxdeleteRuta.Name = "comboboxdeleteRuta";
-            this.comboboxdeleteRuta.Size = new System.Drawing.Size(204, 24);
+            this.comboboxdeleteRuta.Size = new System.Drawing.Size(154, 21);
             this.comboboxdeleteRuta.TabIndex = 65;
             this.comboboxdeleteRuta.SelectedIndexChanged += new System.EventHandler(this.comboboxdeleteRuta_SelectedIndexChanged);
             this.comboboxdeleteRuta.MouseClick += new System.Windows.Forms.MouseEventHandler(this.comboboxdeleteRuta_MouseClick_1);
             // 
             // button13
             // 
-            this.button13.Location = new System.Drawing.Point(333, 87);
-            this.button13.Margin = new System.Windows.Forms.Padding(4);
+            this.button13.Location = new System.Drawing.Point(250, 71);
             this.button13.Name = "button13";
-            this.button13.Size = new System.Drawing.Size(95, 28);
+            this.button13.Size = new System.Drawing.Size(71, 23);
             this.button13.TabIndex = 23;
             this.button13.Text = "Eliminar";
             this.button13.UseVisualStyleBackColor = true;
@@ -1225,21 +1160,19 @@
             // label30
             // 
             this.label30.AutoSize = true;
-            this.label30.Location = new System.Drawing.Point(170, 45);
-            this.label30.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label30.Location = new System.Drawing.Point(128, 37);
             this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(21, 17);
+            this.label30.Size = new System.Drawing.Size(18, 13);
             this.label30.TabIndex = 21;
             this.label30.Text = "ID";
             // 
             // tabPage5
             // 
             this.tabPage5.Controls.Add(this.tabControl5);
-            this.tabPage5.Location = new System.Drawing.Point(4, 25);
-            this.tabPage5.Margin = new System.Windows.Forms.Padding(4);
+            this.tabPage5.Location = new System.Drawing.Point(4, 22);
             this.tabPage5.Name = "tabPage5";
-            this.tabPage5.Padding = new System.Windows.Forms.Padding(4);
-            this.tabPage5.Size = new System.Drawing.Size(747, 401);
+            this.tabPage5.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPage5.Size = new System.Drawing.Size(558, 323);
             this.tabPage5.TabIndex = 4;
             this.tabPage5.Text = "Hoteles";
             this.tabPage5.UseVisualStyleBackColor = true;
@@ -1250,10 +1183,9 @@
             this.tabControl5.Controls.Add(this.tabPage21);
             this.tabControl5.Controls.Add(this.tabPage22);
             this.tabControl5.Location = new System.Drawing.Point(0, 0);
-            this.tabControl5.Margin = new System.Windows.Forms.Padding(4);
             this.tabControl5.Name = "tabControl5";
             this.tabControl5.SelectedIndex = 0;
-            this.tabControl5.Size = new System.Drawing.Size(751, 405);
+            this.tabControl5.Size = new System.Drawing.Size(563, 329);
             this.tabControl5.TabIndex = 0;
             // 
             // tabPage20
@@ -1274,11 +1206,10 @@
             this.tabPage20.Controls.Add(this.label32);
             this.tabPage20.Controls.Add(this.label33);
             this.tabPage20.Controls.Add(this.label34);
-            this.tabPage20.Location = new System.Drawing.Point(4, 25);
-            this.tabPage20.Margin = new System.Windows.Forms.Padding(4);
+            this.tabPage20.Location = new System.Drawing.Point(4, 22);
             this.tabPage20.Name = "tabPage20";
-            this.tabPage20.Padding = new System.Windows.Forms.Padding(4);
-            this.tabPage20.Size = new System.Drawing.Size(743, 376);
+            this.tabPage20.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPage20.Size = new System.Drawing.Size(555, 303);
             this.tabPage20.TabIndex = 0;
             this.tabPage20.Text = "Agregar";
             this.tabPage20.MouseClick += new System.Windows.Forms.MouseEventHandler(this.tabPage20_MouseClick);
@@ -1286,10 +1217,9 @@
             // imagenhotel
             // 
             this.imagenhotel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.imagenhotel.Location = new System.Drawing.Point(434, 11);
-            this.imagenhotel.Margin = new System.Windows.Forms.Padding(4);
+            this.imagenhotel.Location = new System.Drawing.Point(326, 9);
             this.imagenhotel.Name = "imagenhotel";
-            this.imagenhotel.Size = new System.Drawing.Size(296, 306);
+            this.imagenhotel.Size = new System.Drawing.Size(223, 249);
             this.imagenhotel.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.imagenhotel.TabIndex = 67;
             this.imagenhotel.TabStop = false;
@@ -1298,50 +1228,45 @@
             // Precio
             // 
             this.Precio.FormattingEnabled = true;
-            this.Precio.Location = new System.Drawing.Point(119, 297);
-            this.Precio.Margin = new System.Windows.Forms.Padding(4);
+            this.Precio.Location = new System.Drawing.Point(89, 241);
             this.Precio.Name = "Precio";
-            this.Precio.Size = new System.Drawing.Size(204, 24);
+            this.Precio.Size = new System.Drawing.Size(154, 21);
             this.Precio.TabIndex = 58;
             this.Precio.Click += new System.EventHandler(this.Precio_Click);
             // 
             // label68
             // 
             this.label68.AutoSize = true;
-            this.label68.Location = new System.Drawing.Point(23, 300);
-            this.label68.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label68.Location = new System.Drawing.Point(17, 244);
             this.label68.Name = "label68";
-            this.label68.Size = new System.Drawing.Size(48, 17);
+            this.label68.Size = new System.Drawing.Size(37, 13);
             this.label68.TabIndex = 57;
             this.label68.Text = "Precio";
             // 
             // LugarHotelesADD
             // 
             this.LugarHotelesADD.FormattingEnabled = true;
-            this.LugarHotelesADD.Location = new System.Drawing.Point(119, 214);
-            this.LugarHotelesADD.Margin = new System.Windows.Forms.Padding(4);
+            this.LugarHotelesADD.Location = new System.Drawing.Point(89, 174);
             this.LugarHotelesADD.Name = "LugarHotelesADD";
-            this.LugarHotelesADD.Size = new System.Drawing.Size(204, 24);
+            this.LugarHotelesADD.Size = new System.Drawing.Size(154, 21);
             this.LugarHotelesADD.TabIndex = 54;
             this.LugarHotelesADD.MouseClick += new System.Windows.Forms.MouseEventHandler(this.LugarHotelesADD_MouseClick);
             // 
             // paisHotelesADD
             // 
             this.paisHotelesADD.FormattingEnabled = true;
-            this.paisHotelesADD.Location = new System.Drawing.Point(119, 176);
-            this.paisHotelesADD.Margin = new System.Windows.Forms.Padding(4);
+            this.paisHotelesADD.Location = new System.Drawing.Point(89, 143);
             this.paisHotelesADD.Name = "paisHotelesADD";
-            this.paisHotelesADD.Size = new System.Drawing.Size(204, 24);
+            this.paisHotelesADD.Size = new System.Drawing.Size(154, 21);
             this.paisHotelesADD.TabIndex = 53;
             this.paisHotelesADD.SelectedValueChanged += new System.EventHandler(this.paisHotelesADD_SelectedValueChanged);
             this.paisHotelesADD.MouseClick += new System.Windows.Forms.MouseEventHandler(this.paisHotelesADD_MouseClick);
             // 
             // button14
             // 
-            this.button14.Location = new System.Drawing.Point(635, 322);
-            this.button14.Margin = new System.Windows.Forms.Padding(4);
+            this.button14.Location = new System.Drawing.Point(476, 262);
             this.button14.Name = "button14";
-            this.button14.Size = new System.Drawing.Size(95, 28);
+            this.button14.Size = new System.Drawing.Size(71, 23);
             this.button14.TabIndex = 37;
             this.button14.Text = "Agregar";
             this.button14.UseVisualStyleBackColor = true;
@@ -1349,88 +1274,79 @@
             // 
             // habitacionHotelesADD
             // 
-            this.habitacionHotelesADD.Location = new System.Drawing.Point(119, 254);
-            this.habitacionHotelesADD.Margin = new System.Windows.Forms.Padding(4);
+            this.habitacionHotelesADD.Location = new System.Drawing.Point(89, 206);
             this.habitacionHotelesADD.Name = "habitacionHotelesADD";
-            this.habitacionHotelesADD.Size = new System.Drawing.Size(204, 22);
+            this.habitacionHotelesADD.Size = new System.Drawing.Size(154, 20);
             this.habitacionHotelesADD.TabIndex = 36;
             this.habitacionHotelesADD.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.habitacionHotelesADD_KeyPress);
             // 
             // label35
             // 
             this.label35.AutoSize = true;
-            this.label35.Location = new System.Drawing.Point(23, 262);
-            this.label35.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label35.Location = new System.Drawing.Point(17, 213);
             this.label35.Name = "label35";
-            this.label35.Size = new System.Drawing.Size(90, 17);
+            this.label35.Size = new System.Drawing.Size(69, 13);
             this.label35.TabIndex = 35;
             this.label35.Text = "Habitaciones";
             // 
             // label36
             // 
             this.label36.AutoSize = true;
-            this.label36.Location = new System.Drawing.Point(23, 218);
-            this.label36.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label36.Location = new System.Drawing.Point(17, 177);
             this.label36.Name = "label36";
-            this.label36.Size = new System.Drawing.Size(45, 17);
+            this.label36.Size = new System.Drawing.Size(34, 13);
             this.label36.TabIndex = 33;
             this.label36.Text = "Lugar";
             // 
             // label31
             // 
             this.label31.AutoSize = true;
-            this.label31.Location = new System.Drawing.Point(23, 180);
-            this.label31.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label31.Location = new System.Drawing.Point(17, 146);
             this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(35, 17);
+            this.label31.Size = new System.Drawing.Size(27, 13);
             this.label31.TabIndex = 31;
             this.label31.Text = "Pais";
             // 
             // nombreHotelesAdd
             // 
-            this.nombreHotelesAdd.Location = new System.Drawing.Point(119, 82);
-            this.nombreHotelesAdd.Margin = new System.Windows.Forms.Padding(4);
+            this.nombreHotelesAdd.Location = new System.Drawing.Point(89, 67);
             this.nombreHotelesAdd.Name = "nombreHotelesAdd";
-            this.nombreHotelesAdd.Size = new System.Drawing.Size(204, 22);
+            this.nombreHotelesAdd.Size = new System.Drawing.Size(154, 20);
             this.nombreHotelesAdd.TabIndex = 30;
             this.nombreHotelesAdd.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.nombreHotelesAdd_KeyPress);
             // 
             // IDHotelesAdd
             // 
-            this.IDHotelesAdd.Location = new System.Drawing.Point(119, 34);
-            this.IDHotelesAdd.Margin = new System.Windows.Forms.Padding(4);
+            this.IDHotelesAdd.Location = new System.Drawing.Point(89, 28);
             this.IDHotelesAdd.Name = "IDHotelesAdd";
-            this.IDHotelesAdd.Size = new System.Drawing.Size(204, 22);
+            this.IDHotelesAdd.Size = new System.Drawing.Size(154, 20);
             this.IDHotelesAdd.TabIndex = 28;
             this.IDHotelesAdd.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.IDHotelesAdd_KeyPress);
             // 
             // label32
             // 
             this.label32.AutoSize = true;
-            this.label32.Location = new System.Drawing.Point(381, 34);
-            this.label32.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label32.Location = new System.Drawing.Point(286, 28);
             this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(36, 17);
+            this.label32.Size = new System.Drawing.Size(28, 13);
             this.label32.TabIndex = 27;
             this.label32.Text = "Foto";
             // 
             // label33
             // 
             this.label33.AutoSize = true;
-            this.label33.Location = new System.Drawing.Point(23, 82);
-            this.label33.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label33.Location = new System.Drawing.Point(17, 67);
             this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(58, 17);
+            this.label33.Size = new System.Drawing.Size(44, 13);
             this.label33.TabIndex = 26;
             this.label33.Text = "Nombre";
             // 
             // label34
             // 
             this.label34.AutoSize = true;
-            this.label34.Location = new System.Drawing.Point(23, 34);
-            this.label34.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label34.Location = new System.Drawing.Point(17, 28);
             this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(21, 17);
+            this.label34.Size = new System.Drawing.Size(18, 13);
             this.label34.TabIndex = 25;
             this.label34.Text = "ID";
             // 
@@ -1452,11 +1368,10 @@
             this.tabPage21.Controls.Add(this.label40);
             this.tabPage21.Controls.Add(this.label41);
             this.tabPage21.Controls.Add(this.label42);
-            this.tabPage21.Location = new System.Drawing.Point(4, 25);
-            this.tabPage21.Margin = new System.Windows.Forms.Padding(4);
+            this.tabPage21.Location = new System.Drawing.Point(4, 22);
             this.tabPage21.Name = "tabPage21";
-            this.tabPage21.Padding = new System.Windows.Forms.Padding(4);
-            this.tabPage21.Size = new System.Drawing.Size(743, 376);
+            this.tabPage21.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPage21.Size = new System.Drawing.Size(555, 303);
             this.tabPage21.TabIndex = 1;
             this.tabPage21.Text = "Modificar";
             this.tabPage21.MouseClick += new System.Windows.Forms.MouseEventHandler(this.tabPage21_MouseClick);
@@ -1465,10 +1380,9 @@
             // 
             this.IDHotelesMOD.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.IDHotelesMOD.FormattingEnabled = true;
-            this.IDHotelesMOD.Location = new System.Drawing.Point(121, 31);
-            this.IDHotelesMOD.Margin = new System.Windows.Forms.Padding(4);
+            this.IDHotelesMOD.Location = new System.Drawing.Point(91, 25);
             this.IDHotelesMOD.Name = "IDHotelesMOD";
-            this.IDHotelesMOD.Size = new System.Drawing.Size(204, 24);
+            this.IDHotelesMOD.Size = new System.Drawing.Size(154, 21);
             this.IDHotelesMOD.TabIndex = 69;
             this.IDHotelesMOD.SelectedValueChanged += new System.EventHandler(this.IDHotelesMOD_SelectedValueChanged);
             this.IDHotelesMOD.Click += new System.EventHandler(this.IDHotelesMOD_Click);
@@ -1476,10 +1390,9 @@
             // imagenHotelesMod
             // 
             this.imagenHotelesMod.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.imagenHotelesMod.Location = new System.Drawing.Point(434, 9);
-            this.imagenHotelesMod.Margin = new System.Windows.Forms.Padding(4);
+            this.imagenHotelesMod.Location = new System.Drawing.Point(326, 7);
             this.imagenHotelesMod.Name = "imagenHotelesMod";
-            this.imagenHotelesMod.Size = new System.Drawing.Size(296, 306);
+            this.imagenHotelesMod.Size = new System.Drawing.Size(223, 249);
             this.imagenHotelesMod.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.imagenHotelesMod.TabIndex = 68;
             this.imagenHotelesMod.TabStop = false;
@@ -1488,50 +1401,45 @@
             // PrecioM
             // 
             this.PrecioM.FormattingEnabled = true;
-            this.PrecioM.Location = new System.Drawing.Point(121, 295);
-            this.PrecioM.Margin = new System.Windows.Forms.Padding(4);
+            this.PrecioM.Location = new System.Drawing.Point(91, 240);
             this.PrecioM.Name = "PrecioM";
-            this.PrecioM.Size = new System.Drawing.Size(204, 24);
+            this.PrecioM.Size = new System.Drawing.Size(154, 21);
             this.PrecioM.TabIndex = 60;
             this.PrecioM.Click += new System.EventHandler(this.PrecioM_Click);
             // 
             // label69
             // 
             this.label69.AutoSize = true;
-            this.label69.Location = new System.Drawing.Point(25, 298);
-            this.label69.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label69.Location = new System.Drawing.Point(19, 242);
             this.label69.Name = "label69";
-            this.label69.Size = new System.Drawing.Size(48, 17);
+            this.label69.Size = new System.Drawing.Size(37, 13);
             this.label69.TabIndex = 59;
             this.label69.Text = "Precio";
             // 
             // LugarHotelesMod
             // 
             this.LugarHotelesMod.FormattingEnabled = true;
-            this.LugarHotelesMod.Location = new System.Drawing.Point(121, 214);
-            this.LugarHotelesMod.Margin = new System.Windows.Forms.Padding(4);
+            this.LugarHotelesMod.Location = new System.Drawing.Point(91, 174);
             this.LugarHotelesMod.Name = "LugarHotelesMod";
-            this.LugarHotelesMod.Size = new System.Drawing.Size(204, 24);
+            this.LugarHotelesMod.Size = new System.Drawing.Size(154, 21);
             this.LugarHotelesMod.TabIndex = 52;
             this.LugarHotelesMod.Click += new System.EventHandler(this.LugarHotelesMod_Click);
             // 
             // paisHotelesMod
             // 
             this.paisHotelesMod.FormattingEnabled = true;
-            this.paisHotelesMod.Location = new System.Drawing.Point(121, 176);
-            this.paisHotelesMod.Margin = new System.Windows.Forms.Padding(4);
+            this.paisHotelesMod.Location = new System.Drawing.Point(91, 143);
             this.paisHotelesMod.Name = "paisHotelesMod";
-            this.paisHotelesMod.Size = new System.Drawing.Size(204, 24);
+            this.paisHotelesMod.Size = new System.Drawing.Size(154, 21);
             this.paisHotelesMod.TabIndex = 51;
             this.paisHotelesMod.SelectedValueChanged += new System.EventHandler(this.paisHotelesMod_SelectedValueChanged);
             this.paisHotelesMod.Click += new System.EventHandler(this.paisHotelesMod_Click);
             // 
             // button15
             // 
-            this.button15.Location = new System.Drawing.Point(635, 318);
-            this.button15.Margin = new System.Windows.Forms.Padding(4);
+            this.button15.Location = new System.Drawing.Point(476, 258);
             this.button15.Name = "button15";
-            this.button15.Size = new System.Drawing.Size(95, 28);
+            this.button15.Size = new System.Drawing.Size(71, 23);
             this.button15.TabIndex = 50;
             this.button15.Text = "Modificar";
             this.button15.UseVisualStyleBackColor = true;
@@ -1539,79 +1447,71 @@
             // 
             // habitacionesHotelesMod
             // 
-            this.habitacionesHotelesMod.Location = new System.Drawing.Point(121, 254);
-            this.habitacionesHotelesMod.Margin = new System.Windows.Forms.Padding(4);
+            this.habitacionesHotelesMod.Location = new System.Drawing.Point(91, 206);
             this.habitacionesHotelesMod.Name = "habitacionesHotelesMod";
-            this.habitacionesHotelesMod.Size = new System.Drawing.Size(204, 22);
+            this.habitacionesHotelesMod.Size = new System.Drawing.Size(154, 20);
             this.habitacionesHotelesMod.TabIndex = 49;
             this.habitacionesHotelesMod.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.habitacionesHotelesMod_KeyPress);
             // 
             // label37
             // 
             this.label37.AutoSize = true;
-            this.label37.Location = new System.Drawing.Point(25, 262);
-            this.label37.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label37.Location = new System.Drawing.Point(19, 213);
             this.label37.Name = "label37";
-            this.label37.Size = new System.Drawing.Size(90, 17);
+            this.label37.Size = new System.Drawing.Size(69, 13);
             this.label37.TabIndex = 48;
             this.label37.Text = "Habitaciones";
             // 
             // label38
             // 
             this.label38.AutoSize = true;
-            this.label38.Location = new System.Drawing.Point(25, 218);
-            this.label38.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label38.Location = new System.Drawing.Point(19, 177);
             this.label38.Name = "label38";
-            this.label38.Size = new System.Drawing.Size(45, 17);
+            this.label38.Size = new System.Drawing.Size(34, 13);
             this.label38.TabIndex = 46;
             this.label38.Text = "Lugar";
             // 
             // label39
             // 
             this.label39.AutoSize = true;
-            this.label39.Location = new System.Drawing.Point(25, 180);
-            this.label39.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label39.Location = new System.Drawing.Point(19, 146);
             this.label39.Name = "label39";
-            this.label39.Size = new System.Drawing.Size(35, 17);
+            this.label39.Size = new System.Drawing.Size(27, 13);
             this.label39.TabIndex = 44;
             this.label39.Text = "Pais";
             // 
             // NombreHotelesMod
             // 
-            this.NombreHotelesMod.Location = new System.Drawing.Point(121, 82);
-            this.NombreHotelesMod.Margin = new System.Windows.Forms.Padding(4);
+            this.NombreHotelesMod.Location = new System.Drawing.Point(91, 67);
             this.NombreHotelesMod.Name = "NombreHotelesMod";
-            this.NombreHotelesMod.Size = new System.Drawing.Size(204, 22);
+            this.NombreHotelesMod.Size = new System.Drawing.Size(154, 20);
             this.NombreHotelesMod.TabIndex = 43;
             this.NombreHotelesMod.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.NombreHotelesMod_KeyPress);
             // 
             // label40
             // 
             this.label40.AutoSize = true;
-            this.label40.Location = new System.Drawing.Point(379, 34);
-            this.label40.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label40.Location = new System.Drawing.Point(284, 28);
             this.label40.Name = "label40";
-            this.label40.Size = new System.Drawing.Size(36, 17);
+            this.label40.Size = new System.Drawing.Size(28, 13);
             this.label40.TabIndex = 40;
             this.label40.Text = "Foto";
             // 
             // label41
             // 
             this.label41.AutoSize = true;
-            this.label41.Location = new System.Drawing.Point(25, 82);
-            this.label41.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label41.Location = new System.Drawing.Point(19, 67);
             this.label41.Name = "label41";
-            this.label41.Size = new System.Drawing.Size(58, 17);
+            this.label41.Size = new System.Drawing.Size(44, 13);
             this.label41.TabIndex = 39;
             this.label41.Text = "Nombre";
             // 
             // label42
             // 
             this.label42.AutoSize = true;
-            this.label42.Location = new System.Drawing.Point(25, 34);
-            this.label42.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label42.Location = new System.Drawing.Point(19, 28);
             this.label42.Name = "label42";
-            this.label42.Size = new System.Drawing.Size(21, 17);
+            this.label42.Size = new System.Drawing.Size(18, 13);
             this.label42.TabIndex = 38;
             this.label42.Text = "ID";
             // 
@@ -1621,11 +1521,10 @@
             this.tabPage22.Controls.Add(this.IDHotelesDelete);
             this.tabPage22.Controls.Add(this.button16);
             this.tabPage22.Controls.Add(this.label43);
-            this.tabPage22.Location = new System.Drawing.Point(4, 25);
-            this.tabPage22.Margin = new System.Windows.Forms.Padding(4);
+            this.tabPage22.Location = new System.Drawing.Point(4, 22);
             this.tabPage22.Name = "tabPage22";
-            this.tabPage22.Padding = new System.Windows.Forms.Padding(4);
-            this.tabPage22.Size = new System.Drawing.Size(743, 376);
+            this.tabPage22.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPage22.Size = new System.Drawing.Size(555, 303);
             this.tabPage22.TabIndex = 2;
             this.tabPage22.Text = "Eliminar";
             this.tabPage22.MouseClick += new System.Windows.Forms.MouseEventHandler(this.tabPage22_MouseClick);
@@ -1634,19 +1533,17 @@
             // 
             this.IDHotelesDelete.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.IDHotelesDelete.FormattingEnabled = true;
-            this.IDHotelesDelete.Location = new System.Drawing.Point(132, 44);
-            this.IDHotelesDelete.Margin = new System.Windows.Forms.Padding(4);
+            this.IDHotelesDelete.Location = new System.Drawing.Point(99, 36);
             this.IDHotelesDelete.Name = "IDHotelesDelete";
-            this.IDHotelesDelete.Size = new System.Drawing.Size(204, 24);
+            this.IDHotelesDelete.Size = new System.Drawing.Size(154, 21);
             this.IDHotelesDelete.TabIndex = 52;
             this.IDHotelesDelete.Click += new System.EventHandler(this.IDHotelesDelete_Click);
             // 
             // button16
             // 
-            this.button16.Location = new System.Drawing.Point(241, 92);
-            this.button16.Margin = new System.Windows.Forms.Padding(4);
+            this.button16.Location = new System.Drawing.Point(181, 75);
             this.button16.Name = "button16";
-            this.button16.Size = new System.Drawing.Size(95, 28);
+            this.button16.Size = new System.Drawing.Size(71, 23);
             this.button16.TabIndex = 51;
             this.button16.Text = "Eliminar";
             this.button16.UseVisualStyleBackColor = true;
@@ -1655,21 +1552,19 @@
             // label43
             // 
             this.label43.AutoSize = true;
-            this.label43.Location = new System.Drawing.Point(74, 47);
-            this.label43.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label43.Location = new System.Drawing.Point(56, 38);
             this.label43.Name = "label43";
-            this.label43.Size = new System.Drawing.Size(21, 17);
+            this.label43.Size = new System.Drawing.Size(18, 13);
             this.label43.TabIndex = 42;
             this.label43.Text = "ID";
             // 
             // tabPage6
             // 
             this.tabPage6.Controls.Add(this.tabControl6);
-            this.tabPage6.Location = new System.Drawing.Point(4, 25);
-            this.tabPage6.Margin = new System.Windows.Forms.Padding(4);
+            this.tabPage6.Location = new System.Drawing.Point(4, 22);
             this.tabPage6.Name = "tabPage6";
-            this.tabPage6.Padding = new System.Windows.Forms.Padding(4);
-            this.tabPage6.Size = new System.Drawing.Size(747, 401);
+            this.tabPage6.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPage6.Size = new System.Drawing.Size(558, 323);
             this.tabPage6.TabIndex = 5;
             this.tabPage6.Text = "Tarifas Hoteles";
             this.tabPage6.UseVisualStyleBackColor = true;
@@ -1679,11 +1574,10 @@
             this.tabControl6.Controls.Add(this.tabPage24);
             this.tabControl6.Controls.Add(this.tabPage25);
             this.tabControl6.Controls.Add(this.tabPage26);
-            this.tabControl6.Location = new System.Drawing.Point(-5, 0);
-            this.tabControl6.Margin = new System.Windows.Forms.Padding(4);
+            this.tabControl6.Location = new System.Drawing.Point(-4, 0);
             this.tabControl6.Name = "tabControl6";
             this.tabControl6.SelectedIndex = 0;
-            this.tabControl6.Size = new System.Drawing.Size(895, 394);
+            this.tabControl6.Size = new System.Drawing.Size(671, 320);
             this.tabControl6.TabIndex = 0;
             // 
             // tabPage24
@@ -1694,21 +1588,19 @@
             this.tabPage24.Controls.Add(this.IDTarifaHotelesADD);
             this.tabPage24.Controls.Add(this.label44);
             this.tabPage24.Controls.Add(this.label45);
-            this.tabPage24.Location = new System.Drawing.Point(4, 25);
-            this.tabPage24.Margin = new System.Windows.Forms.Padding(4);
+            this.tabPage24.Location = new System.Drawing.Point(4, 22);
             this.tabPage24.Name = "tabPage24";
-            this.tabPage24.Padding = new System.Windows.Forms.Padding(4);
-            this.tabPage24.Size = new System.Drawing.Size(887, 365);
+            this.tabPage24.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPage24.Size = new System.Drawing.Size(663, 294);
             this.tabPage24.TabIndex = 0;
             this.tabPage24.Text = "Agregar";
             this.tabPage24.MouseClick += new System.Windows.Forms.MouseEventHandler(this.tabPage24_MouseClick);
             // 
             // button17
             // 
-            this.button17.Location = new System.Drawing.Point(212, 134);
-            this.button17.Margin = new System.Windows.Forms.Padding(4);
+            this.button17.Location = new System.Drawing.Point(159, 109);
             this.button17.Name = "button17";
-            this.button17.Size = new System.Drawing.Size(95, 28);
+            this.button17.Size = new System.Drawing.Size(71, 23);
             this.button17.TabIndex = 24;
             this.button17.Text = "Agregar";
             this.button17.UseVisualStyleBackColor = true;
@@ -1716,39 +1608,35 @@
             // 
             // PrecioTarifaHotelesADD
             // 
-            this.PrecioTarifaHotelesADD.Location = new System.Drawing.Point(101, 86);
-            this.PrecioTarifaHotelesADD.Margin = new System.Windows.Forms.Padding(4);
+            this.PrecioTarifaHotelesADD.Location = new System.Drawing.Point(76, 70);
             this.PrecioTarifaHotelesADD.Name = "PrecioTarifaHotelesADD";
-            this.PrecioTarifaHotelesADD.Size = new System.Drawing.Size(204, 22);
+            this.PrecioTarifaHotelesADD.Size = new System.Drawing.Size(154, 20);
             this.PrecioTarifaHotelesADD.TabIndex = 10;
             this.PrecioTarifaHotelesADD.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.PrecioTarifaHotelesADD_KeyPress);
             // 
             // IDTarifaHotelesADD
             // 
-            this.IDTarifaHotelesADD.Location = new System.Drawing.Point(101, 38);
-            this.IDTarifaHotelesADD.Margin = new System.Windows.Forms.Padding(4);
+            this.IDTarifaHotelesADD.Location = new System.Drawing.Point(76, 31);
             this.IDTarifaHotelesADD.Name = "IDTarifaHotelesADD";
-            this.IDTarifaHotelesADD.Size = new System.Drawing.Size(204, 22);
+            this.IDTarifaHotelesADD.Size = new System.Drawing.Size(154, 20);
             this.IDTarifaHotelesADD.TabIndex = 9;
             this.IDTarifaHotelesADD.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.IDTarifaHotelesADD_KeyPress);
             // 
             // label44
             // 
             this.label44.AutoSize = true;
-            this.label44.Location = new System.Drawing.Point(20, 86);
-            this.label44.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label44.Location = new System.Drawing.Point(15, 70);
             this.label44.Name = "label44";
-            this.label44.Size = new System.Drawing.Size(48, 17);
+            this.label44.Size = new System.Drawing.Size(37, 13);
             this.label44.TabIndex = 8;
             this.label44.Text = "Precio";
             // 
             // label45
             // 
             this.label45.AutoSize = true;
-            this.label45.Location = new System.Drawing.Point(20, 38);
-            this.label45.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label45.Location = new System.Drawing.Point(15, 31);
             this.label45.Name = "label45";
-            this.label45.Size = new System.Drawing.Size(21, 17);
+            this.label45.Size = new System.Drawing.Size(18, 13);
             this.label45.TabIndex = 7;
             this.label45.Text = "ID";
             // 
@@ -1761,11 +1649,10 @@
             this.tabPage25.Controls.Add(this.IDTarifaHotelesMod);
             this.tabPage25.Controls.Add(this.label46);
             this.tabPage25.Controls.Add(this.label47);
-            this.tabPage25.Location = new System.Drawing.Point(4, 25);
-            this.tabPage25.Margin = new System.Windows.Forms.Padding(4);
+            this.tabPage25.Location = new System.Drawing.Point(4, 22);
             this.tabPage25.Name = "tabPage25";
-            this.tabPage25.Padding = new System.Windows.Forms.Padding(4);
-            this.tabPage25.Size = new System.Drawing.Size(887, 365);
+            this.tabPage25.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPage25.Size = new System.Drawing.Size(663, 294);
             this.tabPage25.TabIndex = 1;
             this.tabPage25.Text = "Modificar";
             this.tabPage25.MouseClick += new System.Windows.Forms.MouseEventHandler(this.tabPage25_MouseClick);
@@ -1773,10 +1660,9 @@
             // ComboboxtarifaH
             // 
             this.ComboboxtarifaH.FormattingEnabled = true;
-            this.ComboboxtarifaH.Location = new System.Drawing.Point(239, 67);
-            this.ComboboxtarifaH.Margin = new System.Windows.Forms.Padding(4);
+            this.ComboboxtarifaH.Location = new System.Drawing.Point(179, 54);
             this.ComboboxtarifaH.Name = "ComboboxtarifaH";
-            this.ComboboxtarifaH.Size = new System.Drawing.Size(204, 24);
+            this.ComboboxtarifaH.Size = new System.Drawing.Size(154, 21);
             this.ComboboxtarifaH.TabIndex = 57;
             this.ComboboxtarifaH.SelectedIndexChanged += new System.EventHandler(this.ComboboxtarifaH_SelectedIndexChanged);
             this.ComboboxtarifaH.SelectionChangeCommitted += new System.EventHandler(this.ComboboxtarifaH_SelectionChangeCommitted);
@@ -1784,10 +1670,9 @@
             // 
             // button18
             // 
-            this.button18.Location = new System.Drawing.Point(350, 209);
-            this.button18.Margin = new System.Windows.Forms.Padding(4);
+            this.button18.Location = new System.Drawing.Point(262, 170);
             this.button18.Name = "button18";
-            this.button18.Size = new System.Drawing.Size(95, 28);
+            this.button18.Size = new System.Drawing.Size(71, 23);
             this.button18.TabIndex = 29;
             this.button18.Text = "Modificar";
             this.button18.UseVisualStyleBackColor = true;
@@ -1795,39 +1680,35 @@
             // 
             // PrecioTarifaHotelesMod
             // 
-            this.PrecioTarifaHotelesMod.Location = new System.Drawing.Point(239, 161);
-            this.PrecioTarifaHotelesMod.Margin = new System.Windows.Forms.Padding(4);
+            this.PrecioTarifaHotelesMod.Location = new System.Drawing.Point(179, 131);
             this.PrecioTarifaHotelesMod.Name = "PrecioTarifaHotelesMod";
-            this.PrecioTarifaHotelesMod.Size = new System.Drawing.Size(204, 22);
+            this.PrecioTarifaHotelesMod.Size = new System.Drawing.Size(154, 20);
             this.PrecioTarifaHotelesMod.TabIndex = 28;
             // 
             // IDTarifaHotelesMod
             // 
             this.IDTarifaHotelesMod.Enabled = false;
-            this.IDTarifaHotelesMod.Location = new System.Drawing.Point(531, 312);
-            this.IDTarifaHotelesMod.Margin = new System.Windows.Forms.Padding(4);
+            this.IDTarifaHotelesMod.Location = new System.Drawing.Point(398, 254);
             this.IDTarifaHotelesMod.Name = "IDTarifaHotelesMod";
-            this.IDTarifaHotelesMod.Size = new System.Drawing.Size(204, 22);
+            this.IDTarifaHotelesMod.Size = new System.Drawing.Size(154, 20);
             this.IDTarifaHotelesMod.TabIndex = 27;
             this.IDTarifaHotelesMod.Visible = false;
             // 
             // label46
             // 
             this.label46.AutoSize = true;
-            this.label46.Location = new System.Drawing.Point(158, 161);
-            this.label46.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label46.Location = new System.Drawing.Point(118, 131);
             this.label46.Name = "label46";
-            this.label46.Size = new System.Drawing.Size(48, 17);
+            this.label46.Size = new System.Drawing.Size(37, 13);
             this.label46.TabIndex = 26;
             this.label46.Text = "Precio";
             // 
             // label47
             // 
             this.label47.AutoSize = true;
-            this.label47.Location = new System.Drawing.Point(173, 67);
-            this.label47.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label47.Location = new System.Drawing.Point(130, 54);
             this.label47.Name = "label47";
-            this.label47.Size = new System.Drawing.Size(21, 17);
+            this.label47.Size = new System.Drawing.Size(18, 13);
             this.label47.TabIndex = 25;
             this.label47.Text = "ID";
             // 
@@ -1837,11 +1718,10 @@
             this.tabPage26.Controls.Add(this.TarifaHdelete);
             this.tabPage26.Controls.Add(this.button19);
             this.tabPage26.Controls.Add(this.label49);
-            this.tabPage26.Location = new System.Drawing.Point(4, 25);
-            this.tabPage26.Margin = new System.Windows.Forms.Padding(4);
+            this.tabPage26.Location = new System.Drawing.Point(4, 22);
             this.tabPage26.Name = "tabPage26";
-            this.tabPage26.Padding = new System.Windows.Forms.Padding(4);
-            this.tabPage26.Size = new System.Drawing.Size(887, 365);
+            this.tabPage26.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPage26.Size = new System.Drawing.Size(663, 294);
             this.tabPage26.TabIndex = 2;
             this.tabPage26.Text = "Eliminar";
             this.tabPage26.MouseClick += new System.Windows.Forms.MouseEventHandler(this.tabPage26_MouseClick);
@@ -1849,10 +1729,9 @@
             // TarifaHdelete
             // 
             this.TarifaHdelete.FormattingEnabled = true;
-            this.TarifaHdelete.Location = new System.Drawing.Point(216, 64);
-            this.TarifaHdelete.Margin = new System.Windows.Forms.Padding(4);
+            this.TarifaHdelete.Location = new System.Drawing.Point(162, 52);
             this.TarifaHdelete.Name = "TarifaHdelete";
-            this.TarifaHdelete.Size = new System.Drawing.Size(204, 24);
+            this.TarifaHdelete.Size = new System.Drawing.Size(154, 21);
             this.TarifaHdelete.TabIndex = 58;
             this.TarifaHdelete.SelectedIndexChanged += new System.EventHandler(this.TarifaHdelete_SelectedIndexChanged);
             this.TarifaHdelete.MouseClick += new System.Windows.Forms.MouseEventHandler(this.TarifaHdelete_MouseClick);
@@ -1860,10 +1739,9 @@
             // 
             // button19
             // 
-            this.button19.Location = new System.Drawing.Point(325, 176);
-            this.button19.Margin = new System.Windows.Forms.Padding(4);
+            this.button19.Location = new System.Drawing.Point(244, 143);
             this.button19.Name = "button19";
-            this.button19.Size = new System.Drawing.Size(95, 28);
+            this.button19.Size = new System.Drawing.Size(71, 23);
             this.button19.TabIndex = 29;
             this.button19.Text = "Eliminar";
             this.button19.UseVisualStyleBackColor = true;
@@ -1872,21 +1750,19 @@
             // label49
             // 
             this.label49.AutoSize = true;
-            this.label49.Location = new System.Drawing.Point(141, 64);
-            this.label49.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label49.Location = new System.Drawing.Point(106, 52);
             this.label49.Name = "label49";
-            this.label49.Size = new System.Drawing.Size(21, 17);
+            this.label49.Size = new System.Drawing.Size(18, 13);
             this.label49.TabIndex = 25;
             this.label49.Text = "ID";
             // 
             // tabPage7
             // 
             this.tabPage7.Controls.Add(this.tabControl7);
-            this.tabPage7.Location = new System.Drawing.Point(4, 25);
-            this.tabPage7.Margin = new System.Windows.Forms.Padding(4);
+            this.tabPage7.Location = new System.Drawing.Point(4, 22);
             this.tabPage7.Name = "tabPage7";
-            this.tabPage7.Padding = new System.Windows.Forms.Padding(4);
-            this.tabPage7.Size = new System.Drawing.Size(747, 401);
+            this.tabPage7.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPage7.Size = new System.Drawing.Size(558, 323);
             this.tabPage7.TabIndex = 6;
             this.tabPage7.Text = "Tarifas Vuelos";
             this.tabPage7.UseVisualStyleBackColor = true;
@@ -1896,11 +1772,10 @@
             this.tabControl7.Controls.Add(this.tabPage27);
             this.tabControl7.Controls.Add(this.tabPage28);
             this.tabControl7.Controls.Add(this.tabPage35);
-            this.tabControl7.Location = new System.Drawing.Point(-5, 0);
-            this.tabControl7.Margin = new System.Windows.Forms.Padding(4);
+            this.tabControl7.Location = new System.Drawing.Point(-4, 0);
             this.tabControl7.Name = "tabControl7";
             this.tabControl7.SelectedIndex = 0;
-            this.tabControl7.Size = new System.Drawing.Size(893, 393);
+            this.tabControl7.Size = new System.Drawing.Size(670, 319);
             this.tabControl7.TabIndex = 0;
             // 
             // tabPage27
@@ -1913,11 +1788,10 @@
             this.tabPage27.Controls.Add(this.label48);
             this.tabPage27.Controls.Add(this.label50);
             this.tabPage27.Controls.Add(this.label51);
-            this.tabPage27.Location = new System.Drawing.Point(4, 25);
-            this.tabPage27.Margin = new System.Windows.Forms.Padding(4);
+            this.tabPage27.Location = new System.Drawing.Point(4, 22);
             this.tabPage27.Name = "tabPage27";
-            this.tabPage27.Padding = new System.Windows.Forms.Padding(4);
-            this.tabPage27.Size = new System.Drawing.Size(885, 364);
+            this.tabPage27.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPage27.Size = new System.Drawing.Size(662, 293);
             this.tabPage27.TabIndex = 0;
             this.tabPage27.Text = "Agregar";
             this.tabPage27.Click += new System.EventHandler(this.tabPage27_Click);
@@ -1927,20 +1801,18 @@
             // 
             this.RutaTarifaVuelosADD.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.RutaTarifaVuelosADD.FormattingEnabled = true;
-            this.RutaTarifaVuelosADD.Location = new System.Drawing.Point(140, 82);
-            this.RutaTarifaVuelosADD.Margin = new System.Windows.Forms.Padding(4);
+            this.RutaTarifaVuelosADD.Location = new System.Drawing.Point(105, 67);
             this.RutaTarifaVuelosADD.Name = "RutaTarifaVuelosADD";
-            this.RutaTarifaVuelosADD.Size = new System.Drawing.Size(204, 24);
+            this.RutaTarifaVuelosADD.Size = new System.Drawing.Size(154, 21);
             this.RutaTarifaVuelosADD.TabIndex = 1;
             this.RutaTarifaVuelosADD.SelectedIndexChanged += new System.EventHandler(this.textBox4_TextChanged);
             this.RutaTarifaVuelosADD.MouseClick += new System.Windows.Forms.MouseEventHandler(this.RutaTarifaVuelosADD_MouseClick);
             // 
             // button20
             // 
-            this.button20.Location = new System.Drawing.Point(251, 182);
-            this.button20.Margin = new System.Windows.Forms.Padding(4);
+            this.button20.Location = new System.Drawing.Point(188, 148);
             this.button20.Name = "button20";
-            this.button20.Size = new System.Drawing.Size(95, 28);
+            this.button20.Size = new System.Drawing.Size(71, 23);
             this.button20.TabIndex = 52;
             this.button20.Text = "Agregar";
             this.button20.UseVisualStyleBackColor = true;
@@ -1948,49 +1820,44 @@
             // 
             // PrecioTarifaVuelosADD
             // 
-            this.PrecioTarifaVuelosADD.Location = new System.Drawing.Point(140, 138);
-            this.PrecioTarifaVuelosADD.Margin = new System.Windows.Forms.Padding(4);
+            this.PrecioTarifaVuelosADD.Location = new System.Drawing.Point(105, 112);
             this.PrecioTarifaVuelosADD.Name = "PrecioTarifaVuelosADD";
-            this.PrecioTarifaVuelosADD.Size = new System.Drawing.Size(204, 22);
+            this.PrecioTarifaVuelosADD.Size = new System.Drawing.Size(154, 20);
             this.PrecioTarifaVuelosADD.TabIndex = 27;
             this.PrecioTarifaVuelosADD.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.PrecioTarifaVuelosADD_KeyPress);
             // 
             // IDTarifaVuelosADD
             // 
-            this.IDTarifaVuelosADD.Location = new System.Drawing.Point(140, 41);
-            this.IDTarifaVuelosADD.Margin = new System.Windows.Forms.Padding(4);
+            this.IDTarifaVuelosADD.Location = new System.Drawing.Point(105, 33);
             this.IDTarifaVuelosADD.Name = "IDTarifaVuelosADD";
-            this.IDTarifaVuelosADD.Size = new System.Drawing.Size(204, 22);
+            this.IDTarifaVuelosADD.Size = new System.Drawing.Size(154, 20);
             this.IDTarifaVuelosADD.TabIndex = 26;
             this.IDTarifaVuelosADD.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.IDTarifaVuelosADD_KeyPress);
             // 
             // label48
             // 
             this.label48.AutoSize = true;
-            this.label48.Location = new System.Drawing.Point(44, 142);
-            this.label48.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label48.Location = new System.Drawing.Point(33, 115);
             this.label48.Name = "label48";
-            this.label48.Size = new System.Drawing.Size(55, 17);
+            this.label48.Size = new System.Drawing.Size(42, 13);
             this.label48.TabIndex = 25;
             this.label48.Text = "Precios";
             // 
             // label50
             // 
             this.label50.AutoSize = true;
-            this.label50.Location = new System.Drawing.Point(44, 89);
-            this.label50.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label50.Location = new System.Drawing.Point(33, 72);
             this.label50.Name = "label50";
-            this.label50.Size = new System.Drawing.Size(38, 17);
+            this.label50.Size = new System.Drawing.Size(30, 13);
             this.label50.TabIndex = 24;
             this.label50.Text = "Ruta";
             // 
             // label51
             // 
             this.label51.AutoSize = true;
-            this.label51.Location = new System.Drawing.Point(44, 41);
-            this.label51.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label51.Location = new System.Drawing.Point(33, 33);
             this.label51.Name = "label51";
-            this.label51.Size = new System.Drawing.Size(21, 17);
+            this.label51.Size = new System.Drawing.Size(18, 13);
             this.label51.TabIndex = 23;
             this.label51.Text = "ID";
             // 
@@ -2004,11 +1871,10 @@
             this.tabPage28.Controls.Add(this.label52);
             this.tabPage28.Controls.Add(this.label53);
             this.tabPage28.Controls.Add(this.label54);
-            this.tabPage28.Location = new System.Drawing.Point(4, 25);
-            this.tabPage28.Margin = new System.Windows.Forms.Padding(4);
+            this.tabPage28.Location = new System.Drawing.Point(4, 22);
             this.tabPage28.Name = "tabPage28";
-            this.tabPage28.Padding = new System.Windows.Forms.Padding(4);
-            this.tabPage28.Size = new System.Drawing.Size(885, 364);
+            this.tabPage28.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPage28.Size = new System.Drawing.Size(662, 293);
             this.tabPage28.TabIndex = 1;
             this.tabPage28.Text = "Modificar";
             this.tabPage28.MouseClick += new System.Windows.Forms.MouseEventHandler(this.tabPage28_MouseClick);
@@ -2017,10 +1883,9 @@
             // 
             this.RutaTarifaVuelosMOD.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.RutaTarifaVuelosMOD.FormattingEnabled = true;
-            this.RutaTarifaVuelosMOD.Location = new System.Drawing.Point(126, 87);
-            this.RutaTarifaVuelosMOD.Margin = new System.Windows.Forms.Padding(4);
+            this.RutaTarifaVuelosMOD.Location = new System.Drawing.Point(94, 71);
             this.RutaTarifaVuelosMOD.Name = "RutaTarifaVuelosMOD";
-            this.RutaTarifaVuelosMOD.Size = new System.Drawing.Size(204, 24);
+            this.RutaTarifaVuelosMOD.Size = new System.Drawing.Size(154, 21);
             this.RutaTarifaVuelosMOD.TabIndex = 61;
             this.RutaTarifaVuelosMOD.MouseClick += new System.Windows.Forms.MouseEventHandler(this.RutaTarifaVuelosMOD_MouseClick);
             // 
@@ -2028,20 +1893,18 @@
             // 
             this.IDTarifaVuelosMod.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.IDTarifaVuelosMod.FormattingEnabled = true;
-            this.IDTarifaVuelosMod.Location = new System.Drawing.Point(126, 42);
-            this.IDTarifaVuelosMod.Margin = new System.Windows.Forms.Padding(4);
+            this.IDTarifaVuelosMod.Location = new System.Drawing.Point(94, 34);
             this.IDTarifaVuelosMod.Name = "IDTarifaVuelosMod";
-            this.IDTarifaVuelosMod.Size = new System.Drawing.Size(204, 24);
+            this.IDTarifaVuelosMod.Size = new System.Drawing.Size(154, 21);
             this.IDTarifaVuelosMod.TabIndex = 60;
             this.IDTarifaVuelosMod.SelectedIndexChanged += new System.EventHandler(this.RutaTarifaVuelosMOD_SelectedIndexChanged);
             this.IDTarifaVuelosMod.MouseClick += new System.Windows.Forms.MouseEventHandler(this.IDTarifaVuelosMod_MouseClick);
             // 
             // button21
             // 
-            this.button21.Location = new System.Drawing.Point(235, 183);
-            this.button21.Margin = new System.Windows.Forms.Padding(4);
+            this.button21.Location = new System.Drawing.Point(176, 149);
             this.button21.Name = "button21";
-            this.button21.Size = new System.Drawing.Size(95, 28);
+            this.button21.Size = new System.Drawing.Size(71, 23);
             this.button21.TabIndex = 59;
             this.button21.Text = "Modificar";
             this.button21.UseVisualStyleBackColor = true;
@@ -2049,40 +1912,36 @@
             // 
             // PreciosTarifaVuelosMod
             // 
-            this.PreciosTarifaVuelosMod.Location = new System.Drawing.Point(126, 138);
-            this.PreciosTarifaVuelosMod.Margin = new System.Windows.Forms.Padding(4);
+            this.PreciosTarifaVuelosMod.Location = new System.Drawing.Point(94, 112);
             this.PreciosTarifaVuelosMod.Name = "PreciosTarifaVuelosMod";
-            this.PreciosTarifaVuelosMod.Size = new System.Drawing.Size(204, 22);
+            this.PreciosTarifaVuelosMod.Size = new System.Drawing.Size(154, 20);
             this.PreciosTarifaVuelosMod.TabIndex = 57;
             this.PreciosTarifaVuelosMod.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.PreciosTarifaVuelosMod_KeyPress);
             // 
             // label52
             // 
             this.label52.AutoSize = true;
-            this.label52.Location = new System.Drawing.Point(28, 143);
-            this.label52.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label52.Location = new System.Drawing.Point(21, 116);
             this.label52.Name = "label52";
-            this.label52.Size = new System.Drawing.Size(55, 17);
+            this.label52.Size = new System.Drawing.Size(42, 13);
             this.label52.TabIndex = 55;
             this.label52.Text = "Precios";
             // 
             // label53
             // 
             this.label53.AutoSize = true;
-            this.label53.Location = new System.Drawing.Point(28, 90);
-            this.label53.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label53.Location = new System.Drawing.Point(21, 73);
             this.label53.Name = "label53";
-            this.label53.Size = new System.Drawing.Size(38, 17);
+            this.label53.Size = new System.Drawing.Size(30, 13);
             this.label53.TabIndex = 54;
             this.label53.Text = "Ruta";
             // 
             // label54
             // 
             this.label54.AutoSize = true;
-            this.label54.Location = new System.Drawing.Point(28, 42);
-            this.label54.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label54.Location = new System.Drawing.Point(21, 34);
             this.label54.Name = "label54";
-            this.label54.Size = new System.Drawing.Size(21, 17);
+            this.label54.Size = new System.Drawing.Size(18, 13);
             this.label54.TabIndex = 53;
             this.label54.Text = "ID";
             // 
@@ -2092,11 +1951,10 @@
             this.tabPage35.Controls.Add(this.IDTarifaVuelosDelete);
             this.tabPage35.Controls.Add(this.button22);
             this.tabPage35.Controls.Add(this.label57);
-            this.tabPage35.Location = new System.Drawing.Point(4, 25);
-            this.tabPage35.Margin = new System.Windows.Forms.Padding(4);
+            this.tabPage35.Location = new System.Drawing.Point(4, 22);
             this.tabPage35.Name = "tabPage35";
-            this.tabPage35.Padding = new System.Windows.Forms.Padding(4);
-            this.tabPage35.Size = new System.Drawing.Size(885, 364);
+            this.tabPage35.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPage35.Size = new System.Drawing.Size(662, 293);
             this.tabPage35.TabIndex = 2;
             this.tabPage35.Text = "Eliminar";
             this.tabPage35.MouseClick += new System.Windows.Forms.MouseEventHandler(this.tabPage35_MouseClick);
@@ -2105,20 +1963,18 @@
             // 
             this.IDTarifaVuelosDelete.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.IDTarifaVuelosDelete.FormattingEnabled = true;
-            this.IDTarifaVuelosDelete.Location = new System.Drawing.Point(122, 41);
-            this.IDTarifaVuelosDelete.Margin = new System.Windows.Forms.Padding(4);
+            this.IDTarifaVuelosDelete.Location = new System.Drawing.Point(92, 33);
             this.IDTarifaVuelosDelete.Name = "IDTarifaVuelosDelete";
-            this.IDTarifaVuelosDelete.Size = new System.Drawing.Size(204, 24);
+            this.IDTarifaVuelosDelete.Size = new System.Drawing.Size(154, 21);
             this.IDTarifaVuelosDelete.TabIndex = 61;
             this.IDTarifaVuelosDelete.SelectedIndexChanged += new System.EventHandler(this.IDTarifaVuelosDelete_SelectedIndexChanged);
             this.IDTarifaVuelosDelete.MouseClick += new System.Windows.Forms.MouseEventHandler(this.IDTarifaVuelosDelete_MouseClick);
             // 
             // button22
             // 
-            this.button22.Location = new System.Drawing.Point(231, 84);
-            this.button22.Margin = new System.Windows.Forms.Padding(4);
+            this.button22.Location = new System.Drawing.Point(173, 68);
             this.button22.Name = "button22";
-            this.button22.Size = new System.Drawing.Size(95, 28);
+            this.button22.Size = new System.Drawing.Size(71, 23);
             this.button22.TabIndex = 59;
             this.button22.Text = "Eliminar";
             this.button22.UseVisualStyleBackColor = true;
@@ -2127,21 +1983,19 @@
             // label57
             // 
             this.label57.AutoSize = true;
-            this.label57.Location = new System.Drawing.Point(24, 41);
-            this.label57.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label57.Location = new System.Drawing.Point(18, 33);
             this.label57.Name = "label57";
-            this.label57.Size = new System.Drawing.Size(21, 17);
+            this.label57.Size = new System.Drawing.Size(18, 13);
             this.label57.TabIndex = 53;
             this.label57.Text = "ID";
             // 
             // tabPage8
             // 
             this.tabPage8.Controls.Add(this.tabControl8);
-            this.tabPage8.Location = new System.Drawing.Point(4, 25);
-            this.tabPage8.Margin = new System.Windows.Forms.Padding(4);
+            this.tabPage8.Location = new System.Drawing.Point(4, 22);
             this.tabPage8.Name = "tabPage8";
-            this.tabPage8.Padding = new System.Windows.Forms.Padding(4);
-            this.tabPage8.Size = new System.Drawing.Size(747, 401);
+            this.tabPage8.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPage8.Size = new System.Drawing.Size(558, 323);
             this.tabPage8.TabIndex = 7;
             this.tabPage8.Text = "Vehiculos";
             this.tabPage8.UseVisualStyleBackColor = true;
@@ -2152,10 +2006,9 @@
             this.tabControl8.Controls.Add(this.tabPage30);
             this.tabControl8.Controls.Add(this.tabPage31);
             this.tabControl8.Location = new System.Drawing.Point(0, 0);
-            this.tabControl8.Margin = new System.Windows.Forms.Padding(4);
             this.tabControl8.Name = "tabControl8";
             this.tabControl8.SelectedIndex = 0;
-            this.tabControl8.Size = new System.Drawing.Size(893, 393);
+            this.tabControl8.Size = new System.Drawing.Size(670, 319);
             this.tabControl8.TabIndex = 0;
             this.tabControl8.MouseClick += new System.Windows.Forms.MouseEventHandler(this.tabControl8_MouseClick);
             // 
@@ -2175,21 +2028,19 @@
             this.tabPage29.Controls.Add(this.label59);
             this.tabPage29.Controls.Add(this.label60);
             this.tabPage29.Controls.Add(this.label61);
-            this.tabPage29.Location = new System.Drawing.Point(4, 25);
-            this.tabPage29.Margin = new System.Windows.Forms.Padding(4);
+            this.tabPage29.Location = new System.Drawing.Point(4, 22);
             this.tabPage29.Name = "tabPage29";
-            this.tabPage29.Padding = new System.Windows.Forms.Padding(4);
-            this.tabPage29.Size = new System.Drawing.Size(885, 364);
+            this.tabPage29.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPage29.Size = new System.Drawing.Size(662, 293);
             this.tabPage29.TabIndex = 0;
             this.tabPage29.Text = "Agregar";
             this.tabPage29.MouseClick += new System.Windows.Forms.MouseEventHandler(this.tabPage29_MouseClick);
             // 
             // button23
             // 
-            this.button23.Location = new System.Drawing.Point(359, 249);
-            this.button23.Margin = new System.Windows.Forms.Padding(4);
+            this.button23.Location = new System.Drawing.Point(269, 202);
             this.button23.Name = "button23";
-            this.button23.Size = new System.Drawing.Size(95, 28);
+            this.button23.Size = new System.Drawing.Size(71, 23);
             this.button23.TabIndex = 50;
             this.button23.Text = "Agregar";
             this.button23.UseVisualStyleBackColor = true;
@@ -2197,114 +2048,102 @@
             // 
             // CantidadvehiculoADD
             // 
-            this.CantidadvehiculoADD.Location = new System.Drawing.Point(125, 252);
-            this.CantidadvehiculoADD.Margin = new System.Windows.Forms.Padding(4);
+            this.CantidadvehiculoADD.Location = new System.Drawing.Point(94, 205);
             this.CantidadvehiculoADD.Name = "CantidadvehiculoADD";
-            this.CantidadvehiculoADD.Size = new System.Drawing.Size(204, 22);
+            this.CantidadvehiculoADD.Size = new System.Drawing.Size(154, 20);
             this.CantidadvehiculoADD.TabIndex = 49;
             // 
             // label55
             // 
             this.label55.AutoSize = true;
-            this.label55.Location = new System.Drawing.Point(29, 261);
-            this.label55.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label55.Location = new System.Drawing.Point(22, 212);
             this.label55.Name = "label55";
-            this.label55.Size = new System.Drawing.Size(64, 17);
+            this.label55.Size = new System.Drawing.Size(49, 13);
             this.label55.TabIndex = 48;
             this.label55.Text = "Cantidad";
             // 
             // PrecioVehiculoADD
             // 
-            this.PrecioVehiculoADD.Location = new System.Drawing.Point(125, 213);
-            this.PrecioVehiculoADD.Margin = new System.Windows.Forms.Padding(4);
+            this.PrecioVehiculoADD.Location = new System.Drawing.Point(94, 173);
             this.PrecioVehiculoADD.Name = "PrecioVehiculoADD";
-            this.PrecioVehiculoADD.Size = new System.Drawing.Size(204, 22);
+            this.PrecioVehiculoADD.Size = new System.Drawing.Size(154, 20);
             this.PrecioVehiculoADD.TabIndex = 47;
             // 
             // label56
             // 
             this.label56.AutoSize = true;
-            this.label56.Location = new System.Drawing.Point(29, 217);
-            this.label56.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label56.Location = new System.Drawing.Point(22, 176);
             this.label56.Name = "label56";
-            this.label56.Size = new System.Drawing.Size(48, 17);
+            this.label56.Size = new System.Drawing.Size(37, 13);
             this.label56.TabIndex = 46;
             this.label56.Text = "Precio";
             // 
             // TipoVehiculoADD
             // 
-            this.TipoVehiculoADD.Location = new System.Drawing.Point(125, 170);
-            this.TipoVehiculoADD.Margin = new System.Windows.Forms.Padding(4);
+            this.TipoVehiculoADD.Location = new System.Drawing.Point(94, 138);
             this.TipoVehiculoADD.Name = "TipoVehiculoADD";
-            this.TipoVehiculoADD.Size = new System.Drawing.Size(204, 22);
+            this.TipoVehiculoADD.Size = new System.Drawing.Size(154, 20);
             this.TipoVehiculoADD.TabIndex = 45;
             this.TipoVehiculoADD.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TipoVehiculoADD_KeyPress);
             // 
             // label58
             // 
             this.label58.AutoSize = true;
-            this.label58.Location = new System.Drawing.Point(29, 178);
-            this.label58.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label58.Location = new System.Drawing.Point(22, 145);
             this.label58.Name = "label58";
-            this.label58.Size = new System.Drawing.Size(36, 17);
+            this.label58.Size = new System.Drawing.Size(28, 13);
             this.label58.TabIndex = 44;
             this.label58.Text = "Tipo";
             // 
             // MarcaVehiculoADD
             // 
-            this.MarcaVehiculoADD.Location = new System.Drawing.Point(125, 81);
-            this.MarcaVehiculoADD.Margin = new System.Windows.Forms.Padding(4);
+            this.MarcaVehiculoADD.Location = new System.Drawing.Point(94, 66);
             this.MarcaVehiculoADD.Name = "MarcaVehiculoADD";
-            this.MarcaVehiculoADD.Size = new System.Drawing.Size(204, 22);
+            this.MarcaVehiculoADD.Size = new System.Drawing.Size(154, 20);
             this.MarcaVehiculoADD.TabIndex = 43;
             this.MarcaVehiculoADD.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.MarcaVehiculoADD_KeyPress);
             // 
             // ModeloVehiculoADD
             // 
-            this.ModeloVehiculoADD.Location = new System.Drawing.Point(125, 130);
-            this.ModeloVehiculoADD.Margin = new System.Windows.Forms.Padding(4);
+            this.ModeloVehiculoADD.Location = new System.Drawing.Point(94, 106);
             this.ModeloVehiculoADD.Name = "ModeloVehiculoADD";
-            this.ModeloVehiculoADD.Size = new System.Drawing.Size(204, 22);
+            this.ModeloVehiculoADD.Size = new System.Drawing.Size(154, 20);
             this.ModeloVehiculoADD.TabIndex = 42;
             this.ModeloVehiculoADD.TextChanged += new System.EventHandler(this.ModeloVehiculoADD_TextChanged);
             this.ModeloVehiculoADD.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ModeloVehiculoADD_KeyPress);
             // 
             // IDVehiculoADD
             // 
-            this.IDVehiculoADD.Location = new System.Drawing.Point(125, 33);
-            this.IDVehiculoADD.Margin = new System.Windows.Forms.Padding(4);
+            this.IDVehiculoADD.Location = new System.Drawing.Point(94, 27);
             this.IDVehiculoADD.Name = "IDVehiculoADD";
-            this.IDVehiculoADD.Size = new System.Drawing.Size(204, 22);
+            this.IDVehiculoADD.Size = new System.Drawing.Size(154, 20);
             this.IDVehiculoADD.TabIndex = 41;
             this.IDVehiculoADD.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.IDVehiculoADD_KeyPress);
             // 
             // label59
             // 
             this.label59.AutoSize = true;
-            this.label59.Location = new System.Drawing.Point(29, 134);
-            this.label59.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label59.Location = new System.Drawing.Point(22, 109);
             this.label59.Name = "label59";
-            this.label59.Size = new System.Drawing.Size(54, 17);
+            this.label59.Size = new System.Drawing.Size(42, 13);
             this.label59.TabIndex = 40;
             this.label59.Text = "Modelo";
             // 
             // label60
             // 
             this.label60.AutoSize = true;
-            this.label60.Location = new System.Drawing.Point(29, 81);
-            this.label60.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label60.Location = new System.Drawing.Point(22, 66);
             this.label60.Name = "label60";
-            this.label60.Size = new System.Drawing.Size(47, 17);
+            this.label60.Size = new System.Drawing.Size(37, 13);
             this.label60.TabIndex = 39;
             this.label60.Text = "Marca";
             // 
             // label61
             // 
             this.label61.AutoSize = true;
-            this.label61.Location = new System.Drawing.Point(29, 33);
-            this.label61.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label61.Location = new System.Drawing.Point(22, 27);
             this.label61.Name = "label61";
-            this.label61.Size = new System.Drawing.Size(21, 17);
+            this.label61.Size = new System.Drawing.Size(18, 13);
             this.label61.TabIndex = 38;
             this.label61.Text = "ID";
             // 
@@ -2324,11 +2163,10 @@
             this.tabPage30.Controls.Add(this.label65);
             this.tabPage30.Controls.Add(this.label66);
             this.tabPage30.Controls.Add(this.label67);
-            this.tabPage30.Location = new System.Drawing.Point(4, 25);
-            this.tabPage30.Margin = new System.Windows.Forms.Padding(4);
+            this.tabPage30.Location = new System.Drawing.Point(4, 22);
             this.tabPage30.Name = "tabPage30";
-            this.tabPage30.Padding = new System.Windows.Forms.Padding(4);
-            this.tabPage30.Size = new System.Drawing.Size(885, 364);
+            this.tabPage30.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPage30.Size = new System.Drawing.Size(662, 293);
             this.tabPage30.TabIndex = 1;
             this.tabPage30.Text = "Modificar";
             this.tabPage30.MouseClick += new System.Windows.Forms.MouseEventHandler(this.tabPage30_MouseClick);
@@ -2336,19 +2174,19 @@
             // IDVehiculoMod
             // 
             this.IDVehiculoMod.FormattingEnabled = true;
-            this.IDVehiculoMod.Location = new System.Drawing.Point(210, 43);
+            this.IDVehiculoMod.Location = new System.Drawing.Point(158, 35);
+            this.IDVehiculoMod.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.IDVehiculoMod.Name = "IDVehiculoMod";
-            this.IDVehiculoMod.Size = new System.Drawing.Size(204, 24);
+            this.IDVehiculoMod.Size = new System.Drawing.Size(154, 21);
             this.IDVehiculoMod.TabIndex = 64;
             this.IDVehiculoMod.SelectedIndexChanged += new System.EventHandler(this.IDVehiculoMod_SelectedIndexChanged);
             this.IDVehiculoMod.MouseClick += new System.Windows.Forms.MouseEventHandler(this.IDVehiculoMod_MouseClick);
             // 
             // button24
             // 
-            this.button24.Location = new System.Drawing.Point(439, 269);
-            this.button24.Margin = new System.Windows.Forms.Padding(4);
+            this.button24.Location = new System.Drawing.Point(329, 219);
             this.button24.Name = "button24";
-            this.button24.Size = new System.Drawing.Size(95, 28);
+            this.button24.Size = new System.Drawing.Size(71, 23);
             this.button24.TabIndex = 63;
             this.button24.Text = "Modificar";
             this.button24.UseVisualStyleBackColor = true;
@@ -2356,106 +2194,95 @@
             // 
             // cantidadvehiculoMod
             // 
-            this.cantidadvehiculoMod.Location = new System.Drawing.Point(210, 269);
-            this.cantidadvehiculoMod.Margin = new System.Windows.Forms.Padding(4);
+            this.cantidadvehiculoMod.Location = new System.Drawing.Point(158, 219);
             this.cantidadvehiculoMod.Name = "cantidadvehiculoMod";
-            this.cantidadvehiculoMod.Size = new System.Drawing.Size(204, 22);
+            this.cantidadvehiculoMod.Size = new System.Drawing.Size(154, 20);
             this.cantidadvehiculoMod.TabIndex = 62;
             this.cantidadvehiculoMod.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cantidadvehiculoMod_KeyPress);
             // 
             // label62
             // 
             this.label62.AutoSize = true;
-            this.label62.Location = new System.Drawing.Point(114, 277);
-            this.label62.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label62.Location = new System.Drawing.Point(86, 225);
             this.label62.Name = "label62";
-            this.label62.Size = new System.Drawing.Size(64, 17);
+            this.label62.Size = new System.Drawing.Size(49, 13);
             this.label62.TabIndex = 61;
             this.label62.Text = "Cantidad";
             // 
             // PreciovehiculoMod
             // 
-            this.PreciovehiculoMod.Location = new System.Drawing.Point(210, 229);
-            this.PreciovehiculoMod.Margin = new System.Windows.Forms.Padding(4);
+            this.PreciovehiculoMod.Location = new System.Drawing.Point(158, 186);
             this.PreciovehiculoMod.Name = "PreciovehiculoMod";
-            this.PreciovehiculoMod.Size = new System.Drawing.Size(204, 22);
+            this.PreciovehiculoMod.Size = new System.Drawing.Size(154, 20);
             this.PreciovehiculoMod.TabIndex = 60;
             this.PreciovehiculoMod.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.PreciovehiculoMod_KeyPress);
             // 
             // label63
             // 
             this.label63.AutoSize = true;
-            this.label63.Location = new System.Drawing.Point(114, 233);
-            this.label63.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label63.Location = new System.Drawing.Point(86, 189);
             this.label63.Name = "label63";
-            this.label63.Size = new System.Drawing.Size(48, 17);
+            this.label63.Size = new System.Drawing.Size(37, 13);
             this.label63.TabIndex = 59;
             this.label63.Text = "Precio";
             // 
             // TipovehiculoMod
             // 
-            this.TipovehiculoMod.Location = new System.Drawing.Point(210, 186);
-            this.TipovehiculoMod.Margin = new System.Windows.Forms.Padding(4);
+            this.TipovehiculoMod.Location = new System.Drawing.Point(158, 151);
             this.TipovehiculoMod.Name = "TipovehiculoMod";
-            this.TipovehiculoMod.Size = new System.Drawing.Size(204, 22);
+            this.TipovehiculoMod.Size = new System.Drawing.Size(154, 20);
             this.TipovehiculoMod.TabIndex = 58;
             this.TipovehiculoMod.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TipovehiculoMod_KeyPress);
             // 
             // label64
             // 
             this.label64.AutoSize = true;
-            this.label64.Location = new System.Drawing.Point(114, 186);
-            this.label64.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label64.Location = new System.Drawing.Point(86, 151);
             this.label64.Name = "label64";
-            this.label64.Size = new System.Drawing.Size(36, 17);
+            this.label64.Size = new System.Drawing.Size(28, 13);
             this.label64.TabIndex = 57;
             this.label64.Text = "Tipo";
             // 
             // MarcavehiculoMod
             // 
-            this.MarcavehiculoMod.Location = new System.Drawing.Point(210, 98);
-            this.MarcavehiculoMod.Margin = new System.Windows.Forms.Padding(4);
+            this.MarcavehiculoMod.Location = new System.Drawing.Point(158, 80);
             this.MarcavehiculoMod.Name = "MarcavehiculoMod";
-            this.MarcavehiculoMod.Size = new System.Drawing.Size(204, 22);
+            this.MarcavehiculoMod.Size = new System.Drawing.Size(154, 20);
             this.MarcavehiculoMod.TabIndex = 56;
             this.MarcavehiculoMod.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.MarcavehiculoMod_KeyPress);
             // 
             // ModeloVehiculoMod
             // 
-            this.ModeloVehiculoMod.Location = new System.Drawing.Point(210, 147);
-            this.ModeloVehiculoMod.Margin = new System.Windows.Forms.Padding(4);
+            this.ModeloVehiculoMod.Location = new System.Drawing.Point(158, 119);
             this.ModeloVehiculoMod.Name = "ModeloVehiculoMod";
-            this.ModeloVehiculoMod.Size = new System.Drawing.Size(204, 22);
+            this.ModeloVehiculoMod.Size = new System.Drawing.Size(154, 20);
             this.ModeloVehiculoMod.TabIndex = 55;
             this.ModeloVehiculoMod.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ModeloVehiculoMod_KeyPress);
             // 
             // label65
             // 
             this.label65.AutoSize = true;
-            this.label65.Location = new System.Drawing.Point(114, 150);
-            this.label65.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label65.Location = new System.Drawing.Point(86, 122);
             this.label65.Name = "label65";
-            this.label65.Size = new System.Drawing.Size(54, 17);
+            this.label65.Size = new System.Drawing.Size(42, 13);
             this.label65.TabIndex = 53;
             this.label65.Text = "Modelo";
             // 
             // label66
             // 
             this.label66.AutoSize = true;
-            this.label66.Location = new System.Drawing.Point(114, 98);
-            this.label66.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label66.Location = new System.Drawing.Point(86, 80);
             this.label66.Name = "label66";
-            this.label66.Size = new System.Drawing.Size(47, 17);
+            this.label66.Size = new System.Drawing.Size(37, 13);
             this.label66.TabIndex = 52;
             this.label66.Text = "Marca";
             // 
             // label67
             // 
             this.label67.AutoSize = true;
-            this.label67.Location = new System.Drawing.Point(114, 50);
-            this.label67.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label67.Location = new System.Drawing.Point(86, 41);
             this.label67.Name = "label67";
-            this.label67.Size = new System.Drawing.Size(21, 17);
+            this.label67.Size = new System.Drawing.Size(18, 13);
             this.label67.TabIndex = 51;
             this.label67.Text = "ID";
             // 
@@ -2465,11 +2292,10 @@
             this.tabPage31.Controls.Add(this.IDvehiculoDelete);
             this.tabPage31.Controls.Add(this.button25);
             this.tabPage31.Controls.Add(this.label73);
-            this.tabPage31.Location = new System.Drawing.Point(4, 25);
-            this.tabPage31.Margin = new System.Windows.Forms.Padding(4);
+            this.tabPage31.Location = new System.Drawing.Point(4, 22);
             this.tabPage31.Name = "tabPage31";
-            this.tabPage31.Padding = new System.Windows.Forms.Padding(4);
-            this.tabPage31.Size = new System.Drawing.Size(885, 364);
+            this.tabPage31.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPage31.Size = new System.Drawing.Size(662, 293);
             this.tabPage31.TabIndex = 2;
             this.tabPage31.Text = "Eliminar";
             this.tabPage31.MouseClick += new System.Windows.Forms.MouseEventHandler(this.tabPage31_MouseClick);
@@ -2477,19 +2303,19 @@
             // IDvehiculoDelete
             // 
             this.IDvehiculoDelete.FormattingEnabled = true;
-            this.IDvehiculoDelete.Location = new System.Drawing.Point(120, 73);
+            this.IDvehiculoDelete.Location = new System.Drawing.Point(90, 59);
+            this.IDvehiculoDelete.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.IDvehiculoDelete.Name = "IDvehiculoDelete";
-            this.IDvehiculoDelete.Size = new System.Drawing.Size(222, 24);
+            this.IDvehiculoDelete.Size = new System.Drawing.Size(168, 21);
             this.IDvehiculoDelete.TabIndex = 64;
             this.IDvehiculoDelete.SelectedIndexChanged += new System.EventHandler(this.IDvehiculoDelete_SelectedIndexChanged);
             this.IDvehiculoDelete.MouseClick += new System.Windows.Forms.MouseEventHandler(this.IDvehiculoDelete_MouseClick);
             // 
             // button25
             // 
-            this.button25.Location = new System.Drawing.Point(247, 124);
-            this.button25.Margin = new System.Windows.Forms.Padding(4);
+            this.button25.Location = new System.Drawing.Point(185, 101);
             this.button25.Name = "button25";
-            this.button25.Size = new System.Drawing.Size(95, 28);
+            this.button25.Size = new System.Drawing.Size(71, 23);
             this.button25.TabIndex = 63;
             this.button25.Text = "Eliminar";
             this.button25.UseVisualStyleBackColor = true;
@@ -2498,21 +2324,19 @@
             // label73
             // 
             this.label73.AutoSize = true;
-            this.label73.Location = new System.Drawing.Point(40, 76);
-            this.label73.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label73.Location = new System.Drawing.Point(30, 62);
             this.label73.Name = "label73";
-            this.label73.Size = new System.Drawing.Size(21, 17);
+            this.label73.Size = new System.Drawing.Size(18, 13);
             this.label73.TabIndex = 51;
             this.label73.Text = "ID";
             // 
             // tabPage9
             // 
             this.tabPage9.Controls.Add(this.tabControl9);
-            this.tabPage9.Location = new System.Drawing.Point(4, 25);
-            this.tabPage9.Margin = new System.Windows.Forms.Padding(4);
+            this.tabPage9.Location = new System.Drawing.Point(4, 22);
             this.tabPage9.Name = "tabPage9";
-            this.tabPage9.Padding = new System.Windows.Forms.Padding(4);
-            this.tabPage9.Size = new System.Drawing.Size(747, 401);
+            this.tabPage9.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPage9.Size = new System.Drawing.Size(558, 323);
             this.tabPage9.TabIndex = 8;
             this.tabPage9.Text = "Reportes";
             this.tabPage9.UseVisualStyleBackColor = true;
@@ -2527,10 +2351,9 @@
             this.tabControl9.Controls.Add(this.tabPage38);
             this.tabControl9.Controls.Add(this.tabPage39);
             this.tabControl9.Location = new System.Drawing.Point(0, 2);
-            this.tabControl9.Margin = new System.Windows.Forms.Padding(4);
             this.tabControl9.Name = "tabControl9";
             this.tabControl9.SelectedIndex = 0;
-            this.tabControl9.Size = new System.Drawing.Size(756, 413);
+            this.tabControl9.Size = new System.Drawing.Size(567, 336);
             this.tabControl9.TabIndex = 0;
             // 
             // tabPage32
@@ -2538,11 +2361,10 @@
             this.tabPage32.Controls.Add(this.label72);
             this.tabPage32.Controls.Add(this.comboboxRep1);
             this.tabPage32.Controls.Add(this.chart1);
-            this.tabPage32.Location = new System.Drawing.Point(4, 25);
-            this.tabPage32.Margin = new System.Windows.Forms.Padding(4);
+            this.tabPage32.Location = new System.Drawing.Point(4, 22);
             this.tabPage32.Name = "tabPage32";
-            this.tabPage32.Padding = new System.Windows.Forms.Padding(4);
-            this.tabPage32.Size = new System.Drawing.Size(748, 384);
+            this.tabPage32.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPage32.Size = new System.Drawing.Size(559, 310);
             this.tabPage32.TabIndex = 0;
             this.tabPage32.Text = "Reporte 1";
             this.tabPage32.UseVisualStyleBackColor = true;
@@ -2551,9 +2373,10 @@
             // label72
             // 
             this.label72.AutoSize = true;
-            this.label72.Location = new System.Drawing.Point(56, 19);
+            this.label72.Location = new System.Drawing.Point(42, 15);
+            this.label72.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label72.Name = "label72";
-            this.label72.Size = new System.Drawing.Size(120, 17);
+            this.label72.Size = new System.Drawing.Size(90, 13);
             this.label72.TabIndex = 37;
             this.label72.Text = "Nombre del hotel:";
             this.label72.Click += new System.EventHandler(this.label72_Click);
@@ -2562,10 +2385,9 @@
             // 
             this.comboboxRep1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboboxRep1.FormattingEnabled = true;
-            this.comboboxRep1.Location = new System.Drawing.Point(183, 16);
-            this.comboboxRep1.Margin = new System.Windows.Forms.Padding(4);
+            this.comboboxRep1.Location = new System.Drawing.Point(137, 13);
             this.comboboxRep1.Name = "comboboxRep1";
-            this.comboboxRep1.Size = new System.Drawing.Size(204, 24);
+            this.comboboxRep1.Size = new System.Drawing.Size(154, 21);
             this.comboboxRep1.TabIndex = 36;
             this.comboboxRep1.SelectedIndexChanged += new System.EventHandler(this.comboboxRep1_SelectedIndexChanged);
             this.comboboxRep1.SelectedValueChanged += new System.EventHandler(this.comboboxRep1_SelectedValueChanged);
@@ -2573,14 +2395,15 @@
             // 
             // chart1
             // 
-            chartArea15.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea15);
+            chartArea1.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea1);
             this.chart1.Cursor = System.Windows.Forms.Cursors.No;
-            legend15.Name = "Legend1";
-            this.chart1.Legends.Add(legend15);
-            this.chart1.Location = new System.Drawing.Point(56, 50);
+            legend1.Name = "Legend1";
+            this.chart1.Legends.Add(legend1);
+            this.chart1.Location = new System.Drawing.Point(42, 41);
+            this.chart1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.chart1.Name = "chart1";
-            this.chart1.Size = new System.Drawing.Size(331, 298);
+            this.chart1.Size = new System.Drawing.Size(248, 242);
             this.chart1.TabIndex = 35;
             this.chart1.Text = "chart1";
             this.chart1.Click += new System.EventHandler(this.chart1_Click);
@@ -2590,11 +2413,10 @@
             this.tabPage33.Controls.Add(this.label74);
             this.tabPage33.Controls.Add(this.rep2);
             this.tabPage33.Controls.Add(this.chart2);
-            this.tabPage33.Location = new System.Drawing.Point(4, 25);
-            this.tabPage33.Margin = new System.Windows.Forms.Padding(4);
+            this.tabPage33.Location = new System.Drawing.Point(4, 22);
             this.tabPage33.Name = "tabPage33";
-            this.tabPage33.Padding = new System.Windows.Forms.Padding(4);
-            this.tabPage33.Size = new System.Drawing.Size(748, 384);
+            this.tabPage33.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPage33.Size = new System.Drawing.Size(559, 310);
             this.tabPage33.TabIndex = 1;
             this.tabPage33.Text = "Reporte 2";
             this.tabPage33.UseVisualStyleBackColor = true;
@@ -2602,9 +2424,10 @@
             // label74
             // 
             this.label74.AutoSize = true;
-            this.label74.Location = new System.Drawing.Point(68, 27);
+            this.label74.Location = new System.Drawing.Point(51, 22);
+            this.label74.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label74.Name = "label74";
-            this.label74.Size = new System.Drawing.Size(120, 17);
+            this.label74.Size = new System.Drawing.Size(90, 13);
             this.label74.TabIndex = 40;
             this.label74.Text = "Nombre del hotel:";
             // 
@@ -2612,24 +2435,25 @@
             // 
             this.rep2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.rep2.FormattingEnabled = true;
-            this.rep2.Location = new System.Drawing.Point(195, 24);
-            this.rep2.Margin = new System.Windows.Forms.Padding(4);
+            this.rep2.Location = new System.Drawing.Point(146, 20);
             this.rep2.Name = "rep2";
-            this.rep2.Size = new System.Drawing.Size(204, 24);
+            this.rep2.Size = new System.Drawing.Size(154, 21);
             this.rep2.TabIndex = 39;
+            this.rep2.SelectedIndexChanged += new System.EventHandler(this.rep2_SelectedIndexChanged);
             this.rep2.SelectedValueChanged += new System.EventHandler(this.rep2_SelectedValueChanged);
             this.rep2.Click += new System.EventHandler(this.rep2_Click);
             // 
             // chart2
             // 
-            chartArea16.Name = "ChartArea1";
-            this.chart2.ChartAreas.Add(chartArea16);
+            chartArea2.Name = "ChartArea1";
+            this.chart2.ChartAreas.Add(chartArea2);
             this.chart2.Cursor = System.Windows.Forms.Cursors.No;
-            legend16.Name = "Legend1";
-            this.chart2.Legends.Add(legend16);
-            this.chart2.Location = new System.Drawing.Point(68, 58);
+            legend2.Name = "Legend1";
+            this.chart2.Legends.Add(legend2);
+            this.chart2.Location = new System.Drawing.Point(51, 47);
+            this.chart2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.chart2.Name = "chart2";
-            this.chart2.Size = new System.Drawing.Size(331, 298);
+            this.chart2.Size = new System.Drawing.Size(248, 242);
             this.chart2.TabIndex = 38;
             this.chart2.Text = "chart2";
             // 
@@ -2639,11 +2463,10 @@
             this.tabPage34.Controls.Add(this.label75);
             this.tabPage34.Controls.Add(this.comboBox1);
             this.tabPage34.Controls.Add(this.chart3);
-            this.tabPage34.Location = new System.Drawing.Point(4, 25);
-            this.tabPage34.Margin = new System.Windows.Forms.Padding(4);
+            this.tabPage34.Location = new System.Drawing.Point(4, 22);
             this.tabPage34.Name = "tabPage34";
-            this.tabPage34.Padding = new System.Windows.Forms.Padding(4);
-            this.tabPage34.Size = new System.Drawing.Size(748, 384);
+            this.tabPage34.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPage34.Size = new System.Drawing.Size(559, 310);
             this.tabPage34.TabIndex = 2;
             this.tabPage34.Text = "Reporte 3";
             this.tabPage34.UseVisualStyleBackColor = true;
@@ -2651,42 +2474,44 @@
             // label76
             // 
             this.label76.AutoSize = true;
-            this.label76.Location = new System.Drawing.Point(98, 24);
+            this.label76.Location = new System.Drawing.Point(74, 20);
+            this.label76.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label76.Name = "label76";
-            this.label76.Size = new System.Drawing.Size(115, 17);
+            this.label76.Size = new System.Drawing.Size(86, 13);
             this.label76.TabIndex = 44;
             this.label76.Text = "Nombre del pais:";
             // 
             // label75
             // 
             this.label75.AutoSize = true;
-            this.label75.Location = new System.Drawing.Point(101, 24);
+            this.label75.Location = new System.Drawing.Point(76, 20);
+            this.label75.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label75.Name = "label75";
-            this.label75.Size = new System.Drawing.Size(0, 17);
+            this.label75.Size = new System.Drawing.Size(0, 13);
             this.label75.TabIndex = 43;
             // 
             // comboBox1
             // 
             this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(228, 21);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.comboBox1.Location = new System.Drawing.Point(171, 17);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(204, 24);
+            this.comboBox1.Size = new System.Drawing.Size(154, 21);
             this.comboBox1.TabIndex = 42;
             this.comboBox1.SelectedValueChanged += new System.EventHandler(this.comboBox1_SelectedValueChanged);
             this.comboBox1.Click += new System.EventHandler(this.comboBox1_Click);
             // 
             // chart3
             // 
-            chartArea17.Name = "ChartArea1";
-            this.chart3.ChartAreas.Add(chartArea17);
+            chartArea3.Name = "ChartArea1";
+            this.chart3.ChartAreas.Add(chartArea3);
             this.chart3.Cursor = System.Windows.Forms.Cursors.No;
-            legend17.Name = "Legend1";
-            this.chart3.Legends.Add(legend17);
-            this.chart3.Location = new System.Drawing.Point(101, 55);
+            legend3.Name = "Legend1";
+            this.chart3.Legends.Add(legend3);
+            this.chart3.Location = new System.Drawing.Point(76, 45);
+            this.chart3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.chart3.Name = "chart3";
-            this.chart3.Size = new System.Drawing.Size(331, 298);
+            this.chart3.Size = new System.Drawing.Size(248, 242);
             this.chart3.TabIndex = 41;
             // 
             // tabPage36
@@ -2696,11 +2521,10 @@
             this.tabPage36.Controls.Add(this.dateTimePicker1);
             this.tabPage36.Controls.Add(this.label77);
             this.tabPage36.Controls.Add(this.chart4);
-            this.tabPage36.Location = new System.Drawing.Point(4, 25);
-            this.tabPage36.Margin = new System.Windows.Forms.Padding(4);
+            this.tabPage36.Location = new System.Drawing.Point(4, 22);
             this.tabPage36.Name = "tabPage36";
-            this.tabPage36.Padding = new System.Windows.Forms.Padding(4);
-            this.tabPage36.Size = new System.Drawing.Size(748, 384);
+            this.tabPage36.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPage36.Size = new System.Drawing.Size(559, 310);
             this.tabPage36.TabIndex = 3;
             this.tabPage36.Text = "Reporte 4";
             this.tabPage36.UseVisualStyleBackColor = true;
@@ -2708,9 +2532,10 @@
             // label78
             // 
             this.label78.AutoSize = true;
-            this.label78.Location = new System.Drawing.Point(397, 20);
+            this.label78.Location = new System.Drawing.Point(298, 16);
+            this.label78.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label78.Name = "label78";
-            this.label78.Size = new System.Drawing.Size(16, 17);
+            this.label78.Size = new System.Drawing.Size(13, 13);
             this.label78.TabIndex = 50;
             this.label78.Text = "a";
             // 
@@ -2718,9 +2543,10 @@
             // 
             this.dateTimePicker2.CustomFormat = "dd MMMM yyyy";
             this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker2.Location = new System.Drawing.Point(419, 15);
+            this.dateTimePicker2.Location = new System.Drawing.Point(314, 12);
+            this.dateTimePicker2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(161, 22);
+            this.dateTimePicker2.Size = new System.Drawing.Size(122, 20);
             this.dateTimePicker2.TabIndex = 49;
             this.dateTimePicker2.ValueChanged += new System.EventHandler(this.dateTimePicker2_ValueChanged);
             // 
@@ -2728,30 +2554,33 @@
             // 
             this.dateTimePicker1.CustomFormat = "dd MMMM yyyy";
             this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker1.Location = new System.Drawing.Point(230, 15);
+            this.dateTimePicker1.Location = new System.Drawing.Point(172, 12);
+            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(161, 22);
+            this.dateTimePicker1.Size = new System.Drawing.Size(122, 20);
             this.dateTimePicker1.TabIndex = 48;
             // 
             // label77
             // 
             this.label77.AutoSize = true;
-            this.label77.Location = new System.Drawing.Point(104, 20);
+            this.label77.Location = new System.Drawing.Point(78, 16);
+            this.label77.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label77.Name = "label77";
-            this.label77.Size = new System.Drawing.Size(120, 17);
+            this.label77.Size = new System.Drawing.Size(92, 13);
             this.label77.TabIndex = 47;
             this.label77.Text = "Rango de fechas:";
             // 
             // chart4
             // 
-            chartArea18.Name = "ChartArea1";
-            this.chart4.ChartAreas.Add(chartArea18);
+            chartArea4.Name = "ChartArea1";
+            this.chart4.ChartAreas.Add(chartArea4);
             this.chart4.Cursor = System.Windows.Forms.Cursors.No;
-            legend18.Name = "Legend1";
-            this.chart4.Legends.Add(legend18);
-            this.chart4.Location = new System.Drawing.Point(176, 51);
+            legend4.Name = "Legend1";
+            this.chart4.Legends.Add(legend4);
+            this.chart4.Location = new System.Drawing.Point(132, 41);
+            this.chart4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.chart4.Name = "chart4";
-            this.chart4.Size = new System.Drawing.Size(331, 298);
+            this.chart4.Size = new System.Drawing.Size(248, 242);
             this.chart4.TabIndex = 45;
             // 
             // tabPage37
@@ -2761,11 +2590,10 @@
             this.tabPage37.Controls.Add(this.dateTimePicker4);
             this.tabPage37.Controls.Add(this.label79);
             this.tabPage37.Controls.Add(this.chart5);
-            this.tabPage37.Location = new System.Drawing.Point(4, 25);
-            this.tabPage37.Margin = new System.Windows.Forms.Padding(4);
+            this.tabPage37.Location = new System.Drawing.Point(4, 22);
             this.tabPage37.Name = "tabPage37";
-            this.tabPage37.Padding = new System.Windows.Forms.Padding(4);
-            this.tabPage37.Size = new System.Drawing.Size(748, 384);
+            this.tabPage37.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPage37.Size = new System.Drawing.Size(559, 310);
             this.tabPage37.TabIndex = 4;
             this.tabPage37.Text = "Reporte 5";
             this.tabPage37.UseVisualStyleBackColor = true;
@@ -2773,9 +2601,10 @@
             // label80
             // 
             this.label80.AutoSize = true;
-            this.label80.Location = new System.Drawing.Point(429, 30);
+            this.label80.Location = new System.Drawing.Point(322, 24);
+            this.label80.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label80.Name = "label80";
-            this.label80.Size = new System.Drawing.Size(16, 17);
+            this.label80.Size = new System.Drawing.Size(13, 13);
             this.label80.TabIndex = 54;
             this.label80.Text = "a";
             // 
@@ -2783,9 +2612,10 @@
             // 
             this.dateTimePicker3.CustomFormat = "dd MMMM yyyy";
             this.dateTimePicker3.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker3.Location = new System.Drawing.Point(451, 25);
+            this.dateTimePicker3.Location = new System.Drawing.Point(338, 20);
+            this.dateTimePicker3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dateTimePicker3.Name = "dateTimePicker3";
-            this.dateTimePicker3.Size = new System.Drawing.Size(161, 22);
+            this.dateTimePicker3.Size = new System.Drawing.Size(122, 20);
             this.dateTimePicker3.TabIndex = 53;
             this.dateTimePicker3.ValueChanged += new System.EventHandler(this.dateTimePicker3_ValueChanged);
             // 
@@ -2793,30 +2623,33 @@
             // 
             this.dateTimePicker4.CustomFormat = "dd MMMM yyyy";
             this.dateTimePicker4.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker4.Location = new System.Drawing.Point(262, 25);
+            this.dateTimePicker4.Location = new System.Drawing.Point(196, 20);
+            this.dateTimePicker4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dateTimePicker4.Name = "dateTimePicker4";
-            this.dateTimePicker4.Size = new System.Drawing.Size(161, 22);
+            this.dateTimePicker4.Size = new System.Drawing.Size(122, 20);
             this.dateTimePicker4.TabIndex = 52;
             // 
             // label79
             // 
             this.label79.AutoSize = true;
-            this.label79.Location = new System.Drawing.Point(136, 30);
+            this.label79.Location = new System.Drawing.Point(102, 24);
+            this.label79.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label79.Name = "label79";
-            this.label79.Size = new System.Drawing.Size(120, 17);
+            this.label79.Size = new System.Drawing.Size(92, 13);
             this.label79.TabIndex = 51;
             this.label79.Text = "Rango de fechas:";
             // 
             // chart5
             // 
-            chartArea19.Name = "ChartArea1";
-            this.chart5.ChartAreas.Add(chartArea19);
+            chartArea5.Name = "ChartArea1";
+            this.chart5.ChartAreas.Add(chartArea5);
             this.chart5.Cursor = System.Windows.Forms.Cursors.No;
-            legend19.Name = "Legend1";
-            this.chart5.Legends.Add(legend19);
-            this.chart5.Location = new System.Drawing.Point(208, 61);
+            legend5.Name = "Legend1";
+            this.chart5.Legends.Add(legend5);
+            this.chart5.Location = new System.Drawing.Point(156, 50);
+            this.chart5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.chart5.Name = "chart5";
-            this.chart5.Size = new System.Drawing.Size(331, 298);
+            this.chart5.Size = new System.Drawing.Size(248, 242);
             this.chart5.TabIndex = 50;
             // 
             // tabPage38
@@ -2824,11 +2657,10 @@
             this.tabPage38.Controls.Add(this.label81);
             this.tabPage38.Controls.Add(this.comboBox2);
             this.tabPage38.Controls.Add(this.chart6);
-            this.tabPage38.Location = new System.Drawing.Point(4, 25);
-            this.tabPage38.Margin = new System.Windows.Forms.Padding(4);
+            this.tabPage38.Location = new System.Drawing.Point(4, 22);
             this.tabPage38.Name = "tabPage38";
-            this.tabPage38.Padding = new System.Windows.Forms.Padding(4);
-            this.tabPage38.Size = new System.Drawing.Size(748, 384);
+            this.tabPage38.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPage38.Size = new System.Drawing.Size(559, 310);
             this.tabPage38.TabIndex = 5;
             this.tabPage38.Text = "Reporte 6";
             this.tabPage38.UseVisualStyleBackColor = true;
@@ -2836,9 +2668,10 @@
             // label81
             // 
             this.label81.AutoSize = true;
-            this.label81.Location = new System.Drawing.Point(52, 27);
+            this.label81.Location = new System.Drawing.Point(39, 22);
+            this.label81.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label81.Name = "label81";
-            this.label81.Size = new System.Drawing.Size(127, 17);
+            this.label81.Size = new System.Drawing.Size(97, 13);
             this.label81.TabIndex = 40;
             this.label81.Text = "marca de vehiculo:";
             // 
@@ -2846,24 +2679,24 @@
             // 
             this.comboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(197, 27);
-            this.comboBox2.Margin = new System.Windows.Forms.Padding(4);
+            this.comboBox2.Location = new System.Drawing.Point(148, 22);
             this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(204, 24);
+            this.comboBox2.Size = new System.Drawing.Size(154, 21);
             this.comboBox2.TabIndex = 39;
             this.comboBox2.SelectedValueChanged += new System.EventHandler(this.comboBox2_SelectedValueChanged);
             this.comboBox2.Click += new System.EventHandler(this.comboBox2_Click);
             // 
             // chart6
             // 
-            chartArea20.Name = "ChartArea1";
-            this.chart6.ChartAreas.Add(chartArea20);
+            chartArea6.Name = "ChartArea1";
+            this.chart6.ChartAreas.Add(chartArea6);
             this.chart6.Cursor = System.Windows.Forms.Cursors.No;
-            legend20.Name = "Legend1";
-            this.chart6.Legends.Add(legend20);
-            this.chart6.Location = new System.Drawing.Point(70, 61);
+            legend6.Name = "Legend1";
+            this.chart6.Legends.Add(legend6);
+            this.chart6.Location = new System.Drawing.Point(52, 50);
+            this.chart6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.chart6.Name = "chart6";
-            this.chart6.Size = new System.Drawing.Size(331, 298);
+            this.chart6.Size = new System.Drawing.Size(248, 242);
             this.chart6.TabIndex = 38;
             this.chart6.Text = "chart6";
             // 
@@ -2871,11 +2704,10 @@
             // 
             this.tabPage39.Controls.Add(this.label82);
             this.tabPage39.Controls.Add(this.chart7);
-            this.tabPage39.Location = new System.Drawing.Point(4, 25);
-            this.tabPage39.Margin = new System.Windows.Forms.Padding(4);
+            this.tabPage39.Location = new System.Drawing.Point(4, 22);
             this.tabPage39.Name = "tabPage39";
-            this.tabPage39.Padding = new System.Windows.Forms.Padding(4);
-            this.tabPage39.Size = new System.Drawing.Size(748, 384);
+            this.tabPage39.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPage39.Size = new System.Drawing.Size(559, 310);
             this.tabPage39.TabIndex = 6;
             this.tabPage39.Text = "Reporte 7";
             this.tabPage39.UseVisualStyleBackColor = true;
@@ -2883,22 +2715,24 @@
             // label82
             // 
             this.label82.AutoSize = true;
-            this.label82.Location = new System.Drawing.Point(61, 23);
+            this.label82.Location = new System.Drawing.Point(46, 19);
+            this.label82.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label82.Name = "label82";
-            this.label82.Size = new System.Drawing.Size(95, 17);
+            this.label82.Size = new System.Drawing.Size(72, 13);
             this.label82.TabIndex = 42;
             this.label82.Text = "Paises escala";
             // 
             // chart7
             // 
-            chartArea21.Name = "ChartArea1";
-            this.chart7.ChartAreas.Add(chartArea21);
+            chartArea7.Name = "ChartArea1";
+            this.chart7.ChartAreas.Add(chartArea7);
             this.chart7.Cursor = System.Windows.Forms.Cursors.No;
-            legend21.Name = "Legend1";
-            this.chart7.Legends.Add(legend21);
-            this.chart7.Location = new System.Drawing.Point(64, 58);
+            legend7.Name = "Legend1";
+            this.chart7.Legends.Add(legend7);
+            this.chart7.Location = new System.Drawing.Point(48, 47);
+            this.chart7.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.chart7.Name = "chart7";
-            this.chart7.Size = new System.Drawing.Size(574, 298);
+            this.chart7.Size = new System.Drawing.Size(430, 242);
             this.chart7.TabIndex = 39;
             this.chart7.Text = "chart7";
             this.chart7.Click += new System.EventHandler(this.chart7_Click);
@@ -2906,10 +2740,11 @@
             // tabPage40
             // 
             this.tabPage40.Controls.Add(this.pictureBox2);
-            this.tabPage40.Location = new System.Drawing.Point(4, 25);
+            this.tabPage40.Location = new System.Drawing.Point(4, 22);
+            this.tabPage40.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tabPage40.Name = "tabPage40";
-            this.tabPage40.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage40.Size = new System.Drawing.Size(747, 401);
+            this.tabPage40.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPage40.Size = new System.Drawing.Size(558, 323);
             this.tabPage40.TabIndex = 9;
             this.tabPage40.Text = "Aeropuertos";
             this.tabPage40.UseVisualStyleBackColor = true;
@@ -2917,10 +2752,9 @@
             // pictureBox2
             // 
             this.pictureBox2.ErrorImage = ((System.Drawing.Image)(resources.GetObject("pictureBox2.ErrorImage")));
-            this.pictureBox2.Location = new System.Drawing.Point(-4, 0);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox2.Location = new System.Drawing.Point(-3, 0);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(757, 396);
+            this.pictureBox2.Size = new System.Drawing.Size(568, 322);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 3;
             this.pictureBox2.TabStop = false;
@@ -2929,10 +2763,9 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(13, 447);
-            this.button1.Margin = new System.Windows.Forms.Padding(4);
+            this.button1.Location = new System.Drawing.Point(10, 363);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(104, 28);
+            this.button1.Size = new System.Drawing.Size(78, 23);
             this.button1.TabIndex = 34;
             this.button1.Text = "Cerrar sesión";
             this.button1.UseVisualStyleBackColor = true;
@@ -2970,7 +2803,7 @@
             this.IDDELETEAeropuerto.Location = new System.Drawing.Point(174, 87);
             this.IDDELETEAeropuerto.Margin = new System.Windows.Forms.Padding(4);
             this.IDDELETEAeropuerto.Name = "IDDELETEAeropuerto";
-            this.IDDELETEAeropuerto.Size = new System.Drawing.Size(204, 22);
+            this.IDDELETEAeropuerto.Size = new System.Drawing.Size(204, 20);
             this.IDDELETEAeropuerto.TabIndex = 22;
             // 
             // button10
@@ -2991,7 +2824,7 @@
             this.ComboboxAeropuertoDelete.Location = new System.Drawing.Point(174, 45);
             this.ComboboxAeropuertoDelete.Margin = new System.Windows.Forms.Padding(4);
             this.ComboboxAeropuertoDelete.Name = "ComboboxAeropuertoDelete";
-            this.ComboboxAeropuertoDelete.Size = new System.Drawing.Size(204, 25);
+            this.ComboboxAeropuertoDelete.Size = new System.Drawing.Size(204, 21);
             this.ComboboxAeropuertoDelete.TabIndex = 26;
             this.ComboboxAeropuertoDelete.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
             this.ComboboxAeropuertoDelete.Click += new System.EventHandler(this.ComboboxAeropuertoDelete_Click);
@@ -3052,7 +2885,7 @@
             this.IDmodAeropuerto.Location = new System.Drawing.Point(99, 87);
             this.IDmodAeropuerto.Margin = new System.Windows.Forms.Padding(4);
             this.IDmodAeropuerto.Name = "IDmodAeropuerto";
-            this.IDmodAeropuerto.Size = new System.Drawing.Size(204, 22);
+            this.IDmodAeropuerto.Size = new System.Drawing.Size(204, 20);
             this.IDmodAeropuerto.TabIndex = 20;
             // 
             // modLocalidadAeropuerto
@@ -3060,7 +2893,7 @@
             this.modLocalidadAeropuerto.Location = new System.Drawing.Point(99, 184);
             this.modLocalidadAeropuerto.Margin = new System.Windows.Forms.Padding(4);
             this.modLocalidadAeropuerto.Name = "modLocalidadAeropuerto";
-            this.modLocalidadAeropuerto.Size = new System.Drawing.Size(204, 22);
+            this.modLocalidadAeropuerto.Size = new System.Drawing.Size(204, 20);
             this.modLocalidadAeropuerto.TabIndex = 21;
             this.modLocalidadAeropuerto.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.modLocalidadAeropuerto_KeyPress);
             // 
@@ -3069,7 +2902,7 @@
             this.nombreMODAeropuerto.Location = new System.Drawing.Point(99, 135);
             this.nombreMODAeropuerto.Margin = new System.Windows.Forms.Padding(4);
             this.nombreMODAeropuerto.Name = "nombreMODAeropuerto";
-            this.nombreMODAeropuerto.Size = new System.Drawing.Size(204, 22);
+            this.nombreMODAeropuerto.Size = new System.Drawing.Size(204, 20);
             this.nombreMODAeropuerto.TabIndex = 22;
             this.nombreMODAeropuerto.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.nombreMODAeropuerto_KeyPress);
             // 
@@ -3087,7 +2920,7 @@
             this.iataMODAeropuerto.Location = new System.Drawing.Point(99, 228);
             this.iataMODAeropuerto.Margin = new System.Windows.Forms.Padding(4);
             this.iataMODAeropuerto.Name = "iataMODAeropuerto";
-            this.iataMODAeropuerto.Size = new System.Drawing.Size(204, 22);
+            this.iataMODAeropuerto.Size = new System.Drawing.Size(204, 20);
             this.iataMODAeropuerto.TabIndex = 24;
             // 
             // AeropuertoMod
@@ -3097,7 +2930,7 @@
             this.AeropuertoMod.Location = new System.Drawing.Point(99, 39);
             this.AeropuertoMod.Margin = new System.Windows.Forms.Padding(4);
             this.AeropuertoMod.Name = "AeropuertoMod";
-            this.AeropuertoMod.Size = new System.Drawing.Size(204, 25);
+            this.AeropuertoMod.Size = new System.Drawing.Size(204, 21);
             this.AeropuertoMod.TabIndex = 25;
             this.AeropuertoMod.SelectedIndexChanged += new System.EventHandler(this.AeropuertoMod_SelectedIndexChanged);
             this.AeropuertoMod.Click += new System.EventHandler(this.AeropuertoMod_Click);
@@ -3157,7 +2990,7 @@
             this.IDaddAeropuerto.Location = new System.Drawing.Point(123, 39);
             this.IDaddAeropuerto.Margin = new System.Windows.Forms.Padding(4);
             this.IDaddAeropuerto.Name = "IDaddAeropuerto";
-            this.IDaddAeropuerto.Size = new System.Drawing.Size(204, 22);
+            this.IDaddAeropuerto.Size = new System.Drawing.Size(204, 20);
             this.IDaddAeropuerto.TabIndex = 11;
             // 
             // LOCALIDADddAeropuerto
@@ -3165,7 +2998,7 @@
             this.LOCALIDADddAeropuerto.Location = new System.Drawing.Point(123, 137);
             this.LOCALIDADddAeropuerto.Margin = new System.Windows.Forms.Padding(4);
             this.LOCALIDADddAeropuerto.Name = "LOCALIDADddAeropuerto";
-            this.LOCALIDADddAeropuerto.Size = new System.Drawing.Size(204, 22);
+            this.LOCALIDADddAeropuerto.Size = new System.Drawing.Size(204, 20);
             this.LOCALIDADddAeropuerto.TabIndex = 12;
             this.LOCALIDADddAeropuerto.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.LOCALIDADddAeropuerto_KeyPress);
             // 
@@ -3174,7 +3007,7 @@
             this.NombreaddAeropuerto.Location = new System.Drawing.Point(123, 87);
             this.NombreaddAeropuerto.Margin = new System.Windows.Forms.Padding(4);
             this.NombreaddAeropuerto.Name = "NombreaddAeropuerto";
-            this.NombreaddAeropuerto.Size = new System.Drawing.Size(204, 22);
+            this.NombreaddAeropuerto.Size = new System.Drawing.Size(204, 20);
             this.NombreaddAeropuerto.TabIndex = 13;
             this.NombreaddAeropuerto.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.NombreaddAeropuerto_KeyPress);
             // 
@@ -3192,18 +3025,17 @@
             this.IATAaddAeropuerto.Location = new System.Drawing.Point(123, 181);
             this.IATAaddAeropuerto.Margin = new System.Windows.Forms.Padding(4);
             this.IATAaddAeropuerto.Name = "IATAaddAeropuerto";
-            this.IATAaddAeropuerto.Size = new System.Drawing.Size(204, 22);
+            this.IATAaddAeropuerto.Size = new System.Drawing.Size(204, 20);
             this.IATAaddAeropuerto.TabIndex = 15;
             // 
             // Administrador
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(896, 480);
+            this.ClientSize = new System.Drawing.Size(672, 390);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.Paises);
             this.Controls.Add(this.pictureBox1);
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Administrador";
             this.Text = "Administrador";
             this.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Administrador_MouseClick);
