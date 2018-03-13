@@ -2704,6 +2704,10 @@ namespace WindowsFormsApp1
                     {
                         cantidad = cantidad + Convert.ToInt32(dr["cantidad_personas"].ToString());
                     }
+                    else if (dr["cantidad_personas"].ToString().Equals(""))
+                    {
+                        cantidad = cantidad + 0;
+                    }
                 }
             }
             conexion.Close();
