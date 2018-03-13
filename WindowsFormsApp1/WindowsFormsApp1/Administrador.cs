@@ -2698,5 +2698,67 @@ namespace WindowsFormsApp1
                 serie.Points.Add(puntos[i]);
             }
         }
+
+        private void dateTimePicker2_ValueChanged(object sender, EventArgs e)
+        {
+            int adulto = 0;
+            Conexion();
+            conexion.Open();
+            NpgsqlCommand cmd = new NpgsqlCommand("SELECT adultos from compra where fecha_inicio AFTER '" + dateTimePicker1.Value + "' AND fecha_final BEFORE '"+dateTimePicker2.Value+"'", conexion);
+            NpgsqlDataReader dr = cmd.ExecuteReader();
+            if (dr.HasRows)
+            {
+                while (dr.Read())
+                {
+                    adulto = adulto + Convert.ToInt32(dr["adultos"].ToString());
+                }
+            }
+            conexion.Close();
+            reporte4(adulto);
+        }
+
+        public void reporte4(int valor)
+        {
+            string[] series = { "Rango de fechas" };
+            int[] puntos = { valor };
+            chart3.Palette = ChartColorPalette.Pastel;
+            for (int i = 0; i < series.Length; i++)
+            {
+                Series serie = chart1.Series.Add(series[i]);
+                serie.Label = puntos[i].ToString();
+                serie.Points.Add(puntos[i]);
+            }
+        }
+
+        private void dateTimePicker3_ValueChanged(object sender, EventArgs e)
+        {
+            int menor = 0;
+            Conexion();
+            conexion.Open();
+            NpgsqlCommand cmd = new NpgsqlCommand("SELECT menores from compra where fecha_inicio AFTER '" + dateTimePicker4.Value + "' AND fecha_final BEFORE '" + dateTimePicker3.Value + "'", conexion);
+            NpgsqlDataReader dr = cmd.ExecuteReader();
+            if (dr.HasRows)
+            {
+                while (dr.Read())
+                {
+                    menor = menor + Convert.ToInt32(dr["menores"].ToString());
+                }
+            }
+            conexion.Close();
+            reporte5(menor);
+        }
+
+        public void reporte5(int valor)
+        {
+            string[] series = { "Rango de fechas" };
+            int[] puntos = { valor };
+            chart3.Palette = ChartColorPalette.Pastel;
+            for (int i = 0; i < series.Length; i++)
+            {
+                Series serie = chart1.Series.Add(series[i]);
+                serie.Label = puntos[i].ToString();
+                serie.Points.Add(puntos[i]);
+            }
+        }
     }
 }
