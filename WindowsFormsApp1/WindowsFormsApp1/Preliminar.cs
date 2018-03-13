@@ -111,7 +111,7 @@ namespace WindowsFormsApp1
             }
             else if (Validar.Equals("Vuelo"))
             {
-                double IVA = (Convert.ToDouble(Pvuelo)) * 0.13;
+                double IVA = Convert.ToDouble(Pvuelo) * 0.13;
                 dtpInicio.Value = fecha1;
                 dtpFinal.Value = fecha2;
                 dtpInicio.MaxDate = fecha1;
@@ -122,7 +122,22 @@ namespace WindowsFormsApp1
                 txtOrigen2.Text = txtDestino1.Text = Destino;
                 txtEscala.Text = Escala;
                 txtVueloP.Text = Pvuelo;
-                txtTotal.Text = Convert.ToString((Convert.ToDouble(Pvuelo)) + IVA);
+                txtTotal.Text = Convert.ToString(Convert.ToDouble(Pvuelo) + IVA);
+            }
+            else if (Validar.Equals("Alojamiento"))
+            {
+                double IVA = Convert.ToDouble(Photel) * 0.13;
+                dtpInicio.Value = fecha1;
+                dtpFinal.Value = fecha2;
+                dtpInicio.MaxDate = fecha1;
+                dtpInicio.MinDate = fecha1;
+                dtpFinal.MaxDate = fecha2;
+                dtpFinal.MinDate = fecha2;
+                txtHabitaciones.Text = Habitaciones;
+                txtHotelP.Text = Convert.ToString(Convert.ToInt32(Photel) * Convert.ToInt32(Habitaciones) * dias);
+                txtLugarH.Text = Hlugar;
+                txtHotel.Text = Hotel;
+                txtTotal.Text = Convert.ToString(Convert.ToDouble(Photel) + IVA);
             }
             
         }

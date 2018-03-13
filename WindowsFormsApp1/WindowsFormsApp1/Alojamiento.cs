@@ -149,7 +149,15 @@ namespace WindowsFormsApp1
 
         private void btnPreliminar_Click(object sender, EventArgs e)
         {
-
+            Preliminar.Validar = "Alojamiento";
+            Preliminar.fecha1 = dtpFecha1.Value;
+            Preliminar.fecha2 = dtpFecha2.Value;
+            Preliminar.Habitaciones = spnHabitaciones.Value.ToString();
+            Preliminar.Photel = precio;
+            Preliminar.Hlugar = lugar;
+            Preliminar.Hotel = nombre;
+            Preliminar ven = new Preliminar();
+            ven.Show();
         }
 
         private void dgvBusqueda_CellClick(object sender, DataGridViewCellEventArgs e)
