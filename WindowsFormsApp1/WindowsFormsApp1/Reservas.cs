@@ -31,6 +31,7 @@ namespace WindowsFormsApp1
         {
             try
             {
+                dgvReservas.DataSource = null;
                 reservas.Clear();
                 Conexion.Coneccion();
                 Conexion.conexion.Open();
