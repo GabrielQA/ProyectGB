@@ -236,6 +236,9 @@ namespace WindowsFormsApp1
 
         private void btnPreliminar_Click(object sender, EventArgs e)
         {
+            Preliminar.Personas = spnPasajeros.Value.ToString();
+            Preliminar.Adultos = spnAdultos.Value.ToString();
+            Preliminar.Menores = spnMenores.Value.ToString();
             if (boxHotel.Checked == true && boxAuto.Checked == true)
             {
                 Preliminar.Validar = "Ambos";

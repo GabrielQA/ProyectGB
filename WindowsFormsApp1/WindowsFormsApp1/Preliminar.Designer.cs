@@ -147,7 +147,7 @@
             this.dtpInicio.CustomFormat = "dd  MMMM yyyy";
             this.dtpInicio.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtpInicio.Location = new System.Drawing.Point(137, 20);
-            this.dtpInicio.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dtpInicio.Margin = new System.Windows.Forms.Padding(4);
             this.dtpInicio.Name = "dtpInicio";
             this.dtpInicio.Size = new System.Drawing.Size(176, 22);
             this.dtpInicio.TabIndex = 6;
@@ -157,7 +157,7 @@
             this.dtpFinal.CustomFormat = "dd  MMMM yyyy";
             this.dtpFinal.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtpFinal.Location = new System.Drawing.Point(461, 20);
-            this.dtpFinal.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dtpFinal.Margin = new System.Windows.Forms.Padding(4);
             this.dtpFinal.Name = "dtpFinal";
             this.dtpFinal.Size = new System.Drawing.Size(176, 22);
             this.dtpFinal.TabIndex = 7;
@@ -165,7 +165,7 @@
             // txtOrigen1
             // 
             this.txtOrigen1.Location = new System.Drawing.Point(137, 55);
-            this.txtOrigen1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtOrigen1.Margin = new System.Windows.Forms.Padding(4);
             this.txtOrigen1.Name = "txtOrigen1";
             this.txtOrigen1.ReadOnly = true;
             this.txtOrigen1.Size = new System.Drawing.Size(176, 22);
@@ -174,7 +174,7 @@
             // txtDestino1
             // 
             this.txtDestino1.Location = new System.Drawing.Point(137, 91);
-            this.txtDestino1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtDestino1.Margin = new System.Windows.Forms.Padding(4);
             this.txtDestino1.Name = "txtDestino1";
             this.txtDestino1.ReadOnly = true;
             this.txtDestino1.Size = new System.Drawing.Size(176, 22);
@@ -183,7 +183,7 @@
             // txtOrigen2
             // 
             this.txtOrigen2.Location = new System.Drawing.Point(461, 55);
-            this.txtOrigen2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtOrigen2.Margin = new System.Windows.Forms.Padding(4);
             this.txtOrigen2.Name = "txtOrigen2";
             this.txtOrigen2.ReadOnly = true;
             this.txtOrigen2.Size = new System.Drawing.Size(176, 22);
@@ -192,7 +192,7 @@
             // txtDestino2
             // 
             this.txtDestino2.Location = new System.Drawing.Point(461, 91);
-            this.txtDestino2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtDestino2.Margin = new System.Windows.Forms.Padding(4);
             this.txtDestino2.Name = "txtDestino2";
             this.txtDestino2.ReadOnly = true;
             this.txtDestino2.Size = new System.Drawing.Size(176, 22);
@@ -211,7 +211,7 @@
             // txtEscala
             // 
             this.txtEscala.Location = new System.Drawing.Point(137, 128);
-            this.txtEscala.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtEscala.Margin = new System.Windows.Forms.Padding(4);
             this.txtEscala.Name = "txtEscala";
             this.txtEscala.ReadOnly = true;
             this.txtEscala.Size = new System.Drawing.Size(176, 22);
@@ -240,7 +240,7 @@
             // txtHotel
             // 
             this.txtHotel.Location = new System.Drawing.Point(461, 127);
-            this.txtHotel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtHotel.Margin = new System.Windows.Forms.Padding(4);
             this.txtHotel.Name = "txtHotel";
             this.txtHotel.ReadOnly = true;
             this.txtHotel.Size = new System.Drawing.Size(136, 22);
@@ -249,7 +249,7 @@
             // txtVehiculo
             // 
             this.txtVehiculo.Location = new System.Drawing.Point(461, 162);
-            this.txtVehiculo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtVehiculo.Margin = new System.Windows.Forms.Padding(4);
             this.txtVehiculo.Name = "txtVehiculo";
             this.txtVehiculo.ReadOnly = true;
             this.txtVehiculo.Size = new System.Drawing.Size(136, 22);
@@ -258,7 +258,7 @@
             // btnHotel
             // 
             this.btnHotel.Location = new System.Drawing.Point(607, 124);
-            this.btnHotel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnHotel.Margin = new System.Windows.Forms.Padding(4);
             this.btnHotel.Name = "btnHotel";
             this.btnHotel.Size = new System.Drawing.Size(32, 28);
             this.btnHotel.TabIndex = 19;
@@ -269,7 +269,7 @@
             // btnVehiculo
             // 
             this.btnVehiculo.Location = new System.Drawing.Point(607, 160);
-            this.btnVehiculo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnVehiculo.Margin = new System.Windows.Forms.Padding(4);
             this.btnVehiculo.Name = "btnVehiculo";
             this.btnVehiculo.Size = new System.Drawing.Size(32, 28);
             this.btnVehiculo.TabIndex = 20;
@@ -290,7 +290,7 @@
             // txtTotal
             // 
             this.txtTotal.Location = new System.Drawing.Point(137, 162);
-            this.txtTotal.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtTotal.Margin = new System.Windows.Forms.Padding(4);
             this.txtTotal.Name = "txtTotal";
             this.txtTotal.ReadOnly = true;
             this.txtTotal.Size = new System.Drawing.Size(136, 22);
@@ -299,7 +299,7 @@
             // btnTotal
             // 
             this.btnTotal.Location = new System.Drawing.Point(283, 160);
-            this.btnTotal.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnTotal.Margin = new System.Windows.Forms.Padding(4);
             this.btnTotal.Name = "btnTotal";
             this.btnTotal.Size = new System.Drawing.Size(32, 28);
             this.btnTotal.TabIndex = 23;
@@ -317,7 +317,7 @@
             this.pnlTotal.Controls.Add(this.label12);
             this.pnlTotal.Controls.Add(this.label11);
             this.pnlTotal.Location = new System.Drawing.Point(36, 257);
-            this.pnlTotal.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnlTotal.Margin = new System.Windows.Forms.Padding(4);
             this.pnlTotal.Name = "pnlTotal";
             this.pnlTotal.Size = new System.Drawing.Size(176, 140);
             this.pnlTotal.TabIndex = 24;
@@ -335,7 +335,7 @@
             // txtVehiculoP
             // 
             this.txtVehiculoP.Location = new System.Drawing.Point(76, 108);
-            this.txtVehiculoP.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtVehiculoP.Margin = new System.Windows.Forms.Padding(4);
             this.txtVehiculoP.Name = "txtVehiculoP";
             this.txtVehiculoP.ReadOnly = true;
             this.txtVehiculoP.Size = new System.Drawing.Size(95, 22);
@@ -344,7 +344,7 @@
             // txtHotelP
             // 
             this.txtHotelP.Location = new System.Drawing.Point(76, 73);
-            this.txtHotelP.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtHotelP.Margin = new System.Windows.Forms.Padding(4);
             this.txtHotelP.Name = "txtHotelP";
             this.txtHotelP.ReadOnly = true;
             this.txtHotelP.Size = new System.Drawing.Size(95, 22);
@@ -353,7 +353,7 @@
             // txtVueloP
             // 
             this.txtVueloP.Location = new System.Drawing.Point(76, 37);
-            this.txtVueloP.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtVueloP.Margin = new System.Windows.Forms.Padding(4);
             this.txtVueloP.Name = "txtVueloP";
             this.txtVueloP.ReadOnly = true;
             this.txtVueloP.Size = new System.Drawing.Size(95, 22);
@@ -399,7 +399,7 @@
             this.pnlVehiculo.Controls.Add(this.label15);
             this.pnlVehiculo.Controls.Add(this.label16);
             this.pnlVehiculo.Location = new System.Drawing.Point(220, 257);
-            this.pnlVehiculo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnlVehiculo.Margin = new System.Windows.Forms.Padding(4);
             this.pnlVehiculo.Name = "pnlVehiculo";
             this.pnlVehiculo.Size = new System.Drawing.Size(187, 140);
             this.pnlVehiculo.TabIndex = 25;
@@ -417,7 +417,7 @@
             // txtCantidadV
             // 
             this.txtCantidadV.Location = new System.Drawing.Point(80, 108);
-            this.txtCantidadV.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtCantidadV.Margin = new System.Windows.Forms.Padding(4);
             this.txtCantidadV.Name = "txtCantidadV";
             this.txtCantidadV.ReadOnly = true;
             this.txtCantidadV.Size = new System.Drawing.Size(95, 22);
@@ -426,7 +426,7 @@
             // txtTipoV
             // 
             this.txtTipoV.Location = new System.Drawing.Point(80, 73);
-            this.txtTipoV.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtTipoV.Margin = new System.Windows.Forms.Padding(4);
             this.txtTipoV.Name = "txtTipoV";
             this.txtTipoV.ReadOnly = true;
             this.txtTipoV.Size = new System.Drawing.Size(95, 22);
@@ -435,7 +435,7 @@
             // txtModeloV
             // 
             this.txtModeloV.Location = new System.Drawing.Point(80, 37);
-            this.txtModeloV.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtModeloV.Margin = new System.Windows.Forms.Padding(4);
             this.txtModeloV.Name = "txtModeloV";
             this.txtModeloV.ReadOnly = true;
             this.txtModeloV.Size = new System.Drawing.Size(95, 22);
@@ -481,7 +481,7 @@
             this.pnlHotel.Controls.Add(this.label18);
             this.pnlHotel.Controls.Add(this.label19);
             this.pnlHotel.Location = new System.Drawing.Point(415, 257);
-            this.pnlHotel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnlHotel.Margin = new System.Windows.Forms.Padding(4);
             this.pnlHotel.Name = "pnlHotel";
             this.pnlHotel.Size = new System.Drawing.Size(201, 140);
             this.pnlHotel.TabIndex = 26;
@@ -499,7 +499,7 @@
             // btnFotoH
             // 
             this.btnFotoH.Location = new System.Drawing.Point(101, 105);
-            this.btnFotoH.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnFotoH.Margin = new System.Windows.Forms.Padding(4);
             this.btnFotoH.Name = "btnFotoH";
             this.btnFotoH.Size = new System.Drawing.Size(96, 28);
             this.btnFotoH.TabIndex = 17;
@@ -509,7 +509,7 @@
             // txtHabitaciones
             // 
             this.txtHabitaciones.Location = new System.Drawing.Point(101, 74);
-            this.txtHabitaciones.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtHabitaciones.Margin = new System.Windows.Forms.Padding(4);
             this.txtHabitaciones.Name = "txtHabitaciones";
             this.txtHabitaciones.ReadOnly = true;
             this.txtHabitaciones.Size = new System.Drawing.Size(95, 22);
@@ -518,7 +518,7 @@
             // txtLugarH
             // 
             this.txtLugarH.Location = new System.Drawing.Point(101, 38);
-            this.txtLugarH.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtLugarH.Margin = new System.Windows.Forms.Padding(4);
             this.txtLugarH.Name = "txtLugarH";
             this.txtLugarH.ReadOnly = true;
             this.txtLugarH.Size = new System.Drawing.Size(95, 22);
@@ -557,7 +557,7 @@
             // btnReservar
             // 
             this.btnReservar.Location = new System.Drawing.Point(119, 206);
-            this.btnReservar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnReservar.Margin = new System.Windows.Forms.Padding(4);
             this.btnReservar.Name = "btnReservar";
             this.btnReservar.Size = new System.Drawing.Size(100, 28);
             this.btnReservar.TabIndex = 27;
@@ -568,7 +568,7 @@
             // btnComprar
             // 
             this.btnComprar.Location = new System.Drawing.Point(443, 206);
-            this.btnComprar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnComprar.Margin = new System.Windows.Forms.Padding(4);
             this.btnComprar.Name = "btnComprar";
             this.btnComprar.Size = new System.Drawing.Size(100, 28);
             this.btnComprar.TabIndex = 28;
@@ -580,7 +580,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(655, 435);
+            this.ClientSize = new System.Drawing.Size(655, 244);
             this.Controls.Add(this.btnComprar);
             this.Controls.Add(this.btnReservar);
             this.Controls.Add(this.pnlHotel);
@@ -609,7 +609,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Preliminar";
             this.Text = "Preliminar";
             this.Load += new System.EventHandler(this.Preliminar_Load);

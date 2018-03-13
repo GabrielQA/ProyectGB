@@ -31,9 +31,10 @@ namespace WindowsFormsApp1
         public static string Hlugar;
         public static string Pvehiculo;
         public static string Validar;
-
-
+        public static string Adultos;
+        public static string Menores;
         public static int ID;
+        public static string Personas;
         public Preliminar()
         {
             InitializeComponent();
@@ -196,7 +197,7 @@ namespace WindowsFormsApp1
             {
                 Conexion.Coneccion();
                 Conexion.conexion.Open();
-                Conexion.cmd = new NpgsqlCommand("INSERT INTO compra(id,fecha_inicio,fecha_final,pais_origen,pais_destino,hotel,vehiculo,calificacion,precio_total) VALUES ('" + ID + "', '" + dtpInicio.Value + "', '" + dtpFinal.Value + "', '" + txtOrigen1.Text + "', '" + txtDestino1.Text + "', '" + txtHotel.Text + "','" + txtVehiculo.Text + "', '" + calificacion + "', '" + txtTotal.Text + "')", Conexion.conexion);
+                Conexion.cmd = new NpgsqlCommand("INSERT INTO compra(id,fecha_inicio,fecha_final,pais_origen,pais_destino,hotel,vehiculo,calificacion,precio_total,cantidad_personas, escala, adultos, menores) VALUES ('" + ID + "', '" + dtpInicio.Value + "', '" + dtpFinal.Value + "', '" + txtOrigen1.Text + "', '" + txtDestino1.Text + "', '" + txtHotel.Text + "','" + txtVehiculo.Text + "', '" + calificacion + "', '" + txtTotal.Text + "', '" + Personas + "', '" + txtEscala.Text + "')", Conexion.conexion);
                 Conexion.cmd.ExecuteNonQuery();
                 Conexion.conexion.Close();
                 MessageBox.Show("Su compra a sido exitosa");
@@ -218,7 +219,7 @@ namespace WindowsFormsApp1
                 Conexion.Coneccion();
                 Conexion.conexion.Open();
 
-                Conexion.cmd = new NpgsqlCommand("INSERT INTO reservas(id,fecha_inicio,fecha_final,pais_origen,pais_destino,escala,nombre_hotel,lugar_hotel,habitaciones_hotel,marca_vehiculo,modelo_vehiculo,cantidad_vehiculo,precio_vuelo,precio_hotel,precio_vehiculo,precio_total) VALUES ('" + ID + "', '" + dtpInicio.Value + "', '" + dtpFinal.Value + "', '" + txtOrigen1.Text + "', '" + txtDestino1.Text + "', '" + txtEscala.Text + "', '" + txtHotel.Text + "', '" + txtLugarH.Text + "', '" + txtHabitaciones.Text + "', '" + txtVehiculo.Text + "', '" + txtModeloV.Text + "', '" + txtCantidadV.Text + "', '" + txtVueloP.Text + "', '" + txtHotelP.Text + "', '" + txtVehiculoP.Text + "', '" + txtTotal.Text + "')", Conexion.conexion);
+                Conexion.cmd = new NpgsqlCommand("INSERT INTO reservas(id,fecha_inicio,fecha_final,pais_origen,pais_destino,escala,nombre_hotel,lugar_hotel,habitaciones_hotel,marca_vehiculo,modelo_vehiculo,cantidad_vehiculo,precio_vuelo,precio_hotel,precio_vehiculo,precio_total,cantidad_personas) VALUES ('" + ID + "', '" + dtpInicio.Value + "', '" + dtpFinal.Value + "', '" + txtOrigen1.Text + "', '" + txtDestino1.Text + "', '" + txtEscala.Text + "', '" + txtHotel.Text + "', '" + txtLugarH.Text + "', '" + txtHabitaciones.Text + "', '" + txtVehiculo.Text + "', '" + txtModeloV.Text + "', '" + txtCantidadV.Text + "', '" + txtVueloP.Text + "', '" + txtHotelP.Text + "', '" + txtVehiculoP.Text + "', '" + txtTotal.Text + "', '" + Personas + "')", Conexion.conexion);
                 Conexion.cmd.ExecuteNonQuery();
                 Conexion.conexion.Close();
                 MessageBox.Show("Su reserva a sido exitosa");

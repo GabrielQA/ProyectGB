@@ -17,6 +17,7 @@ using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms.DataVisualization.Charting;
 
 using System.Windows.Forms;
 
@@ -2537,6 +2538,165 @@ namespace WindowsFormsApp1
         {
             ComboboxAeropuertoDelete.Items.Clear();
             aeropuertos();
+        }
+        public void resultado(int valor, string nombre)
+        {
+            string[] series = { nombre };
+            int[] puntos = { valor };
+            chart1.Palette = ChartColorPalette.Pastel;
+            for (int i = 0; i < series.Length; i++)
+            {
+                Series serie = chart1.Series.Add(series[i]);
+                serie.Label = puntos[i].ToString();
+                serie.Points.Add(puntos[i]);
+            }
+        }
+
+        private void comboboxRep1_SelectedValueChanged(object sender, EventArgs e)
+        {
+            Conexion();
+            conexion.Open();
+            List<String> lista = new List<String>();
+            NpgsqlCommand cmd = new NpgsqlCommand("SELECT count(nombre_hotel) AS contador FROM reservas WHERE nombre_hotel='" + comboboxRep1.SelectedItem + "'", conexion);
+            NpgsqlDataReader dr = cmd.ExecuteReader();
+            if (dr.HasRows)
+            {
+                while (dr.Read())
+                {
+                    resultado(Convert.ToInt32(dr["contador"].ToString()), comboboxRep1.SelectedItem.ToString());
+                }
+            }
+            conexion.Close();
+        }
+
+        private void comboboxRep1_Click(object sender, EventArgs e)
+        {
+            comboboxRep1.Items.Clear();
+            Rep1();
+
+        }
+        public void Rep1()
+        {
+            Conexion();
+            conexion.Open();
+            List<String> lista = new List<String>();
+            NpgsqlCommand cmd = new NpgsqlCommand("SELECT nombre FROM hoteles", conexion);
+            NpgsqlDataReader dr = cmd.ExecuteReader();
+            if (dr.HasRows)
+            {
+                while (dr.Read())
+                {
+                    rep2.Items.Add(dr.GetString(0));
+                    comboboxRep1.Items.Add(dr.GetString(0));
+                }
+            }
+            conexion.Close();
+        }
+
+        private void chart1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void rep2_Click(object sender, EventArgs e)
+        {
+            rep2.Items.Clear();
+            Rep1();
+
+            
+        }
+
+        private void rep2_SelectedValueChanged(object sender, EventArgs e)
+        {
+            rep2.Items.Clear();
+            int cantidad = 0;
+            Conexion();
+            conexion.Open();
+            NpgsqlCommand cmd = new NpgsqlCommand("SELECT cantidad_personas from compra where hotel='"+rep2.SelectedItem+"'", conexion);
+            NpgsqlDataReader dr = cmd.ExecuteReader();
+            if (dr.HasRows)
+            {
+                while (dr.Read())
+                {
+                    cantidad = cantidad + Convert.ToInt32(dr["cantidad_personas"].ToString());
+                }
+            }
+            conexion.Close();
+            reporte2(cantidad,rep2.SelectedItem.ToString());
+        }
+        public void reporte2(int valor,string nombre)
+        {
+            string[] series = { nombre };
+            int[] puntos = { valor };
+            chart2.Palette = ChartColorPalette.Pastel;
+            for (int i = 0; i < series.Length; i++)
+            {
+                Series serie = chart1.Series.Add(series[i]);
+                serie.Label = puntos[i].ToString();
+                serie.Points.Add(puntos[i]);
+            }
+        }
+
+        private void comboBox1_Click(object sender, EventArgs e)
+        {
+            comboBox1.Items.Clear();
+            Conexion();
+            conexion.Open();
+            NpgsqlCommand cmd = new NpgsqlCommand("SELECT nombre from paises", conexion);
+            NpgsqlDataReader dr = cmd.ExecuteReader();
+            if (dr.HasRows)
+            {
+                while (dr.Read())
+                {
+                    comboBox1.Items.Add(dr["nombre"].ToString());
+                }
+            }
+            conexion.Close();
+        }
+
+        private void comboBox1_SelectedValueChanged(object sender, EventArgs e)
+        {
+            int pais = 0;
+            Conexion();
+            conexion.Open();
+            NpgsqlCommand cmd = new NpgsqlCommand("SELECT COUNT(pais_destino) AS pais from compra where pais_destino ='" + comboBox1.SelectedItem + "'", conexion);
+            NpgsqlDataReader dr = cmd.ExecuteReader();
+            if (dr.HasRows)
+            {
+                while (dr.Read())
+                {
+                    pais = pais + Convert.ToInt32(dr["pais"].ToString());
+                }
+            }
+            conexion.Close();
+            int personas = 0;
+            Conexion();
+            conexion.Open();
+            cmd = new NpgsqlCommand("SELECT cantidad_personas from compra where pais_destino ='" + comboBox1.SelectedItem + "'", conexion);
+            NpgsqlDataReader dr1 = cmd.ExecuteReader();
+            if (dr1.HasRows)
+            {
+                while (dr1.Read())
+                {
+                    personas = personas + Convert.ToInt32(dr1["cantidad_personas"].ToString());
+                }
+            }
+            conexion.Close();
+            int porcentaje = pais * 100 / personas;
+            reporte3(porcentaje, comboBox1.SelectedItem.ToString());
+        }
+
+        public void reporte3(int valor, string nombre)
+        {
+            string[] series = { nombre };
+            int[] puntos = { valor };
+            chart3.Palette = ChartColorPalette.Pastel;
+            for (int i = 0; i < series.Length; i++)
+            {
+                Series serie = chart1.Series.Add(series[i]);
+                serie.Label = puntos[i].ToString();
+                serie.Points.Add(puntos[i]);
+            }
         }
     }
 }

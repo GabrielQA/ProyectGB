@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Windows.Forms.DataVisualization.Charting;
+using Npgsql;
 namespace WindowsFormsApp1
 {
     public partial class Rep : Form
@@ -19,14 +20,37 @@ namespace WindowsFormsApp1
         {
             InitializeComponent();
         }
-
-        private void Rep_Load(object sender, EventArgs e)
+        static string cadenaConexion = null;
+        static NpgsqlConnection conexion;
+        static NpgsqlCommand cmd;
+        public static void Conexion()
         {
+            string servidor = "localhost";
+            int puerto = 5432;
+            string usuario = "postgres";
+            string clave = "123";
+            string baseDatos = "proyectgb";
+            cadenaConexion = "Server=" + servidor + "; " + "Port=" + puerto + "; " + "User Id=" + usuario + "; " + "Password=" + clave + "; " + "Database=" + baseDatos;
+            conexion = new NpgsqlConnection(cadenaConexion);
+            Console.WriteLine(cadenaConexion);
 
         }
-       
-       
-       
+        public void Rep1()
+        {
+            Conexion();
+            conexion.Open();
+            List<String> lista = new List<String>();
+            NpgsqlCommand cmd = new NpgsqlCommand("SELECT nombre FROM hoteles", conexion);
+            NpgsqlDataReader dr = cmd.ExecuteReader();
+            if (dr.HasRows)
+            {
+                while (dr.Read())
+                {
+                    comboboxRep1.Items.Add(dr.GetString(0));
+                }
+            }
+            conexion.Close();
+        }
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -35,42 +59,46 @@ namespace WindowsFormsApp1
             v.Show();
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void comboboxRep1_Click(object sender, EventArgs e)
         {
-            A = Convert.ToInt32(QQQ.Text);
-            B = Convert.ToInt32(QQ.Text);
-            string[] series = { "Guacamaya", "VolcanLook" };
-            int[] puntos = { A, B };
+            comboboxRep1.Items.Clear();
+            Rep1();
 
+        }
+
+        private void comboboxRep1_SelectedValueChanged(object sender, EventArgs e)
+        {
+            Conexion();
+            conexion.Open();
+            List<String> lista = new List<String>();
+            NpgsqlCommand cmd = new NpgsqlCommand("SELECT count(nombre_hotel) AS contador FROM reservas WHERE nombre_hotel='"+comboboxRep1.SelectedItem+"'", conexion);
+            NpgsqlDataReader dr = cmd.ExecuteReader();
+            if (dr.HasRows)
+            {
+                while (dr.Read())
+                {
+                    resultado(Convert.ToInt32(dr["contador"].ToString()), comboboxRep1.SelectedItem.ToString());
+                }
+            }
+            conexion.Close();
+        }
+
+        public void resultado(int valor, string nombre)
+        {
+            string[] series = { nombre };
+            int[] puntos = { valor };
             chart1.Palette = ChartColorPalette.Pastel;
-            chart1.Titles.Add("Hoteles");
-
             for (int i = 0; i < series.Length; i++)
             {
-
                 Series serie = chart1.Series.Add(series[i]);
                 serie.Label = puntos[i].ToString();
                 serie.Points.Add(puntos[i]);
             }
         }
 
-        private void button1_Click_1(object sender, EventArgs e)
+        private void comboboxRep1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            A = Convert.ToInt32(QQQ.Text);
-            B = Convert.ToInt32(QQ.Text);
-            string[] series = { "Guacamaya", "VolcanLook" };
-            int[] puntos = { A, B };
 
-            chart1.Palette = ChartColorPalette.Pastel;
-            chart1.Titles.Add("Hoteles");
-
-            for (int i = 0; i < series.Length; i++)
-            {
-
-                Series serie = chart1.Series.Add(series[i]);
-                serie.Label = puntos[i].ToString();
-                serie.Points.Add(puntos[i]);
-            }
         }
     }
 }
