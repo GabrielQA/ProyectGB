@@ -337,9 +337,12 @@ namespace WindowsFormsApp1
                 //cmd.Parameters.AddWithValue("bandera", imagenPaisesAdd);
                 cmd.ExecuteNonQuery();
                 conexion.Close();
+                MessageBox.Show("Datos ingresados correctamente");
+                txtIDPais.Clear();
+                textBox3.Clear();
             } catch (Exception e)
             {
-                MessageBox.Show("Fallo en el ingreso de datos" + e.ToString());
+                MessageBox.Show("Fallo en el ingreso de datos" );
             }
 
         }
@@ -382,12 +385,21 @@ namespace WindowsFormsApp1
         /// 
         public void InsertarDatosLugares()
         {
-            Conexion();
-            conexion.Open();
-            cmd = new NpgsqlCommand("INSERT INTO lugares(id,nombre,pais) VALUES ('" + IDLADD.Text + "', '" + nombreLADD.Text + "', '" + lugarespaisadd.Text + "')", conexion);
-            cmd.ExecuteNonQuery();
-            conexion.Close();
-            MessageBox.Show("Informacion añadida correctamente");
+            try
+            {
+                Conexion();
+                conexion.Open();
+                cmd = new NpgsqlCommand("INSERT INTO lugares(id,nombre,pais) VALUES ('" + IDLADD.Text + "', '" + nombreLADD.Text + "', '" + lugarespaisadd.Text + "')", conexion);
+                cmd.ExecuteNonQuery();
+                conexion.Close();
+                MessageBox.Show("Informacion añadida correctamente");
+
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("ID ya ingresado");
+            }
+
 
         }
         public void ModificarDatosLugares()
@@ -753,6 +765,7 @@ namespace WindowsFormsApp1
         {
             InsertarDatosLugares();
             clearAll();
+            lugarespaisadd.Items.Clear();
             LimpiarLugares();
         }
 
@@ -799,7 +812,7 @@ namespace WindowsFormsApp1
         private void button11_Click(object sender, EventArgs e)
         {
 
-            InsertarDatosRutas(); clearAll();
+            InsertarDatosRutas(); 
             clearAll();
         }
 
@@ -817,7 +830,7 @@ namespace WindowsFormsApp1
 
         private void button14_Click(object sender, EventArgs e)
         {
-
+            
             InsertarDatosHoteles();
             IDHotelesAdd.Clear();
             nombreHotelesAdd.Clear();
@@ -825,6 +838,7 @@ namespace WindowsFormsApp1
             LugarHotelesADD.Items.Clear();
             habitacionHotelesADD.Clear();
             Precio.Items.Clear();
+            clearAll();
         }
 
         private void button15_Click(object sender, EventArgs e)
@@ -839,8 +853,9 @@ namespace WindowsFormsApp1
 
         private void button17_Click(object sender, EventArgs e)
         {
-            clearAll();
+           
             InsertarDatosTarifaHoteles();
+            clearAll();
         }
 
         private void button18_Click(object sender, EventArgs e)
@@ -1350,6 +1365,7 @@ namespace WindowsFormsApp1
         {
 
             InsertarDatosPais();
+          
 
 
         }
@@ -1360,6 +1376,7 @@ namespace WindowsFormsApp1
         }
         public void clearAll()
         {
+          
             txtIDPais.Clear();
             textBox3.Clear();
 
@@ -1420,9 +1437,11 @@ namespace WindowsFormsApp1
             lugarespaisadd.Equals("");
             lpam.Equals("");
 
-
+            PaisOadd.Items.Clear();
             PaisDadd.Items.Clear();
-
+            paisHotelesADD.Items.Clear();
+            LugarHotelesADD.Items.Clear();
+            Precio.Items.Clear();
 
 
 
@@ -1552,17 +1571,17 @@ namespace WindowsFormsApp1
 
         private void tabPage29_MouseClick(object sender, MouseEventArgs e)
         {
-            clearAll();
+           
         }
 
         private void tabPage30_MouseClick(object sender, MouseEventArgs e)
         {
-            clearAll();
+
         }
 
         private void tabPage31_MouseClick(object sender, MouseEventArgs e)
         {
-            clearAll();
+            
         }
 
         private void tabControl8_MouseClick(object sender, MouseEventArgs e)
@@ -2299,7 +2318,7 @@ namespace WindowsFormsApp1
                 {
                     cadenas = openFileDialog1.FileName;
                     imagenhotel.Load(this.openFileDialog1.FileName);
-                    MessageBox.Show(cadenas);
+                   
                 }
             }
             catch (Exception ex)
@@ -2888,7 +2907,12 @@ namespace WindowsFormsApp1
             }
             conexion.Close();
             */
-        } 
+        }
+
+        private void textBox3_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
-}
+    }
+
