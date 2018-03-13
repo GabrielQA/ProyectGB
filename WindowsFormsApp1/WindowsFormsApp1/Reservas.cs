@@ -36,9 +36,7 @@ namespace WindowsFormsApp1
                 Conexion.Coneccion();
                 Conexion.conexion.Open();
                 NpgsqlDataAdapter read = new NpgsqlDataAdapter("SELECT fecha_inicio, fecha_final, pais_origen, pais_destino, escala, nombre_hotel, lugar_hotel, habitaciones_hotel, marca_vehiculo, modelo_vehiculo, cantidad_vehiculo, precio_vuelo, precio_hotel, precio_vehiculo, precio_total, cantidad_personas, adultos, menores FROM reservas WHERE id = '" + ID + "'", Conexion.conexion);
-                NpgsqlDataReader dr = Conexion.cmd.ExecuteReader();
                 read.Fill(reservas);
-                Conexion.conexion.Close();
                 DataTable dtAll = reservas.Tables[0].Copy();
                 for (var i = 1; i < reservas.Tables.Count; i++)
                 {
