@@ -156,6 +156,8 @@ namespace WindowsFormsApp1
             Preliminar.Photel = precio;
             Preliminar.Hlugar = lugar;
             Preliminar.Hotel = nombre;
+            Preliminar.Adultos = spnAdultos.Value.ToString();
+            Preliminar.Menores = spnMenores.Value.ToString();
             Preliminar ven = new Preliminar();
             ven.Show();
         }

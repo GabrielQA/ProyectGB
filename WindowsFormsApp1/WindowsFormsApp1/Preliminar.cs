@@ -212,7 +212,7 @@ namespace WindowsFormsApp1
             {
                 Conexion.Coneccion();
                 Conexion.conexion.Open();
-                Conexion.cmd = new NpgsqlCommand("INSERT INTO compra(id,fecha_inicio,fecha_final,pais_origen,pais_destino,hotel,vehiculo,calificacion,precio_total,cantidad_personas, escala, adultos, menores) VALUES ('" + ID + "', '" + dtpInicio.Value + "', '" + dtpFinal.Value + "', '" + txtOrigen1.Text + "', '" + txtDestino1.Text + "', '" + txtHotel.Text + "','" + txtVehiculo.Text + "', '" + calificacion + "', '" + txtTotal.Text + "', '" + Personas + "', '" + txtEscala.Text + "')", Conexion.conexion);
+                Conexion.cmd = new NpgsqlCommand("INSERT INTO compra(id,fecha_inicio,fecha_final,pais_origen,pais_destino,hotel,vehiculo,calificacion,precio_total,cantidad_personas, escala, adultos, menores) VALUES ('" + ID + "', '" + dtpInicio.Value + "', '" + dtpFinal.Value + "', '" + txtOrigen1.Text + "', '" + txtDestino1.Text + "', '" + txtHotel.Text + "','" + txtVehiculo.Text + "', '" + calificacion + "', '" + txtTotal.Text + "', '" + Personas + "', '" + txtEscala.Text + "', '" + Adultos + "', '" + Menores + "')", Conexion.conexion);
                 Conexion.cmd.ExecuteNonQuery();
                 Conexion.conexion.Close();
                 MessageBox.Show("Su compra a sido exitosa");
