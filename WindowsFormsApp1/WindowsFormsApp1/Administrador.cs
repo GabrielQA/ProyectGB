@@ -2700,9 +2700,18 @@ namespace WindowsFormsApp1
             {
                 while (dr.Read())
                 {
-                    cantidad = cantidad + Convert.ToInt32(dr["cantidad_personas"].ToString());
+                    if (dr["cantidad_personas"].ToString().Equals("") == false)
+                    {
+                        cantidad = cantidad + Convert.ToInt32(dr["cantidad_personas"].ToString());
+                    }
+                    else
+                    {
+                        cantidad = cantidad+0;
+                    }
+                    MessageBox.Show(""+cantidad);
                 }
             }
+           
             conexion.Close();
             reporte2(cantidad, rep2.SelectedItem.ToString());
         }

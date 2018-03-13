@@ -63,7 +63,7 @@ namespace WindowsFormsApp1
             {
                 Conexion.Coneccion();
                 Conexion.conexion.Open();
-                NpgsqlCommand command = new NpgsqlCommand("DELETE FROM reservas WHERE id = '" + ID + "' nombre_hotel = '" + hotel + "' precio_total = '" + total + "'", Conexion.conexion);
+                NpgsqlCommand command = new NpgsqlCommand("DELETE FROM reservas WHERE id = '" + ID + "'and nombre_hotel = '" + hotel + "'and precio_total = '" + total + "'", Conexion.conexion);
                 command.ExecuteNonQuery();
                 Conexion.conexion.Close();
                 cargardgv();

@@ -41,18 +41,20 @@
             this.dgvReservas.AllowUserToDeleteRows = false;
             this.dgvReservas.AllowUserToOrderColumns = true;
             this.dgvReservas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvReservas.Location = new System.Drawing.Point(12, 12);
+            this.dgvReservas.Location = new System.Drawing.Point(16, 15);
+            this.dgvReservas.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dgvReservas.Name = "dgvReservas";
             this.dgvReservas.ReadOnly = true;
-            this.dgvReservas.Size = new System.Drawing.Size(568, 255);
+            this.dgvReservas.Size = new System.Drawing.Size(757, 314);
             this.dgvReservas.TabIndex = 0;
             this.dgvReservas.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvReservas_CellClick);
             // 
             // btnEliminar
             // 
-            this.btnEliminar.Location = new System.Drawing.Point(260, 273);
+            this.btnEliminar.Location = new System.Drawing.Point(340, 338);
+            this.btnEliminar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(75, 23);
+            this.btnEliminar.Size = new System.Drawing.Size(100, 28);
             this.btnEliminar.TabIndex = 1;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = true;
@@ -60,9 +62,10 @@
             // 
             // btnSalir
             // 
-            this.btnSalir.Location = new System.Drawing.Point(12, 273);
+            this.btnSalir.Location = new System.Drawing.Point(16, 336);
+            this.btnSalir.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(75, 23);
+            this.btnSalir.Size = new System.Drawing.Size(100, 28);
             this.btnSalir.TabIndex = 2;
             this.btnSalir.Text = "Salir";
             this.btnSalir.UseVisualStyleBackColor = true;
@@ -70,9 +73,10 @@
             // 
             // btnComprar
             // 
-            this.btnComprar.Location = new System.Drawing.Point(505, 273);
+            this.btnComprar.Location = new System.Drawing.Point(673, 336);
+            this.btnComprar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnComprar.Name = "btnComprar";
-            this.btnComprar.Size = new System.Drawing.Size(75, 23);
+            this.btnComprar.Size = new System.Drawing.Size(100, 28);
             this.btnComprar.TabIndex = 3;
             this.btnComprar.Text = "Compra";
             this.btnComprar.UseVisualStyleBackColor = true;
@@ -80,13 +84,14 @@
             // 
             // Reservas
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(592, 308);
+            this.ClientSize = new System.Drawing.Size(789, 379);
             this.Controls.Add(this.btnComprar);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.dgvReservas);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Reservas";
             this.Text = "Reservas";
             this.Load += new System.EventHandler(this.Reservas_Load);

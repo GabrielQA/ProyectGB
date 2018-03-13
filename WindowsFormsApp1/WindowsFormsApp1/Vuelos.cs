@@ -275,6 +275,8 @@ namespace WindowsFormsApp1
                 Preliminar.Hlugar = hlugar;
                 Preliminar ven = new Preliminar();
                 ven.Show();
+
+                ///a
             }
             else if(boxAuto.Checked == true)
             {
